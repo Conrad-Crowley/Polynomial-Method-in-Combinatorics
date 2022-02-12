@@ -1,0 +1,185 @@
+\documentclass[a4paper,11pt]{report}
+%\usepackage[none]{hyphenat}
+
+%\usepackage[T1]{fontenc}
+%\usepackage[bitstream-charter]{mathdesign}
+
+%\usepackage[usenames,dvipsnames,pdf]{pstricks}
+%\usepackage[crop=off]{auto-pst-pdf}
+\usepackage{makeidx}
+\usepackage{url}
+\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage{framed}
+\usepackage[toc,page]{appendix}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{subfig}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{float}
+\usepackage{multirow}
+%indicator 1
+\usepackage{dsfont}
+
+% Fancy letters
+\usepackage{mathrsfs}
+
+\usepackage[noend,ruled,noline,linesnumbered,algochapter]{algorithm2e}
+\usepackage[linktoc=page]{hyperref}
+\usepackage[margin=3cm]{geometry}
+\usepackage{setspace} 
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\rhead{\nouppercase\leftmark}
+\lhead{\nouppercase\rightmark}
+
+\makeindex
+
+\onehalfspacing 
+
+\renewcommand*\contentsname{Table of Contents}
+
+% Proof, Corollary, and Lemma indexing
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{remark}{Remark}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{conjecture}{Conjecture}
+
+% New Commands 
+\newcommand{\thm}[2]{\begin{theorem}[#1] #2 \end{theorem} }
+\newcommand{\prf}[1]{\begin{proof} #1 \end{proof}}
+\newcommand{\eq}[1]{\begin{equation*} #1\end{equation*}}
+\newcommand{\eqq}[1]{\begin{equation} #1\end{equation}}
+\newcommand{\lem}[1]{\begin{lemma} #1 \end{lemma}}
+
+\newcommand{\CC}{\mathbb C}
+% Fancy C
+\newcommand{\CE}{\mathcal C}
+\newcommand{\FF}{\mathbb F}
+% Special F_p 
+\newcommand{\FP}{\mathbb{ F}_p}
+\newcommand{\KK}{\mathbb K}
+% Fancy L
+\newcommand{\LL}{\mathcal L}
+
+
+\newcommand{\NN}{\mathbb N}
+%Fancy P
+\newcommand{\PP}{\mathcal P}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\RR}{\mathbb R}
+
+% Fancy S
+\newcommand{\ES}{\mathcal S}
+\newcommand{\ZZ}{\mathbb Z}
+
+%indicator 
+\newcommand{\1}[1]{\mathds{1}_{[#1]}}
+
+% Polynomial space of degree 
+
+\begin{document}
+
+\pagenumbering{roman}
+
+%title page
+%\input{0.0.title.tex}
+
+%\clearpage
+%\thispagestyle{empty}
+%\mbox{}
+\clearpage
+
+%\thispagestyle{empty}
+%Dedication
+%I would like to dedicate this thesis to my loving family ...
+    
+
+
+
+%\clearpage
+%\thispagestyle{empty}
+%\mbox{}
+%\clearpage
+%\thispagestyle{empty}
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+%\input{0.1.abstract.tex}
+
+\clearpage
+\phantomsection
+\tableofcontents
+\renewcommand{\contentsname}{Table of Contents}
+\addcontentsline{toc}{chapter}{Table of Contents}
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+%\clearpage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{List of Tables}
+%\listoftables
+
+
+
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\renewcommand\bibname{References}
+
+\clearpage
+\phantomsection
+
+
+%\input{1.intro.tex}
+\input{chap/kakeya.tex}
+\input{chap/joints.tex}
+\input{chap/trotter.tex}
+\input{chap/circle.tex}
+\input{chap/alon.tex}
+
+
+
+
+\bibliographystyle{unsrt}
+\bibliography{fyp}
+\addcontentsline{toc}{chapter}{References}
+
+\clearpage
+%\appendix 
+
+%\phantomsection
+
+%\addcontentsline{toc}{chapter}{Appendices}
+%\chapter{Amino Acids\label{appAmino}}
+%\begin{figure}[h]
+%\begin{center}
+%\includegraphics[width=1\textwidth]{./images/background/aminoacids}
+%\end{center}
+%\caption{Twenty different amino acids, their structures and chemical properties.\index{Amino Acid!chemical properties}\cite{Lehninger2012}.}
+%\end{figure}
+%\clearpage
+%\thispagestyle{empty}
+%\mbox{}
+
+%\clearpage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{Index}
+%\printindex
+
+\end{document}

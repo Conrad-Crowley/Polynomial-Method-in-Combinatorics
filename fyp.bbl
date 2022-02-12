@@ -1,0 +1,46 @@
+\begin{thebibliography}{1}
+
+\bibitem{davies1971some}
+Roy~O Davies.
+\newblock Some remarks on the kakeya problem.
+\newblock In {\em Mathematical Proceedings of the Cambridge Philosophical
+  Society}, volume~69, pages 417--421. Cambridge University Press, 1971.
+
+\bibitem{BUSH1991}
+Jean Bourga'in.
+\newblock Besicovitch type maximal operators and applications to fourier
+  analysis.
+\newblock {\em Geometric \& Functional Analysis GAFA}, 1(2):147--187, 1991.
+
+\bibitem{GUTH2016}
+L.~Guth.
+\newblock {\em Polynomial Methods in Combinatorics}.
+\newblock University Lecture Series. American Mathematical Society, 2016.
+
+\bibitem{WOLFF1995}
+Thomas Wolff.
+\newblock An improved bound for kakeya type maximal functions.
+\newblock {\em Revista Matemática Iberoamericana}, 11(3):651--674, 1995.
+
+\bibitem{GOW2020}
+Timothy Gowers.
+\newblock Topics in combinatorics - cambridge tripos lecture notes.
+\newblock 2020.
+
+\bibitem{guth2008algebraic}
+Larry Guth and Nets~Hawk Katz.
+\newblock Algebraic methods in discrete analogs of the kakeya problem, 2008.
+
+\bibitem{quilodran2009joints}
+René Quilodrán.
+\newblock The joints problem in rn, 2009.
+
+\bibitem{kaplan2009lines}
+Haim Kaplan, Micha Sharir, and Eugenii Shustin.
+\newblock On lines and joints, 2009.
+
+\bibitem{ellenberg2016new}
+Jordan~S. Ellenberg, Jozsef Solymosi, and Joshua Zahl.
+\newblock New bounds on curve tangencies and orthogonalities, 2016.
+
+\end{thebibliography}
