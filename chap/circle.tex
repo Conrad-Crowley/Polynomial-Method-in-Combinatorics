@@ -32,8 +32,8 @@ We can now prove the main theorem.
     $$\beta(\gamma) = \left \{ (x,y,z) \in \RR^3 : (x,y) \in \gamma, z = - \frac{x-x_\gamma}{y-y_\gamma} \right \},$$ where $(x_\gamma,y_\gamma)$ is the 
     centre of the circle $\gamma$. Given a point $(x,y)$, and a non-vertical line $l$ containing $(x,y)$ of slope $z$, $\gamma$ is tangent to $l$ at $(x,y)$ if and only if $(x,y,z) \in \beta(\gamma)$.
 
-    Let $\mathscr{C} = \{ \beta(\gamma) : \gamma \in \Gamma \}.$ 
-    Two circles $\gamma_1$ and $\gamma_2$ are tangent if and only if $\beta(\gamma_1) \cap \beta(\gamma_2) \neq \emptyset$.
+    Let $\beta (\Gamma) = \{ \beta(\gamma) : \gamma \in \Gamma \}.$ 
+    Two circles $\gamma_1$ and $\gamma_2$ are tangent if and only if $\beta(\gamma_1) \cap \beta(\gamma_2) \neq \emptyset$. [TODO: expand on this? diagram?]
 
     Suppose $(x,y,z) \in \beta(\gamma_1) \cap \beta(\gamma_2) $ for some $\gamma_1 \neq \gamma_2$. Then $$(0,0,1) \in \text{span} \left( T_{(x,y,z) }\beta (\gamma_1), T_{(x,y,z) }\beta (\gamma_2)\right).$$
     We can establish this by examining a parameterisation of $\gamma_1$ and $\gamma_2$ in the neighbourhood of $(x,y)$.
@@ -46,13 +46,13 @@ We can now prove the main theorem.
     \\ &\subset \text{span} \left( T_{(x,y,z) }\beta (\gamma_1), T_{(x,y,z) }\beta (\gamma_2)\right). 
     \end{align*}
 
-    Let $P \in \RR[x,y,z]$ be the non-zero polynomial of minimal degree that vanishes on all the curves in $\mathscr C$. The degree of $P$ is $\sim N^{1/2}$. 
-    By our result above, if $(x,y,z)$ is a point where two curves from $\mathscr C$ intersect, then $\partial_z P (x,y,z)  =0 $. Thus since each $\gamma \in \Gamma$ is 
-    tangent to $\gtrsim N^{1/2}$, and each of these tangencies occur at a distinct point, we have that $\partial_z P$ vanishes at $\gtrsim N^{1/2}$ points on each curve in $\mathscr C$.
+    Let $P \in \RR[x,y,z]$ be the non-zero polynomial of minimal degree that vanishes on all the curves in $\beta (\Gamma)$. The degree of $P$ is $\sim N^{1/2}$. 
+    By our result above, if $(x,y,z)$ is a point where two curves from $\beta (\Gamma)$ intersect, then $\partial_z P (x,y,z)  =0 $. Thus since each $\gamma \in \Gamma$ is 
+    tangent to $\gtrsim N^{1/2}$, and each of these tangencies occur at a distinct point, we have that $\partial_z P$ vanishes at $\gtrsim N^{1/2}$ points on each curve in $\beta (\Gamma)$.
     [TODO: clean up here!]By Bézout's theorem we have that $\partial_z P$ vanishes on all curves in $\mathscr{C}$ as:
     \[
     \deg (\partial_z P) \deg (\gamma) \sim  (N^{1/2}) \gtrsim \# \{\partial_z P \cap \gamma\} \sim (N^{1/2}) .    
-    \] Since $P$ was the non-zero polynomial of minimal degree that vanishes on all the curves in $\mathscr C$, we must conclude 
+    \] Since $P$ was the non-zero polynomial of minimal degree that vanishes on all the curves in $\beta (\Gamma)$, we must conclude 
     $\partial_z P$= 0. We have then that $P(x,y,z) = Q(x,y)$ for some $Q \in \RR[x,y]$ with degree $\sim N^{1/2}$. 
     But this implies that each of the $N$ circles in $\Gamma$ must be in $Z(Q)$. This is a contradiction, as $Q$ has degree $\sim N^{1/2}$ whereas $\cup \gamma$ has degree $2N$.
     We conclude that $\Gamma$ has fewer than $N^{3/2}$ tangencies.

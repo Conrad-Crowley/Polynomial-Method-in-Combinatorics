@@ -21,4 +21,4 @@
 \contentsline {chapter}{\numberline {4}The Circle Tangency Counting Problem}{16}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Include trivial 5/3 bound?}{16}{section.4.1}%
 \contentsline {chapter}{\numberline {5}The Polynomial Method in Additive Combinatorics}{19}{chapter.5}%
-\contentsline {chapter}{References}{20}{chapter*.10}%
+\contentsline {chapter}{References}{21}{chapter*.10}%
