@@ -4,11 +4,11 @@ Work on the Kakeya problem can be traced back to the Russian mathematician Abram
 of the existence of planar sets of measure zero which contain a line segment in every direction. In 1920, Besicovitch constructed such a set and published in a Russian Journal.
 
 However, 1917 was a turbulent year as it marked the end of
-the Russian Empire and the start of the Russian civil war. Due to this, and the ensuing blockade of Russian ports, there was scarce communication with the outside world.
+the Russian Empire and the start of the Russian civil war. Due to this and the ensuing blockade of Russian ports there was scarce communication with the outside world.
 Thus Besicovitch could not have known of a Japanese mathematician Kakeya who asked also in 1917 a related question: What is the smallest area of a convex set within which
-one can rotate a needle by 180 degrees in the plane? Julius Pal\footnote{Westernized spelling, originally Gyula Pál.} answered this question in 1921 with the equilateral triangle. The 
-problem without the convexity condition remained open. In 1924, after leaving the newly formed Soviet Union for Copenhagen, Besicovitch discovered this
-problem and by modifying his previous construction produced a solution in 1925. This lead to the more general questions being asked about kakeya sets in higher dimensions.
+one can rotate a needle by 180 degrees in the plane? Julius Pal answered this question in 1921 with the equilateral triangle. The 
+more interesting problem without the convexity condition remained open. In 1924, after leaving the newly formed Soviet Union for Copenhagen, Besicovitch discovered this
+problem and by modifying his previous construction produced a solution in 1925. This lead to the more general questions being asked about Kakeya sets in higher dimensions.
 \begin{definition}[Kakeya Set in $\RR^n$]
     A Kakeya set is a set $A \subset \RR^n$ that contains a unit segment in every direction.
 \end{definition}
@@ -20,8 +20,9 @@ The natural question then arises, what is the dimension of such sets? There are 
 Given a set $S \subset \RR^n$, define $N(\varepsilon)$ to be the number of boxes of side length $\varepsilon$ required to cover the set.
 The Minkowski Dimension of the set $S$ is then defined as:
 $$\dim_M (S) = \lim_{\varepsilon \to 0} \frac{\log( N(\varepsilon))}{\log (1/\varepsilon)}.$$
-If this limit does not exist, one can still define the upper and lower Minkowski dimension by taking the limit superior and limit inferior respectively.
-We denote these as $\dim_{M_{\text{upper}}}$ and $\dim_{M_{\text{lower}}}$ respectively.
+If this limit does not exist, one can still define the upper and lower Minkowski dimensions, 
+$\dim_{M_{\text{upper}}}$ and $\dim_{M_{\text{lower}}}$, by taking the limit superior and limit inferior respectively.
+
 \end{definition}
 
 \begin{definition}[Hausdorff Dimension]
@@ -30,8 +31,8 @@ We denote these as $\dim_{M_{\text{upper}}}$ and $\dim_{M_{\text{lower}}}$ respe
     Then we can define the Hausdorff dimension of the set $S$ to be:
     $$\dim_H (S) = \inf \{ d \geq 0 : \mathcal{H}^d(S) = 0 \}.   $$
 \end{definition}
-These dimensions are related by the inequality when they are all defined:
-$$\dim_H \leq \dim_{M_{\text{lower}}} \leq \dim_{M_{\text{upper}}}$$
+These dimensions are related by the following inequality when they are all defined:
+$$\dim_H \leq \dim_{M_{\text{lower}}} \leq \dim_{M_{\text{upper}}}.$$
 In 1971, Davies produced a solution for the 2 dimensional case, proving that
 although the measure of a Kakeya set can be arbitrarily small, it must have Hausdorff (and hence Minkowski) dimension of 2.\cite{davies1971some}
 This resulted in the following conjectures:
@@ -83,7 +84,7 @@ This lemma follows immediately from Fermat's Little Theorem.
 \section{Combinatorial attempts at the proof}
 We fix a finite field $\FF = \FF_{p^k}$.
 \subsection{Bush Argument}
-Bourgain produced one of the first non-trivial estimates of the dimension in 1991.\cite{BUSH1991} We present Guth's formulation here\cite{GUTH2016}:
+Bourgain produced one of the first non-trivial estimates of the dimension in 1991.\cite{BUSH1991} We present the finite field analogue of his argument here.\cite{GUTH2016}
 \begin{theorem}[Bush Argument]
 If $l_1, \dots, l_M$ are lines in $\FF^n$, then the number of points in their union is at least 
 $$\frac12 M^{1/2} |\FF|$$
@@ -91,8 +92,9 @@ In particular, if $A$ is a Kakeya set, then we have:
 $$|A| \gtrsim |\FF|^{\frac{n+1}{2}}$$
 \end{theorem}
 
-\prf{Let $X$ be the union of the lines $l_1, \dots, l_M.$ Each of these lines contains $|\FF|$ points of $X$. 
-By the pigeonhole principle, there is a point $x \in X$ which lies in at least $|\FF|M |X|^{-1}$ of the lines $l_i$.
+\prf{Let $X$ be the union of the lines $l_1, \dots, l_M.$ Each of these lines contains $|\FF|$ points of $X$,
+so we have $|\FF|M$ points to distribute over $X$. By the pigeonhole principle, there is a point $x \in X$ which lies in at least $|\FF|M |X|^{-1}$ of the lines $l_i$.
+[TODO: Im not sure what to expand on here - we could contradict by saying if this wasn't the case but that seems verbose]
 
 These set of lines $l_i$ through $x$ is called the bush of $x$. These lines are disjoint except at $x$, and their union 
 lies in $X$. So we have:
@@ -117,7 +119,7 @@ Due to Wolff. \cite{WOLFF1995}
     Suppose $l_1, \dots , l_M$ are lines in $\FF^n$, and that at most $|\FF| +1$ of the lines lie in any plane.
     Then their union has cardinality at least 
     \[
-        \frac{1}{3}    q^{3/2} M^{1/2}.
+        \frac{1}{3}    |\FF|^{3/2} M^{1/2}.
     \]
     In particular, if $A$ is a Kakeya set, then we have:
     \[
@@ -126,8 +128,8 @@ Due to Wolff. \cite{WOLFF1995}
 \end{theorem}
 \begin{proof}
     Let $X = \cup_i l_i$. If $l_i$ is a line in $A$, then the hairbrush with stem $l_i$ is
-    defined to be the set of lines $l_j$ which intersect $l_i$. An average point of $X$ lies in $|\FF|M |X|^{-1}$ lines $l_i$ . If each point of X was
-    about average, then each hairbrush would contain $\gtrsim |\FF|^2 M |X|^{-1}$ lines. We claim
+    defined to be the set of lines $l_j$ which intersect $l_i$. An average point of $X$ lies in $|\FF|M |X|^{-1}$ lines $l_i$.
+    If each point of X was about average, then each hairbrush would contain $\gtrsim |\FF|^2 M |X|^{-1}$ lines. We claim
     that there is always at least one hairbrush with $\geq (1/2)|\FF|^2M |X|^{-1}$ lines.  
 
     [TODO: Finish this proof]
