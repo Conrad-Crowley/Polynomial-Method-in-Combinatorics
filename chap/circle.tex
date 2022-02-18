@@ -23,7 +23,7 @@ For the first claim, observe that at each step $i$ we are reducing $\tau(\CE_i)$
 \end{align*}
 We must now check that we have not removed every circle from our collection. We have the trivial inequality $|\tau(\CE_M)| \leq c_2 N^{2}$. Combining this with the result above, we attain $|\CE_M| \geq \frac{c_1}{2c_2} N^{3/4}$.
 \end{proof}
-[TODO: meaning of $N$ unclear (used inconsistently I think) in above proof]
+\todo{ meaning of $N$ unclear (used inconsistently I think) in above proof}
 We can now prove the main theorem.
 \begin{proof}
     Given an arbitrary collection of circles $\CE$ with $\gtrsim N^{3/2}$ tangencies, we can reduce to a collection $\Gamma$ where each circle is tangent to at least $\sim N^{1/2}$ other circles using the previous lemma. 
@@ -49,14 +49,12 @@ We can now prove the main theorem.
     Let $P \in \RR[x,y,z]$ be the non-zero polynomial of minimal degree that vanishes on all the curves in $\beta (\Gamma)$. The degree of $P$ is $\sim N^{1/2}$. 
     By our result above, if $(x,y,z)$ is a point where two curves from $\beta (\Gamma)$ intersect, then $\partial_z P (x,y,z)  =0 $. Thus since each $\gamma \in \Gamma$ is 
     tangent to $\gtrsim N^{1/2}$, and each of these tangencies occur at a distinct point, we have that $\partial_z P$ vanishes at $\gtrsim N^{1/2}$ points on each curve in $\beta (\Gamma)$.
-    [TODO: clean up here!]By Bézout's theorem we have that $\partial_z P$ vanishes on all curves in $\mathscr{C}$ as:
+   \todo{clean up here!}By Bézout's theorem we have that $\partial_z P$ vanishes on all curves in $\mathscr{C}$ as:
     \[
     \deg (\partial_z P) \deg (\gamma) \sim  (N^{1/2}) \gtrsim \# \{\partial_z P \cap \gamma\} \sim (N^{1/2}) .    
     \] Since $P$ was the non-zero polynomial of minimal degree that vanishes on all the curves in $\beta (\Gamma)$, we must conclude 
     $\partial_z P$= 0. We have then that $P(x,y,z) = Q(x,y)$ for some $Q \in \RR[x,y]$ with degree $\sim N^{1/2}$. 
     But this implies that each of the $N$ circles in $\Gamma$ must be in $Z(Q)$. This is a contradiction, as $Q$ has degree $\sim N^{1/2}$ whereas $\cup \gamma$ has degree $2N$.
     We conclude that $\Gamma$ has fewer than $N^{3/2}$ tangencies.
-
-
-
 \end{proof}
+
