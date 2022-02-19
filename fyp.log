@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  18 FEB 2022 14:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.2.19)  19 FEB 2022 15:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/conrad/deve/fyp-combo/fyp.tex
-(/home/conrad/deve/fyp-combo/fyp.tex
+**/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex
+(/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2021-11-22> (/usr/share/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
@@ -829,7 +829,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [2]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 112.
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 79.
+
+
+LaTeX Warning: Marginpar on page 3 moved.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -913,6 +916,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 21.
 
+
+Overfull \hbox (2.678pt too wide) in paragraph at lines 30--30
+[][][]\OT1/cmr/m/n/10.95 diagram?[]  
+ []
+
+
+Overfull \hbox (2.678pt too wide) in paragraph at lines 30--30
+[][][]\OT1/cmr/m/n/10.95 diagram?[]  
+ []
+
 [11
 
 ]
@@ -961,6 +974,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [17]
 Chapter 5.
+
+Overfull \hbox (11.77258pt too wide) in paragraph at lines 4--4
+[][][]\OT1/cmr/m/n/10.95 Tautology?[]  
+ []
+
+
+Overfull \hbox (11.77258pt too wide) in paragraph at lines 4--4
+[][][]\OT1/cmr/m/n/10.95 Tautology?[]  
+ []
+
 [18
 
 ]) (./fyp.bbl
@@ -975,21 +998,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ] (./fyp.aux)
 Package rerunfilecheck Info: File `fyp.out' has not changed.
-(rerunfilecheck)             Checksum: D596CF8FA637B609778AA3899475E0AB;4033.
+(rerunfilecheck)             Checksum: 2E2EF5D4C9DE82B2F990C57F5A339A17;4033.
  ) 
 Here is how much of TeX's memory you used:
- 28328 strings out of 478353
- 526670 string characters out of 5854636
- 816347 words of memory out of 5000000
- 45866 multiletter control sequences out of 15000+600000
+ 28386 strings out of 478353
+ 528025 string characters out of 5854635
+ 820213 words of memory out of 5000000
+ 45918 multiletter control sequences out of 15000+600000
  414570 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,15n,89p,616b,1031s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,15n,89p,641b,1063s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on fyp.pdf (22 pages, 297817 bytes).
+Output written on fyp.pdf (22 pages, 299093 bytes).
 PDF statistics:
- 410 PDF objects out of 1000 (max. 8388607)
- 346 compressed objects within 4 object streams
- 99 named destinations out of 1000 (max. 500000)
+ 417 PDF objects out of 1000 (max. 8388607)
+ 353 compressed objects within 4 object streams
+ 105 named destinations out of 1000 (max. 500000)
  210 words of extra memory for PDF output out of 10000 (max. 10000000)
 

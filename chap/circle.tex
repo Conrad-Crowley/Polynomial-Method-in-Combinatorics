@@ -7,23 +7,23 @@ We discuss now a special case of the curve tangency problem from a recent paper 
     Given a collection of circles $\CE$ in the plane such that no three are tangent at a common point, then there are at most $\sim N^{3/2}$ tangencies. 
 \end{theorem}
 \begin{lemma}
-    Given $\CE$ as above and suppose that there are $\gtrsim N^{3/2}$ tangencies. Then we can refine our set such that every circle in $\CE' \subset \CE$ is tangent to $\gtrsim N^{1/2}$ circles.
+    Given $\CE$ as above and suppose that there are $\gtrsim N^{\alpha}$ tangencies. Then we can refine our set such that every circle in $\CE' \subset \CE$ is tangent to $\gtrsim N^{\alpha -1}$ circles.
 \end{lemma}
 \begin{proof}
 Let $\tau(\CE)$ be the set of tangencies of the circles in $\CE$. Take a circle $\gamma \in \CE$ such that $|\{\gamma \cap \tau(\CE)\}| < c_1 N^{1/2}$
 and discard it. We label our new refined collection as $\CE_1$. After repeating this process $M$ times until there are no more circles that satisfy our criteria, at each step removing a circle that does not have sufficient
-tangencies, we attain a collection $\CE_M$. We claim that $\tau(\CE_M) \gtrsim N^{3/2}$, and that $\CE_M \neq \emptyset$.
+tangencies, we attain a collection $\CE_M$. We claim that $\tau(\CE_M) \gtrsim N^{\alpha}$, and that $\CE_M \neq \emptyset$.
 
-For the first claim, observe that at each step $i$ we are reducing $\tau(\CE_i)$ by at most $c_1 N^{1/2}$.  Thus,
+For the first claim, observe that at each step $i$ we are reducing $\tau(\CE_i)$ by at most $c_1 N^{\alpha -1}$.  Thus,
 \begin{align*}
-    |\tau(\CE_M)| &\geq |\tau(\CE)| - M c_1 N^{1/2} \\
-    &> c_0 N^{3/2} -  M c_1 N^{1/2} \\ 
-    &> c_0 N^{3/2} - \underbrace{c_1}_{\text{Set } = c_0/2} N^{3/2} \\
-    |\tau(\CE_M)| &> \frac{c_0}{2} N^{3/2}.
+    |\tau(\CE_M)| &\geq |\tau(\CE)| - M c_1 N^{\alpha -1} \\
+    &> c_0 N^{\alpha} -  M c_1 N^{\alpha -1} \\ 
+    &> c_0 N^{\alpha} - \underbrace{c_1}_{\text{Set } = c_0/2} N^{\alpha} \\
+    |\tau(\CE_M)| &> \frac{c_0}{2} N^{\alpha}.
 \end{align*}
 We must now check that we have not removed every circle from our collection. We have the trivial inequality $|\tau(\CE_M)| \leq c_2 N^{2}$. Combining this with the result above, we attain $|\CE_M| \geq \frac{c_1}{2c_2} N^{3/4}$.
 \end{proof}
-\todo{ meaning of $N$ unclear (used inconsistently I think) in above proof}
+\todo{Last line is incorrect}
 We can now prove the main theorem.
 \begin{proof}
     Given an arbitrary collection of circles $\CE$ with $\gtrsim N^{3/2}$ tangencies, we can reduce to a collection $\Gamma$ where each circle is tangent to at least $\sim N^{1/2}$ other circles using the previous lemma. 
