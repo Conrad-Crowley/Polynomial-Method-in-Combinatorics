@@ -1,24 +1,75 @@
 \chapter{Szemerédi–Trotter Theorem}
 
-\section{Background}
-The Szemerédi–Trotter theorem deals with counting the number of incidences between a finite set of points, $\PP$, in
-$\RR^2$ and a finite set of lines, $\LL$, in $\RR^2$. We define 
-\[I(\PP,\LL) = \{(p, \ell) \in \PP \times \LL | p \in \ell\}\] 
-to be the set of incidences between $\PP$ and $\LL$. 
+In this chapter we will study the application of the polynomial method to incidence geometry by proving a fundamental theorem in the field.
+Incidence geometry is the study of possible intersection patterns of simple geometric objects, such as lines or low degree curves. 
+We have already seen an incidence problem in the previous chapter on the Joints problem. 
+By developing the powerful tool of polynomial partitioning we shall see the key role that the topology of $\RR$ plays in such problems, in contrast to the trivial topology of finite fields. 
 
-\section{Examples}
-\subsection{Example Finite Fields}
-\begin{example}
+
+\section{Background}
+
+
+
+\begin{theorem}[Szemerédi–Trotter]
+    Let $\PP \subset\RR^2$ be a finite set of points and
+    let $\LL \subset \RR^2$ be a finite set of lines. We define 
+    \[I(\PP,\LL) = \{(p, \ell) \in \PP \times \LL \ | \ p \in \ell\}\] 
+    to be the set of incidences between $\PP$ and $\LL$. 
+   
+    Then:
+    \[
+        |I(\PP, \LL)| \lesssim \left(|\PP||\LL|\right)^{2/3} + |\PP| + |\LL|
+    \]
+    
+    \label{thm:S-T}
+\end{theorem}
+
+\section{The Trivial Bound}
+In planar geometry, we have the following dual statements: two points determine a line and every pair of lines intersect in at most one point.
+Using this we can prove the following bounds on $I(\PP,\LL)$:
+\begin{theorem}[Trivial Incidence Bounds]
+    $$I(\PP,\LL) \lesssim |\PP|\cdot |\LL|^{\frac{1}{2}} + |\LL|$$
+    and
+    $$I(\PP,\LL) \lesssim |\LL|\cdot |\PP|^{\frac{1}{2}} + |\PP|.$$
+    \label{thm:trivial-ST-bounds}
+\end{theorem}
+\begin{proof}
     
 
-We can not improve beyond trivial bounds in a finite field $\FF$. To see this, consider the set of points $\PP=\FF^2$ and lines 
-$\LL = \FF^2$. Every line contains exactly $|\FF|$ many points in $\FF^2$, so we have $|\FF|^3$ incidences. So both sides of the trivial inequality are comparable
+We have that 
+$$|I(\PP,\LL)| \leq |\PP|^2 + |\LL|.$$
+To see this, count the lines that have at most one point in $P$ on them. These contribute at most $|\LL|$ incidences.
+Every other line has at least two points in $\PP$. The total number of incidences on these lines is at most $|\PP|^2$
+as otherwise there would exist a $p\in \PP$ that lies on over $|\PP|$ lines, and each of these lines would have an additional 
+point on it. This would imply there are more that $|\PP|$ points, a contradiction. 
+
+We now bound the number of incidences. 
+
+\begin{align*}
+    |I(\PP,\LL)|^2 &= \left( \sum_{\ell \in \LL} \sum_{p \in \PP} 1_{p\in \ell} \right)^2 \\
+    & \leq |\LL|\cdot \sum_{\ell \in \LL} \left( \sum_{p \in \PP} 1_{p\in \ell} \right)^2  \qquad \text{ (Cauchy-Schwarz on $\ell$)}\\
+    &= |\LL|\cdot \sum_{p_1,p_2 \in \PP} \sum_{\ell \in \LL}   1_{p_1\in \ell} 1_{p_2\in \ell}    \\
+    & \leq |\LL|\cdot ( |I(\PP,\LL)| + |\PP|^2)\\
+    &\leq |\LL|^2 + 2|\LL|\cdot |\PP|^2 \qquad \text{ (Applying trivial bounds \ref{thm:trivial-ST-bounds})}\\ 
+\end{align*}    
+This implies
+$$I(\PP,\LL) \lesssim |\PP|\cdot |\LL|^{\frac{1}{2}} + |L|.$$ 
+Repeating the above proof interchanging the roles $\PP$ and $\LL$ achieves the other bound.
+\end{proof}
+
+
+\section{Examples}
+We can not improve beyond trivial bounds in a finite field $\FF^2$. Unlike the joints problem, where the results coincided for finite fields and the reals,
+this suggests that the topology of $\RR$ plays a special role. 
+\begin{example}[Finite Fields]
+Consider the set of points $\PP=\FF^2$ and lines 
+$\LL = \FF^2$. Every line contains exactly $|\FF|$ many points in $\FF^2$, so we have $|\FF|^3$ incidences. 
+So both sides of the trivial inequality \ref{thm:trivial-ST-bounds} are comparable:
 $$
 I(\PP,\LL) = |\FF|^3 \sim (|\FF|^2)(|\FF|^2)^{1/2} + |\FF|^2.
 $$
 \end{example}
-
-\subsection{Two Tight Examples in $\RR^2$}
+In contrast, the following examples seem to be the best possible over $\RR$. We will later prove that these are the tight case of Theorem \ref{thm:S-T}.
 \begin{example} Consider the following collections in $\RR^2$:
     \begin{align*}
     \PP &= \{ (a,b) \in \ZZ^2 \ : \ a\in [1,N], b \in [1,2N^2] \} \\
@@ -32,38 +83,8 @@ $$
     $R$ \& $2R$ example
 \end{example}
 \todo{add this example}
-\section{The Trivial Bound}
-Using the simple fact that two points determine a line, and that every pair of lines intersect in at most one point, 
-we can prove the following bound on $I(\PP,\LL)$:
-\begin{theorem}[Trivial Incidence Bound]
-    $$I(\PP,\LL) \lesssim |\PP|\cdot |\LL|^{\frac{1}{2}} + |L|$$
-    and
-    $$I(\PP,\LL) \lesssim |\LL|\cdot |\PP|^{\frac{1}{2}} + |P|.$$
-\end{theorem}
-\begin{proof}
-    
 
-We have that 
-$$|I(\PP,\LL)| \leq |P|^2 + |L|.$$
-To see this, count the lines that have at most one point in $P$ on them. These contribute at most $|\LL|$ incidences.
-Every other line has at least two points in $\PP$. The total number of incidences on these lines is at most $|\PP|^2$
-as otherwise there would exist a $p\in \PP$ that lies on $> |\PP|$ lines, and each of these lines would have an additional 
-point on it. This would imply there are more that $|\PP|$ points, a contradiction. 
 
-We now bound the number of incidences. 
-
-\begin{align*}
-    |I(\PP,\LL)|^2 &= \left( \sum_{\ell \in \LL} \sum_{p \in \PP} 1_{p\in \ell} \right)^2 \\
-    & \leq |\LL|\cdot \sum_{\ell \in \LL} \left( \sum_{p \in \PP} 1_{p\in \ell} \right)^2  \qquad \text{ (Cauchy Schwartz)}\\
-    &= |\LL|\cdot \sum_{p_1,p_2 \in \PP} \sum_{\ell \in \LL}   1_{p_1\in \ell} 1_{p_2\in \ell}    \\
-    & \leq |\LL|\cdot ( |I(\PP,\LL)| + |P|^2)\\
-    &\leq |\LL|^2 + 2|\LL|\cdot |\PP|^2 \\ 
-\end{align*}    
-This implies
-$$I(\PP,\LL) \lesssim |\PP|\cdot |\LL|^{\frac{1}{2}} + |L|.$$ 
-
-Repeating the above proof, interchanging $\PP$ and $\LL$ achieves the other bound.
-\end{proof}
 
 \section{Ham Sandwich Theorems}
 \begin{theorem}[General Ham Sandwich Theorem]
@@ -103,7 +124,7 @@ Now the map $\phi: S^N \to \RR^N$ is antipodal and continuous. By the Borsuk-Ula
     Thus $P_{\delta_{m}} > 0$ on more than half the points of $U_{i, \delta_{m}}$.
 \end{proof}
 \section{Proof of Szemerédi–Trotter Theorem}
-\begin{theorem}[Cell Decompositions]
+\begin{theorem}[Polynomial Partitioning]
    For any $n$ there exists a constant $c(n)$ such that if $S$ is a finite subset of $\RR^n$ and $D$ is any degree, then there exists
    a polynomial $P$ of degree $D$ such that $\RR \backslash Z(P)$ is a disjoint union of $\lesssim D^n$ open sets $O_i$ each containing
    $\leq c(n) |S|D^{-n}$ points. \label{thm:PolyPartioning}
@@ -119,12 +140,6 @@ points of $S$. Now we choose $D$ such that $\deg(P) < D$ which is equivalent to 
 The number of points in each $O_i$ is $\leq |S| 2^{-J} \leq c(n) |S| D^{-n}$
 \end{proof}
 
-\begin{theorem} [Szemerédi–Trotter Theorem]
-    Let $\ES \subset \RR^2$ be a set of $S$ points, and let $\LL \subset \RR^2$ be a set of $L$ lines in $\RR^2$, then their incidences $I(\ES,\LL)$ satisfies
-    $$
-    I(\ES, \LL) \lesssim (SL)^{2/3} + S + L
-    $$ 
-\end{theorem}
 \begin{lemma} [Trivial Bounds]
     By double counting, we have the following trivial estimates:
     $$

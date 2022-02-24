@@ -1,18 +1,18 @@
 # Fdb version 3
-["bibtex fyp"] 1645383214 "fyp.aux" "fyp.bbl" "fyp" 1645383364
+["bibtex fyp"] 1645697070 "fyp.aux" "fyp.bbl" "fyp" 1645697229
   "/usr/share/texmf-dist/bibtex/bst/base/unsrt.bst" 1640600964 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "fyp.aux" 1645383364 9483 67ec9d7d68935ae1f331987082c867b5 "pdflatex"
+  "fyp.aux" 1645697229 9369 f04c693cdac06633b320fa36b4de0c47 "pdflatex"
   "fyp.bib" 1645383213 2793 cb610b4d477e81e0558133aaf7b27e15 ""
   (generated)
   "fyp.bbl"
   "fyp.blg"
-["makeindex fyp.idx"] 1645004760 "fyp.idx" "fyp.ind" "fyp" 1645383364
-  "fyp.idx" 1645383364 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex fyp.idx"] 1645004760 "fyp.idx" "fyp.ind" "fyp" 1645697229
+  "fyp.idx" 1645697228 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "fyp.ilg"
   "fyp.ind"
-["pdflatex"] 1645383363 "/home/conrad/deve/fyp-combo/fyp.tex" "fyp.pdf" "fyp" 1645383364
-  "/home/conrad/deve/fyp-combo/fyp.tex" 1645383363 3954 11821e90f02e90a6b83bb421ce987b91 ""
+["pdflatex"] 1645697227 "/home/conrad/deve/fyp-combo/fyp.tex" "fyp.pdf" "fyp" 1645697229
+  "/home/conrad/deve/fyp-combo/fyp.tex" 1645697227 3999 807299da8ba4bb9f97d9d1a3126798a7 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1640600964 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1640600964 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1640600964 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -26,7 +26,6 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1640600964 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1640600964 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1640600964 1528 abec98dbc43e172678c11b3b9031252a ""
-  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1640600964 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1640600964 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1640600964 1520 eccf95517727cb11801f4f1aee3a21b4 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1640600964 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
@@ -220,14 +219,14 @@
   "chap/circle.tex" 1645383078 5365 bb921f000f8b18b81aef3a573d681738 ""
   "chap/joints.tex" 1642754227 5376 dc82cdb01a6930844e3d508f3029f85b ""
   "chap/kakeya.tex" 1645383078 13640 78c8d4c7ec64d0b32eaa1106e8b8d7ea ""
-  "chap/trotter.tex" 1645383078 10394 e986b2c05668be6c6d4241ba2d795833 ""
-  "fyp.aux" 1645383364 9483 67ec9d7d68935ae1f331987082c867b5 "pdflatex"
-  "fyp.bbl" 1645383214 1410 724b2c0297bfa1150661934d8dfe206e "bibtex fyp"
+  "chap/trotter.tex" 1645697227 11236 954b1a4cd892965d417c81db5e5cfdd0 ""
+  "fyp.aux" 1645697229 9369 f04c693cdac06633b320fa36b4de0c47 "pdflatex"
+  "fyp.bbl" 1645697070 1410 724b2c0297bfa1150661934d8dfe206e "bibtex fyp"
   "fyp.ind" 1645004761 0 d41d8cd98f00b204e9800998ecf8427e "makeindex fyp.idx"
-  "fyp.lof" 1645383364 357 af3883ca5d8f078b6a746e8cca8ab330 "pdflatex"
-  "fyp.out" 1645383364 4033 1f258d07314d3878c737644f0903e34f "pdflatex"
-  "fyp.tex" 1645383363 3954 11821e90f02e90a6b83bb421ce987b91 ""
-  "fyp.toc" 1645383364 1959 ab8d9eaa10b6502e1f0a0f7a6c212fba "pdflatex"
+  "fyp.lof" 1645697229 357 af3883ca5d8f078b6a746e8cca8ab330 "pdflatex"
+  "fyp.out" 1645697229 3666 c1452f3519dccd5ed1db81edff2e840c "pdflatex"
+  "fyp.tex" 1645697227 3999 807299da8ba4bb9f97d9d1a3126798a7 ""
+  "fyp.toc" 1645697229 1761 b76be4f4ef2003176ab70d963b2bf361 "pdflatex"
   "images/kakeya_ex_f32.png" 1634059698 14426 917f32e033fd5ec603800c609d1fedc4 ""
   (generated)
   "fyp.aux"

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  20 FEB 2022 18:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  24 FEB 2022 10:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -676,24 +676,24 @@ File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
 ) (./fyp.aux)
 \openout1 = `fyp.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count352
@@ -720,7 +720,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count358
-Package hyperref Info: Link coloring OFF on input line 100.
+Package hyperref Info: Link coloring OFF on input line 103.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
@@ -730,9 +730,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count359
 )
-LaTeX Info: Redefining \ref on input line 100.
-LaTeX Info: Redefining \pageref on input line 100.
-LaTeX Info: Redefining \nameref on input line 100.
+LaTeX Info: Redefining \ref on input line 103.
+LaTeX Info: Redefining \pageref on input line 103.
+LaTeX Info: Redefining \nameref on input line 103.
  (./fyp.out) (./fyp.out)
 \@outlinefile=\write5
 \openout5 = `fyp.out'.
@@ -773,7 +773,7 @@ LaTeX Info: Redefining \nameref on input line 100.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 100.
+Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 103.
 
 (./fyp.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
@@ -810,7 +810,7 @@ Chapter 1.
 
 
 ]
-<images/kakeya_ex_f32.png, id=158, 85.3624pt x 85.3624pt>
+<images/kakeya_ex_f32.png, id=148, 85.3624pt x 85.3624pt>
 File: images/kakeya_ex_f32.png Graphic file (type png)
 <use images/kakeya_ex_f32.png>
 Package pdftex.def Info: images/kakeya_ex_f32.png  used on input line 59.
@@ -844,31 +844,19 @@ Chapter 2.
 
 ] [9]) (./chap/trotter.tex [10]
 Chapter 3.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 21.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 21.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 21.
-
-
-Overfull \hbox (2.678pt too wide) in paragraph at lines 30--30
-[][][]\OT1/cmr/m/n/10.95 diagram?[]  
- []
-
-
-Overfull \hbox (2.678pt too wide) in paragraph at lines 30--30
-[][][]\OT1/cmr/m/n/10.95 diagram?[]  
- []
-
 [11
 
-] [12] [13] [14]) (./chap/circle.tex [15]
+] [12]
+Overfull \hbox (2.678pt too wide) in paragraph at lines 81--81
+[][][]\OT1/cmr/m/n/10.95 diagram?[]  
+ []
+
+
+Overfull \hbox (2.678pt too wide) in paragraph at lines 81--81
+[][][]\OT1/cmr/m/n/10.95 diagram?[]  
+ []
+
+[13] [14]) (./chap/circle.tex [15]
 Chapter 4.
 [16
 
@@ -900,21 +888,21 @@ Overfull \hbox (7.98569pt too wide) in paragraph at lines 37--37
 
 ] (./fyp.aux)
 Package rerunfilecheck Info: File `fyp.out' has not changed.
-(rerunfilecheck)             Checksum: 1F258D07314D3878C737644F0903E34F;4033.
+(rerunfilecheck)             Checksum: C1452F3519DCCD5ED1DB81EDFF2E840C;3666.
  ) 
 Here is how much of TeX's memory you used:
- 28395 strings out of 478353
- 528146 string characters out of 5854636
- 820358 words of memory out of 5000000
- 45926 multiletter control sequences out of 15000+600000
- 414570 words of font info for 70 fonts, out of 8000000 for 9000
+ 28386 strings out of 478353
+ 528022 string characters out of 5854636
+ 820476 words of memory out of 5000000
+ 45920 multiletter control sequences out of 15000+600000
+ 413158 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,15n,89p,616b,1063s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on fyp.pdf (22 pages, 299211 bytes).
+Output written on fyp.pdf (22 pages, 300098 bytes).
 PDF statistics:
  418 PDF objects out of 1000 (max. 8388607)
- 354 compressed objects within 4 object streams
- 106 named destinations out of 1000 (max. 500000)
- 210 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 347 compressed objects within 4 object streams
+ 104 named destinations out of 1000 (max. 500000)
+ 194 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1024,6 +1024,7 @@ INPUT /usr/share/texmf-dist/tex/latex/tools/calc.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/calc.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/calc.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 OUTPUT fyp.idx
 INPUT /usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -1182,12 +1183,6 @@ INPUT ./chap/trotter.tex
 INPUT chap/trotter.tex
 INPUT ./chap/trotter.tex
 INPUT chap/trotter.tex
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT ./chap/circle.tex
 INPUT chap/circle.tex
 INPUT ./chap/circle.tex
