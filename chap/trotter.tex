@@ -11,14 +11,14 @@ By developing the powerful tool of polynomial partitioning we shall see the key 
 
 
 \begin{theorem}[Szemerédi–Trotter]
-    Let $\PP \subset\RR^2$ be a finite set of points and
+    Let $\ES \subset\RR^2$ be a finite set of points and
     let $\LL \subset \RR^2$ be a finite set of lines. We define 
-    \[I(\PP,\LL) = \{(p, \ell) \in \PP \times \LL \ | \ p \in \ell\}\] 
-    to be the set of incidences between $\PP$ and $\LL$. 
+    \[I(\ES,\LL) = \{(p, \ell) \in \ES \times \LL \ | \ p \in \ell\}\] 
+    to be the set of incidences between $\ES$ and $\LL$. 
    
     Then:
     \[
-        |I(\PP, \LL)| \lesssim \left(|\PP||\LL|\right)^{2/3} + |\PP| + |\LL|
+        |I(\ES, \LL)| \lesssim \left(|\ES||\LL|\right)^{2/3} + |\ES| + |\LL|
     \]
     
     \label{thm:S-T}
@@ -26,35 +26,35 @@ By developing the powerful tool of polynomial partitioning we shall see the key 
 
 \section{The Trivial Bound}
 In planar geometry, we have the following dual statements: two points determine a line and every pair of lines intersect in at most one point.
-Using this we can prove the following bounds on $I(\PP,\LL)$:
+Using this we can prove the following bounds on $I(\ES,\LL)$:
 \begin{theorem}[Trivial Incidence Bounds]
-    $$I(\PP,\LL) \lesssim |\PP|\cdot |\LL|^{\frac{1}{2}} + |\LL|$$
+    $$I(\ES,\LL) \lesssim |\ES|\cdot |\LL|^{\frac{1}{2}} + |\LL|$$
     and
-    $$I(\PP,\LL) \lesssim |\LL|\cdot |\PP|^{\frac{1}{2}} + |\PP|.$$
+    $$I(\ES,\LL) \lesssim |\LL|\cdot |\ES|^{\frac{1}{2}} + |\ES|.$$
     \label{thm:trivial-ST-bounds}
 \end{theorem}
 \begin{proof}
     
 
 We have that 
-$$|I(\PP,\LL)| \leq |\PP|^2 + |\LL|.$$
+\eqq{I(\ES,\LL)| \leq |\ES|^2 + |\LL|. \label{eq:trivial-trivial-ST}}
 To see this, count the lines that have at most one point in $P$ on them. These contribute at most $|\LL|$ incidences.
-Every other line has at least two points in $\PP$. The total number of incidences on these lines is at most $|\PP|^2$
-as otherwise there would exist a $p\in \PP$ that lies on over $|\PP|$ lines, and each of these lines would have an additional 
-point on it. This would imply there are more that $|\PP|$ points, a contradiction. 
+Every other line has at least two points in $\ES$. The total number of incidences on these lines is at most $|\ES|^2$
+as otherwise there would exist a $p\in \ES$ that lies on over $|\ES|$ lines, and each of these lines would have an additional 
+point on it. This would imply there are more that $|\ES|$ points, a contradiction. 
 
 We now bound the number of incidences. 
 
 \begin{align*}
-    |I(\PP,\LL)|^2 &= \left( \sum_{\ell \in \LL} \sum_{p \in \PP} 1_{p\in \ell} \right)^2 \\
-    & \leq |\LL|\cdot \sum_{\ell \in \LL} \left( \sum_{p \in \PP} 1_{p\in \ell} \right)^2  \qquad \text{ (Cauchy-Schwarz on $\ell$)}\\
-    &= |\LL|\cdot \sum_{p_1,p_2 \in \PP} \sum_{\ell \in \LL}   1_{p_1\in \ell} 1_{p_2\in \ell}    \\
-    & \leq |\LL|\cdot ( |I(\PP,\LL)| + |\PP|^2)\\
-    &\leq |\LL|^2 + 2|\LL|\cdot |\PP|^2 \qquad \text{ (Applying trivial bounds \ref{thm:trivial-ST-bounds})}\\ 
+    |I(\ES,\LL)|^2 &= \left( \sum_{\ell \in \LL} \sum_{p \in \ES} 1_{p\in \ell} \right)^2 \\
+    & \leq |\LL|\cdot \sum_{\ell \in \LL} \left( \sum_{p \in \ES} 1_{p\in \ell} \right)^2  \qquad \text{ (Cauchy-Schwarz on $\ell$)}\\
+    &= |\LL|\cdot \sum_{p_1,p_2 \in \ES} \sum_{\ell \in \LL}   1_{p_1\in \ell} 1_{p_2\in \ell}    \\
+    & \leq |\LL|\cdot ( |I(\ES,\LL)| + |\ES|^2)\\
+    &\leq |\LL|^2 + 2|\LL|\cdot |\ES|^2 \qquad \text{ (Using \ref{eq:trivial-trivial-ST}) }\\ 
 \end{align*}    
 This implies
-$$I(\PP,\LL) \lesssim |\PP|\cdot |\LL|^{\frac{1}{2}} + |L|.$$ 
-Repeating the above proof interchanging the roles $\PP$ and $\LL$ achieves the other bound.
+$$I(\ES,\LL) \lesssim |\ES|\cdot |\LL|^{\frac{1}{2}} + |L|.$$ 
+Repeating the above proof interchanging the roles $\ES$ and $\LL$ achieves the other bound.
 \end{proof}
 
 
@@ -62,21 +62,21 @@ Repeating the above proof interchanging the roles $\PP$ and $\LL$ achieves the o
 We can not improve beyond trivial bounds in a finite field $\FF^2$. Unlike the joints problem, where the results coincided for finite fields and the reals,
 this suggests that the topology of $\RR$ plays a special role. 
 \begin{example}[Finite Fields]
-Consider the set of points $\PP=\FF^2$ and lines 
+Consider the set of points $\ES=\FF^2$ and lines 
 $\LL = \FF^2$. Every line contains exactly $|\FF|$ many points in $\FF^2$, so we have $|\FF|^3$ incidences. 
-So both sides of the trivial inequality \ref{thm:trivial-ST-bounds} are comparable:
+So both sides of the \hyperref[thm:trivial-ST-bounds]{trivial bounds} are comparable:
 $$
-I(\PP,\LL) = |\FF|^3 \sim (|\FF|^2)(|\FF|^2)^{1/2} + |\FF|^2.
+I(\ES,\LL) = |\FF|^3 \sim (|\FF|^2)(|\FF|^2)^{1/2} + |\FF|^2.
 $$
 \end{example}
-In contrast, the following examples seem to be the best possible over $\RR$. We will later prove that these are the tight case of Theorem \ref{thm:S-T}.
+In contrast, the following examples seem to be the best possible over $\RR$. We will later prove that these are the tight case of the \hyperref[thm:S-T]{Szemerédi–Trotter Theorem}.
 \begin{example} Consider the following collections in $\RR^2$:
     \begin{align*}
-    \PP &= \{ (a,b) \in \ZZ^2 \ : \ a\in [1,N], b \in [1,2N^2] \} \\
+    \ES &= \{ (a,b) \in \ZZ^2 \ : \ a\in [1,N], b \in [1,2N^2] \} \\
     \LL &= \{ (x,mx+c) \in \RR^2 \ : \ m,c\in \ZZ, m\in [1,N], c \in [1,N^2] \} \end{align*}
-    We have $P= 2N^3$ points and $L = N^3$ lines. Every line in $\LL$ contains $N$ points in $\PP$ so there are
+    We have $P= 2N^3$ points and $L = N^3$ lines. Every line in $\LL$ contains $N$ points in $\ES$ so there are
     $N^4$ incidences. Both sides Szemerédi-Trotter are comparable as 
-    $$ I(\PP,\LL) = N^4 \sim (N^3)^{\frac{2}{3}} (N^3)^{\frac{2}{3}} \sim P^{2/3} L^{2/3}$$
+    $$ I(\ES,\LL) = N^4 \sim (N^3)^{\frac{2}{3}} (N^3)^{\frac{2}{3}} \sim P^{2/3} L^{2/3}$$
 \end{example}
 \todo{diagram?}
 \begin{example}
