@@ -63,7 +63,7 @@ We can not improve beyond trivial bounds in a finite field $\FF^2$. Unlike the j
 this suggests that the topology of $\RR$ plays a special role. 
 \begin{example}[Finite Fields]
 Consider the set of points $\ES=\FF^2$ and lines 
-$\LL = \FF^2$. Every line contains exactly $|\FF|$ many points in $\FF^2$ \todo{show this}, so we have $|\FF|^3$ incidences. 
+$\LL = \FF^2$. Every line contains exactly $|\FF|$ many points in $\FF^2$, so we have $|\FF|^3$ incidences. 
 So both sides of the \hyperref[thm:trivial-ST-bounds]{trivial bounds} are comparable:
 $$
 I(\ES,\LL) = |\FF|^3 \sim (|\FF|^2)(|\FF|^2)^{1/2} + |\FF|^2.
@@ -79,8 +79,8 @@ We define a line in $\RR^2$ as follows:
     \begin{align*}
     \ES &= \{ (a,b) \in \ZZ^2 \ | \ a\in [1,N], b \in [1,2N^2] \} \\
     \LL &= \{ \ell_{m,c} \in \RR^2 \ | \ m,c\in \ZZ, m\in [1,N], c \in [1,N^2] \} \end{align*}
-    The collection $\ES$ contains $2N^3$ points and $\LL$ contains $N^3$ lines. Every line in $\LL$ contains $N$ points in $\ES$ so there are
-    $N^4$ incidences. Both sides of the \hyperref[thm:S-T]{Szemerédi-Trotter} inequality are comparable as 
+    The collection $\ES$ contains $2N^3$ points and $\LL$ contains $N^3$ lines. Every line in $\LL$ contains $N$ points in $\ES$ as for each $x \in [1,N]$  the y-coordinate of $\ell_{m,c}$, $ mx+c$, gives a different integer in $[1,2N^2]$.
+    Hence there are $N^4$ incidences. Both sides of the \hyperref[thm:S-T]{Szemerédi-Trotter} inequality are comparable as 
     $$ I(\ES,\LL) = N^4 \sim (N^3)^{\frac{2}{3}} (N^3)^{\frac{2}{3}} \sim P^{2/3} L^{2/3}$$
 \end{example}
 \todo{diagram?}
