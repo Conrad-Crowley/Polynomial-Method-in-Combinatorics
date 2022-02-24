@@ -49,9 +49,9 @@ We now bound the number of incidences.
     |I(\ES,\LL)|^2 &= \left( \sum_{\ell \in \LL} \sum_{p \in \ES} 1_{p\in \ell} \right)^2 \\
     & \leq |\LL|\cdot \sum_{\ell \in \LL} \left( \sum_{p \in \ES} 1_{p\in \ell} \right)^2  \qquad \text{ (Cauchy-Schwarz on $\ell$)}\\
     &= |\LL|\cdot \sum_{p_1,p_2 \in \ES} \sum_{\ell \in \LL}   1_{p_1\in \ell} 1_{p_2\in \ell}    \\
-    & \leq |\LL|\cdot ( |I(\ES,\LL)| + |\ES|^2)\\
+    & \leq |\LL|\cdot ( |I(\ES,\LL)| + |\ES|^2)\\ 
     &\leq |\LL|^2 + 2|\LL|\cdot |\ES|^2 \qquad \text{ (Using \ref{eq:trivial-trivial-ST}) }\\ 
-\end{align*}    
+\end{align*}    \todo{extra step needed here - split up sum and do triple thing}
 This implies
 $$I(\ES,\LL) \lesssim |\ES|\cdot |\LL|^{\frac{1}{2}} + |L|.$$ 
 Repeating the above proof interchanging the roles $\ES$ and $\LL$ achieves the other bound.
@@ -116,6 +116,9 @@ We define a line in $\RR^2$ as follows:
 
 
 \section{Ham Sandwich Theorems}
+We begin here by stating an extremely powerful theorem, the Borsuk-Ulam.
+
+
 \begin{theorem}[General Ham Sandwich Theorem]
 Let V be a vector space of continuous functions on $\RR^n$. Let $U_1,U_2,\dots,U_N \subset \RR^n$ be finite volume open sets with $N< \dim V$. For any function $f \in V\backslash \{0\}$, suppose $Z(f)$ has Lebesgue measure zero.
 

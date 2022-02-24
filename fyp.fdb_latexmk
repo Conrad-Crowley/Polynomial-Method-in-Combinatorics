@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex fyp"] 1645708382 "fyp.aux" "fyp.bbl" "fyp" 1645708383
+["bibtex fyp"] 1645708662 "fyp.aux" "fyp.bbl" "fyp" 1645729348
   "/usr/share/texmf-dist/bibtex/bst/base/unsrt.bst" 1640600964 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "fyp.aux" 1645708383 10048 1dc8bede5b3a2e6b55cfce235e072c56 "pdflatex"
+  "fyp.aux" 1645729348 10387 a293558f2cadf946ecc46718c8ca3d4f "pdflatex"
   "fyp.bib" 1645383213 2793 cb610b4d477e81e0558133aaf7b27e15 ""
   (generated)
   "fyp.bbl"
   "fyp.blg"
-["makeindex fyp.idx"] 1645708329 "fyp.idx" "fyp.ind" "fyp" 1645708383
-  "fyp.idx" 1645708383 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex fyp.idx"] 1645708660 "fyp.idx" "fyp.ind" "fyp" 1645729348
+  "fyp.idx" 1645729347 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "fyp.ilg"
   "fyp.ind"
-["pdflatex"] 1645708382 "/home/conrad/deve/fyp-combo/fyp.tex" "fyp.pdf" "fyp" 1645708383
+["pdflatex"] 1645729347 "/home/conrad/deve/fyp-combo/fyp.tex" "fyp.pdf" "fyp" 1645729348
   "/home/conrad/deve/fyp-combo/fyp.tex" 1645697227 3999 807299da8ba4bb9f97d9d1a3126798a7 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1640600964 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1640600964 1004 54797486969f23fa377b128694d548df ""
@@ -219,14 +219,14 @@
   "chap/circle.tex" 1645383078 5365 bb921f000f8b18b81aef3a573d681738 ""
   "chap/joints.tex" 1642754227 5376 dc82cdb01a6930844e3d508f3029f85b ""
   "chap/kakeya.tex" 1645383078 13640 78c8d4c7ec64d0b32eaa1106e8b8d7ea ""
-  "chap/trotter.tex" 1645708380 13890 26abca4309063da5f4b41b6007664950 ""
-  "fyp.aux" 1645708383 10048 1dc8bede5b3a2e6b55cfce235e072c56 "pdflatex"
-  "fyp.bbl" 1645708382 1410 724b2c0297bfa1150661934d8dfe206e "bibtex fyp"
-  "fyp.ind" 1645708329 0 d41d8cd98f00b204e9800998ecf8427e "makeindex fyp.idx"
-  "fyp.lof" 1645708383 357 af3883ca5d8f078b6a746e8cca8ab330 "pdflatex"
-  "fyp.out" 1645708383 3666 4324fcedc368743ac10354eab8b91e94 "pdflatex"
+  "chap/trotter.tex" 1645729346 14030 7f31552bc9769b223cc2b61c26e40acd ""
+  "fyp.aux" 1645729348 10387 a293558f2cadf946ecc46718c8ca3d4f "pdflatex"
+  "fyp.bbl" 1645708662 1410 724b2c0297bfa1150661934d8dfe206e "bibtex fyp"
+  "fyp.ind" 1645708660 0 d41d8cd98f00b204e9800998ecf8427e "makeindex fyp.idx"
+  "fyp.lof" 1645729348 357 af3883ca5d8f078b6a746e8cca8ab330 "pdflatex"
+  "fyp.out" 1645729348 3666 e1cd8f70fe858a0f77bd9efbe2cb64a2 "pdflatex"
   "fyp.tex" 1645697227 3999 807299da8ba4bb9f97d9d1a3126798a7 ""
-  "fyp.toc" 1645708383 1761 e694fe1776317460df2f4cbb4b3786f2 "pdflatex"
+  "fyp.toc" 1645729348 1761 9c1a9833f1d1a9a327238dcde30ca510 "pdflatex"
   "images/kakeya_ex_f32.png" 1634059698 14426 917f32e033fd5ec603800c609d1fedc4 ""
   (generated)
   "fyp.aux"
