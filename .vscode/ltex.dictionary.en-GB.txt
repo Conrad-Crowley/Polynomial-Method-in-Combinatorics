@@ -1,3 +1,4 @@
 Kakeya
 nullstellensatz
 Szemerédi
+Szemerédi-Trotter
