@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex fyp"] 1646062485 "fyp.aux" "fyp.bbl" "fyp" 1646062487
+["bibtex fyp"] 1646067441 "fyp.aux" "fyp.bbl" "fyp" 1646067530
   "/usr/share/texmf-dist/bibtex/bst/base/unsrt.bst" 1640600964 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "fyp.aux" 1646062486 10843 dcaa59422e14ab87517cf1a9906d181f "pdflatex"
+  "fyp.aux" 1646067529 11464 d2d775ba3265c7b77eabdae08cb62bd8 "pdflatex"
   "fyp.bib" 1646055622 3070 d1a76a7df4f5dc65bf9a450898acd9bc ""
   (generated)
   "fyp.bbl"
   "fyp.blg"
-["makeindex fyp.idx"] 1646051186 "fyp.idx" "fyp.ind" "fyp" 1646062487
-  "fyp.idx" 1646062486 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex fyp.idx"] 1646051186 "fyp.idx" "fyp.ind" "fyp" 1646067530
+  "fyp.idx" 1646067528 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "fyp.ilg"
   "fyp.ind"
-["pdflatex"] 1646062485 "/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex" "fyp.pdf" "fyp" 1646062487
+["pdflatex"] 1646067528 "/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex" "fyp.pdf" "fyp" 1646067530
   "/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex" 1646051185 4027 7983f2a5b823e569cf8f603ac8051c52 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1640600964 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1640600964 1004 54797486969f23fa377b128694d548df ""
@@ -219,14 +219,14 @@
   "chap/circle.tex" 1645285769 5365 bb921f000f8b18b81aef3a573d681738 ""
   "chap/joints.tex" 1645224568 5376 dc82cdb01a6930844e3d508f3029f85b ""
   "chap/kakeya.tex" 1646052200 13659 b5d17f549e780830ea081279cdbfe640 ""
-  "chap/trotter.tex" 1646062482 15491 b944c33eab2a6575677f42fcd38c9d39 ""
-  "fyp.aux" 1646062486 10843 dcaa59422e14ab87517cf1a9906d181f "pdflatex"
-  "fyp.bbl" 1646062485 1662 5b3ba1120fc036ee626ad3be230c189c "bibtex fyp"
+  "chap/trotter.tex" 1646067527 15811 4e78bf219c4d17622d81780a510ce4e4 ""
+  "fyp.aux" 1646067529 11464 d2d775ba3265c7b77eabdae08cb62bd8 "pdflatex"
+  "fyp.bbl" 1646067441 1662 5b3ba1120fc036ee626ad3be230c189c "bibtex fyp"
   "fyp.ind" 1646051186 0 d41d8cd98f00b204e9800998ecf8427e "makeindex fyp.idx"
-  "fyp.lof" 1646062486 357 af3883ca5d8f078b6a746e8cca8ab330 "pdflatex"
-  "fyp.out" 1646062486 3666 4ab6c1e824045fa88d6cf3f2b260deef "pdflatex"
+  "fyp.lof" 1646067529 357 af3883ca5d8f078b6a746e8cca8ab330 "pdflatex"
+  "fyp.out" 1646067529 3686 afe5dd1c2b4bebf496a3c32ede573eec "pdflatex"
   "fyp.tex" 1646051185 4027 7983f2a5b823e569cf8f603ac8051c52 ""
-  "fyp.toc" 1646062486 1761 8caf906602c11ec060aed7eb109fdf07 "pdflatex"
+  "fyp.toc" 1646067529 1763 65542591664be7bbb50ea07eb17eb6f7 "pdflatex"
   "images/kakeya_ex_f32.png" 1645224568 14426 917f32e033fd5ec603800c609d1fedc4 ""
   (generated)
   "fyp.aux"

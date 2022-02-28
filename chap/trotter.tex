@@ -176,35 +176,46 @@ Now we choose $n$ sufficiently large that $|f_n (x) - f(x)| < \delta$ on $U\back
 We now combine each $\phi_i$ into the map $\phi : V\backslash \{0\} \to \RR^N$. Since $\dim V > N$, select a subspace $U < V$ such that $\dim U = N+1$. 
 Now choose an isomorphism of $U$ with $\RR^{N+1}$, and think of $\SP^N$ as a subset of $U$.
 Now the map $\phi: \SP^N \to \RR^N$ is antipodal and continuous. 
-By the Borsuk-Ulam theorem, there exists an $f\in S^N \subset V\backslash \{0\}$ such that $\phi(f) = 0$.
+By the Borsuk-Ulam theorem, there exists an $f\in \SP^N \subset V\backslash \{0\}$ such that $\phi(f) = 0$.
 \end{proof}
 
 \begin{corollary}[Finite Ham Sandwich Theorem]
-    Let $S_1, \dots , S_N$ be finite sets in $\RR^n$ with $N < {{D+n}\choose{n}} = \text{Poly}_D (\RR^n)$. Then there exists a non-zero $P\in \text{Poly}_D (\RR^n)$ that bisects each $S_i$.  \label{thm:FiniteHamSandwich} 
+    Let $S_1, \dots , S_N$ be finite sets in $\RR^n$ and let $D$ be such that $N < {{D+n}\choose{n}}$. 
+    Then there exists a non-zero $P\in \text{Poly}_D (\RR^n)$ that bisects each $S_i$.  \label{thm:FiniteHamSandwich} 
 \end{corollary}
 
 \begin{proof}
-    For each $\delta>0$, define $U_{i, \delta}$ to be the union of $\delta-balls$ centred at the points of $S_i$. By Theorem \ref{thm:GenHamSand}, we can find a non-zero $P_{\delta}$ with degree less than $D$ that bisects each $U_{i, \delta}$. By rescaling we can assume $P_{\delta} \in S^N \subset \text{Poly}_D (\RR^n) \backslash \{0\}$.
-    Since $S^N$ compact, we can find a sequence $\delta_m \to 0$ so that $P_{\delta_{m}}$ converges to $P$ in $S^N$. Since the coefficients of $P_{\delta_{m}}$ converge to $P$, $P_{\delta_{m}}$ converges to $P$ uniformly on compact sets.
+    For each $\delta>0$, define $U_{i, \delta}$ to be the union of $\delta-balls$ centered\todo{spell this word} at the points of $S_i$. 
+    By Theorem \ref{thm:GenHamSand}, we can find a non-zero $P_{\delta}$ with degree less than $D$ that bisects each $U_{i, \delta}$. 
+    By rescaling we can assume \todo{abusing notation, also the norm is l1?}$P_{\delta} \in \SP^N \subset \text{Poly}_D (\RR^n) \backslash \{0\}$.
+    Since $\SP^N$ compact, we can find a sequence $\delta_m \to 0$ so that $P_{\delta_{m}}$ converges to $P$ in $\SP^N$.
+    Since the coefficients of $P_{\delta_{m}}$ converge to $P$, $P_{\delta_{m}}$ converges to $P$ uniformly on compact sets.
 
-    We claim $P$ bisects each $S_i$. By contradiction, suppose $P>0$ on more than half the points of $S_i$, say on the points of $S_i^+$. By choosing $\varepsilon$ sufficiently small, we can assume $P>\varepsilon$ on the $\varepsilon$-ball around each point of $S_i^+$.
+    We claim $P$ bisects each $S_i$. 
+    By contradiction, suppose $P>0$ on more than half the points of $S_i$, say on the points of $S_i^+$. 
+    Choosing $\varepsilon$ sufficiently small, we can assume $P>0$ on the $\varepsilon$-ball around each point of $S_i^+$.
     Further, we can choose $\varepsilon$ such that each $\varepsilon$-ball is disjoint. 
-
-    Since $P_{\delta_{m}}$ converges uniformly, we can find $m$ sufficiently large such that $P_{\delta_{m}}>0$ on the $\varepsilon$-ball around each point of $S_i^+$. By making $m$ large, we can also arrange that $\delta_n < \varepsilon$.
+    Since $P_{\delta_{m}}$ converges uniformly, we can find $m$ sufficiently large such that $P_{\delta_{m}}>0$ 
+    on the $\varepsilon$-ball around each point of $S_i^+$.
+    By making $m$ large, we can also arrange that $\delta_m < \varepsilon$.
     Thus $P_{\delta_{m}} > 0$ on more than half the points of $U_{i, \delta_{m}}$.
 \end{proof}
-\section{Proof of Szemerédi–Trotter Theorem}
+\section{Proof of the Szemerédi-Trotter Theorem}
 \begin{theorem}[Polynomial Partitioning]
    For any $n$ there exists a constant $c(n)$ such that if $S$ is a finite subset of $\RR^n$ and $D$ is any degree, then there exists
    a polynomial $P$ of degree $D$ such that $\RR \backslash Z(P)$ is a disjoint union of $\lesssim D^n$ open sets $O_i$ each containing
-   $\leq c(n) |S|D^{-n}$ points. \label{thm:PolyPartioning}
+   $\lesssim_n |S|D^{-n}$ points. \label{thm:PolyPartioning}
 \end{theorem}
 
 \begin{proof}
-We repeatedly apply Corollary \ref{thm:FiniteHamSandwich}. We begin by finding a polynomial $P_1$ of degree 1 that bisects $S$. We partition $\RR \backslash Z(P_1)$
-into two disjoint open sets according to the sign of $P_1$, each containing at most $|S|/2$ points. We then bisect both of these sets using another polynomial $P_2$. There are four sign conditions on $P_1$ and $P_2$, and the subset for
-each sign condition contains at most $|S|/4$ points of $S$. Continuing this process to define polynomials $P_3, P_4, \dots$, the polynomial $P_j$ bisects $2^{j-1}$ finite sets. By Corollary \ref{thm:FiniteHamSandwich}, we can find $P_j$ with degree
-$\lesssim 2^{j/n}$. $\RR \backslash Z (P_1 \cdot P_2 \cdot \dots P_j)$ is the disjoint union of $2^j$ open sets each containing $\leq |S| 2^{-j}$ points. 
+The main idea of this proof is the repeated application of the \hyperref[thm:FiniteHamSandwich]{Finite Ham Sandwich Theorem}. We begin by finding a polynomial $P_1$ of degree 1 that bisects $S$. This partitions $\RR \backslash Z(P_1)$
+into two disjoint open sets according to the sign of $P_1$, $P_1^+$ and $P_1^-$, each containing at most $|S|/2$ points.
+We then bisect both of these sets using another polynomial $P_2$.
+There are four sign conditions on $P_1$ and $P_2$, these being the four possible intersections of the sets $P_1^{\pm}$ and $P_2^{\pm}$,
+and the subset for each sign condition contains at most $|S|/4$ points of $S$. 
+Continuing this process to define polynomials $P_3, P_4, \dots$, where the polynomial $P_j$ bisects $2^{j-1}$ finite sets. 
+By the \hyperref[thm:FiniteHamSandwich]{Finite Ham Sandwich Theorem}, each $P_j$ with can have a degree
+$\lesssim 2^{j/n}$. $\RR \backslash Z (P_1 P_2 \cdot \dots P_j)$ is the disjoint union of $2^j$ open sets each containing $\leq |S| 2^{-j}$ points. 
 Repeating this procedure $J$ times, and defining $P = \prod_{i=1}^{J} P_i$, $\RR^n \backslash Z(P)$ is the disjoint union of $2^J$ open sets each containing $ \leq |S|2^{-J}$
 points of $S$. Now we choose $D$ such that $\deg(P) < D$ which is equivalent to $\sum_{j=0}^J c(n) 2^{j/n} \leq D$. But $\sum_{j=0}^J 2^{j/n}$ is a geometric series so we can find $\deg (P) < D$ for $D \leq c(n) 2^{J/n}$. 
 The number of points in each $O_i$ is $\leq |S| 2^{-J} \leq c(n) |S| D^{-n}$
@@ -236,7 +247,8 @@ $$I(\ES_z, \LL_z) \leq S + D^2$$
 and finally $$I(\ES_z, \LL_c) \leq LD.$$
 Together we have now 
 $$I(\ES, \LL) \lesssim LD + S^2D^{-2} +S + D^2.$$
-We optimise $D$ in $LD + S^2D^{-2}$ by making both terms comparable and hence $D \sim S^{\frac{2}{3}} L^{-\frac{1}{3}}$. From our restriction $S^{\frac{1}{2}} \leq L \leq S^2$ we have $S^{\frac{2}{3}} L^{-\frac{1}{3}} \geq 1$
-and $D^2 \sim S^{\frac{4}{3}} L^{-\frac{2}{3}} \leq S$ so we achieve
+We optimise $LD + S^2D^{-2}$ by choosing $D$ such that both terms comparable and hence $D \sim S^{\frac{2}{3}} L^{-\frac{1}{3}}$. 
+From our restriction $S^{\frac{1}{2}} \leq L \leq S^2$ we have $S^{\frac{2}{3}} L^{-\frac{1}{3}} \geq 1$
+and $D^2 \sim S^{\frac{4}{3}} L^{-\frac{2}{3}} \leq S$, so we achieve
 $$I(\ES, \LL) \lesssim (SL)^{2/3} + S $$
 \end{proof}
