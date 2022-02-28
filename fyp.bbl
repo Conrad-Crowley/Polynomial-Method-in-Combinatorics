@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{davies1971some}
 Roy~O Davies.
@@ -37,6 +37,13 @@ René Quilodrán.
 \bibitem{kaplan2009lines}
 Haim Kaplan, Micha Sharir, and Eugenii Shustin.
 \newblock On lines and joints, 2009.
+
+\bibitem{matouvsek2003using}
+Ji{\v{r}}{\'\i} Matou{\v{s}}ek, Anders Bj{\"o}rner, G{\"u}nter~M Ziegler,
+  et~al.
+\newblock {\em Using the Borsuk-Ulam theorem: lectures on topological methods
+  in combinatorics and geometry}.
+\newblock Springer, 2003.
 
 \bibitem{ellenberg2016new}
 Jordan~S. Ellenberg, Jozsef Solymosi, and Joshua Zahl.

@@ -16,7 +16,7 @@
 \contentsline {section}{\numberline {3.3}Examples}{12}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Ham Sandwich Theorems}{14}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Proof of Szemerédi–Trotter Theorem}{15}{section.3.5}%
-\contentsline {chapter}{\numberline {4}The Circle Tangency Counting Problem}{17}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Include trivial 5/3 bound?}{17}{section.4.1}%
-\contentsline {chapter}{\numberline {5}The Polynomial Method in Additive Combinatorics}{19}{chapter.5}%
-\contentsline {chapter}{References}{21}{chapter*.24}%
+\contentsline {chapter}{\numberline {4}The Circle Tangency Counting Problem}{18}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Include trivial 5/3 bound?}{18}{section.4.1}%
+\contentsline {chapter}{\numberline {5}The Polynomial Method in Additive Combinatorics}{20}{chapter.5}%
+\contentsline {chapter}{References}{22}{chapter*.25}%

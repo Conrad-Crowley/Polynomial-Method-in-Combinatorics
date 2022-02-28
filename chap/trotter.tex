@@ -59,8 +59,7 @@ Repeating the above proof interchanging the roles $\ES$ and $\LL$ achieves the o
 
 
 \section{Examples}
-We can not improve beyond trivial bounds in a finite field $\FF^2$. Unlike the joints problem, where the results coincided for finite fields and the reals,
-this suggests that the topology of $\RR$ plays a special role. 
+We can not improve beyond trivial bounds in a finite field $\FF^2$. 
 \begin{example}[Finite Fields]
 Consider the set of points $\ES=\FF^2$ and lines 
 $\LL = \FF^2$. Every line contains exactly $|\FF|$ many points in $\FF^2$, so we have $|\FF|^3$ incidences. 
@@ -116,29 +115,68 @@ We define a line in $\RR^2$ as follows:
 
 
 \section{Ham Sandwich Theorems}
-We begin here by stating an extremely powerful theorem, the Borsuk-Ulam.
+The above examples suggest that the topology of $\RR$ plays a key role in this incidence problem. We shall now introduce the method of polynomial partitioning,
+which can be seen as the topological analogy to the \hyperref[kaklem2]{vanishing lemma} we used in the previous chapters. 
+
+Let $\SP$ denote the unit $n$-sphere in $\RR^{n+1}$. 
+\begin{theorem}[Borsuk-Ulam]
+    A map $\phi$ is said to be antipodal if it obeys $\phi (-x) = -\phi(x)$ for all $x$ in its domain. Suppose $\phi: \SP^N \to \RR^N$ is a continuous antipodal mapping. 
+    Then the image of $\phi$ contains 0. 
+    \label{thm:Borsuk-Ulam}
+\end{theorem}
+The proof of this result is long and beyond the scope of this paper. We refer interested readers to a beautiful geometric proof in chapter 2 of Matousek's book \textit{Using the Borsuk-Ulam theorem}.\cite{matouvsek2003using}
+
+Let us now define some useful notation going forward. 
+For any function $f : \RR^n \to \RR$ let us denote the zero set of $f$ by $Z(f) = \{x \in \RR^n \ | \ f(x) = 0\}.$
+\begin{definition}[Bisection of a Set]
+A function $f :\RR^n \to \RR$ is said to bisect an open set $U$ with volume $\text{Vol}(U) < \infty$ if:
+\[
+    \text{Vol}\{x \in U \ | \ f(x) > 0 \} = \text{Vol}\{x \in U \ | \ f(x) < 0 \} = \frac{1}{2} \text{Vol}(U).
+\]
+Analogously, a function $f$ is said to bisect a finite set $S$ if both:
+\[
+  |\{x \in S \ | \ f(x) > 0\}| \leq \frac{|S|}{2}   
+\]
+and 
+\[
+  |\{x \in S \ | \ f(x) < 0\}| \leq \frac{|S|}{2}.
+\]
+
+\end{definition}
 
 
 \begin{theorem}[General Ham Sandwich Theorem]
-Let V be a vector space of continuous functions on $\RR^n$. Let $U_1,U_2,\dots,U_N \subset \RR^n$ be finite volume open sets with $N< \dim V$. For any function $f \in V\backslash \{0\}$, suppose $Z(f)$ has Lebesgue measure zero.
+Let V be a finite dimensional vector space of continuous functions $f:\RR^n \to \RR$ such that for any non-zero function $f$,
+ $Z(f)$ has zero Lebesgue measure. 
+Let $U_1,U_2,\dots,U_N \subset \RR^n$ be finite volume open sets with $N< \dim V$. 
 
-Then there exists a function $f \in V\backslash \{0\}$ that bisects each $U_i$. \label{thm:GenHamSand}
+Then there exists a non-zero function $f \in V$ that bisects each $U_i$. \label{thm:GenHamSand}
 \end{theorem}
 \begin{proof}
 Define the functions $\{\phi_i\}_{i=1}^N$, $\phi_i: V\backslash \{0\} \to \RR$ by
 \[
-\phi_i(F) = \text{Vol}(\{x\in U_i | F(x) > 0 \}) - \text{Vol}(\{x\in U_i | F(x) > 0 \})
+\phi_i(f) = \text{Vol}(\{x\in U_i \ | \ f(x) > 0 \}) - \text{Vol}(\{x\in U_i \ |\ f(x) > 0 \})
 \]
-We notice that each $\phi_i(F) = 0$ if and only if $F$ bisects $U_i$. Notice also that $\phi_i(-F) = -\phi_i(F)$, hence $\phi_i$ is antipodal. We now show each $\phi_i(F)$ is continuous.
-It is enough to show that is $U$ is a finite volume open set, that the measure of $\{x\in U| f(x)>0\}$ depends continuously on $f\in V \backslash \{0\}$.
+Since $Z(f)$ has measure zero, it is easy to see that $\phi_i(f) = 0$ if and only if $f$ bisects $U_i$. 
+Notice also that $\phi_i(-f) = -\phi_i(f)$, hence $\phi_i$ is antipodal. 
 
-Suppose $f_n \to f$ in $V$ for some $f,f_n \in V \backslash \{0\}$. $f_n$ converges to $f$ in the topology of $V$, so it follows it must converge pointwise. Pick any $\varepsilon >0$. We can find a subset $E\subset U$ so that $f_n \to f$ uniformly pointwise on $U \backslash E$, and $m(E)< \varepsilon$.
-By hypothesis, $m(Z(f)) =0$ and $m(U) < \infty$. Hence we can choose $\delta$ such that $m\left(\{x\in U| |f(x)|<\delta\}\right) < \varepsilon$.
+We now show each $\phi_i(F)$ is continuous.
+It is enough to show that if $U$ is a finite volume open set, then the measure of $\{x\in U\ |\ f(x)>0\}$ depends continuously on $f\in V \backslash \{0\}$.
 
-Now we choose $n$ sufficiently large such that $|f_n (x) - f(x)| < \delta$ on $U\backslash E$. Then we have \[|m\left(\{x\in U| f_n(x)>0\}\right) - m\left(\{x\in U| f(x)>0\}\right)| < 2 \varepsilon.\] Since $\varepsilon$ was arbitrary each $\phi_i$ is continuous.
+Suppose $f_n \to f$ in $V$ for some $f,f_n \in V \backslash \{0\}$. $f_n$ converges to $f$ in the topology of $V$, 
+so it follows it must converge pointwise. Pick any $\varepsilon >0$. 
+By Egorov's theorem, we can find a subset $E\subset U$ so that $f_n \to f$ uniformly pointwise on $U \backslash E$, and $m(E)< \varepsilon$.
+By hypothesis, $m(Z(f)) =0$ and $m(U) < \infty$. 
+Since the Lebesgue measure is continuous we can choose $\delta$ such that $m\left(\{x\in U\ |\ |f(x)|<\delta\}\right) < \varepsilon$.
 
-We now combine each $\phi_i$ into the map $\phi : V\backslash \{0\} \to \RR^N$. Since $\dim V > N$, let $\dim V = N+1$. Now choose an isomorphism of $V$ with $\RR^{N+1}$, and think of $S^N$ as a subset of $V$.
-Now the map $\phi: S^N \to \RR^N$ is antipodal and continuous. By the Borsuk-Ulam theorem, there exists an $F\in S^N \subset V\backslash \{0\}$ such that $\phi(F) = 0$.
+Now we choose $n$ sufficiently large that $|f_n (x) - f(x)| < \delta$ on $U\backslash E$. Then we have \[|m\left(\{x\in U\ |\ f_n(x)>0\}\right) - m\left(\{x\in U\ |\ f(x)>0\}\right)| < 2 \varepsilon.\] Since $\varepsilon$ was arbitrary each $\phi_i$ is continuous.
+\todo{what to say here - ask marco}
+
+
+We now combine each $\phi_i$ into the map $\phi : V\backslash \{0\} \to \RR^N$. Since $\dim V > N$, select a subspace $U < V$ such that $\dim U = N+1$. 
+Now choose an isomorphism of $U$ with $\RR^{N+1}$, and think of $\SP^N$ as a subset of $U$.
+Now the map $\phi: \SP^N \to \RR^N$ is antipodal and continuous. 
+By the Borsuk-Ulam theorem, there exists an $f\in S^N \subset V\backslash \{0\}$ such that $\phi(f) = 0$.
 \end{proof}
 
 \begin{corollary}[Finite Ham Sandwich Theorem]
