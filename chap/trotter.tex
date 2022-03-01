@@ -222,7 +222,7 @@ By the Borsuk-Ulam theorem, there exists an $f\in \SP^N \subset V\backslash \{0\
  We then bisect both of these sets using another polynomial $P_2$.
  There are four sign conditions on $P_1$ and $P_2$, these being the four possible intersections of the sets $P_1^{\pm}$ and $P_2^{\pm}$,
  and the subset for each sign condition contains at most $|S|/4$ points of $S$. 
- Continuing this process to define polynomials $P_3, P_4, \dots$, where the polynomial $P_j$ bisects $2^{j-1}$ finite sets. 
+ Continuing this process to define polynomials $P_3, P_4, \dots$, where the polynomial $P_j$ simultaneously bisects $2^{j-1}$ finite sets. 
  By the \hyperref[thm:FiniteHamSandwich]{Finite Ham Sandwich Theorem}, each $P_j$ can have a degree
  $\lesssim 2^{j/n}$. 
  Repeating this procedure $J$ times, and defining $P = \prod_{i=1}^{J} P_i$, $\RR^n \backslash Z(P)$ is the disjoint union of $2^J$ open sets each containing $ \leq |S|2^{-J}$
@@ -235,7 +235,7 @@ The above theorem does not guarantee anything about the distribution of points b
 This is made most clear looking at the extremal examples. If all points line in the compliment of $Z(P)$ then we have an optimal eqidistribution of points,
 and can often use trivial bounds in a divide-and-conquer style argument. On the otherhand, in the case all points are contained in $Z(P)$ we have
 many points in an algebraic surface of controlled degree, so we can try and use tools from algebraic geometry. Generally, there will be some points in both $Z(P)$ and its compliment,
-which we need to deal with seperately.
+which we need to deal with separately.
 
 
 \section{Proof of the Szemerédi-Trotter Theorem}

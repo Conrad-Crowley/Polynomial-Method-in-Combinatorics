@@ -1,55 +1,142 @@
 \chapter{The Circle Tangency Counting Problem}
-\section{Include trivial 5/3 bound?}
+\todo{Kakeya proof with a twist}
+Here we shall discuss the problem of counting the number of tangencies in a suitably non-degenerate collection of circles. We say two circles are tangent if their intersection contains a single point.\todo{is this stupid?}
+The set of unordered pairs of circles in a collection $\CE$ which are mutually tangent are called the tangencies of the collection and is denoted $\tau(\CE)$. 
+\section{Trivial Bounds}
+\begin{theorem}[Trivial Bound]
+    Let $\CE$ be an arbitrary finite collection of circles. Then the number of tangencies $|\tau(\CE)|$ is bounded as follows:
+    \[
+        |\tau(\CE)| \leq |\CE|^2
+    \]
+\end{theorem}
+Stated for arbitrary collections of circles the problem is not particularly interesting as the above bound turns out to be asymotopically tight. 
+\begin{example}
+Denote a circle centred at $(x,y)$ with radius $r$ as $\gamma (x,y,r)$. \todo{notation}
+Consider the following collection of $N$ circles:
+\begin{align*}
+    C_0 &= \gamma\left(0,0,1\right) \\
+    C_1 &= \gamma\left(\frac{1}{2},0,\frac{1}{2}\right) \\
+    C_2 &= \gamma\left(\frac{3}{4},0, \frac{1}{4}\right) \\
+    &\vdots \\
+    C_N &= \gamma\left(1- \frac{1}{2^N}, 0, \frac{1}{2^N}\right)
+\end{align*}
+Each circle in our collection $\CE = \cup_{0 \leq i \leq N} C_i$ is tangent to $N$ other circles at the point (1,0). 
+Hence $|\tau(\CE)| \sim N^2 \sim |\CE|^2$. 
+\todo{diagram}
+\end{example}
 
-We discuss now a special case of the curve tangency problem from a recent paper of Zahl. \cite{ellenberg2016new}
+Instead we shall look at collections of circles that satisfy a single non-degeneracy condition. We consider collections of circles 
+such that no three are mutually tangent at a common point. The best known examples leverage our tight \hyperref[thm:S-T]{Szemerédi-Trotter Theorem} examples:
+\begin{example}
+    Let $\ES$, $\LL$ be collections of $N$ points and $N$ lines respectively such that the \hyperref[thm:S-T]{Szemerédi-Trotter Theorem}'s bound is tight. 
+    In particular, they determine $\sim N^{4/3}$ point line incidences. 
+    Let $C_1$ denote the collection of unit circles centred at the points of $\ES$. 
+    Let $C_2$ denote the collection of lines obtained by translating each line $\ell in \LL$ one unit in the $\ell^{\perp}$ direction.
+    If $(p,\ell) \in \ES \times \LL$ is a point-line incidence from our original collection, then the corresponding circle-line pair will be tangent.
+    Performing an inversion transform about a point that does not lie in any of the circles or lines, our collection $\CE = C_1 \cup C_2$ becomes a 
+    collection of $2N$ circles that determine $N^{4/3}$ tangencies.
+ \end{example}
+
+We shall now present a bound from a recent paper of Ellenberg-Solymosi-Zahl which uses the polynomial method.\cite{ellenberg2016new}
 
 \begin{theorem}
-    Given a collection of circles $\CE$ in the plane such that no three are tangent at a common point, then there are at most $\sim N^{3/2}$ tangencies. 
+    Given a finite collection $\CE$ of $N$ circles in the plane such that no three are tangent at a common point, 
+    then the number of tangencies $|\tau(\CE)|$ obeys:
+    \[
+        |\tau(\CE)| \lesssim N^{3/2}
+    \]
 \end{theorem}
+
+It is not obvious how to apply the polynomial method in the current formulation. 
+We will perform a lifting  of our circles into algebraic curves $\RR^3$, 
+preserving tangencies between circles in the plane as intersections between their lifted curves in $\RR^3$. 
+This transforms the problem from a tangency problem to an incidence problem, and reduces the required degree of polynomial needed to interpolate.
+
+We shall now discuss this lifting in detail. Let $\gamma \subset \RR^2$ be a circle in the plane of radius $r_{\gamma}$ centred at $(x_\gamma, y_\gamma)$. 
+We define the lifting transform of the circle as: \[
+    \beta(\gamma) = \left \{ (x,y,z) \in \RR^3 \ | \ (x-x_\gamma)^2 + (y-y_\gamma)^2 = r_\gamma^2, \ z = - \frac{x-x_\gamma}{y-y_\gamma} \right \}.
+\]  
+Clearly $\beta$ is an algebraic curve, so now we shall examine the correspondence between mutually tangent circles. Notice that $z$ is defined as the slope of the tangent line
+at the point $(x,y) \in \gamma$.
+
 \begin{lemma}
-    Given $\CE$ as above and suppose that there are $\gtrsim N^{\alpha}$ tangencies. Then we can refine our set such that every circle in $\CE' \subset \CE$ is tangent to $\gtrsim N^{\alpha -1}$ circles.
+    Let $\beta$ be the transform defined as above. 
+    Then two circles $\gamma, \gamma' \subset \RR^2$ are tangent if and only if $\beta(\gamma) \cap \beta(\gamma') \neq \emptyset$.
+    \label{lem:beta-lift}
 \end{lemma}
 \begin{proof}
-Let $\tau(\CE)$ be the set of tangencies of the circles in $\CE$. Take a circle $\gamma \in \CE$ such that $|\{\gamma \cap \tau(\CE)\}| < c_1 N^{1/2}$
-and discard it. We label our new refined collection as $\CE_1$. After repeating this process $M$ times until there are no more circles that satisfy our criteria, at each step removing a circle that does not have sufficient
-tangencies, we attain a collection $\CE_M$. We claim that $\tau(\CE_M) \gtrsim N^{\alpha}$, and that $\CE_M \neq \emptyset$.
+If $\gamma$ and $\gamma'$ are tangent, then there exists a point $(x,y) \in \gamma \cap \gamma'$ so the first two coordinates of $\beta(\gamma)$ and $\beta(\gamma')$ agree. 
+Further, at a point of tangency we have that the slope of the tangent lines coincide for $\gamma$ and $\gamma'$, so the final coordinate is also equal. Hence $\beta(\gamma) \cap \beta(\gamma') \neq \emptyset$.
+
+In the other direction, assume there exists some $(x,y,z) \in \beta(\gamma) \cap \beta(\gamma')$. Clearly $(x,y) \in \gamma \cap \gamma'$, and again the slope of the tangent lines at this point are equal, hence we conclude
+$\gamma$ is tangent to $\gamma'$.
+\end{proof}
+This one-to-one correspondence between tangencies in $\RR^2$ and incidences in $\RR^3$ is the key idea behind the proof. To use the polynomial method here, we will need to ensure our tangencies
+are sufficiently uniformly distributed among our circles. We can refine our collection such that this is the case by the following lemma.
+
+\begin{lemma}
+    Let $\CE$ be a collection of $N$ circles and suppose that  $\tau(\CE) \gtrsim N^{\alpha}$. 
+    Then we can refine our set such that every circle in $\CE' \subset \CE$ is tangent to $\gtrsim N^{\alpha -1}$ circles.
+\end{lemma}
+
+\begin{proof}
+Let $\tau(\CE)$ be the set of tangencies of the circles in $\CE$. Let $\CE_0 = \CE$. Take a circle $\gamma \in \CE_0$ such that $|\{(\gamma, \gamma') \ |\ (\gamma, \gamma') \in \tau(\CE_0)\}| < c_1 N^{1/2}$
+and discard it. We label our new refined collection as $\CE_1$. From this collection, again take a circle $\gamma$ such that $|\{(\gamma, \gamma') \ |\ (\gamma, \gamma') \in \tau(\CE_1)\}| < c_1 N^{1/2}$ and discard it. 
+
+After repeating this process $M$ times until there are no more circles that satisfy our criteria, 
+at each step removing a circle that contributes only a small number of tangencies, we attain a collection $\CE_M$.
+ We claim that $\tau(\CE_M) \gtrsim N^{\alpha}$, and that $\CE_M \neq \emptyset$.
 
 For the first claim, observe that at each step $i$ we are reducing $\tau(\CE_i)$ by at most $c_1 N^{\alpha -1}$.  Thus,
 \begin{align*}
-    |\tau(\CE_M)| &\geq |\tau(\CE)| - M c_1 N^{\alpha -1} \\
+    |\tau(\CE_M)| &\geq |\tau(\CE_0)| - M c_1 N^{\alpha -1} \\
     &> c_0 N^{\alpha} -  M c_1 N^{\alpha -1} \\ 
-    &> c_0 N^{\alpha} - \underbrace{c_1}_{\text{Set } = c_0/2} N^{\alpha} \\
-    |\tau(\CE_M)| &> \frac{c_0}{2} N^{\alpha}.
+    &> c_0 N^{\alpha} - c_1 N^{\alpha} \\
+    |\tau(\CE_M)| &> \frac{c_0}{2} N^{\alpha}. \qquad (\text{by choosing } c_1 = c_0/2 )
 \end{align*}
-We must now check that we have not removed every circle from our collection. We have the trivial inequality $|\tau(\CE_M)| \leq c_2 N^{2}$. Combining this with the result above, we attain $|\CE_M| \geq \frac{c_1}{2c_2} N^{3/4}$.
+We must now check that we have not removed every circle from our collection.\todo{disagree with correction here, tangencies is not necessarily non-zero, why else get this lower bound?} We have the trivial inequality $|\tau(\CE_M)| \leq |\CE_M|^{2}$. 
+Combining this with the result above, we attain $|\CE_M| \gtrsim |N|^{\alpha/2}$.
 \end{proof}
-\todo{Last line is incorrect}
-We can now prove the main theorem.
+In a similar fashion to our arguments in the Kakeya problem we will be arguing by contradiction, however here we will be arguing that if the zero set of a polynomial contains too many of a certain first type of object, 
+it must contain many more of a second kind of object. 
+
+We will need a result from Bezout which bounds the number of intersections between curves in $\RR^3$.
+
+\begin{lemma}[Bezout's Theorem for Plane Algebraic Curves]
+   Let $Z_1$ and $Z_2$ be the zero sets of two polynomials over $\RR[X,Y]$. Then the following holds:
+   \[
+       |\{ x | x \in Z_1 \cap Z_2 \}| \leq \deg Z_1 \deg Z_2
+   \]
+    \label{lem:Bezout}
+\end{lemma}
+
+
+We can now prove the main theorem. 
 \begin{proof}
     Given an arbitrary collection of circles $\CE$ with $\gtrsim N^{3/2}$ tangencies, we can reduce to a collection $\Gamma$ where each circle is tangent to at least $\sim N^{1/2}$ other circles using the previous lemma. 
     After applying a small rotation, we can assume that the tangent line at each point of tangency does not point vertically in the $y$-direction.
-    Now for each $\gamma \in \Gamma$, we define:
-    $$\beta(\gamma) = \left \{ (x,y,z) \in \RR^3 : (x,y) \in \gamma, z = - \frac{x-x_\gamma}{y-y_\gamma} \right \},$$ where $(x_\gamma,y_\gamma)$ is the 
-    centre of the circle $\gamma$. Given a point $(x,y)$, and a non-vertical line $l$ containing $(x,y)$ of slope $z$, $\gamma$ is tangent to $l$ at $(x,y)$ if and only if $(x,y,z) \in \beta(\gamma)$.
+    Let $\beta (\Gamma) = \{ \beta(\gamma) : \gamma \in \Gamma \}$, where $\beta$ is the lifting transform defined earlier,
+    Recall from Lemma \ref{lem:beta-lift} that two circles $\gamma_1$ and $\gamma_2$ are tangent if and only if $\beta(\gamma_1) \cap \beta(\gamma_2) \neq \emptyset$.
 
-    Let $\beta (\Gamma) = \{ \beta(\gamma) : \gamma \in \Gamma \}.$ 
-    Two circles $\gamma_1$ and $\gamma_2$ are tangent if and only if $\beta(\gamma_1) \cap \beta(\gamma_2) \neq \emptyset$. [TODO: expand on this? diagram?]
-
-    Suppose $(x,y,z) \in \beta(\gamma_1) \cap \beta(\gamma_2) $ for some $\gamma_1 \neq \gamma_2$. Then $$(0,0,1) \in \text{span} \left( T_{(x,y,z) }\beta (\gamma_1), T_{(x,y,z) }\beta (\gamma_2)\right).$$
+    Suppose $(x,y,z) \in \beta(\gamma_1) \cap \beta(\gamma_2) $ for some $\gamma_1 \neq \gamma_2$. 
+    Then $$(0,0,1) \in \text{span} \left( T_{(x,y,z) }\beta (\gamma_1), T_{(x,y,z) }\beta (\gamma_2)\right).$$
+    In other words, at the intersection of $\beta(\gamma_1)$ and $\beta(\gamma_2)$ their tangent vectors span a vertical subspace of $\RR^3$. 
     We can establish this by examining a parameterisation of $\gamma_1$ and $\gamma_2$ in the neighbourhood of $(x,y)$.
-    Define $f_i (t)$ such that $(t+x, f_i(t))$ is a parameterisation of $\gamma_i$ in the neighbourhood of $(x,y)$ for all $t$ in a small neighbourhood of 0. 
+    Define $f_i (t), \ i \in \{1,2\}$ such that $(t+x, f_i(t))$ is a parameterisation of $\gamma_i$ in the neighbourhood of $(x,y)$ for all $t$ in a small neighbourhood of 0. In particular $f_i(0) = y$.
     Since $\gamma_1$ is tangent to $\gamma_2$ at $(x,y)$, $\frac{df_1}{dt}(0) = \frac{df_2}{dt}(0)$. 
-    Since $\gamma_1$ and $\gamma_2$ are distinct, $\frac{d^2f_1}{dt^2}(0) \neq \frac{d^2f_2}{dt^2}(0)$.
-    In the neighbourhood of $(x,y,z)$, $\beta(\gamma_i)$ is parameterised by $\left(t,f_i (t) ,\frac{df_1}{dt}(t) \right)$. It follows that the vector
-    $\left(1,\frac{df_i}{dt}(0), \frac{d^2f_i}{dt^2} (0) \right)$ is in the space $T_{(x,y,z)} \beta(\gamma_i)$. Thus 
+    Since $\gamma_1$ and $\gamma_2$ are distinct quadratic curves, $\frac{d^2f_1}{dt^2}(0) \neq \frac{d^2f_2}{dt^2}(0)$. \todo{this was intuitive, not anymore :(}
+    In the neighbourhood of $(x,y,z)$, $\beta(\gamma_i)$ is parametrised by $\left(t,f_i (t) ,\frac{df_1}{dt}(t) \right)$ as the slope of the tangent to the circle is given by $\frac{df_1}{dt}(t)$.\todo{I'm not convinced in this explan.} 
+     It follows that the tangent vector
+    $\left(1,\frac{df_i}{dt}(0), \frac{d^2f_i}{dt^2} (0) \right)$ generates the vertical space $T_{(x,y,z)} \beta(\gamma_i)$. Thus 
     \begin{align*} (0,0,1) &\in \text{span}\left( \left(1,\frac{df_1}{dt}(0), \frac{d^2f_1}{dt^2} (0) \right) - \left(1,\frac{df_2}{dt}(0), \frac{d^2f_2}{dt^2} (0) \right) \right)
     \\ &\subset \text{span} \left( T_{(x,y,z) }\beta (\gamma_1), T_{(x,y,z) }\beta (\gamma_2)\right). 
     \end{align*}
 
-    Let $P \in \RR[x,y,z]$ be the non-zero polynomial of minimal degree that vanishes on all the curves in $\beta (\Gamma)$. The degree of $P$ is $\sim N^{1/2}$. 
+    We will now interpolate all points of intersection with a polynomial of suitably low degree, and show that if this contains too many points it will lead to a contradiction.
+    Let $P \in \RR[x,y,z]$ be a non-zero polynomial of minimal degree that vanishes on all intersections between the curves in $\beta (\Gamma)$. The degree of $P$ is $\sim N^{1/2}$. 
     By our result above, if $(x,y,z)$ is a point where two curves from $\beta (\Gamma)$ intersect, then $\partial_z P (x,y,z)  =0 $. Thus since each $\gamma \in \Gamma$ is 
     tangent to $\gtrsim N^{1/2}$, and each of these tangencies occur at a distinct point, we have that $\partial_z P$ vanishes at $\gtrsim N^{1/2}$ points on each curve in $\beta (\Gamma)$.
-   \todo{clean up here!}By Bézout's theorem we have that $\partial_z P$ vanishes on all curves in $\mathscr{C}$ as:
+    By \hyperref[lem:Bezout]{Bézout's theorem} we have that $\partial_z P$ vanishes on all curves in $\Gamma$ as:
     \[
     \deg (\partial_z P) \deg (\gamma) \sim  (N^{1/2}) \gtrsim \# \{\partial_z P \cap \gamma\} \sim (N^{1/2}) .    
     \] Since $P$ was the non-zero polynomial of minimal degree that vanishes on all the curves in $\beta (\Gamma)$, we must conclude 

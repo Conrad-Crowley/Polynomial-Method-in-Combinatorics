@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex fyp"] 1646133240 "fyp.aux" "fyp.bbl" "fyp" 1646133242
+["bibtex fyp"] 1646152159 "fyp.aux" "fyp.bbl" "fyp" 1646152189
   "/usr/share/texmf-dist/bibtex/bst/base/unsrt.bst" 1640600964 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "fyp.aux" 1646133242 12094 92a755a0d2914cadd6bd52f295e2aba5 "pdflatex"
+  "fyp.aux" 1646152189 13848 a38e55468e0953482d4d1f8e4802112a "pdflatex"
   "fyp.bib" 1646055622 3070 d1a76a7df4f5dc65bf9a450898acd9bc ""
   (generated)
   "fyp.bbl"
   "fyp.blg"
-["makeindex fyp.idx"] 1646128170 "fyp.idx" "fyp.ind" "fyp" 1646133242
-  "fyp.idx" 1646133241 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex fyp.idx"] 1646143001 "fyp.idx" "fyp.ind" "fyp" 1646152189
+  "fyp.idx" 1646152187 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "fyp.ilg"
   "fyp.ind"
-["pdflatex"] 1646133240 "/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex" "fyp.pdf" "fyp" 1646133242
+["pdflatex"] 1646152187 "/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex" "fyp.pdf" "fyp" 1646152189
   "/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex" 1646051185 4027 7983f2a5b823e569cf8f603ac8051c52 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1640600964 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1640600964 1004 54797486969f23fa377b128694d548df ""
@@ -57,7 +57,6 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb" 1640600964 35660 fb24af7afbadb71801619f1415838111 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1640600964 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1640600964 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
-  "/usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb" 1640600964 16077 4737ac34f0fb5608550f3780a0202c22 ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1640600964 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1640600964 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1640600964 40635 c40361e206be584d448876bba8a64a3b ""
@@ -216,17 +215,17 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1645285067 4243317 6cd4c1d3b72728bfa7db8ef2e14c0430 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1645285026 2920107 e3ac758adfae0b7fb31b54fc2d3b03c4 ""
   "chap/alon.tex" 1645635019 4032 548000717bf839112d593e8f3f054170 ""
-  "chap/circle.tex" 1645285769 5365 bb921f000f8b18b81aef3a573d681738 ""
+  "chap/circle.tex" 1646152186 11417 0aefc9c4f70a685c73d9c57dd0494294 ""
   "chap/joints.tex" 1645224568 5376 dc82cdb01a6930844e3d508f3029f85b ""
   "chap/kakeya.tex" 1646052200 13659 b5d17f549e780830ea081279cdbfe640 ""
-  "chap/trotter.tex" 1646133236 18613 00d3aa026639e560e19661672beb6022 ""
-  "fyp.aux" 1646133242 12094 92a755a0d2914cadd6bd52f295e2aba5 "pdflatex"
-  "fyp.bbl" 1646133240 1662 5b3ba1120fc036ee626ad3be230c189c "bibtex fyp"
-  "fyp.ind" 1646128170 0 d41d8cd98f00b204e9800998ecf8427e "makeindex fyp.idx"
-  "fyp.lof" 1646133242 357 af3883ca5d8f078b6a746e8cca8ab330 "pdflatex"
-  "fyp.out" 1646133242 3683 bda1f3ade4d620a3e4273170a0bc0809 "pdflatex"
+  "chap/trotter.tex" 1646134001 18628 5d25682a9e323caf18829f0b38d6dc60 ""
+  "fyp.aux" 1646152189 13848 a38e55468e0953482d4d1f8e4802112a "pdflatex"
+  "fyp.bbl" 1646152159 1662 5b3ba1120fc036ee626ad3be230c189c "bibtex fyp"
+  "fyp.ind" 1646143001 0 d41d8cd98f00b204e9800998ecf8427e "makeindex fyp.idx"
+  "fyp.lof" 1646152189 357 af3883ca5d8f078b6a746e8cca8ab330 "pdflatex"
+  "fyp.out" 1646152189 3617 972a25eb8dcc231a7e7108c949d12705 "pdflatex"
   "fyp.tex" 1646051185 4027 7983f2a5b823e569cf8f603ac8051c52 ""
-  "fyp.toc" 1646133242 1761 9f737c05a65a91148f1b9c87faacb6dc "pdflatex"
+  "fyp.toc" 1646152189 1749 a99d3f2a2cb0aac73a53218a53d5ca5d "pdflatex"
   "images/kakeya_ex_f32.png" 1645224568 14426 917f32e033fd5ec603800c609d1fedc4 ""
   (generated)
   "fyp.aux"
