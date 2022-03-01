@@ -1,16 +1,16 @@
-\chapter{Szemerédi–Trotter Theorem}
+\chapter{Szemerédi-Trotter Theorem}
 
 In this chapter we will study the application of the polynomial method to incidence geometry by proving a fundamental theorem in the field.
 Incidence geometry is the study of possible intersection patterns of simple geometric objects, such as lines or low degree curves. 
 We have already seen an incidence problem in the previous chapter on the Joints problem. 
-By developing the powerful tool of polynomial partitioning we shall see the key role that the topology of $\RR$ plays in such problems, in contrast to the trivial topology of finite fields. 
+By developing the powerful tool of polynomial partitioning we shall see the key role that the topology of $\RR$ can play in such problems, 
+in contrast to the trivial topology of finite fields. 
 
 
 \section{Background}
-
-
-
-\begin{theorem}[Szemerédi–Trotter]
+The Szemerédi-Trotter theorem is a fundamental theorem to the field of incidence geometry, originally proved by an involved cell decomposition argument
+of Szemerédi and Trotter and later given a shorter proof using crossing numbers by Székely. 
+\begin{theorem}[Szemerédi-Trotter]
     Let $\ES \subset\RR^2$ be a finite set of points and
     let $\LL \subset \RR^2$ be a finite set of lines. We define 
     \[I(\ES,\LL) = \{(p, \ell) \in \ES \times \LL \ | \ p \in \ell\}\] 
@@ -20,28 +20,37 @@ By developing the powerful tool of polynomial partitioning we shall see the key 
     \[
         |I(\ES, \LL)| \lesssim \left(|\ES||\LL|\right)^{2/3} + |\ES| + |\LL|
     \]
-    
     \label{thm:S-T}
 \end{theorem}
 
 \section{The Trivial Bound}
 In planar geometry, we have the following dual statements: two points determine a line and every pair of lines intersect in at most one point.
 Using this we can prove the following bounds on $I(\ES,\LL)$:
-\begin{theorem}[Trivial Incidence Bounds]
-    $$I(\ES,\LL) \lesssim |\ES|\cdot |\LL|^{\frac{1}{2}} + |\LL|$$
-    and
-    $$I(\ES,\LL) \lesssim |\LL|\cdot |\ES|^{\frac{1}{2}} + |\ES|.$$
+\begin{theorem}[Trivial Bounds]
+    For a set of points $\ES$ and lines $\LL$ we have
+    \[I(\ES,\LL)| \leq |\ES|^2 + |\LL|. \]
+    \[I(\ES,\LL)| \leq |\LL|^2 + |\ES|. \]
     \label{thm:trivial-ST-bounds}
 \end{theorem}
 \begin{proof}
-    
 
-We have that 
-\eqq{I(\ES,\LL)| \leq |\ES|^2 + |\LL|. \label{eq:trivial-trivial-ST}}
 To see this, count the lines that have at most one point in $P$ on them. These contribute at most $|\LL|$ incidences.
 Every other line has at least two points in $\ES$. The total number of incidences on these lines is at most $|\ES|^2$
 as otherwise there would exist a $p\in \ES$ that lies on over $|\ES|$ lines, and each of these lines would have an additional 
 point on it. This would imply there are more that $|\ES|$ points, a contradiction. 
+
+Interchanging the roles of $\LL$ and $\ES$ achieves the other bound. \todo{does it?}
+\end{proof}
+
+\begin{theorem}[Second Trivial Incidence Bound]
+    $$I(\ES,\LL) \lesssim |\ES|\cdot |\LL|^{\frac{1}{2}} + |\LL|$$
+    and
+    $$I(\ES,\LL) \lesssim |\LL|\cdot |\ES|^{\frac{1}{2}} + |\ES|.$$
+    \label{thm:pretty-trivial-ST-bounds}
+\end{theorem}
+\begin{proof}
+    
+
 
 We now bound the number of incidences. 
 
@@ -50,7 +59,7 @@ We now bound the number of incidences.
     & \leq |\LL|\cdot \sum_{\ell \in \LL} \left( \sum_{p \in \ES} 1_{p\in \ell} \right)^2  \qquad \text{ (Cauchy-Schwarz on $\ell$)}\\
     &= |\LL|\cdot \sum_{p_1,p_2 \in \ES} \sum_{\ell \in \LL}   1_{p_1\in \ell} 1_{p_2\in \ell}    \\
     & \leq |\LL|\cdot ( |I(\ES,\LL)| + |\ES|^2)\\ 
-    &\leq |\LL|^2 + 2|\LL|\cdot |\ES|^2 \qquad \text{ (Using \ref{eq:trivial-trivial-ST}) }\\ 
+    &\leq |\LL|^2 + 2|\LL|\cdot |\ES|^2 \qquad \text{ (Using Theorem \ref{thm:trivial-ST-bounds}) }\\ 
 \end{align*}    \todo{extra step needed here - split up sum and do triple thing}
 This implies
 $$I(\ES,\LL) \lesssim |\ES|\cdot |\LL|^{\frac{1}{2}} + |L|.$$ 
@@ -59,11 +68,11 @@ Repeating the above proof interchanging the roles $\ES$ and $\LL$ achieves the o
 
 
 \section{Examples}
-We can not improve beyond trivial bounds in a finite field $\FF^2$. 
+We can not improve beyond our second trivial bounds in a finite field $\FF^2$. 
 \begin{example}[Finite Fields]
-Consider the set of points $\ES=\FF^2$ and lines 
-$\LL = \FF^2$. Every line contains exactly $|\FF|$ many points in $\FF^2$, so we have $|\FF|^3$ incidences. 
-So both sides of the \hyperref[thm:trivial-ST-bounds]{trivial bounds} are comparable:
+Consider the set of points $\ES=\FF^2$ and let $\LL$ be the set of all lines 
+in $\FF^2$. Every line contains exactly $|\FF|$ many points of $\ES$, so we have $|\FF|^3$ incidences. 
+So both sides of the \hyperref[thm:pretty-trivial-ST-bounds]{second trivial bound} are comparable:
 $$
 I(\ES,\LL) = |\FF|^3 \sim (|\FF|^2)(|\FF|^2)^{1/2} + |\FF|^2.
 $$
@@ -118,7 +127,7 @@ We define a line in $\RR^2$ as follows:
 The above examples suggest that the topology of $\RR$ plays a key role in this incidence problem. We shall now introduce the method of polynomial partitioning,
 which can be seen as the topological analogy to the \hyperref[kaklem2]{vanishing lemma} we used in the previous chapters. 
 
-Let $\SP$ denote the unit $n$-sphere in $\RR^{n+1}$. 
+Let $\SP^n$ denote the unit $n$-sphere in $\RR^{n+1}$. 
 \begin{theorem}[Borsuk-Ulam]
     A map $\phi$ is said to be antipodal if it obeys $\phi (-x) = -\phi(x)$ for all $x$ in its domain. Suppose $\phi: \SP^N \to \RR^N$ is a continuous antipodal mapping. 
     Then the image of $\phi$ contains 0. 
@@ -170,7 +179,7 @@ By hypothesis, $m(Z(f)) =0$ and $m(U) < \infty$.
 Since the Lebesgue measure is continuous we can choose $\delta$ such that $m\left(\{x\in U\ |\ |f(x)|<\delta\}\right) < \varepsilon$.
 
 Now we choose $n$ sufficiently large that $|f_n (x) - f(x)| < \delta$ on $U\backslash E$. Then we have \[|m\left(\{x\in U\ |\ f_n(x)>0\}\right) - m\left(\{x\in U\ |\ f(x)>0\}\right)| < 2 \varepsilon.\] Since $\varepsilon$ was arbitrary each $\phi_i$ is continuous.
-\todo{what to say here - ask marco}
+\todo{is this just cnty of everything? - ask marco}
 
 
 We now combine each $\phi_i$ into the map $\phi : V\backslash \{0\} \to \RR^N$. Since $\dim V > N$, select a subspace $U < V$ such that $\dim U = N+1$. 
@@ -185,7 +194,7 @@ By the Borsuk-Ulam theorem, there exists an $f\in \SP^N \subset V\backslash \{0\
 \end{corollary}
 
 \begin{proof}
-    For each $\delta>0$, define $U_{i, \delta}$ to be the union of $\delta-balls$ centered\todo{spell this word} at the points of $S_i$. 
+    For each $\delta>0$, define $U_{i, \delta}$ to be the union of $\delta-balls$ centred at the points of $S_i$. 
     By Theorem \ref{thm:GenHamSand}, we can find a non-zero $P_{\delta}$ with degree less than $D$ that bisects each $U_{i, \delta}$. 
     By rescaling we can assume \todo{abusing notation, also the norm is l1?}$P_{\delta} \in \SP^N \subset \text{Poly}_D (\RR^n) \backslash \{0\}$.
     Since $\SP^N$ compact, we can find a sequence $\delta_m \to 0$ so that $P_{\delta_{m}}$ converges to $P$ in $\SP^N$.
@@ -200,55 +209,84 @@ By the Borsuk-Ulam theorem, there exists an $f\in \SP^N \subset V\backslash \{0\
     By making $m$ large, we can also arrange that $\delta_m < \varepsilon$.
     Thus $P_{\delta_{m}} > 0$ on more than half the points of $U_{i, \delta_{m}}$.
 \end{proof}
-\section{Proof of the Szemerédi-Trotter Theorem}
+
 \begin{theorem}[Polynomial Partitioning]
-   For any $n$ there exists a constant $c(n)$ such that if $S$ is a finite subset of $\RR^n$ and $D$ is any degree, then there exists
-   a polynomial $P$ of degree $D$ such that $\RR \backslash Z(P)$ is a disjoint union of $\lesssim D^n$ open sets $O_i$ each containing
-   $\lesssim_n |S|D^{-n}$ points. \label{thm:PolyPartioning}
-\end{theorem}
+    For any $n$ there exists a constant $c(n)$ such that if $S$ is a finite subset of $\RR^n$ and $D$ is any degree, then there exists
+    a polynomial $P$ of degree $D$ such that $\RR \backslash Z(P)$ is a disjoint union of $\lesssim D^n$ open sets $O_i$ each containing
+    $\lesssim_n |S|D^{-n}$ points. \label{thm:PolyPartioning}
+ \end{theorem}
+ 
+ \begin{proof}
+ The main idea of this proof is the repeated application of the \hyperref[thm:FiniteHamSandwich]{Finite Ham Sandwich Theorem}. We begin by finding a polynomial $P_1$ of degree 1 that bisects $S$. This partitions $\RR \backslash Z(P_1)$
+ into two disjoint open sets according to the sign of $P_1$, $P_1^+$ and $P_1^-$, each containing at most $|S|/2$ points.
+ We then bisect both of these sets using another polynomial $P_2$.
+ There are four sign conditions on $P_1$ and $P_2$, these being the four possible intersections of the sets $P_1^{\pm}$ and $P_2^{\pm}$,
+ and the subset for each sign condition contains at most $|S|/4$ points of $S$. 
+ Continuing this process to define polynomials $P_3, P_4, \dots$, where the polynomial $P_j$ bisects $2^{j-1}$ finite sets. 
+ By the \hyperref[thm:FiniteHamSandwich]{Finite Ham Sandwich Theorem}, each $P_j$ can have a degree
+ $\lesssim 2^{j/n}$. 
+ Repeating this procedure $J$ times, and defining $P = \prod_{i=1}^{J} P_i$, $\RR^n \backslash Z(P)$ is the disjoint union of $2^J$ open sets each containing $ \leq |S|2^{-J}$
+ points of $S$. Now we choose $D$ such that $\deg(P) < D$ which is equivalent to $\sum_{j=0}^J c(n) 2^{j/n} \leq D$. But $\sum_{j=0}^J 2^{j/n}$ is a geometric series so we can find $\deg (P) < D$ for $D \leq c(n) 2^{J/n}$. 
+ The number of points in each $O_i$ is $\leq |S| 2^{-J} \leq c(n) |S| D^{-n}$
+ \end{proof}
 
-\begin{proof}
-The main idea of this proof is the repeated application of the \hyperref[thm:FiniteHamSandwich]{Finite Ham Sandwich Theorem}. We begin by finding a polynomial $P_1$ of degree 1 that bisects $S$. This partitions $\RR \backslash Z(P_1)$
-into two disjoint open sets according to the sign of $P_1$, $P_1^+$ and $P_1^-$, each containing at most $|S|/2$ points.
-We then bisect both of these sets using another polynomial $P_2$.
-There are four sign conditions on $P_1$ and $P_2$, these being the four possible intersections of the sets $P_1^{\pm}$ and $P_2^{\pm}$,
-and the subset for each sign condition contains at most $|S|/4$ points of $S$. 
-Continuing this process to define polynomials $P_3, P_4, \dots$, where the polynomial $P_j$ bisects $2^{j-1}$ finite sets. 
-By the \hyperref[thm:FiniteHamSandwich]{Finite Ham Sandwich Theorem}, each $P_j$ with can have a degree
-$\lesssim 2^{j/n}$. $\RR \backslash Z (P_1 P_2 \cdot \dots P_j)$ is the disjoint union of $2^j$ open sets each containing $\leq |S| 2^{-j}$ points. 
-Repeating this procedure $J$ times, and defining $P = \prod_{i=1}^{J} P_i$, $\RR^n \backslash Z(P)$ is the disjoint union of $2^J$ open sets each containing $ \leq |S|2^{-J}$
-points of $S$. Now we choose $D$ such that $\deg(P) < D$ which is equivalent to $\sum_{j=0}^J c(n) 2^{j/n} \leq D$. But $\sum_{j=0}^J 2^{j/n}$ is a geometric series so we can find $\deg (P) < D$ for $D \leq c(n) 2^{J/n}$. 
-The number of points in each $O_i$ is $\leq |S| 2^{-J} \leq c(n) |S| D^{-n}$
-\end{proof}
+There is a crucial point to note about polynomial partitioning. 
+The above theorem does not guarantee anything about the distribution of points between $Z(P)$ and its compliment.
+This is made most clear looking at the extremal examples. If all points line in the compliment of $Z(P)$ then we have an optimal eqidistribution of points,
+and can often use trivial bounds in a divide-and-conquer style argument. On the otherhand, in the case all points are contained in $Z(P)$ we have
+many points in an algebraic surface of controlled degree, so we can try and use tools from algebraic geometry. Generally, there will be some points in both $Z(P)$ and its compliment,
+which we need to deal with seperately.
 
-\begin{lemma} [Trivial Bounds]
-    By double counting, we have the following trivial estimates:
-    $$
-    I(\ES, \LL) \leq L^2 + S,
-    $$
-    $$
-    I(\ES, \LL) \leq S^2 + L.
-    $$
-    
-    
-\end{lemma}
-\begin{proof}
-We need only consider the case $S^{\frac{1}{2}} \leq L \leq S^2$, as otherwise the proof follows immediately from the lemma above. Let $D$ be a degree to be chosen later. By Theorem \ref{thm:PolyPartioning}, there
-exists a polynomial $P$ of degree $D$ such that each component of $\RR^2 \backslash Z(P)$ has $\lesssim SD^{-2}$ points. Let $O_i$ denote these components and $\ES_i = \ES \cap O_i$, $\LL_i = \LL \cap O_i$. 
-Note that $\ES = \ES_c \cup \ES_z$, $\LL = \LL_c \cup \LL_z$, where $\ES_z, \LL_z$ are the set of points and lines in $Z(P)$ respectively.
-$$I(\ES, \LL) \leq I(\ES_c, \LL) + I(\ES_z, \LL_z) + I(\ES_z, \LL_c)$$
-If a line $\ell \notin Z(P)$ then it can intersect $P$ at most $D$ times, and so each line intersects at most $D+1$ cells. Hence $\sum L_i \leq (D+1)L$.
+
+\section{Proof of the Szemerédi-Trotter Theorem}
+We now can prove the \hyperref[thm:S-T]{Szemerédi-Trotter} theorem using polynomial partitioning.
+\begin{proof}[Proof of the Szemerédi-Trotter Theorem]
+Let $|\ES| = S$ and $|\LL| = L$.
+We need only consider the case $S^{\frac{1}{2}} \leq L \leq S^2$, as otherwise the proof follows immediately from the lemma above. 
+Let $D$ be a degree to be chosen later. By Theorem \ref{thm:PolyPartioning}, there
+exists a polynomial $P$ of degree $D$ such that $\RR^2 \backslash Z(P)$ splits into $D^2$ components each having $\lesssim SD^{-2}$ points. 
+Let $O_{i \in \Pi}$ denote these components and let $\ES_i = \ES \cap O_i$, $\LL_i$ denote the lines that intersect the interior of each $O_i$ respectively.
+We define the following complimentary sets:
 \begin{align*}
-    I(\ES_c, \LL) &= \sum_i I(\ES_i, \LL_i) \leq \sum_i \ES_i^2 + \sum_i \LL_i\\
-    &\lesssim LD + SD^{-2} \sum_i S_i \leq LD + S^2D^{-2}
+    \ES_c &=\{x \in \ES \ |\ x \not \in Z(p)\}\\
+    \ES_z &=\{x \in \ES \ |\ x \in Z(p)\}\\
+    \LL_c &=\{\ell \in \LL \ |\ \ell \not \subset Z(p)\}\\
+    \LL_z &=\{\ell \in \LL \ |\ x \subset Z(p)\}
 \end{align*} 
-We also have by our lemma
-$$I(\ES_z, \LL_z) \leq S + D^2$$
-and finally $$I(\ES_z, \LL_c) \leq LD.$$
+Note that $\ES = \ES_c \cup \ES_z$, $\LL = \LL_c \cup \LL_z$. We can now write our total line-point incidences as the following sum
+$$I(\ES, \LL) = I(\ES_c, \LL) + I(\ES_z, \LL_z) + I(\ES_z, \LL_c).$$\todo{check equality?}
+If a line $\ell$ is not contained entirely in $Z(P)$ then it can intersect $P$ at most $D$ times, 
+ so each line intersects at most $D+1$ cells. Hence $\sum_{i \in \Pi} L_i \leq (D+1)L$. We begin by examining the $I(\ES_c, \LL)$ term:
+\begin{align*}
+I(\ES_c, \LL) &= \sum_{i \in \Pi} I(\ES_i, \LL_i)
+\end{align*}
+Using our \hyperref[thm:trivial-ST-bounds]{trivial bound} in each cell:
+\begin{align*}
+&\leq \sum_{i \in \Pi} \ES_i^2 + \sum_{i \in \Pi} \LL_i\\
+&\lesssim LD + SD^{-2} \sum_{i \in \Pi} S_i\\ &\leq LD + S^2D^{-2}
+\end{align*} 
+
+
+The number of lines in $\LL_z$ is at most $D$. So we have by our \hyperref[thm:trivial-ST-bounds]{trivial bounds}:
+$$I(\ES_z, \LL_z) \leq S + D^2.$$
+Each line in $\LL_c$ has at most $D$ intersection points with $Z(P)$ so it has at most $D$ incidences with $\ES_z$. Hence:
+ $$I(\ES_z, \LL_c) \leq LD.$$
 Together we have now 
 $$I(\ES, \LL) \lesssim LD + S^2D^{-2} +S + D^2.$$
 We optimise $LD + S^2D^{-2}$ by choosing $D$ such that both terms comparable and hence $D \sim S^{\frac{2}{3}} L^{-\frac{1}{3}}$. 
 From our restriction $S^{\frac{1}{2}} \leq L \leq S^2$ we have $S^{\frac{2}{3}} L^{-\frac{1}{3}} \geq 1$
 and $D^2 \sim S^{\frac{4}{3}} L^{-\frac{2}{3}} \leq S$, so we achieve
-$$I(\ES, \LL) \lesssim (SL)^{2/3} + S $$
+$$I(\ES, \LL) \lesssim (SL)^{2/3} + S. $$
+
+Considering the regime where $L > S^2$ and applying the \hyperref[thm:trivial-ST-bounds]{trivial bound} yields the full Szemerédi-Trotter inequality:
+\[
+    I(\ES, \LL) \lesssim (SL)^{2/3} + S + L. 
+\]
 \end{proof}
+
+There are two key things to note about the above proof. First, the key role that the topology of $\RR$ plays. Topology is used in the proof of polynomial partitioning as
+it relies on the Borsuk Ulam theorem. It is a worthwhile heuristic to develop that polynomial partitioning may be useful for incidence problems
+where the best examples in a finite field (which is only equipped with the trivial topology) do not coincide with the best known examples over the reals.
+Secondly, the above proof illustrates the surprising power of polynomial partitioning. We are able to use very trivial bounds in each cell to achieve
+a tight overall bound. 
+\todo{consider adding a digression on ST}
