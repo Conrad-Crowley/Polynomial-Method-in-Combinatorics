@@ -43,12 +43,24 @@ This resulted in the following conjectures:
 \begin{conjecture}[Kakeya Conjecture for the Hausdorff Dimension]
     Let $A$ be a Kakeya set in $\RR^n$. Then $\dim_H (A) = n$.
 \end{conjecture}
-
+\todo{Wolff finite fields}
 \section*{Notation}
 We introduce some convenient notation here. We write that $A \lesssim_n B$ to mean that there exists some constant
-$C_n$ which depends on $n$ such that $A \leq C_n B$. Further, we write that $A \sim_n B$ if $A \lesssim_n B$ and $B \lesssim_n A$.
+$C(n)$ which depends on $n$ such that $A \leq C(n) B$. Further, we write that $A \sim_n B$ if $A \lesssim_n B$ and $B \lesssim_n A$.
 
 We write $\text{Poly}_D (\KK^n)$ to represent the space of polynomials in $n$ variables with coefficients in $\KK$ and degree at most $D$.
+
+The indicator function $\OO$ is defined on logical statements $X$ as follows:
+\[
+    \OO[X] = 
+  \begin{cases}
+      1 & \text{if X is true}, \\
+      0 & \text{if X is false}.
+  \end{cases}  
+\]
+
+For any function $f : \RR^n \to \RR$ let us denote the zero set of $f$ by $Z(f) = \{x \in \RR^n \ | \ f(x) = 0\}.$
+
 \section{Background}
 Analogous to the Euclidean case, we define lines in $\FP^n$ as the set:
 $$\mathcal{L} = \{x+ty : x,y \in \FP^n,  t \in \FP \}$$

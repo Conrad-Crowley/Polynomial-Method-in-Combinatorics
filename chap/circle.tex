@@ -1,4 +1,4 @@
-\chapter{The Circle Tangency Counting Problem}
+\chapter{Counting Circle Tangencies}
 \todo{Kakeya proof with a twist}
 Here we shall discuss the problem of counting the number of tangencies in a suitably non-degenerate collection of circles. We say two circles are tangent if their intersection contains a single point.\todo{is this stupid?}
 The set of unordered pairs of circles in a collection $\CE$ which are mutually tangent are called the tangencies of the collection and is denoted $\tau(\CE)$. 
@@ -6,9 +6,8 @@ The set of unordered pairs of circles in a collection $\CE$ which are mutually t
 \begin{theorem}[Trivial Bound]
     Let $\CE$ be an arbitrary finite collection of circles. Then the number of tangencies $|\tau(\CE)|$ is bounded as follows:
     \[
-        |\tau(\CE)| \leq |\CE|^2
-    \]
-    \label{thm:trivial-circle-bound}
+        |\tau(\CE)| \leq |\CE|^2.
+    \] \label{thm:trivial-circle-bound}
 \end{theorem}
 Stated for arbitrary collections of circles the problem is not particularly interesting as the above bound turns out to be asymotopically tight. 
 \begin{example}
@@ -78,6 +77,8 @@ In the other direction, assume there exists some $(x,y,z) \in \beta(\gamma) \cap
 $\gamma$ is tangent to $\gamma'$.
 \end{proof} \todo{satisfactory?}
 This one-to-one correspondence between tangencies in $\RR^2$ and incidences in $\RR^3$ is the key idea behind the proof. 
+For those more algebraically inclined, what we are doing here is equivalent to looking at the tangent bundles of our circle in the projective space, hence we 
+are preserving intersections. \todo{dangerous comment when Andrei is second reader}
 
 We will need a Bezout-type result which bounds the number of intersections between curves with no common components.
 \begin{lemma}[Bezout's Theorem for Plane Algebraic Curves]
@@ -91,13 +92,13 @@ We will need a Bezout-type result which bounds the number of intersections betwe
 
 
 \section{Ellenberg-Solymosi-Zahl's Proof of Theorem \ref{thm:circle-tangencies}}
-To use the polynomial method here, we will need to ensure our tangencies
+In this proof, we will need to ensure our tangencies
 are sufficiently uniformly distributed among our circles. We can refine our collection such that this is the case by the following lemma.
 
 
 \begin{lemma}[Uniform Refinement]
     Let $\CE$ be a collection of $N$ circles and suppose that  $\tau(\CE) \gtrsim N^{\alpha}$. 
-    Then we can refine our set such that every circle in $\CE' \subset \CE$ is tangent to $\gtrsim N^{\alpha -1}$ circles. \label{lem:uniform-refine}
+    Then we can refine our collection to a collection $\CE' \subset \CE$ such that every circle in $\CE'$ is tangent to $\gtrsim N^{\alpha -1}$ other circles in $\CE'$ and $\tau(\CE') \gtrsim N^{\alpha}.$ \label{lem:uniform-refine}
 \end{lemma}
 
 \begin{proof}
@@ -238,7 +239,6 @@ Using our \hyperref[thm:trivial-circle-bound]{trivial bound} and the fact that t
                  &= N^2D^{-1} + ND.
 \end{align*}
 \todo{not the same Bezout lemma}
-
 The argument for $I(C_1,C_2)$ is the similar to the above calculation, however there are now no intersections happening inside the cells by the definition of $C_2$.
  Fix $\beta(\gamma)$ in:
 \begin{align*}

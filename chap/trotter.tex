@@ -55,13 +55,12 @@ Interchanging the roles of $\LL$ and $\ES$ achieves the other bound. \todo{does 
 We now bound the number of incidences. 
 
 \begin{align*}
-    |I(\ES,\LL)|^2 &= \left( \sum_{\ell \in \LL} \sum_{p \in \ES} 1_{p\in \ell} \right)^2 \\
-    & \leq |\LL|\cdot \sum_{\ell \in \LL} \left( \sum_{p \in \ES} 1_{p\in \ell} \right)^2  \qquad \text{ (Cauchy-Schwarz on $\ell$)}\\
-    &= |\LL|\cdot \sum_{p_1,p_2 \in \ES} \sum_{\ell \in \LL}   1_{p_1\in \ell} 1_{p_2\in \ell}    \\
+    |I(\ES,\LL)|^2 &= \left( \sum_{\ell \in \LL} \sum_{p \in \ES} \OO[p\in \ell] \right)^2 \\
+    & \leq |\LL|\cdot \sum_{\ell \in \LL} \left( \sum_{p \in \ES} \OO[p\in \ell] \right)^2  \qquad \text{ (Cauchy-Schwarz on $\ell$)}\\
+    &= |\LL|\cdot \sum_{p_1,p_2 \in \ES} \sum_{\ell \in \LL}   \OO[p_1\in \ell] \OO[p_2\in \ell]    \\
     & \leq |\LL|\cdot ( |I(\ES,\LL)| + |\ES|^2)\\ 
     &\leq |\LL|^2 + 2|\LL|\cdot |\ES|^2 \qquad \text{ (Using Theorem \ref{thm:trivial-ST-bounds}) }\\ 
 \end{align*}    \todo{extra step needed here - split up sum and do triple thing}
-\todo{fix indicatior fn}
 This implies
 $$I(\ES,\LL) \lesssim |\ES|\cdot |\LL|^{\frac{1}{2}} + |L|.$$ 
 Repeating the above proof interchanging the roles $\ES$ and $\LL$ achieves the other bound.
@@ -119,7 +118,6 @@ We define a line in $\RR^2$ as follows:
     |I(\ES, \LL)| \sim \frac{N^4}{R^2} \sim (N^2)^{\frac{2}{3}} \left(\frac{N^4}{R^3}\right)^{\frac{2}{3}} \sim |\ES|^{\frac{2}{3}}|\LL|^{\frac{2}{3}}
     \]
 \end{example}
-\todo{Is the spacing messed up?}
 \todo{add diagram (!)}
 
 
@@ -137,7 +135,6 @@ Let $\SP^n$ denote the unit $n$-sphere in $\RR^{n+1}$.
 The proof of this result is long and beyond the scope of this paper. We refer interested readers to a beautiful geometric proof in chapter 2 of Matousek's book \textit{Using the Borsuk-Ulam theorem}.\cite{matouvsek2003using}
 
 Let us now define some useful notation going forward. 
-For any function $f : \RR^n \to \RR$ let us denote the zero set of $f$ by $Z(f) = \{x \in \RR^n \ | \ f(x) = 0\}.$
 \begin{definition}[Bisection of a Set]
 A function $f :\RR^n \to \RR$ is said to bisect an open set $U$ with volume $\text{Vol}(U) < \infty$ if:
 \[
@@ -247,12 +244,12 @@ We need only consider the case $S^{\frac{1}{2}} \leq L \leq S^2$, as otherwise t
 Let $D$ be a degree to be chosen later. By Theorem \ref{thm:PolyPartioning}, there
 exists a polynomial $P$ of degree $D$ such that $\RR^2 \backslash Z(P)$ splits into $D^2$ components each having $\lesssim SD^{-2}$ points. 
 Let $O_{i \in \Pi}$ denote these components and let $\ES_i = \ES \cap O_i$, $\LL_i$ denote the lines that intersect the interior of each $O_i$ respectively.
-We define the following complimentary sets:
+We define the following pairs of complimentary sets:
 \begin{align*}
     \ES_c &=\{x \in \ES \ |\ x \not \in Z(p)\}\\
     \ES_z &=\{x \in \ES \ |\ x \in Z(p)\}\\
     \LL_c &=\{\ell \in \LL \ |\ \ell \not \subset Z(p)\}\\
-    \LL_z &=\{\ell \in \LL \ |\ x \subset Z(p)\}
+    \LL_z &=\{\ell \in \LL \ |\ \ell \subset Z(p)\}
 \end{align*} 
 Note that $\ES = \ES_c \cup \ES_z$, $\LL = \LL_c \cup \LL_z$. We can now write our total line-point incidences as the following sum
 $$I(\ES, \LL) = I(\ES_c, \LL) + I(\ES_z, \LL_z) + I(\ES_z, \LL_c).$$\todo{check equality?}

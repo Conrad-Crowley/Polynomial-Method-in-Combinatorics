@@ -55,4 +55,12 @@ Larry Guth.
 \newblock In {\em Mathematical Proceedings of the Cambridge Philosophical
   Society}, volume 159, pages 459--469. Cambridge University Press, 2015.
 
+\bibitem{alon1999combinatorial}
+Noga Alon.
+\newblock Combinatorial nullstellensatz.
+\newblock {\em Combinatorics, Probability and Computing}, 8(1-2):7--29, 1999.
+
+\bibitem{michalek2010}
+{\em The American Mathematical Monthly}, 117(9):821--823, Nov 2010.
+
 \end{thebibliography}

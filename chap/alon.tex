@@ -1,14 +1,16 @@
 \chapter{The Polynomial Method in Additive Combinatorics}
-
+So far our discussion has only centred around the usefulness of polynomial methods in geometric combinatorial problems. 
+In this chapter we shall discuss applications to the exciting field of additive combinatorics, where in 1990 Alon provided perhaps
+the first example of the polynomial method in action.\cite{alon1999combinatorial} We present Michalek's short, elementary, and direct proof of the combinatorial nullstellensatz.\cite{michalek2010}
+\section{Combinatorial Nullstellensatz}
 \begin{theorem}[Combinatorial Nullstellensatz]
-    Let $\KK$ be a (not necessarily finite) field, and let $P(x_1,\dots, x_n) \in \KK[X_1,\dots, X_n]$ be a polynomial in $n$ variables with coefficients in $\KK$. \todo{Tautology?} Suppose $\deg P = \sum_{i=1}^n k_i$, where each $k_i$ is a non-negative
-    integer, and further suppose the coefficient of $x_1^{k_1}x_2^{k_2}\dots x_n^{k_n}$ is non-zero.
+    Let $\KK$ be a (not necessarily finite) field, and let $P(X_1,\dots, X_n) \in \KK[X_1,\dots, X_n]$ be a polynomial in $n$ variables with coefficients in $\KK$. Suppose the coefficient of $x_1^{k_1}x_2^{k_2}\dots x_n^{k_n}$ is non-zero and further suppose $\deg P = \sum_{i=1}^n k_i$, where each $k_i$ is a non-negative integer.
 
     Then for any subsets $A_1,\dots A_n$ of $\KK$ satisfying $|A_i| > k_i$ for each $1\leq i\leq n$ there exist $a_1 \in A_1, \dots, a_n \in A_n$ such that $P(a_1,\dots, a_n) \neq 0$.
     \label{comb-nullstellensatz}
 \end{theorem}
 \begin{proof}
-    We proceed by induction on $\deg P = D$. When $D=1$, $P$ is simply a linear combination of $n$ variables so the theorem holds.
+    We proceed by induction on $\deg P = D$. When $D=1$, $P$ is simply a linear combination of $n$ variables say $P(X_1,\dots X_m) = c_1 X_1 + \dots c_n X_n$. Without loss of generality assume $x_1$ has a non-zero coefficient and consider the sets $A_i = \{a_{i,1}, a_{i,2}\}$. Suppose $P$ at the point $(a_{1,1}, a_{2,1}, \dots, a_{n,1})$ is zero. We can then determine $c_{1} =- \frac{c_2 a_{2,1} + c_3 a_{3,1}+\dots+ c_n a_{n,1}}{a_{1,1}}$. Now evaluating at $(a_{1,2}, a_{2,1}, \dots, a_{n,1})$ we see that this is zero only when $a_{1,1} = a_{1,2}$, so our theorem holds. 
 
     Now let us assume the theorem holds for $\deg P = D -1$, and prove for $\deg P = D$.
     Suppose that $P$ satisfies the assumptions of the theorem but $P(x) = 0$ for every $x \in A_1 \times \dots \times A_n$.
@@ -23,7 +25,7 @@
     Take any $x \in \{a\} \times A_2 \times \dots \times A_n$ and evaluate $(\dagger)$. Since $P(x) = 0$ it follows that $R(x) = 0$, but $R$ is independent of $x_1$ so $R$ must also vanish on $A_1 \backslash \{a\} \times A_2 \times \dots \times A_n$.
     Now take any $x \in A_1 \backslash \{a\} \times A_2 \times \dots \times A_n$ and evaluate $(\dagger)$. Since $(x_1 - a)$ is non-zero, $Q(x) =0$. So $Q$ vanishes on all $x \in A_1 \backslash \{a\} \times A_2 \times \dots \times A_n$, which contradicts the inductive hypothesis.
 \end{proof}
-
+\section{Cauchy-Davenport Theorem}
 \begin{theorem} [Cauchy-Davenport Theorem]
     Let $A,B$ be non-empty subsets of $\ZZ_p$ for some $p$ prime. Define their sumset $A+B$ as follows:
     \[
