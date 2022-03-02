@@ -8,11 +8,12 @@ The set of unordered pairs of circles in a collection $\CE$ which are mutually t
     \[
         |\tau(\CE)| \leq |\CE|^2
     \]
+    \label{thm:trivial-circle-bound}
 \end{theorem}
 Stated for arbitrary collections of circles the problem is not particularly interesting as the above bound turns out to be asymotopically tight. 
 \begin{example}
 Denote a circle centred at $(x,y)$ with radius $r$ as $\gamma (x,y,r)$. \todo{notation}
-Consider the following collection of $N$ circles:
+Consider the following collection of $N+1$ circles:
 \begin{align*}
     C_0 &= \gamma\left(0,0,1\right) \\
     C_1 &= \gamma\left(\frac{1}{2},0,\frac{1}{2}\right) \\
@@ -45,12 +46,17 @@ We shall now present a bound from a recent paper of Ellenberg-Solymosi-Zahl whic
     \[
         |\tau(\CE)| \lesssim N^{3/2}
     \]
+    \label{thm:circle-tangencies}
 \end{theorem}
 
 It is not obvious how to apply the polynomial method in the current formulation. 
 We will perform a lifting  of our circles into algebraic curves $\RR^3$, 
 preserving tangencies between circles in the plane as intersections between their lifted curves in $\RR^3$. 
 This transforms the problem from a tangency problem to an incidence problem, and reduces the required degree of polynomial needed to interpolate.
+In general Lemma \ref{kaklem2}\todo{wrong lemma?} tells us that if we are to interpolate a set of $M$ points in $\RR^d$ by a polynomial $P$, the degree of $P$ is of order $\deg P \sim M^{1/d}$, 
+so increasing the dimension of the problem yields a more controlled degree of the polynomial required.
+
+\section{Lifting of circles to $\RR^3$}
 
 We shall now discuss this lifting in detail. Let $\gamma \subset \RR^2$ be a circle in the plane of radius $r_{\gamma}$ centred at $(x_\gamma, y_\gamma)$. 
 We define the lifting transform of the circle as: \[
@@ -70,13 +76,28 @@ Further, at a point of tangency we have that the slope of the tangent lines coin
 
 In the other direction, assume there exists some $(x,y,z) \in \beta(\gamma) \cap \beta(\gamma')$. Clearly $(x,y) \in \gamma \cap \gamma'$, and again the slope of the tangent lines at this point are equal, hence we conclude
 $\gamma$ is tangent to $\gamma'$.
-\end{proof}
-This one-to-one correspondence between tangencies in $\RR^2$ and incidences in $\RR^3$ is the key idea behind the proof. To use the polynomial method here, we will need to ensure our tangencies
+\end{proof} \todo{satisfactory?}
+This one-to-one correspondence between tangencies in $\RR^2$ and incidences in $\RR^3$ is the key idea behind the proof. 
+
+We will need a Bezout-type result which bounds the number of intersections between curves with no common components.
+\begin{lemma}[Bezout's Theorem for Plane Algebraic Curves]
+   Let $Z_1$ and $Z_2$ be the zero sets of two polynomials over $\RR[X,Y]$ and suppose $\deg Z_1 > \deg Z_2$. Then one of the following holds:
+   \begin{align*}
+    |\{ x \ |& \ x \in Z_1 \cap Z_2 \}| \leq \deg Z_1 \deg Z_2 \\
+    \text{ or }& Z_2 \subset Z_1
+   \end{align*}
+    \label{lem:Bezout}
+\end{lemma}
+
+
+\section{Ellenberg-Solymosi-Zahl's Proof of Theorem \ref{thm:circle-tangencies}}
+To use the polynomial method here, we will need to ensure our tangencies
 are sufficiently uniformly distributed among our circles. We can refine our collection such that this is the case by the following lemma.
 
-\begin{lemma}
+
+\begin{lemma}[Uniform Refinement]
     Let $\CE$ be a collection of $N$ circles and suppose that  $\tau(\CE) \gtrsim N^{\alpha}$. 
-    Then we can refine our set such that every circle in $\CE' \subset \CE$ is tangent to $\gtrsim N^{\alpha -1}$ circles.
+    Then we can refine our set such that every circle in $\CE' \subset \CE$ is tangent to $\gtrsim N^{\alpha -1}$ circles. \label{lem:uniform-refine}
 \end{lemma}
 
 \begin{proof}
@@ -94,26 +115,20 @@ For the first claim, observe that at each step $i$ we are reducing $\tau(\CE_i)$
     &> c_0 N^{\alpha} - c_1 N^{\alpha} \\
     |\tau(\CE_M)| &> \frac{c_0}{2} N^{\alpha}. \qquad (\text{by choosing } c_1 = c_0/2 )
 \end{align*}
-We must now check that we have not removed every circle from our collection.\todo{disagree with correction here, tangencies is not necessarily non-zero, why else get this lower bound?} We have the trivial inequality $|\tau(\CE_M)| \leq |\CE_M|^{2}$. 
+We must now check that we have not removed every circle from our collection.\todo{disagree with correction here?} We have the trivial inequality $|\tau(\CE_M)| \leq |\CE_M|^{2}$. 
 Combining this with the result above, we attain $|\CE_M| \gtrsim |N|^{\alpha/2}$.
 \end{proof}
-In a similar fashion to our arguments in the Kakeya problem we will be arguing by contradiction, however here we will be arguing that if the zero set of a polynomial contains too many of a certain first type of object, 
+In a similar fashion to our arguments in the Kakeya\todo{write coherent sentence} problem we will be arguing by contradiction, however here we will be arguing that if the zero set of a polynomial contains too many of a certain first type of object, 
 it must contain many more of a second kind of object. 
 
-We will need a result from Bezout which bounds the number of intersections between curves in $\RR^3$.
 
-\begin{lemma}[Bezout's Theorem for Plane Algebraic Curves]
-   Let $Z_1$ and $Z_2$ be the zero sets of two polynomials over $\RR[X,Y]$. Then the following holds:
-   \[
-       |\{ x | x \in Z_1 \cap Z_2 \}| \leq \deg Z_1 \deg Z_2
-   \]
-    \label{lem:Bezout}
-\end{lemma}
 
 
 We can now prove the main theorem. 
 \begin{proof}
-    Given an arbitrary collection of circles $\CE$ with $\gtrsim N^{3/2}$ tangencies, we can reduce to a collection $\Gamma$ where each circle is tangent to at least $\sim N^{1/2}$ other circles using the previous lemma. 
+    Given an arbitrary collection of circles $\CE$ with $\gtrsim N^{3/2}$ tangencies, Lemma \ref{lem:uniform-refine} with $\alpha = \frac{3}{2}$ 
+    allows us to reduce to a collection
+     $\Gamma$ where each circle is tangent to  $\gtrsim N^{1/2}$ other circles using the previous lemma. 
     After applying a small rotation, we can assume that the tangent line at each point of tangency does not point vertically in the $y$-direction.
     Let $\beta (\Gamma) = \{ \beta(\gamma) : \gamma \in \Gamma \}$, where $\beta$ is the lifting transform defined earlier,
     Recall from Lemma \ref{lem:beta-lift} that two circles $\gamma_1$ and $\gamma_2$ are tangent if and only if $\beta(\gamma_1) \cap \beta(\gamma_2) \neq \emptyset$.
@@ -132,16 +147,109 @@ We can now prove the main theorem.
     \\ &\subset \text{span} \left( T_{(x,y,z) }\beta (\gamma_1), T_{(x,y,z) }\beta (\gamma_2)\right). 
     \end{align*}
 
-    We will now interpolate all points of intersection with a polynomial of suitably low degree, and show that if this contains too many points it will lead to a contradiction.
-    Let $P \in \RR[x,y,z]$ be a non-zero polynomial of minimal degree that vanishes on all intersections between the curves in $\beta (\Gamma)$. The degree of $P$ is $\sim N^{1/2}$. 
-    By our result above, if $(x,y,z)$ is a point where two curves from $\beta (\Gamma)$ intersect, then $\partial_z P (x,y,z)  =0 $. Thus since each $\gamma \in \Gamma$ is 
-    tangent to $\gtrsim N^{1/2}$, and each of these tangencies occur at a distinct point, we have that $\partial_z P$ vanishes at $\gtrsim N^{1/2}$ points on each curve in $\beta (\Gamma)$.
-    By \hyperref[lem:Bezout]{Bézout's theorem} we have that $\partial_z P$ vanishes on all curves in $\Gamma$ as:
-    \[
-    \deg (\partial_z P) \deg (\gamma) \sim  (N^{1/2}) \gtrsim \# \{\partial_z P \cap \gamma\} \sim (N^{1/2}) .    
-    \] Since $P$ was the non-zero polynomial of minimal degree that vanishes on all the curves in $\beta (\Gamma)$, we must conclude 
-    $\partial_z P$= 0. We have then that $P(x,y,z) = Q(x,y)$ for some $Q \in \RR[x,y]$ with degree $\sim N^{1/2}$. 
-    But this implies that each of the $N$ circles in $\Gamma$ must be in $Z(Q)$. This is a contradiction, as $Q$ has degree $\sim N^{1/2}$ whereas $\cup \gamma$ has degree $2N$.
-    We conclude that $\Gamma$ has fewer than $N^{3/2}$ tangencies.
-\end{proof}
+    We will now interpolate all points of intersection with a minimal polynomial of suitably low degree, and show that if this contains too many intersections it must also contain the curves. 
+    Then due to the tangent vector spanning the $z$-axis we will be able to achieve a contradiction.
 
+    Let $P \in \RR[x,y,z]$ be a non-zero polynomial of minimal degree that vanishes on all intersections between the curves in $\beta (\Gamma)$. 
+    This polynomial interpolates $\sim N^{3/2}$ points in $\RR^3$, so by Lemma \ref{kaklem2}\todo{wrong lemma?} 
+    the degree of $P$ is $\lesssim \left(N^{3/2}\right)^{\frac{1}{3}} =  N^{1/2}$. 
+
+    Due to our refinement each $\gamma \in \Gamma$ is 
+    tangent to $\gtrsim N^{1/2}$ circles and each of these tangencies occur at a distinct point by our non-degeneracy condition.   
+    Hence we have that $P$ vanishes at $\gtrsim N^{1/2}$ points on each curve in $\beta (\Gamma)$.
+    By \hyperref[lem:Bezout]{Bézout's theorem} we have that $P$ vanishes on all curves in $\beta(\Gamma)$ as:
+    \[
+    \deg (P) \deg (\beta(\gamma))  \lesssim \# \{ P \cap \beta(\gamma)\}  
+    \]
+    for suitable choice of constants. 
+
+    By our result above, if $(x,y,z)$ is a point where two curves from $\beta (\Gamma)$ intersect, then $\partial_z P (x,y,z)  =0 $. 
+    Thus by the same Bezout argument $\partial_z P$ is also a polynomial which vanishes on all curves in $\beta(\Gamma)$. 
+
+    Since $P$ was a non-zero polynomial of minimal degree that vanishes on all the curves in $\beta (\Gamma)$, we must conclude 
+    $\partial_z P \equiv$ 0. By the minimality if $P$ we must have that $P(x,y,z) = Q(x,y)$ for some $Q \in \RR[x,y]$ with degree $\lesssim N^{1/2}$. 
+    But this implies that each of the $N$ lifted circles in $\beta(\Gamma)$ must also be contained in $Z(Q)$.
+    This is a contradiction, as $Q$ has degree $\sim N^{1/2}$ whereas $\cup \beta(\gamma)$ has degree $2N$.
+    Thus $\beta(\Gamma)$ has $\lesssim N^{3/2}$ curve-curve incidences, so we can conclude that $\Gamma$ has $\lesssim N^{3/2}$ tangencies.
+\end{proof}
+\todo{worried about the $\Gamma - \beta (\Gamma)$}
+
+\section{Proof via Polynomial Partitioning for Varieties}
+In this section we shall present a new proof of Theorem \ref{thm:circle-tangencies}. 
+There are a few key differences between both methods of proof. In the following proof, 
+it is no longer required to ensure the uniform distribution of tangent points among each circle in our collection, so we will not
+have to use Lemma \ref{lem:uniform-refine}.
+Secondly, we will partition $\RR^3$ using a polynomial of controlled degree and leverage our \hyperref[thm:trivial-circle-bound]{trivial bound} in each cell.
+Slight care will be needed to deal with intersections with curves in the zero set. We begin by introducing the main tool for this proof, 
+an extension of the \hyperref[thm:PolyPartioning]{polynomial partitioning} theorem to algebraic varieties instead of just points (which are in some sense 0-dimensional varieties). 
+
+\begin{lemma}[Polynomial Partitioning for Algebraic Varieties]
+    Suppose $\Gamma$ is a set of $k$-dimensional varieties in $\RR^n$. For any positive integer $D$ there exists a non-zero polynomial $P$ of degree at
+    most $D$ such that each connected component of $\RR^n \backslash Z(P)$ intersects $\lesssim D^{k-n} |\Gamma|$ varieties $\gamma \in \Gamma$.
+    \label{lem:poly-part-var}
+\end{lemma}
+We shall not prove this here. A proof of this can be found as Theorem 0.3 in the original paper of Guth presenting the result.\cite{guth2015polypartvar}
+
+
+\begin{proof}[Proof of Theorem \ref{thm:circle-tangencies} by Polynomial Partitioning]
+Relabel $\CE$ as $\Gamma$ for convenience. Again, we perform the lifting transform $\beta$ on each $\gamma \in \Gamma$. 
+We have a collection of $N$ 1-dimensional varieties in $\RR^3$ upon which we shall use our \hyperref[lem:poly-part-var]{polynomial partitioning} lemma
+to find a polynomial $P$ such that each cell of $\RR^n \backslash Z(P)$ intersects $\lesssim N D^{-2}$ varieties. 
+$\RR^3 \backslash Z(P)$ partitions the space into $D^3$ cells. 
+Let us label the interior of each of these cells as $\{\Omega_i \ | \ 0 \leq i \lesssim D^3 \}$, and further label the set of varieties in $\Gamma$ that pass through a given cell $\Omega_i$ as $\Gamma_i$.
+
+We can now define the following complimentary sets based on whether the variety is contained entirely in $Z(P)$:
+\begin{align*}
+    C_1 &= \{ \beta{\gamma} \ |\ \beta{\gamma} \not \subset Z(P) \}\\
+    C_2 &= \{ \beta{\gamma} \ |\ \beta{\gamma}  \subset Z(P) \}
+\end{align*}
+Notice here that $\beta(\Gamma) = C_1 \cup C_2$. Recalling the correspondence between incidences between our curves and tangencies of the circles, we define the following
+incidence sets and hence have the following expression for $|\tau(\Gamma)|$:
+\begin{align*}
+    I(C_1, C_1) &= \{(\beta(\gamma), \beta(\gamma')) \ |  \ \beta(\gamma), \beta(\gamma') \in C_1, \ \beta(\gamma) \cap \beta(\gamma') \neq \emptyset \} \\
+    I(C_1, C_2) &= \{(\beta(\gamma), \beta(\gamma')) \ |  \ \beta(\gamma)\in C_1, \beta(\gamma') \in C_2, \ \beta(\gamma) \cap \beta(\gamma') \neq \emptyset \} \\
+    I(C_2, C_2) &= \{(\beta(\gamma), \beta(\gamma')) \ |  \ \beta(\gamma), \beta(\gamma') \in C_2, \ \beta(\gamma) \cap \beta(\gamma') \neq \emptyset \} \\
+    |\tau(\Gamma)| &= |I(C_1, C_1)| + |I(C_1, C_2)| + |I(C_2, C_2)|
+\end{align*}
+We now proceed by calculating the cardinality each of these sets. The case for $I(C_1,C_1)$ will use our \hyperref[thm:trivial-circle-bound]{trivial bound} and bezout's
+theorem.\todo{no} Calculating for $I(C_1,C_2)$ is again straightforward by Bezout. 
+The interesting case here is $I(C_2,C_2)$, where we will be forced to argue via a recursive style of argument.
+
+We begin with the intersections that occur between varieties not entirely contained in the zero set:
+\begin{align*}
+    I(C_1,C_1) = &\{ (\beta(\gamma), \beta(\gamma')) \ |  \ \beta(\gamma), \beta(\gamma') \in C_1, \ \beta(\gamma) \cap \beta(\gamma') \in \RR^3 \backslash Z(P)\} \\
+                & \cup \{ (\beta(\gamma), \beta(\gamma')) \ |  \ \beta(\gamma), \beta(\gamma') \in C_1, \ \beta(\gamma) \cap \beta(\gamma') \in Z(P)\}
+\end{align*}
+Hence we have:
+\begin{align*}
+    |I(C_1,C_1)| &= \sum_{\beta(\gamma), \beta(\gamma') \in C_1} \OO[\beta(\gamma) \cap \beta(\gamma') \in \RR^3 \backslash Z(P)] + 
+                  \sum_{\beta(\gamma), \beta(\gamma') \in C_1} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)] \\
+                 &= \sum_{\beta(\gamma), \beta(\gamma') \in C_1} \sum_i \OO[\beta(\gamma) \cap \beta(\gamma') \in \Omega_i] +
+                 \sum_{\beta(\gamma), \beta(\gamma') \in C_1} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)]\\
+                 &= \sum_i \sum_{\beta(\gamma), \beta(\gamma') \in \Gamma_i}  \OO[\beta(\gamma) \cap \beta(\gamma') \in \Omega_i] +
+                  \sum_{\beta(\gamma), \beta(\gamma') \in C_1} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)]
+\end{align*}
+Using our \hyperref[thm:trivial-circle-bound]{trivial bound} and the fact that there are $\lesssim ND^{-2}$ varieties intesecting a given cell we attain:
+\begin{align*}
+                 &\lesssim \sum_i \left(\frac{N}{D^2}\right)^2 + \sum_{\beta(\gamma), \beta(\gamma') \in C_1} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)] \\
+                 &= D^3 N^2 D^{-4} + \sum_{\beta(\gamma)\in C_1} \sum_{\beta(\gamma') \in C_1} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)]\\
+                 \intertext{Fixing $\beta(\gamma)$ we see that the latter sum must be $\lesssim D$ by Bezout's lemma in conjunction with our non-degeneracy condition.}
+                 &\lesssim  N^2 D^{-1} + \sum_{\beta(\gamma)\in C_1} D \\
+                 &= N^2D^{-1} + ND.
+\end{align*}
+\todo{not the same Bezout lemma}
+
+The argument for $I(C_1,C_2)$ is the similar to the above calculation, however there are now no intersections happening inside the cells by the definition of $C_2$.
+ Fix $\beta(\gamma)$ in:
+\begin{align*}
+    I(C_1,C_2) &= \sum_{\beta(\gamma)\in C_1} \sum_{\beta(\gamma') \in C_2} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)] \\
+    \intertext{and again the second sum is $\lesssim D$ due to Bezout and our non-degeneracy condition. Hence,}
+    & \lesssim \sum_{\beta(\gamma)\in C_1} D = ND.
+\end{align*}
+
+
+
+
+
+    
+\end{proof}
