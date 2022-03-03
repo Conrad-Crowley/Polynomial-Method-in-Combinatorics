@@ -1,19 +1,19 @@
 # Fdb version 3
-["bibtex fyp"] 1646239201 "fyp.aux" "fyp.bbl" "fyp" 1646239218
+["bibtex fyp"] 1646349782 "fyp.aux" "fyp.bbl" "fyp" 1646349787
   "/usr/share/texmf-dist/bibtex/bst/base/unsrt.bst" 1640600964 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "fyp.aux" 1646239217 17197 2434da6586912e3945b6a93c27b184a9 "pdflatex"
-  "fyp.bib" 1646237530 3947 5c07687eb12ad43e22844355cf51cdff ""
+  "fyp.aux" 1646349786 19799 46831ca9944a5cf2b0aae1816d86ff86 "pdflatex"
+  "fyp.bib" 1646347349 3947 5c07687eb12ad43e22844355cf51cdff ""
   (generated)
   "fyp.bbl"
   "fyp.blg"
-["makeindex fyp.idx"] 1646239197 "fyp.idx" "fyp.ind" "fyp" 1646239218
-  "fyp.idx" 1646239215 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex fyp.idx"] 1646347583 "fyp.idx" "fyp.ind" "fyp" 1646349787
+  "fyp.idx" 1646349784 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "fyp.ilg"
   "fyp.ind"
-["pdflatex"] 1646239214 "/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex" "fyp.pdf" "fyp" 1646239218
+["pdflatex"] 1646349783 "/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex" "fyp.pdf" "fyp" 1646349787
   "/home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk" 1646225646 7808 02bbf091c98b2158c684d721941b3dbe ""
-  "/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex" 1646229930 4068 d2a9a0d90a5cf84e4d01a20f7eb88918 ""
+  "/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex" 1646346686 4070 c904178fa0c65e914308abe244e70d34 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1640600964 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1640600964 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1640600964 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -224,19 +224,20 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1640600964 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1645285067 4243317 6cd4c1d3b72728bfa7db8ef2e14c0430 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1645285026 2920107 e3ac758adfae0b7fb31b54fc2d3b03c4 ""
-  "chap/alon.tex" 1646239213 4978 6b43188440e27f3bab5e0548b15e5423 ""
-  "chap/circle.tex" 1646235335 19266 b585fd44c913028c31c4243e63fa6526 ""
-  "chap/joints.tex" 1646234820 5486 a07371f49c6a97500261053c72bc0dc7 ""
-  "chap/kakeya.tex" 1646236157 14001 f0c346c0a22023cebce55c467723a8d1 ""
+  "chap/alon.tex" 1646345565 4996 66f65048f47ddc2dac81447972d6cf2e ""
+  "chap/circle.tex" 1646347591 19285 063165f00ba2cd97b23fc721247b9555 ""
+  "chap/intro.tex" 1646349734 3030 af31e3f452122080f29e1f2a6007dc20 ""
+  "chap/joints.tex" 1646347049 5506 9d64f9681a42cacdf4b7ae38d52b82f7 ""
+  "chap/kakeya.tex" 1646349778 14062 8dc11aa88d3822d4bf9b182b3abcb62b ""
   "chap/title.tex" 1646230316 928 110bfa4d51c88b6dca06acabfc815fd1 ""
-  "chap/trotter.tex" 1646236648 18496 308570934154f84d014caf9b2e2488c8 ""
-  "fyp.aux" 1646239217 17197 2434da6586912e3945b6a93c27b184a9 "pdflatex"
-  "fyp.bbl" 1646239201 2166 677e43ad9234749ea464f020f3943e30 "bibtex fyp"
-  "fyp.ind" 1646239197 0 d41d8cd98f00b204e9800998ecf8427e "makeindex fyp.idx"
-  "fyp.lof" 1646239217 357 a335228973f2ac1abf6916234e677022 "pdflatex"
-  "fyp.out" 1646239217 4741 95896bbbe4fae45f1fbc14ca2f9aa334 "pdflatex"
-  "fyp.tex" 1646229930 4068 d2a9a0d90a5cf84e4d01a20f7eb88918 ""
-  "fyp.toc" 1646239217 2250 92a348e7263b74d0d7564cd7e1eed35f "pdflatex"
+  "chap/trotter.tex" 1646347123 18521 5ee0b94ef7a27322ef66fe150e2ae098 ""
+  "fyp.aux" 1646349786 19799 46831ca9944a5cf2b0aae1816d86ff86 "pdflatex"
+  "fyp.bbl" 1646349783 2166 3689e369448bda2e8669f5626c28b793 "bibtex fyp"
+  "fyp.ind" 1646347583 0 d41d8cd98f00b204e9800998ecf8427e "makeindex fyp.idx"
+  "fyp.lof" 1646349786 378 846820559af9c1bf77d43db5726128be "pdflatex"
+  "fyp.out" 1646349786 5015 13254cf1c414687c36cca494d32539c5 "pdflatex"
+  "fyp.tex" 1646346686 4070 c904178fa0c65e914308abe244e70d34 ""
+  "fyp.toc" 1646349786 2403 0b7d85503b0fbb611add157f8d157357 "pdflatex"
   "images/kakeya_ex_f32.png" 1645224568 14426 917f32e033fd5ec603800c609d1fedc4 ""
   "images/ucc.png" 1646229889 304950 441d27ca6478ae0af827a4d866060b25 ""
   (generated)

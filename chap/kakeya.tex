@@ -1,4 +1,4 @@
-\chapter{The Kakeya Problem in Finite Fields}
+\chapter{The Kakeya Problem in Finite Fields \label{chap:kakeya}}
 Before we can discuss the Kakeya problem in finite fields, and its rather surprising resolution, we ought to first discuss the origin and history of the problem. 
 Work on the Kakeya problem can be traced back to the Russian mathematician Abram Besicovitch in 1917. While working on a problem in Riemann integration, Besicovitch reduced it to the question
 of the existence of planar sets of measure zero which contain a line segment in every direction. In 1920, Besicovitch constructed such a set and published in a Russian Journal.
@@ -72,6 +72,7 @@ A Kakeya set in $\FP^n$ is a set that contains a line in every direction.
 \caption{An example of a Kakeya set (shaded) in $\FF_3^2$.}
 {\label{kak_ex_f32}
 \end{figure}
+\todo{big example}
 
 
 \section{Introduction to Finite Fields}
@@ -155,7 +156,7 @@ In finite fields Kakeya's conjecture is as follows:
 We shall prove this theorem via 3 surprisingly simple lemmas. This formulation of Dvir's proof is due to Gowers.\cite{GOW2020}
 
 \begin{lemma}[Parameter Counting] 
-Let $\KK$ be a (not necessarily finite) field. If $A \subset \KK^n$ and $|A| < {{n+D} \choose {n}}$, there exists a non-zero polynomial $P(x_1,\dots, x_n)$ of degree $D$ that vanishes on $A$. \label{paramcounting}
+Let $\KK$ be a (not necessarily finite) field. If $A \subset \KK^n$ and $|A| < {{n+D} \choose {n}}$, there exists a non-zero polynomial $P(x_1,\dots, x_n)$ of degree $D$ that vanishes on $A$. \label{lem:paramcounting}
 \end{lemma}
 
 \prf{ We first show the dimension of $\text{Poly}_D (\KK^n)$ is ${D+n} \choose{n}$. A basis for $\text{Poly}_D (\KK^n)$ is given by monomials of the form $x_1^{D_1}\dots x_n^{D_n}$, where $\sum_i D_i \leq D$, hence we just need to count the number of monomials.
@@ -173,7 +174,7 @@ This map is clearly linear. Its kernel $\ker E$ is exactly the set of polynomial
 Note that if $D=|\FF|-1$, and $|A| \leq {{|\FF|+n-1} \choose{|\FF|-1}} = { {|\FF|+n-1} \choose{n}}$ we have a polynomial of degree $|\FF|-1$ that vanishes on $A$. Since $\frac{|\FF|^n}{n!} < {{|\FF|+n-1} \choose{n}}$,we can definitely find such a polynomial when $|A| \leq \frac{|\FF|^n}{n!}$.
 
 
-\begin{lemma}Suppose $A \subset \FF^n$ contains a line in every direction, and suppose that there exists a non-zero polynomial $P$ with degree $D<|\FF|$ that vanishes on $A$. Then there exists a non-zero degree $D$ polynomial $\bar{P}$ that vanishes everywhere on $\FF^n$. \label{kaklem2} \end{lemma}
+\begin{lemma}Suppose $A \subset \FF^n$ contains a line in every direction, and suppose that there exists a non-zero polynomial $P$ with degree $D<|\FF|$ that vanishes on $A$. Then there exists a non-zero degree $D$ polynomial $\bar{P}$ that vanishes everywhere on $\FF^n$. \label{lem:kaklem2} \end{lemma}
 
 \prf{ Choose a line in $A$, say $\ell = \{x+tz : t\in \FF \}$ with $x\in \FF^n$ and $z \in \FF^n / \FF^{\times}$. Now we consider the restriction of our polynomial $P$ to the line $\ell$, $P_{|\ell}$ .
 Recall $P$ is a sum of monomials, and we use multi-index notation here with $\alpha = (\alpha_1, \alpha_2, \dots, \alpha_n), \ \alpha_i \in \NN \cup \{0\}$ and $|\alpha| =  \sum \alpha_i$. $P$ can be written as:
@@ -193,7 +194,7 @@ Notice that $Q_{x,z,D}$ no longer depends on $x$, but on $z$ alone. In particula
 
 
 
-\lem{Let $P$ be a non-zero polynomial on $\FF^n$ with degree less than $|\FF|$. Then $P$ does not vanish everywhere. \label{kaklem3}}
+\lem{Let $P$ be a non-zero polynomial on $\FF^n$ with degree less than $|\FF|$. Then $P$ does not vanish everywhere. \label{lem:kaklem3}}
 
 \prf{ We proceed by induction on $n$. For $n=1$, a non-zero polynomial that vanishes everywhere has $|\FF|$ roots, so must be at least of degree $|\FF|$.
 Let us assume that the statement holds in $\FF^{n-1}$, we now prove it must also hold for $\FF^N$.
@@ -207,9 +208,9 @@ Each $P_j$ are polynomials in $x_1, \dots x_{n-1}$ of degree less than $|\FF|$. 
 }
 
 \begin{proof} [Proof of Theorem \ref{KakeyaConjecture}] 
-Assume $A \subset \FF^n$ is a Kakeya set, and that $|A| \leq \frac{|\FF|^n}{n!}$. Then by \ref{paramcounting} we can find a 
-non-zero polynomial, say $P$, that vanishes on $A$. Now by \ref{kaklem2} there exists a non-zero polynomial $\bar{P}$ that vanishes everywhere on $\FF^n$, and has degree less than $|\FF|$.
-Finally $\ref{kaklem3}$ says that such a $\bar{P}$ is necessarily the zero polynomial, a contradiction. We conclude that $|A| > \frac{|\FF|^n}{n!}$, or in other words:
+Assume $A \subset \FF^n$ is a Kakeya set, and that $|A| \leq \frac{|\FF|^n}{n!}$. Then by \ref{lem:paramcounting} we can find a 
+non-zero polynomial, say $P$, that vanishes on $A$. Now by \ref{lem:kaklem2} there exists a non-zero polynomial $\bar{P}$ that vanishes everywhere on $\FF^n$, and has degree less than $|\FF|$.
+Finally \ref{lem:kaklem3} says that such a $\bar{P}$ is necessarily the zero polynomial, a contradiction. We conclude that $|A| > \frac{|\FF|^n}{n!}$, or in other words:
 $$
 |A| \gtrsim_n |\FF|^n.
 $$

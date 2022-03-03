@@ -1,5 +1,14 @@
 \begin{thebibliography}{10}
 
+\bibitem{alon1999combinatorial}
+Noga Alon.
+\newblock Combinatorial nullstellensatz.
+\newblock {\em Combinatorics, Probability and Computing}, 8(1-2):7--29, 1999.
+
+\bibitem{GOW2020}
+Timothy Gowers.
+\newblock Topics in combinatorics - cambridge tripos lecture notes, 2020.
+
 \bibitem{davies1971some}
 Roy~O Davies.
 \newblock Some remarks on the kakeya problem.
@@ -21,10 +30,6 @@ L.~Guth.
 Thomas Wolff.
 \newblock An improved bound for kakeya type maximal functions.
 \newblock {\em Revista Matemática Iberoamericana}, 11(3):651--674, 1995.
-
-\bibitem{GOW2020}
-Timothy Gowers.
-\newblock Topics in combinatorics - cambridge tripos lecture notes, 2020.
 
 \bibitem{guth2008algebraic}
 Larry Guth and Nets~Hawk Katz.
@@ -54,11 +59,6 @@ Larry Guth.
 \newblock Polynomial partitioning for a set of varieties.
 \newblock In {\em Mathematical Proceedings of the Cambridge Philosophical
   Society}, volume 159, pages 459--469. Cambridge University Press, 2015.
-
-\bibitem{alon1999combinatorial}
-Noga Alon.
-\newblock Combinatorial nullstellensatz.
-\newblock {\em Combinatorics, Probability and Computing}, 8(1-2):7--29, 1999.
 
 \bibitem{michalek2010}
 {\em The American Mathematical Monthly}, 117(9):821--823, Nov 2010.
