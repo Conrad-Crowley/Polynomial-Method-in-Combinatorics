@@ -1,13 +1,13 @@
 \chapter{The Joints Problem \label{chap:joints}}
-
+\todo{add fluff}
 \section{Background}
 Let $\LL$ be a set of distinct lines in $\RR^n$. A joint of $\LL$ is a point which lies in three non-coplanar lines of $\LL$.
 The joints problem consists of setting a sharp lower bound on the maximal number of joints that can be formed from a configuration of $L$ distinct lines.
-We denote this quantity $J(L)$. In other words $J(L)$ is the supremeum over all configurations of lines in $\RR^n$ in the number of joints.
+We denote this quantity $J(L)$. In other words $J(L)$ is the supremeum over all configurations of lines in $\RR^n$ in the number of joints. \todo{?}
 
 
 
-
+\todo{examples corrections}
 We shall begin by examining an example based on a grid, with the hopes of gaining better intuition about the problem and formulating a conjecture. 
 \begin{example}Consider an $N \times N \times N$ regular grid of integer coordinates. We shall give a collection of lines such that each point of this grid is a joint for the collection.
 Let $\LL$ be the collection of all lines parallel to any of the Cartesian axes that intersect this a point in this grid.
@@ -25,8 +25,6 @@ This leaves us with $|\LL| = 3 N^2$ lines forming $N^3$ joints. The number of jo
 
 We can extend this example to higher dimensional grids easily. 
 \begin{example}
-    
-
 If we have an $\underbrace{N \times \dots \times N}_{n \text{ Dimensions}}$ regular grid of integer coordinates in $\RR^n$, we can construct an example  by a straightforward extension
 of the above example. Each additional dimension increases the number of lines by a factor of $N$, this can be seen by considering each new dimension as a layering of the previous set along the new axis.
 Thus we can see that $\sim N^{n-1}$ lines form $N^n$ joints in this manner. So the number of joints is $\sim |\LL|^{\frac{n}{n-1}}$.

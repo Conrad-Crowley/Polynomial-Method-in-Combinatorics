@@ -26,4 +26,4 @@
 \contentsline {chapter}{\numberline {6}The Polynomial Method in Additive Combinatorics }{28}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Combinatorial Nullstellensatz}{28}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Cauchy-Davenport Theorem}{29}{section.6.2}%
-\contentsline {chapter}{References}{30}{chapter*.47}%
+\contentsline {chapter}{References}{31}{chapter*.49}%

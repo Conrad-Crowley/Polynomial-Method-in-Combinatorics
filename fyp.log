@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.2.19)  3 MAR 2022 23:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  4 MAR 2022 11:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex
-(/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex
+**/home/conrad/deve/fyp-combo/fyp.tex
+(/home/conrad/deve/fyp-combo/fyp.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2021-11-22> (/usr/share/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
@@ -814,7 +814,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 ...ine {chapter}{References}{30}{chapter*.47}
+l.29 ...ine {chapter}{References}{31}{chapter*.49}
                                                   % [1
 
 
@@ -849,15 +849,15 @@ LaTeX Font Info:    Trying to load font information for U+bbm on input line 53.
  (/usr/share/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 ) [4]
-<images/kakeya_ex_f32.png, id=241, 85.3624pt x 85.3624pt>
+<images/kakeya_ex_f32.png, id=246, 85.3624pt x 85.3624pt>
 File: images/kakeya_ex_f32.png Graphic file (type png)
 <use images/kakeya_ex_f32.png>
-Package pdftex.def Info: images/kakeya_ex_f32.png  used on input line 71.
+Package pdftex.def Info: images/kakeya_ex_f32.png  used on input line 72.
 (pdftex.def)             Requested size: 128.0387pt x 128.04196pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 72.
+(caption)                particular \caption on input line 73.
 See the caption package documentation for explanation.
 
 
@@ -867,10 +867,10 @@ LaTeX Warning: Marginpar on page 5 moved.
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 159.
+(amsmath)                 on input line 160.
 
 
-Overfull \hbox (9.26088pt too wide) in paragraph at lines 171--171
+Overfull \hbox (9.26088pt too wide) in paragraph at lines 172--172
 []\OT1/cmr/m/n/10.95 Let now $\OML/cmm/m/it/10.95 p[]; [] ; p[]$ \OT1/cmr/m/n/10.95 be the points of $\OML/cmm/m/it/10.95 A$\OT1/cmr/m/n/10.95 . We con-sider the eval-u-a-tion map $\OML/cmm/m/it/10.95 E \OT1/cmr/m/n/10.95 : [][](\U/msb/m/n/10.95 K[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 !
  []
 
@@ -965,37 +965,47 @@ Chapter 6.
 [28
 
 ]
-Overfull \hbox (7.98569pt too wide) in paragraph at lines 39--39
+Overfull \hbox (7.98569pt too wide) in paragraph at lines 38--38
 [][][]\OT1/cmr/m/n/10.95 Generalise 
  []
 
 
-Overfull \hbox (7.98569pt too wide) in paragraph at lines 39--39
+Overfull \hbox (7.98569pt too wide) in paragraph at lines 38--38
 [][][]\OT1/cmr/m/n/10.95 Generalise 
+ []
+
+
+Overfull \hbox (11.02736pt too wide) in paragraph at lines 61--61
+[][][]\OT1/cmr/m/n/10.95 Generalise![]  
+ []
+
+
+Overfull \hbox (11.02736pt too wide) in paragraph at lines 61--61
+[][][]\OT1/cmr/m/n/10.95 Generalise![]  
  []
 
 ) (./fyp.bbl [29]) [30
 
-] (./fyp.aux)
+] [31] (./fyp.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `fyp.out' has not changed.
-(rerunfilecheck)             Checksum: 13254CF1C414687C36CCA494D32539C5;5015.
+(rerunfilecheck)             Checksum: E9E906BF46DA0B6205675CD158EAB7CF;5015.
  ) 
 Here is how much of TeX's memory you used:
- 28766 strings out of 478353
- 535660 string characters out of 5854635
- 858469 words of memory out of 5000000
- 46222 multiletter control sequences out of 15000+600000
+ 28790 strings out of 478353
+ 536071 string characters out of 5854636
+ 858776 words of memory out of 5000000
+ 46241 multiletter control sequences out of 15000+600000
  416877 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,13n,89p,680b,1065s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,13n,89p,655b,1065s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on fyp.pdf (34 pages, 520577 bytes).
+Output written on fyp.pdf (35 pages, 522259 bytes).
 PDF statistics:
- 598 PDF objects out of 1000 (max. 8388607)
- 512 compressed objects within 6 object streams
- 164 named destinations out of 1000 (max. 500000)
+ 610 PDF objects out of 1000 (max. 8388607)
+ 523 compressed objects within 6 object streams
+ 169 named destinations out of 1000 (max. 500000)
  255 words of extra memory for PDF output out of 10000 (max. 10000000)
 

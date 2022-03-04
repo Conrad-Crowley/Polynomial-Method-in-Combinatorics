@@ -1,13 +1,13 @@
 \chapter{The Polynomial Method in Additive Combinatorics \label{chap:alon}}
-So far our discussion has only centred around the usefulness of polynomial methods in geometric combinatorial problems. 
+So far our discussion has only centred around the usefulness of polynomial methods in combinatorial problems with a geometric flavour. 
 In this chapter we shall discuss applications to the exciting field of additive combinatorics, where in 1990 Alon provided perhaps
 the first example of the polynomial method in action.\cite{alon1999combinatorial} We present Michalek's short, elementary, and direct proof of the combinatorial nullstellensatz.\cite{michalek2010}
 \section{Combinatorial Nullstellensatz}
 \begin{theorem}[Combinatorial Nullstellensatz]
-    Let $\KK$ be a (not necessarily finite) field, and let $P(X_1,\dots, X_n) \in \KK[X_1,\dots, X_n]$ be a polynomial in $n$ variables with coefficients in $\KK$. Suppose the coefficient of $x_1^{k_1}x_2^{k_2}\dots x_n^{k_n}$ is non-zero and further suppose $\deg P = \sum_{i=1}^n k_i$, where each $k_i$ is a non-negative integer.
+    Let $\KK$ be a (not necessarily finite) field, and let $P(X_1,\dots, X_n) \in \KK[X_1,\dots, X_n]$ be a polynomial in $n$ variables with coefficients in $\KK$. Suppose the coefficient of $X_1^{k_1}X_2^{k_2}\dots X_n^{k_n}$ is non-zero and further suppose $\deg P = \sum_{i=1}^n k_i$, where each $k_i$ is a non-negative integer.
 
     Then for any subsets $A_1,\dots A_n$ of $\KK$ satisfying $|A_i| > k_i$ for each $1\leq i\leq n$ there exist $a_1 \in A_1, \dots, a_n \in A_n$ such that $P(a_1,\dots, a_n) \neq 0$.
-    \label{comb-nullstellensatz}
+    \label{thm:comb-nullstellensatz}
 \end{theorem}
 \begin{proof}
     We proceed by induction on $\deg P = D$. When $D=1$, $P$ is simply a linear combination of $n$ variables say $P(X_1,\dots X_m) = c_1 X_1 + \dots c_n X_n$. Without loss of generality assume $x_1$ has a non-zero coefficient and consider the sets $A_i = \{a_{i,1}, a_{i,2}\}$. Suppose $P$ at the point $(a_{1,1}, a_{2,1}, \dots, a_{n,1})$ is zero. We can then determine $c_{1} =- \frac{c_2 a_{2,1} + c_3 a_{3,1}+\dots+ c_n a_{n,1}}{a_{1,1}}$. Now evaluating at $(a_{1,2}, a_{2,1}, \dots, a_{n,1})$ we see that this is zero only when $a_{1,1} = a_{1,2}$, so our theorem holds. 
@@ -18,12 +18,11 @@ the first example of the polynomial method in action.\cite{alon1999combinatorial
     \[
     P = (x_1-a)Q +R  \tag{$\dagger$}
     \]
-    by the usual long division of polynomials. The degree of $R$ in $x_1$ must be strictly less than $\deg(x_1-a)$, so $R$ does not contain any
-    $x_1$ terms. Thus it follows that $Q$ must have a monomial with non-zero coefficient of the form $x_1^{k_{1} -1} x_2^{k_2} \dots x_n^{k_n}$ and 
+    by the usual long division of polynomials. The degree of $R$ in $x_1$ must be strictly less than $\deg(X_1-a)$, so $R$ is independent of $X_1$ terms. Thus it follows that $Q$ must have a monomial with non-zero coefficient of the form $X_1^{k_{1} -1} X_2^{k_2} \dots X_n^{k_n}$ and 
     $\deg (Q) = D-1$.
 
-    Take any $x \in \{a\} \times A_2 \times \dots \times A_n$ and evaluate $(\dagger)$. Since $P(x) = 0$ it follows that $R(x) = 0$, but $R$ is independent of $x_1$ so $R$ must also vanish on $A_1 \backslash \{a\} \times A_2 \times \dots \times A_n$.
-    Now take any $x \in A_1 \backslash \{a\} \times A_2 \times \dots \times A_n$ and evaluate $(\dagger)$. Since $(x_1 - a)$ is non-zero, $Q(x) =0$. So $Q$ vanishes on all $x \in A_1 \backslash \{a\} \times A_2 \times \dots \times A_n$, which contradicts the inductive hypothesis.
+    Take any $x \in \{a\} \times A_2 \times \dots \times A_n$ and evaluate $(\dagger)$. Since $P(x) = 0$ it follows that $R(x) = 0$. Hence $R$ vanishes identically on the slice $\{a\} \times A_2 \times \dots \times A_n$. Since $R$ is independent of $X_1$ it must also vanish identically on $A_1 \times A_2 \times \dots \times A_n$.
+    Now take any $x \in A_1 \backslash \{a\} \times A_2 \times \dots \times A_n$ and evaluate $(\dagger)$. Since the $(X_1 - a)$ term is non-zero, $Q(x) =0$. So $Q$ vanishes on all $x \in A_1 \backslash \{a\} \times A_2 \times \dots \times A_n$, which contradicts the inductive hypothesis.
 \end{proof}
 \section{Cauchy-Davenport Theorem}
 \begin{theorem} [Cauchy-Davenport Theorem]
@@ -40,7 +39,7 @@ the first example of the polynomial method in action.\cite{alon1999combinatorial
 
 \begin{proof}
     Let us tackle the two cases separately. First, assume that $\min \left\{p, |A| + |B| -1 \right\} = p$.
-    Then if $|A| + |B| > p$, $A$ and $B$ must intersect. \todo{ More explanation on $\cap$ needed? PHP?}
+    Then if $|A| + |B| > p$, $A$ and $B$ must intersect. \todo{expand PHP}
     For some $g \in \ZZ_p$ denote the set  $\left\{ g - x  \ | \ x \in B, \  \right\} \subset \ZZ_p$ as $g-B$. Since $|g-B| = |B|$, we have that 
     $g-B$ and $A$ must intersect as well. Thus there exists some $a \in A$, $b \in B$ such that: 
     \begin{align*}
@@ -50,13 +49,13 @@ the first example of the polynomial method in action.\cite{alon1999combinatorial
     Our choice of $g$ was arbitrary, so it follows that $A+B = \ZZ_p$ and hence $|A+B| = p$.
 
     Now assume that $\min \left\{p, |A| + |B| -1 \right\} = |A| + |B| -1$. Then if the theorem is false we have $|A+B| \leq |A| + |B| -2$, so there exists some $C \subset \ZZ_p$ such that 
-    $A+B \subset C$ and $|C| =  |A| + |B| -2$. Now let us define a polynomial $f(x,y) \in \ZZ_p [x,y]$ as:
+    $A+B \subset C$ and $|C| =  |A| + |B| -2$. Now let us define a polynomial $f(x,y) \in \ZZ_p [X,Y$ as:
     \[
-        f(x,y) = \prod_{c \in C} (x+y -c).
+        f(X,Y) = \prod_{c \in C} (X+Y -c).
     \]
     Since $A+B \subset C$, $f(a,b) =0$ for all $(a,b) \in A\times B$. Further, the degree of $f$ is $\deg f = |C| = |A| + |B| -2$. 
-    We can now appeal to the combinatorial nullstellensatz to yield a contradiction. Let $k_1 = |A| -1$, and $k_2 = |B|-1$. 
+    We can now appeal to the \hyperref[thm:comb-nullstellensatz]{Combinatorial Nullstellensatz} to yield a contradiction. Let $k_1 = |A| -1$, and $k_2 = |B|-1$. 
     Now $\deg f = k_1 + k_2$, and the coefficient of $x^{k_1}y^{k_2}$ is
-    ${|A|+|B| - 2} \choose {|A|- 1}$ which is non-zero in $\ZZ_p$ as the numerator cannot contain a factor of $p$ by assumption. Applying Theorem \ref{comb-nullstellensatz} we see that there 
+    ${|A|+|B| - 2} \choose {|A|- 1}$ which is non-zero in $\ZZ_p$ as the binomial coefficient is not divisible by $p$ if all its factors are less than $p$. Applying Theorem \ref{thm:comb-nullstellensatz} we see that there 
     must exist some $(a,b) \in A \times B$ such that $f(a,b) \neq 0$, a contradiction.
 \end{proof}

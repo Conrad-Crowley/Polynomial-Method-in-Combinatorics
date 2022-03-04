@@ -5,9 +5,20 @@ Noga Alon.
 \newblock Combinatorial nullstellensatz.
 \newblock {\em Combinatorics, Probability and Computing}, 8(1-2):7--29, 1999.
 
+\bibitem{2008DVIR}
+Zeev Dvir.
+\newblock On the size of kakeya sets in finite fields.
+\newblock {\em Journal of the American Mathematical Society},
+  22(4):1093–1097, Jun 2008.
+
 \bibitem{GOW2020}
 Timothy Gowers.
 \newblock Topics in combinatorics - cambridge tripos lecture notes, 2020.
+
+\bibitem{GUTH2016}
+L.~Guth.
+\newblock {\em Polynomial Methods in Combinatorics}.
+\newblock University Lecture Series. American Mathematical Society, 2016.
 
 \bibitem{davies1971some}
 Roy~O Davies.
@@ -20,11 +31,6 @@ Jean Bourga'in.
 \newblock Besicovitch type maximal operators and applications to fourier
   analysis.
 \newblock {\em Geometric \& Functional Analysis GAFA}, 1(2):147--187, 1991.
-
-\bibitem{GUTH2016}
-L.~Guth.
-\newblock {\em Polynomial Methods in Combinatorics}.
-\newblock University Lecture Series. American Mathematical Society, 2016.
 
 \bibitem{WOLFF1995}
 Thomas Wolff.
