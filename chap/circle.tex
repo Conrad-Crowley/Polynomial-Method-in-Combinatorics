@@ -9,7 +9,7 @@ The set of unordered pairs of circles in a collection $\CE$ which are mutually t
         |\tau(\CE)| \leq |\CE|^2.
     \] \label{thm:trivial-circle-bound}
 \end{theorem}
-Stated for arbitrary collections of circles the problem is not particularly interesting as the above bound turns out to be asymotopically tight. 
+Stated for arbitrary collections of circles the problem is not particularly interesting as the above bound turns out to be asymptotically tight. 
 \begin{example}
 Denote a circle centred at $(x,y)$ with radius $r$ as $\gamma (x,y,r)$. \todo{notation}
 Consider the following collection of $N+1$ circles:
@@ -20,15 +20,15 @@ Consider the following collection of $N+1$ circles:
     &\vdots \\
     C_N &= \gamma\left(1- \frac{1}{2^N}, 0, \frac{1}{2^N}\right)
 \end{align*}
-Each circle in our collection $\CE = \cup_{0 \leq i \leq N} C_i$ is tangent to $N$ other circles at the point (1,0). 
+Each circle in our collection $\CE = \{ C_i \ | \ 0 \leq i leq N\}$ is tangent to $N$ other circles at the point (1,0). 
 Hence $|\tau(\CE)| \sim N^2 \sim |\CE|^2$. 
 \todo{diagram}
 \end{example}
 
 Instead we shall look at collections of circles that satisfy a single non-degeneracy condition. We consider collections of circles 
-such that no three are mutually tangent at a common point. The best known examples leverage our tight \hyperref[thm:S-T]{Szemerédi-Trotter Theorem} examples:
+such that no three are mutually tangent at a common point. The best known examples leverage our asymptotically tight \hyperref[thm:S-T]{Szemerédi-Trotter Theorem} examples:
 \begin{example}
-    Let $\ES$, $\LL$ be collections of $N$ points and $N$ lines respectively such that the \hyperref[thm:S-T]{Szemerédi-Trotter Theorem}'s bound is tight. 
+    Let $\ES$, $\LL$ be collections of $N$ points and $N$ lines respectively such that the \hyperref[thm:S-T]{Szemerédi-Trotter Theorem}'s bound is asymptotically tight. 
     In particular, they determine $\sim N^{4/3}$ point line incidences. 
     Let $C_1$ denote the collection of unit circles centred at the points of $\ES$. 
     Let $C_2$ denote the collection of lines obtained by translating each line $\ell in \LL$ one unit in the $\ell^{\perp}$ direction.
@@ -52,7 +52,7 @@ It is not obvious how to apply the polynomial method in the current formulation.
 We will perform a lifting  of our circles into algebraic curves $\RR^3$, 
 preserving tangencies between circles in the plane as intersections between their lifted curves in $\RR^3$. 
 This transforms the problem from a tangency problem to an incidence problem, and reduces the required degree of polynomial needed to interpolate.
-In general Lemma \ref{kaklem2}\todo{wrong lemma?} tells us that if we are to interpolate a set of $M$ points in $\RR^d$ by a polynomial $P$, the degree of $P$ is of order $\deg P \sim M^{1/d}$, 
+In general Lemma \ref{lem:paramcounting} tells us that if we are to interpolate a set of $M$ points in $\RR^d$ by a polynomial $P$, then the degree of $P$ is $O(M^{1/d})$, 
 so increasing the dimension of the problem yields a more controlled degree of the polynomial required.
 
 \section{Lifting of circles to $\RR^3$}
@@ -61,7 +61,7 @@ We shall now discuss this lifting in detail. Let $\gamma \subset \RR^2$ be a cir
 We define the lifting transform of the circle as: \[
     \beta(\gamma) = \left \{ (x,y,z) \in \RR^3 \ | \ (x-x_\gamma)^2 + (y-y_\gamma)^2 = r_\gamma^2, \ z = - \frac{x-x_\gamma}{y-y_\gamma} \right \}.
 \]  
-Clearly $\beta$ is an algebraic curve, so now we shall examine the correspondence between mutually tangent circles. Notice that $z$ is defined as the slope of the tangent line
+Clearly $\beta$ is an algebraic curve, so now we shall examine the correspondence between mutually tangent circles. Notice that $z$ is defined as the reciprocal of the slope of the tangent line
 at the point $(x,y) \in \gamma$.
 
 \begin{lemma}
@@ -70,15 +70,15 @@ at the point $(x,y) \in \gamma$.
     \label{lem:beta-lift}
 \end{lemma}
 \begin{proof}
-If $\gamma$ and $\gamma'$ are tangent, then there exists a point $(x,y) \in \gamma \cap \gamma'$ so the first two coordinates of $\beta(\gamma)$ and $\beta(\gamma')$ agree. 
+If $\gamma$ and $\gamma'$ are tangent, then there exists a point $(x,y) \in \gamma \cap \gamma'$.
 Further, at a point of tangency we have that the slope of the tangent lines coincide for $\gamma$ and $\gamma'$, so the final coordinate is also equal. Hence $\beta(\gamma) \cap \beta(\gamma') \neq \emptyset$.
 
 In the other direction, assume there exists some $(x,y,z) \in \beta(\gamma) \cap \beta(\gamma')$. Clearly $(x,y) \in \gamma \cap \gamma'$, and again the slope of the tangent lines at this point are equal, hence we conclude
 $\gamma$ is tangent to $\gamma'$.
-\end{proof} \todo{satisfactory?}
+\end{proof}
 This one-to-one correspondence between tangencies in $\RR^2$ and incidences in $\RR^3$ is the key idea behind the proof. 
 For those more algebraically inclined, what we are doing here is equivalent to looking at the tangent bundles of our circle in the projective space, hence we 
-are preserving intersections. \todo{dangerous comment when Andrei is second reader}
+are preserving intersections.
 
 We will need a Bezout-type result which bounds the number of intersections between curves with no common components.
 \begin{lemma}[Bezout's Theorem for Plane Algebraic Curves]
@@ -152,7 +152,7 @@ We can now prove the main theorem.
     Then due to the tangent vector spanning the $z$-axis we will be able to achieve a contradiction.
 
     Let $P \in \RR[x,y,z]$ be a non-zero polynomial of minimal degree that vanishes on all intersections between the curves in $\beta (\Gamma)$. 
-    This polynomial interpolates $\sim N^{3/2}$ points in $\RR^3$, so by Lemma \ref{kaklem2}\todo{wrong lemma?} 
+    This polynomial interpolates $\sim N^{3/2}$ points in $\RR^3$, so by Lemma \ref{lem:paramcounting}
     the degree of $P$ is $\lesssim \left(N^{3/2}\right)^{\frac{1}{3}} =  N^{1/2}$. 
 
     Due to our refinement each $\gamma \in \Gamma$ is 

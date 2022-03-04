@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  4 MAR 2022 11:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.2.19)  4 MAR 2022 15:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/conrad/deve/fyp-combo/fyp.tex
-(/home/conrad/deve/fyp-combo/fyp.tex
+**/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex
+(/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2021-11-22> (/usr/share/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
@@ -814,7 +814,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 ...ine {chapter}{References}{31}{chapter*.49}
+l.29 ...ine {chapter}{References}{31}{chapter*.47}
                                                   % [1
 
 
@@ -876,11 +876,24 @@ Overfull \hbox (9.26088pt too wide) in paragraph at lines 172--172
 
 [7] [8]) (./chap/joints.tex [9]
 Chapter 3.
+
+Overfull \hbox (2.10007pt too wide) in paragraph at lines 10--10
+[][][]\OT1/cmr/m/n/10.95 examples 
+ []
+
+
+Overfull \hbox (2.10007pt too wide) in paragraph at lines 10--10
+[][][]\OT1/cmr/m/n/10.95 examples 
+ []
+
+
+LaTeX Warning: Marginpar on page 10 moved.
+
 [10
 
 ]
 
-LaTeX Warning: Reference `paramcounting' on page 11 undefined on input line 73.
+LaTeX Warning: Reference `paramcounting' on page 11 undefined on input line 71.
 
 [11]) (./chap/trotter.tex [12]
 Chapter 4.
@@ -946,11 +959,7 @@ LaTeX Warning: Marginpar on page 24 moved.
 
 LaTeX Warning: Marginpar on page 24 moved.
 
-[24]
-
-LaTeX Warning: Reference `kaklem2' on page 25 undefined on input line 155.
-
-[25]
+[24] [25]
 Overfull \hbox (6.09149pt too wide) in paragraph at lines 196--201
 []\OT1/cmr/m/n/10.95 Relabel $\OMS/cmsy/m/n/10.95 C$ \OT1/cmr/m/n/10.95 as $^^@$ for con-ve-nience. Again,
  []
@@ -974,16 +983,6 @@ Overfull \hbox (7.98569pt too wide) in paragraph at lines 38--38
 [][][]\OT1/cmr/m/n/10.95 Generalise 
  []
 
-
-Overfull \hbox (11.02736pt too wide) in paragraph at lines 61--61
-[][][]\OT1/cmr/m/n/10.95 Generalise![]  
- []
-
-
-Overfull \hbox (11.02736pt too wide) in paragraph at lines 61--61
-[][][]\OT1/cmr/m/n/10.95 Generalise![]  
- []
-
 ) (./fyp.bbl [29]) [30
 
 ] [31] (./fyp.aux)
@@ -991,21 +990,21 @@ Overfull \hbox (11.02736pt too wide) in paragraph at lines 61--61
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `fyp.out' has not changed.
-(rerunfilecheck)             Checksum: E9E906BF46DA0B6205675CD158EAB7CF;5015.
+(rerunfilecheck)             Checksum: 13254CF1C414687C36CCA494D32539C5;5015.
  ) 
 Here is how much of TeX's memory you used:
- 28790 strings out of 478353
- 536071 string characters out of 5854636
- 858776 words of memory out of 5000000
- 46241 multiletter control sequences out of 15000+600000
+ 28770 strings out of 478353
+ 535686 string characters out of 5854635
+ 858420 words of memory out of 5000000
+ 46223 multiletter control sequences out of 15000+600000
  416877 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,13n,89p,655b,1065s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,13n,89p,680b,1065s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on fyp.pdf (35 pages, 522259 bytes).
+Output written on fyp.pdf (35 pages, 522100 bytes).
 PDF statistics:
- 610 PDF objects out of 1000 (max. 8388607)
- 523 compressed objects within 6 object streams
- 169 named destinations out of 1000 (max. 500000)
+ 609 PDF objects out of 1000 (max. 8388607)
+ 522 compressed objects within 6 object streams
+ 167 named destinations out of 1000 (max. 500000)
  255 words of extra memory for PDF output out of 10000 (max. 10000000)
 

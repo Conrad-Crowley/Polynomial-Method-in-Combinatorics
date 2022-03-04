@@ -3,7 +3,7 @@
 In this chapter we will study the application of the polynomial method to incidence geometry by proving a fundamental theorem in the field.
 Incidence geometry is the study of possible intersection patterns of simple geometric objects, such as lines or low degree curves. 
 We have already seen an incidence problem in the previous chapter on the Joints problem. 
-By developing the powerful tool of polynomial partitioning we shall see the key role that the topology of $\RR$ can play in such problems, 
+By developing the powerful tool of polynomial partitioning we shall see the key role that the topology of $\RR^n$ can play in such problems, 
 in contrast to the trivial topology of finite fields. 
 
 
@@ -39,7 +39,7 @@ Every other line has at least two points in $\ES$. The total number of incidence
 as otherwise there would exist a $p\in \ES$ that lies on over $|\ES|$ lines, and each of these lines would have an additional 
 point on it. This would imply there are more that $|\ES|$ points, a contradiction. 
 
-Interchanging the roles of $\LL$ and $\ES$ achieves the other bound. \todo{does it?}
+Interchanging the roles of $\LL$ and $\ES$ achieves the other bound as two lines intersect in at most one point.
 \end{proof}
 
 \begin{theorem}[Second Trivial Incidence Bound]
@@ -77,7 +77,7 @@ $$
 I(\ES,\LL) = |\FF|^3 \sim (|\FF|^2)(|\FF|^2)^{1/2} + |\FF|^2.
 $$
 \end{example}
-In contrast, the following examples seem to be the best possible over $\RR$. We will later prove that these are the tight case of the \hyperref[thm:S-T]{Szemerédi–Trotter Theorem}.
+In contrast, the following examples seem to be the best possible over $\RR$. We will later prove that these are the asymptotically tight case of the \hyperref[thm:S-T]{Szemerédi–Trotter Theorem}.
 We define a line in $\RR^2$ as follows:
 \[
     \ell_{m,c} = \{(x,y) \in \RR^2 \ | \ y = mx+c\}.     
@@ -123,7 +123,7 @@ We define a line in $\RR^2$ as follows:
 
 
 \section{Ham Sandwich Theorems}
-The above examples suggest that the topology of $\RR$ plays a key role in this incidence problem. We shall now introduce the method of polynomial partitioning,
+The above examples suggest that the topology of $\RR^3$ plays a key role in this incidence problem. We shall now introduce the method of polynomial partitioning,
 which can be seen as the topological analogy to the \hyperref[lem:kaklem2]{vanishing lemma} we used in the previous chapters. 
 
 Let $\SP^n$ denote the unit $n$-sphere in $\RR^{n+1}$. 
@@ -160,9 +160,10 @@ Let $U_1,U_2,\dots,U_N \subset \RR^n$ be finite volume open sets with $N< \dim V
 Then there exists a non-zero function $f \in V$ that bisects each $U_i$. \label{thm:GenHamSand}
 \end{theorem}
 \begin{proof}
-Define the functions $\{\phi_i\}_{i=1}^N$, $\phi_i: V\backslash \{0\} \to \RR$ by
+
+Define the functions $\{\phi_i\}_{i=1}^N$, $\phi_i: V\backslash \{0\} \to \RR$ by:
 \[
-\phi_i(f) = \text{Vol}(\{x\in U_i \ | \ f(x) > 0 \}) - \text{Vol}(\{x\in U_i \ |\ f(x) > 0 \})
+\phi_i(f) = \text{Vol}(\{x\in U_i \ | \ f(x) > 0 \}) - \text{Vol}(\{x\in U_i \ |\ f(x) > 0 \}).
 \]
 Since $Z(f)$ has measure zero, it is easy to see that $\phi_i(f) = 0$ if and only if $f$ bisects $U_i$. 
 Notice also that $\phi_i(-f) = -\phi_i(f)$, hence $\phi_i$ is antipodal. 
@@ -172,13 +173,17 @@ It is enough to show that if $U$ is a finite volume open set, then the measure o
 
 Suppose $f_n \to f$ in $V$ for some $f,f_n \in V \backslash \{0\}$. $f_n$ converges to $f$ in the topology of $V$, 
 so it follows it must converge pointwise. Pick any $\varepsilon >0$. 
-By Egorov's theorem, we can find a subset $E\subset U$ so that $f_n \to f$ uniformly pointwise on $U \backslash E$, and $m(E)< \varepsilon$.
+By Egorov's theorem, we can find a subset $E\subset U$ so that $f_n \to f$ uniformly pointwise on $U \backslash E$ with $m(E)< \varepsilon$.
 By hypothesis, $m(Z(f)) =0$ and $m(U) < \infty$. 
-Since the Lebesgue measure is continuous we can choose $\delta$ such that $m\left(\{x\in U\ |\ |f(x)|<\delta\}\right) < \varepsilon$.
+Since the Lebesgue measure is continuous we can choose $\delta$ such that $m\left(\{x\in U\ \big |\ |f(x)|<\delta\}\right) < \varepsilon$.
 
-Now we choose $n$ sufficiently large that $|f_n (x) - f(x)| < \delta$ on $U\backslash E$. Then we have \[|m\left(\{x\in U\ |\ f_n(x)>0\}\right) - m\left(\{x\in U\ |\ f(x)>0\}\right)| < 2 \varepsilon.\] Since $\varepsilon$ was arbitrary each $\phi_i$ is continuous.
-\todo{is this just cnty of everything? - ask marco}
-
+Now we choose $n$ sufficiently large that $|f_n (x) - f(x)| < \delta$ on $U\backslash E$. Then we have by the triangle inequality:
+\begin{align*}
+    |m&\left(\{x\in U \ |\ f_n(x)>0\}\right) - m\left(\{x\in U\ |\ f(x)>0\}\right)| \\
+    &\leq |m\left(\{x\in U\ |\ f_n(x)>0\}\right)| + |m\left(\{x\in U\ |\ f(x)>0\}\right)| \\
+    &< 2 \varepsilon.
+\end{align*}
+Since $\varepsilon$ was arbitrary each $\phi_i$ is continuous.
 
 We now combine each $\phi_i$ into the map $\phi : V\backslash \{0\} \to \RR^N$. Since $\dim V > N$, select a subspace $U < V$ such that $\dim U = N+1$. 
 Now choose an isomorphism of $U$ with $\RR^{N+1}$, and think of $\SP^N$ as a subset of $U$.
@@ -192,9 +197,10 @@ By the Borsuk-Ulam theorem, there exists an $f\in \SP^N \subset V\backslash \{0\
 \end{corollary}
 
 \begin{proof}
+    Let us equip the space with the $L^1$ norm.
     For each $\delta>0$, define $U_{i, \delta}$ to be the union of $\delta-balls$ centred at the points of $S_i$. 
     By Theorem \ref{thm:GenHamSand}, we can find a non-zero $P_{\delta}$ with degree less than $D$ that bisects each $U_{i, \delta}$. 
-    By rescaling we can assume \todo{abusing notation, also the norm is l1?}$P_{\delta} \in \SP^N \subset \text{Poly}_D (\RR^n) \backslash \{0\}$.
+    By rescaling we can assume $P_{\delta} \in \SP^N \subset \text{Poly}_D (\RR^n) \backslash \{0\}$.
     Since $\SP^N$ compact, we can find a sequence $\delta_m \to 0$ so that $P_{\delta_{m}}$ converges to $P$ in $\SP^N$.
     Since the coefficients of $P_{\delta_{m}}$ converge to $P$, $P_{\delta_{m}}$ converges to $P$ uniformly on compact sets.
 
@@ -252,7 +258,7 @@ We define the following pairs of complimentary sets:
     \LL_z &=\{\ell \in \LL \ |\ \ell \subset Z(p)\}
 \end{align*} 
 Note that $\ES = \ES_c \cup \ES_z$, $\LL = \LL_c \cup \LL_z$. We can now write our total line-point incidences as the following sum
-$$I(\ES, \LL) = I(\ES_c, \LL) + I(\ES_z, \LL_z) + I(\ES_z, \LL_c).$$\todo{check equality?}
+$$I(\ES, \LL) = I(\ES_c, \LL) + I(\ES_z, \LL_z) + I(\ES_z, \LL_c).$$
 If a line $\ell$ is not contained entirely in $Z(P)$ then it can intersect $P$ at most $D$ times, 
  so each line intersects at most $D+1$ cells. Hence $\sum_{i \in \Pi} L_i \leq (D+1)L$. We begin by examining the $I(\ES_c, \LL)$ term:
 \begin{align*}
@@ -282,9 +288,9 @@ Considering the regime where $L > S^2$ and applying the \hyperref[thm:trivial-ST
 \]
 \end{proof}
 
-There are two key things to note about the above proof. First, the key role that the topology of $\RR$ plays. Topology is used in the proof of polynomial partitioning as
+There are two key things to note about the above proof. First, the key role that the topology of $\RR^3$ plays. Topology is used in the proof of polynomial partitioning as
 it relies on the Borsuk Ulam theorem. It is a worthwhile heuristic to develop that polynomial partitioning may be useful for incidence problems
 where the best examples in a finite field (which is only equipped with the trivial topology) do not coincide with the best known examples over the reals.
 Secondly, the above proof illustrates the surprising power of polynomial partitioning. We are able to use very trivial bounds in each cell to achieve
-a tight overall bound. 
+a asymptotically tight overall bound. 
 \todo{consider adding a digression on ST}
