@@ -84,8 +84,8 @@ We will need a Bezout-type result which bounds the number of intersections betwe
 \begin{lemma}[Bezout's Theorem for Plane Algebraic Curves]     \label{lem:Bezout}
    Let $Z_1$ and $Z_2$ be the zero sets of two polynomials over $\RR[X,Y]$ and suppose $\deg Z_1 > \deg Z_2$. Then one of the following holds:
    \begin{align*}
-    |Z_1 \cap Z_2 | \leq \deg Z_1 \deg Z_2 \\
-    \text{ or }& Z_2 \subset Z_1
+    |Z_1 \cap Z_2 | &\leq \deg Z_1 \deg Z_2 \\
+    \text{ or } &Z_2 \subset Z_1
    \end{align*}
 \end{lemma}
 
@@ -100,8 +100,9 @@ are sufficiently uniformly distributed among our circles. We can refine our coll
 \end{lemma}
 
 \begin{proof}
-Let $\tau(\CE)$ be the set of tangencies of the circles in $\CE$. Let $\CE_0 = \CE$. Take a circle $\gamma \in \CE_0$ such that $|\{(\gamma, \gamma') \ |\ (\gamma, \gamma') \in \tau(\CE_0)\}| < c_1 N^{1/2}$
-and discard it. We label our new refined collection as $\CE_1$. From this collection, again take a circle $\gamma$ such that $|\{(\gamma, \gamma') \ |\ (\gamma, \gamma') \in \tau(\CE_1)\}| < c_1 N^{1/2}$ and discard it. 
+We proceed by a stopping time argument.
+Let $\tau(\CE)$ be the set of tangencies of the circles in $\CE$. Let $\CE_0 = \CE$. Let $c_1$ be a fixed constant to be chosen later. Take a circle $\gamma \in \CE_0$ such that $|\{ \gamma' \ |\ (\gamma, \gamma') \in \tau(\CE_0)\}| < c_1 N^{1/2}$
+and discard it. We label our new refined collection as $\CE_1$. From this collection, again take a circle $\gamma$ such that $|\{\gamma'\ |\ (\gamma, \gamma') \in \tau(\CE_1)\}| < c_1 N^{1/2}$ and discard it. 
 
 After repeating this process $M$ times until there are no more circles that satisfy our criteria, 
 at each step removing a circle that contributes only a small number of tangencies, we attain a collection $\CE_M$.
