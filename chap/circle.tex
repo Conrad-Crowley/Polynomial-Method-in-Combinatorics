@@ -84,7 +84,7 @@ We will need a Bezout-type result which bounds the number of intersections betwe
 \begin{lemma}[Bezout's Theorem for Plane Algebraic Curves]     \label{lem:Bezout}
    Let $Z_1$ and $Z_2$ be the zero sets of two polynomials over $\RR[X,Y]$ and suppose $\deg Z_1 > \deg Z_2$. Then one of the following holds:
    \begin{align*}
-    |\{ x \ |& \ x \in Z_1 \cap Z_2 \}| \leq \deg Z_1 \deg Z_2 \\
+    |Z_1 \cap Z_2 | \leq \deg Z_1 \deg Z_2 \\
     \text{ or }& Z_2 \subset Z_1
    \end{align*}
 \end{lemma}
@@ -198,8 +198,8 @@ Let us label the interior of each of these cells as $\{\Omega_i \ | \ 0 \leq i \
 
 We can now define the following complimentary sets based on whether the variety is contained entirely in $Z(P)$:
 \begin{align*}
-    C_1 &= \{ \beta{\gamma} \ |\ \beta{\gamma} \not \subset Z(P) \}\\
-    C_2 &= \{ \beta{\gamma} \ |\ \beta{\gamma}  \subset Z(P) \}
+    C_1 &= \{ \beta(\gamma) \ |\ \beta(\gamma \not \subset Z(P) \}\\
+    C_2 &= \{ \beta(\gamma) \ |\ \beta(\gamma)  \subset Z(P) \}
 \end{align*}
 Notice here that $\beta(\Gamma) = C_1 \cup C_2$. Recalling the correspondence between incidences between our curves and tangencies of the circles, we define the following
 incidence sets and hence have the following expression for $|\tau(\Gamma)|$:
