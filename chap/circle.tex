@@ -1,17 +1,17 @@
 \chapter{Counting Circle Tangencies\label{chap:circle}}
 \todo{Kakeya proof with a twist}
-Here we shall discuss the problem of counting the number of tangencies in a suitably non-degenerate collection of circles. We say two circles are tangent if their intersection contains a single point.\todo{is this stupid?}
+Here we shall discuss the problem of counting the number of tangencies in a suitably non-degenerate collection of circles. We say two circles are tangent if their intersection contains a single point.
 The set of unordered pairs of circles in a collection $\CE$ which are mutually tangent are called the tangencies of the collection and is denoted $\tau(\CE)$. 
 \section{Trivial Bounds}
-\begin{theorem}[Trivial Bound]
+\begin{theorem}[Trivial Bound] \label{thm:trivial-circle-bound}
     Let $\CE$ be an arbitrary finite collection of circles. Then the number of tangencies $|\tau(\CE)|$ is bounded as follows:
     \[
         |\tau(\CE)| \leq |\CE|^2.
-    \] \label{thm:trivial-circle-bound}
+    \] 
 \end{theorem}
 Stated for arbitrary collections of circles the problem is not particularly interesting as the above bound turns out to be asymptotically tight. 
 \begin{example}
-Denote a circle centred at $(x,y)$ with radius $r$ as $\gamma (x,y,r)$. \todo{notation}
+Denote a circle centred at $(x,y)$ with radius $r$ as $\gamma (x,y,r)$.
 Consider the following collection of $N+1$ circles:
 \begin{align*}
     C_0 &= \gamma\left(0,0,1\right) \\
@@ -20,7 +20,7 @@ Consider the following collection of $N+1$ circles:
     &\vdots \\
     C_N &= \gamma\left(1- \frac{1}{2^N}, 0, \frac{1}{2^N}\right)
 \end{align*}
-Each circle in our collection $\CE = \{ C_i \ | \ 0 \leq i leq N\}$ is tangent to $N$ other circles at the point (1,0). 
+Each circle in our collection $\CE = \{ C_i \ | \ 0 \leq i \leq N\}$ is tangent to $N$ other circles at the point (1,0). 
 Hence $|\tau(\CE)| \sim N^2 \sim |\CE|^2$. 
 \todo{diagram}
 \end{example}
@@ -41,11 +41,10 @@ We shall now present a bound from a recent paper of Ellenberg-Solymosi-Zahl whic
 
 \begin{theorem}
     Given a finite collection $\CE$ of $N$ circles in the plane such that no three are tangent at a common point, 
-    then the number of tangencies $|\tau(\CE)|$ obeys:
+    then the number of tangencies $|\tau(\CE)|$ obeys:     \label{thm:circle-tangencies}
     \[
         |\tau(\CE)| \lesssim N^{3/2}
     \]
-    \label{thm:circle-tangencies}
 \end{theorem}
 
 It is not obvious how to apply the polynomial method in the current formulation. 
@@ -59,42 +58,41 @@ so increasing the dimension of the problem yields a more controlled degree of th
 
 We shall now discuss this lifting in detail. Let $\gamma \subset \RR^2$ be a circle in the plane of radius $r_{\gamma}$ centred at $(x_\gamma, y_\gamma)$. 
 We define the lifting transform of the circle as: \[
-    \beta(\gamma) = \left \{ (x,y,z) \in \RR^3 \ | \ (x-x_\gamma)^2 + (y-y_\gamma)^2 = r_\gamma^2, \ z = - \frac{x-x_\gamma}{y-y_\gamma} \right \}.
+    \beta(\gamma) = \left \{ (x,y,z) \in \RR^3 \ \big | \ (x-x_\gamma)^2 + (y-y_\gamma)^2 = r_\gamma^2, \ z = - \frac{x-x_\gamma}{y-y_\gamma} \right \}.
 \]  
-Clearly $\beta$ is an algebraic curve, so now we shall examine the correspondence between mutually tangent circles. Notice that $z$ is defined as the reciprocal of the slope of the tangent line
+Clearly $\beta(\gamma)$ is an algebraic curve, so now we shall examine the correspondence between mutually tangent circles. Notice that $z$ is defined as the reciprocal of the slope of the tangent line
 at the point $(x,y) \in \gamma$.
 
 \begin{lemma}
     Let $\beta$ be the transform defined as above. 
-    Then two circles $\gamma, \gamma' \subset \RR^2$ are tangent if and only if $\beta(\gamma) \cap \beta(\gamma') \neq \emptyset$.
-    \label{lem:beta-lift}
+    Then two circles $\gamma, \gamma' \subset \RR^2$ are tangent if and only if $\beta(\gamma) \cap \beta(\gamma') \neq \emptyset$.    \label{lem:beta-lift}
 \end{lemma}
 \begin{proof}
-If $\gamma$ and $\gamma'$ are tangent, then there exists a point $(x,y) \in \gamma \cap \gamma'$.
-Further, at a point of tangency we have that the slope of the tangent lines coincide for $\gamma$ and $\gamma'$, so the final coordinate is also equal. Hence $\beta(\gamma) \cap \beta(\gamma') \neq \emptyset$.
+If $\gamma$ and $\gamma'$ are tangent then there exists a point $(x,y) \in \gamma \cap \gamma'$ and
+at a point of tangency we have that the slopes of the tangent lines coincide for $\gamma$ and $\gamma'$. Explicitly $\frac{x-x_\gamma'}{y - y_\gamma'}= \frac{x-x_\gamma}{y - y_\gamma} = z$.
+Hence $(x,y,z) \in \beta(\gamma) \cap \beta(\gamma')$ and thus $ \beta(\gamma) \cap \beta(\gamma') \neq \emptyset$.
 
-In the other direction, assume there exists some $(x,y,z) \in \beta(\gamma) \cap \beta(\gamma')$. Clearly $(x,y) \in \gamma \cap \gamma'$, and again the slope of the tangent lines at this point are equal, hence we conclude
-$\gamma$ is tangent to $\gamma'$.
+In the other direction, assume there exists some $(x,y,z) \in \beta(\gamma) \cap \beta(\gamma')$. 
+Clearly $(x,y) \in \gamma \cap \gamma'$ and the slopes of the tangent lines at this point are equal,
+hence we conclude $\gamma$ is tangent to $\gamma'$.
 \end{proof}
 This one-to-one correspondence between tangencies in $\RR^2$ and incidences in $\RR^3$ is the key idea behind the proof. 
 For those more algebraically inclined, what we are doing here is equivalent to looking at the tangent bundles of our circle in the projective space, hence we 
 are preserving intersections.
 
 We will need a Bezout-type result which bounds the number of intersections between curves with no common components.
-\begin{lemma}[Bezout's Theorem for Plane Algebraic Curves]
+\begin{lemma}[Bezout's Theorem for Plane Algebraic Curves]     \label{lem:Bezout}
    Let $Z_1$ and $Z_2$ be the zero sets of two polynomials over $\RR[X,Y]$ and suppose $\deg Z_1 > \deg Z_2$. Then one of the following holds:
    \begin{align*}
     |\{ x \ |& \ x \in Z_1 \cap Z_2 \}| \leq \deg Z_1 \deg Z_2 \\
     \text{ or }& Z_2 \subset Z_1
    \end{align*}
-    \label{lem:Bezout}
 \end{lemma}
 
 
-\section{Ellenberg-Solymosi-Zahl's Proof of Theorem \ref{thm:circle-tangencies}}
+\section[Ellenberg-Solymosi-Zahl's Proof]{Ellenberg-Solymosi-Zahl's Proof of Theorem \ref{thm:circle-tangencies}}
 In this proof, we will need to ensure our tangencies
 are sufficiently uniformly distributed among our circles. We can refine our collection such that this is the case by the following lemma.
-
 
 \begin{lemma}[Uniform Refinement]
     Let $\CE$ be a collection of $N$ circles and suppose that  $\tau(\CE) \gtrsim N^{\alpha}$. 
@@ -107,7 +105,7 @@ and discard it. We label our new refined collection as $\CE_1$. From this collec
 
 After repeating this process $M$ times until there are no more circles that satisfy our criteria, 
 at each step removing a circle that contributes only a small number of tangencies, we attain a collection $\CE_M$.
- We claim that $\tau(\CE_M) \gtrsim N^{\alpha}$, and that $\CE_M \neq \emptyset$.
+ We claim that $|\tau(\CE_M)| \gtrsim N^{\alpha}$, and that $|\CE_M| \gtrsim N^{\alpha/2}$.
 
 For the first claim, observe that at each step $i$ we are reducing $\tau(\CE_i)$ by at most $c_1 N^{\alpha -1}$.  Thus,
 \begin{align*}
@@ -116,7 +114,7 @@ For the first claim, observe that at each step $i$ we are reducing $\tau(\CE_i)$
     &> c_0 N^{\alpha} - c_1 N^{\alpha} \\
     |\tau(\CE_M)| &> \frac{c_0}{2} N^{\alpha}. \qquad (\text{by choosing } c_1 = c_0/2 )
 \end{align*}
-We must now check that we have not removed every circle from our collection.\todo{disagree with correction here?} We have the trivial inequality $|\tau(\CE_M)| \leq |\CE_M|^{2}$. 
+We now provide a lower bound on the cardinality of our refined set $\CE_M$. We have the trivial inequality $|\tau(\CE_M)| \leq |\CE_M|^{2}$. 
 Combining this with the result above, we attain $|\CE_M| \gtrsim |N|^{\alpha/2}$.
 \end{proof}
 In a similar fashion to our arguments in the Kakeya\todo{write coherent sentence} problem we will be arguing by contradiction, however here we will be arguing that if the zero set of a polynomial contains too many of a certain first type of object, 
@@ -140,8 +138,8 @@ We can now prove the main theorem.
     We can establish this by examining a parameterisation of $\gamma_1$ and $\gamma_2$ in the neighbourhood of $(x,y)$.
     Define $f_i (t), \ i \in \{1,2\}$ such that $(t+x, f_i(t))$ is a parameterisation of $\gamma_i$ in the neighbourhood of $(x,y)$ for all $t$ in a small neighbourhood of 0. In particular $f_i(0) = y$.
     Since $\gamma_1$ is tangent to $\gamma_2$ at $(x,y)$, $\frac{df_1}{dt}(0) = \frac{df_2}{dt}(0)$. 
-    Since $\gamma_1$ and $\gamma_2$ are distinct quadratic curves, $\frac{d^2f_1}{dt^2}(0) \neq \frac{d^2f_2}{dt^2}(0)$. \todo{this was intuitive, not anymore :(}
-    In the neighbourhood of $(x,y,z)$, $\beta(\gamma_i)$ is parametrised by $\left(t,f_i (t) ,\frac{df_1}{dt}(t) \right)$ as the slope of the tangent to the circle is given by $\frac{df_1}{dt}(t)$.\todo{I'm not convinced in this explan.} 
+    Since $\gamma_1$ and $\gamma_2$ are distinct quadratic curves, $\frac{d^2f_1}{dt^2}(0) \neq \frac{d^2f_2}{dt^2}(0)$. \todo{write out the calc}
+    In the neighbourhood of $(x,y,z)$, $\beta(\gamma_i)$ is parametrised by $\left(t,f_i (t) ,\frac{df_1}{dt}(t) \right)$ as the slope of the tangent to the circle is given by $\frac{df_1}{dt}(t)$.
      It follows that the tangent vector
     $\left(1,\frac{df_i}{dt}(0), \frac{d^2f_i}{dt^2} (0) \right)$ generates the vertical space $T_{(x,y,z)} \beta(\gamma_i)$. Thus 
     \begin{align*} (0,0,1) &\in \text{span}\left( \left(1,\frac{df_1}{dt}(0), \frac{d^2f_1}{dt^2} (0) \right) - \left(1,\frac{df_2}{dt}(0), \frac{d^2f_2}{dt^2} (0) \right) \right)
@@ -169,13 +167,12 @@ We can now prove the main theorem.
 
     Since $P$ was a non-zero polynomial of minimal degree that vanishes on all the curves in $\beta (\Gamma)$, we must conclude 
     $\partial_z P \equiv$ 0. By the minimality if $P$ we must have that $P(x,y,z) = Q(x,y)$ for some $Q \in \RR[x,y]$ with degree $\lesssim N^{1/2}$. 
-    But this implies that each of the $N$ lifted circles in $\beta(\Gamma)$ must also be contained in $Z(Q)$.
-    This is a contradiction, as $Q$ has degree $\sim N^{1/2}$ whereas $\cup \beta(\gamma)$ has degree $2N$.
+    But this implies that there must be at least of the $N^{3/4}$ circles in our original collection must also be contained in $Z(Q)$.
+    This is a contradiction, as $Q$ has degree $\sim N^{1/2}$ whereas $\cup \gamma$ has degree $2N^{3/4}$.
     Thus $\beta(\Gamma)$ has $\lesssim N^{3/2}$ curve-curve incidences, so we can conclude that $\Gamma$ has $\lesssim N^{3/2}$ tangencies.
 \end{proof}
-\todo{worried about the $\Gamma - \beta (\Gamma)$}
 
-\section{Proof via Polynomial Partitioning for Varieties}
+\section[New Proof via Polynomial Partitioning]{A New Proof via Polynomial Partitioning for Varieties}
 In this section we shall present a new proof of Theorem \ref{thm:circle-tangencies}. 
 There are a few key differences between both methods of proof. In the following proof, 
 it is no longer required to ensure the uniform distribution of tangent points among each circle in our collection, so we will not
@@ -213,7 +210,7 @@ incidence sets and hence have the following expression for $|\tau(\Gamma)|$:
     |\tau(\Gamma)| &= |I(C_1, C_1)| + |I(C_1, C_2)| + |I(C_2, C_2)|
 \end{align*}
 We now proceed by calculating the cardinality each of these sets. The case for $I(C_1,C_1)$ will use our \hyperref[thm:trivial-circle-bound]{trivial bound} and bezout's
-theorem.\todo{no} Calculating for $I(C_1,C_2)$ is again straightforward by Bezout. 
+theorem. Calculating for $I(C_1,C_2)$ is again straightforward by Bezout. 
 The interesting case here is $I(C_2,C_2)$, where we will be forced to argue via a recursive style of argument.
 
 We begin with the intersections that occur between varieties not entirely contained in the zero set:
@@ -238,7 +235,7 @@ Using our \hyperref[thm:trivial-circle-bound]{trivial bound} and the fact that t
                  &\lesssim  N^2 D^{-1} + \sum_{\beta(\gamma)\in C_1} D \\
                  &= N^2D^{-1} + ND.
 \end{align*}
-\todo{not the same Bezout lemma}
+
 The argument for $I(C_1,C_2)$ is the similar to the above calculation, however there are now no intersections happening inside the cells by the definition of $C_2$.
  Fix $\beta(\gamma)$ in:
 \begin{align*}

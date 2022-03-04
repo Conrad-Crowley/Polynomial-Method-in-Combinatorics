@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.2.19)  4 MAR 2022 15:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.2.19)  4 MAR 2022 17:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -814,7 +814,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 ...ine {chapter}{References}{31}{chapter*.47}
+l.29 ...ine {chapter}{References}{31}{chapter*.37}
                                                   % [1
 
 
@@ -849,7 +849,7 @@ LaTeX Font Info:    Trying to load font information for U+bbm on input line 53.
  (/usr/share/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 ) [4]
-<images/kakeya_ex_f32.png, id=246, 85.3624pt x 85.3624pt>
+<images/kakeya_ex_f32.png, id=244, 85.3624pt x 85.3624pt>
 File: images/kakeya_ex_f32.png Graphic file (type png)
 <use images/kakeya_ex_f32.png>
 Package pdftex.def Info: images/kakeya_ex_f32.png  used on input line 72.
@@ -911,61 +911,28 @@ Overfull \hbox (2.678pt too wide) in paragraph at lines 94--94
 
 [15] [16] [17] [18] [19]) (./chap/circle.tex [20]
 Chapter 5.
-
-LaTeX Warning: Marginpar on page 21 moved.
-
 [21
 
 ]
 
-LaTeX Warning: Reference `kaklem2' on page 22 undefined on input line 55.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 57.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 58.
+(hyperref)                removing `superscript' on input line 57.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 58.
+(hyperref)                removing `math shift' on input line 57.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 58.
-
-[22]
-Overfull \hbox (18.61636pt too wide) in paragraph at lines 78--78
-[][][]\OT1/cmr/m/n/10.95 satisfactory?[]  
- []
-
-
-Overfull \hbox (18.61636pt too wide) in paragraph at lines 78--78
-[][][]\OT1/cmr/m/n/10.95 satisfactory?[]  
- []
-
-
-Overfull \hbox (6.69298pt too wide) in paragraph at lines 81--81
-[][][]\OT1/cmr/m/n/10.95 dangerous 
- []
-
-
-Overfull \hbox (6.69298pt too wide) in paragraph at lines 81--81
-[][][]\OT1/cmr/m/n/10.95 dangerous 
- []
-
-[23]
-
-LaTeX Warning: Marginpar on page 24 moved.
-
-
-LaTeX Warning: Marginpar on page 24 moved.
-
-[24] [25]
-Overfull \hbox (6.09149pt too wide) in paragraph at lines 196--201
+[22] [23] [24]
+Overfull \hbox (6.09149pt too wide) in paragraph at lines 193--198
 []\OT1/cmr/m/n/10.95 Relabel $\OMS/cmsy/m/n/10.95 C$ \OT1/cmr/m/n/10.95 as $^^@$ for con-ve-nience. Again,
  []
 
-
-Overfull \hbox (0.72185pt too wide) detected at line 232
+[25]
+Overfull \hbox (0.72185pt too wide) detected at line 229
 []
  []
 
@@ -990,21 +957,21 @@ Overfull \hbox (7.98569pt too wide) in paragraph at lines 38--38
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `fyp.out' has not changed.
-(rerunfilecheck)             Checksum: 13254CF1C414687C36CCA494D32539C5;5015.
+(rerunfilecheck)             Checksum: 49CECB8674517586B9F1709EFBEEEF91;4868.
  ) 
 Here is how much of TeX's memory you used:
- 28770 strings out of 478353
- 535686 string characters out of 5854635
- 858420 words of memory out of 5000000
- 46223 multiletter control sequences out of 15000+600000
+ 28679 strings out of 478353
+ 533637 string characters out of 5854635
+ 847606 words of memory out of 5000000
+ 46142 multiletter control sequences out of 15000+600000
  416877 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,13n,89p,680b,1065s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,14n,89p,680b,1069s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on fyp.pdf (35 pages, 522100 bytes).
+Output written on fyp.pdf (35 pages, 519648 bytes).
 PDF statistics:
- 609 PDF objects out of 1000 (max. 8388607)
- 522 compressed objects within 6 object streams
- 167 named destinations out of 1000 (max. 500000)
+ 596 PDF objects out of 1000 (max. 8388607)
+ 509 compressed objects within 6 object streams
+ 157 named destinations out of 1000 (max. 500000)
  255 words of extra memory for PDF output out of 10000 (max. 10000000)
 

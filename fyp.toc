@@ -21,9 +21,9 @@
 \contentsline {chapter}{\numberline {5}Counting Circle Tangencies}{21}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Trivial Bounds}{21}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Lifting of circles to $\mathbb R^3$}{22}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Ellenberg-Solymosi-Zahl's Proof of Theorem \ref {thm:circle-tangencies}}{23}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Proof via Polynomial Partitioning for Varieties}{25}{section.5.4}%
+\contentsline {section}{\numberline {5.3}Ellenberg-Solymosi-Zahl's Proof}{23}{section.5.3}%
+\contentsline {section}{\numberline {5.4}New Proof via Polynomial Partitioning}{25}{section.5.4}%
 \contentsline {chapter}{\numberline {6}The Polynomial Method in Additive Combinatorics }{28}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Combinatorial Nullstellensatz}{28}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Cauchy-Davenport Theorem}{29}{section.6.2}%
-\contentsline {chapter}{References}{31}{chapter*.47}%
+\contentsline {chapter}{References}{31}{chapter*.37}%
