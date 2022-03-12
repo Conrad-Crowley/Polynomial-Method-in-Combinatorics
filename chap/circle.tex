@@ -41,7 +41,7 @@ We shall now present a bound from a recent paper of Ellenberg-Solymosi-Zahl whic
 
 \begin{theorem}
     Given a finite collection $\CE$ of $N$ circles in the plane such that no three are tangent at a common point, 
-    then the number of tangencies $|\tau(\CE)|$ obeys:     \label{thm:circle-tangencies}
+    then the number of tangencies $|\tau(\CE)|$ obeys:   \label{thm:circle-tangencies}
     \[
         |\tau(\CE)| \lesssim N^{3/2}
     \]
@@ -95,17 +95,16 @@ In this proof, we will need to ensure our tangencies
 are sufficiently uniformly distributed among our circles. We can refine our collection such that this is the case by the following lemma.
 
 \begin{lemma}[Uniform Refinement]
-    Let $\CE$ be a collection of $N$ circles and suppose that  $\tau(\CE) \gtrsim N^{\alpha}$. 
-    Then we can refine our collection to a collection $\CE' \subset \CE$ such that every circle in $\CE'$ is tangent to $\gtrsim N^{\alpha -1}$ other circles in $\CE'$ and $\tau(\CE') \gtrsim N^{\alpha}.$ \label{lem:uniform-refine}
+    Let $\CE$ be a collection of $N$ circles and suppose that $|\tau(\CE)| \gtrsim N^{\alpha}$. 
+    Then we can refine our collection to a collection $\CE' \subset \CE$ such that every circle in $\CE'$ is mutually tangent to $\gtrsim N^{\alpha -1}$ other circles in $\CE'$, $|\tau(\CE')| \gtrsim N^{\alpha}$, and $|\CE'| \gtrsim N^{\alpha/2}$. \label{lem:uniform-refine}
 \end{lemma}
 
 \begin{proof}
 We proceed by a stopping time argument.
-Let $\tau(\CE)$ be the set of tangencies of the circles in $\CE$. Let $\CE_0 = \CE$. Let $c_1$ be a fixed constant to be chosen later. Take a circle $\gamma \in \CE_0$ such that $|\{ \gamma' \ |\ (\gamma, \gamma') \in \tau(\CE_0)\}| < c_1 N^{1/2}$
-and discard it. We label our new refined collection as $\CE_1$. From this collection, again take a circle $\gamma$ such that $|\{\gamma'\ |\ (\gamma, \gamma') \in \tau(\CE_1)\}| < c_1 N^{1/2}$ and discard it. 
+Let $\tau(\CE)$ be the set of tangencies of the circles in $\CE$. Let $\CE_0 = \CE$ and let $c_1$ be a fixed constant to be chosen later. If there exists a circle $\gamma \in \CE_0$ such that $|\{ \gamma' \ |\ (\gamma, \gamma') \in \tau(\CE_0)\}| < c_1 N^{1/2}$
+remove it from the collection and label the new refined collection as $\CE_1$. From this refined collection, if there exists a circle $\gamma$ such that $|\{\gamma'\ |\ (\gamma, \gamma') \in \tau(\CE_1)\}| < c_1 N^{1/2}$ we remove it and label the remaining collection as $\CE_2$.
 
-After repeating this process $M$ times until there are no more circles that satisfy our criteria, 
-at each step removing a circle that contributes only a small number of tangencies, we attain a collection $\CE_M$.
+After repeating this process $M$ times until there are no more circles $\gamma$ that satisfy $|\{\gamma'\ |\ (\gamma, \gamma') \in \tau(\CE_M)\}| < c_1 N^{1/2}$, at each step removing a circle that contributes only a small number of tangencies, we attain a collection $\CE_M$.
  We claim that $|\tau(\CE_M)| \gtrsim N^{\alpha}$, and that $|\CE_M| \gtrsim N^{\alpha/2}$.
 
 For the first claim, observe that at each step $i$ we are reducing $\tau(\CE_i)$ by at most $c_1 N^{\alpha -1}$.  Thus,
@@ -125,7 +124,7 @@ it must contain many more of a second kind of object.
 
 
 We can now prove the main theorem. 
-\begin{proof}
+\begin{proof}[Proof of Theorem \ref{thm:circle-tangencies}]
     Given an arbitrary collection of circles $\CE$ with $\gtrsim N^{3/2}$ tangencies, Lemma \ref{lem:uniform-refine} with $\alpha = \frac{3}{2}$ 
     allows us to reduce to a collection
      $\Gamma$ where each circle is tangent to  $\gtrsim N^{1/2}$ other circles using the previous lemma. 
@@ -137,9 +136,18 @@ We can now prove the main theorem.
     Then $$(0,0,1) \in \text{span} \left( T_{(x,y,z) }\beta (\gamma_1), T_{(x,y,z) }\beta (\gamma_2)\right).$$
     In other words, at the intersection of $\beta(\gamma_1)$ and $\beta(\gamma_2)$ their tangent vectors span a vertical subspace of $\RR^3$. 
     We can establish this by examining a parameterisation of $\gamma_1$ and $\gamma_2$ in the neighbourhood of $(x,y)$.
-    Define $f_i (t), \ i \in \{1,2\}$ such that $(t+x, f_i(t))$ is a parameterisation of $\gamma_i$ in the neighbourhood of $(x,y)$ for all $t$ in a small neighbourhood of 0. In particular $f_i(0) = y$.
-    Since $\gamma_1$ is tangent to $\gamma_2$ at $(x,y)$, $\frac{df_1}{dt}(0) = \frac{df_2}{dt}(0)$. 
-    Since $\gamma_1$ and $\gamma_2$ are distinct quadratic curves, $\frac{d^2f_1}{dt^2}(0) \neq \frac{d^2f_2}{dt^2}(0)$. \todo{write out the calc}
+    Define $f_i (t), \ i \in \{1,2\}$ such that $(t+x, f_i(t))$ is a parameterisation of $\gamma_i$ in the neighbourhood of $(x,y)$ for all $t$ in a small neighbourhood of 0. In particular $f_i(0) = y$. Taking the first derivative and evaluating at $t=0$:
+    \[
+        \frac{df_i}{dt}(0) = -\frac{x- x_{\gamma_i}}{y- y_{\gamma_i}}
+    \]
+    Since $\gamma_1$ is tangent to $\gamma_2$ at $(x,y)$ the slopes of their tangent lines coincide at that point so $\frac{df_1}{dt}(0) = \frac{df_2}{dt}(0)$. Now taking the second derivative and evaluating at $t=0$:
+    \[
+        \frac{d^2f_i}{dt^2}(0) = -\frac{(y- y_{\gamma_i})^2 + (x- x_{\gamma_i})^2}{(y- y_{\gamma_i})^3} = -\frac{r^2_{\gamma_i}}{(y- y_{\gamma_i})^3} 
+    \]
+    Since $\gamma_1$ and $\gamma_2$ are distinct quadratic curves, $\frac{d^2f_1}{dt^2}(0) \neq \frac{d^2f_2}{dt^2}(0)$. 
+
+
+
     In the neighbourhood of $(x,y,z)$, $\beta(\gamma_i)$ is parametrised by $\left(t,f_i (t) ,\frac{df_1}{dt}(t) \right)$ as the slope of the tangent to the circle is given by $\frac{df_1}{dt}(t)$.
      It follows that the tangent vector
     $\left(1,\frac{df_i}{dt}(0), \frac{d^2f_i}{dt^2} (0) \right)$ generates the vertical space $T_{(x,y,z)} \beta(\gamma_i)$. Thus 
@@ -188,7 +196,7 @@ an extension of the \hyperref[thm:PolyPartioning]{polynomial partitioning} theor
     \label{lem:poly-part-var}
 \end{lemma}
 We shall not prove this here. A proof of this can be found as Theorem 0.3 in the original paper of Guth presenting the result.\cite{guth2015polypartvar}
-
+\todo{add sketch of proof?}
 
 \begin{proof}[Proof of Theorem \ref{thm:circle-tangencies} by Polynomial Partitioning]
 Relabel $\CE$ as $\Gamma$ for convenience. Again, we perform the lifting transform $\beta$ on each $\gamma \in \Gamma$. 
