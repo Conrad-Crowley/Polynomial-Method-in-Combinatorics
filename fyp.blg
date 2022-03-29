@@ -3,9 +3,9 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: fyp.aux
 The style file: unsrt.bst
 Database file #1: fyp.bib
-Warning--can't use both volume and number fields in guth2015polypartvar
 Warning--empty author in michalek2010
 Warning--empty title in michalek2010
+Warning--can't use both volume and number fields in guth2015polypartvar
 You've used 14 entries,
             1791 wiz_defined-function locations,
             530 strings with 5195 characters,

@@ -37,6 +37,9 @@ Thomas Wolff.
 \newblock An improved bound for kakeya type maximal functions.
 \newblock {\em Revista Matemática Iberoamericana}, 11(3):651--674, 1995.
 
+\bibitem{michalek2010}
+{\em The American Mathematical Monthly}, 117(9):821--823, Nov 2010.
+
 \bibitem{guth2008algebraic}
 Larry Guth and Nets~Hawk Katz.
 \newblock Algebraic methods in discrete analogs of the kakeya problem, 2008.
@@ -65,8 +68,5 @@ Larry Guth.
 \newblock Polynomial partitioning for a set of varieties.
 \newblock In {\em Mathematical Proceedings of the Cambridge Philosophical
   Society}, volume 159, pages 459--469. Cambridge University Press, 2015.
-
-\bibitem{michalek2010}
-{\em The American Mathematical Monthly}, 117(9):821--823, Nov 2010.
 
 \end{thebibliography}

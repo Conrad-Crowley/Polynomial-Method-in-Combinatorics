@@ -1,5 +1,11 @@
 \chapter{Introduction}
 
+\section{Preface to this Draft}
+This draft is released to hopefully give the reader a clearer picture of the report before the presentations next week. 
+The reader ought to be aware that the report is not fully complete, and is lacking polish in certain areas that we be remedied before the final submission. Polynomial methods are surprisingly powerful tools in combinatorics and are beautiful in their non-constructive elegance. To get a summary of what this manuscript covers, I recommend reading Section \ref{sect:Dvirs-proof}, the short Chapter \ref{chap:joints}, Sections \ref{sect:ham-sandwich-thms} and \ref{sect:prf-of-ST}, and finally Chapter \ref{chap:circle} upon which I will be basing my presentation. 
+
+ 
+
 The following is a short exposition of the polynomial method in combinatorics. 
 It is perhaps already misleading to call this the polynomial method 
 as there are in fact a collection of polynomial methods that have applications in combinatorics, the first example of this being known since the 1990s
@@ -33,6 +39,20 @@ Points to possibly mention here:
     \item ill-formed thoughts that polynomials extract information about finite series analogous to generating functions and infinite series. 
 \end{enumerate}
 
-Should we expect there to be a connection?
+\section*{Notation}
+We introduce some convenient notation here. We write that $A \lesssim_n B$ to mean that there exists some constant
+$C(n)$ which depends on $n$ such that $A \leq C(n) B$. Further, we write that $A \sim_n B$ if $A \lesssim_n B$ and $B \lesssim_n A$.
 
-\todo{if keeping,add Notation here}
+We write $\text{Poly}_D (\KK^n)$ to represent the space of polynomials in $n$ variables with coefficients in $\KK$ and degree at most $D$.
+
+The indicator function $\OO$ is defined on logical statements $X$ as follows:
+\[
+    \OO[X] = 
+  \begin{cases}
+      1 & \text{if X is true}, \\
+      0 & \text{if X is false}.
+  \end{cases}  
+\]
+
+For any function $f : \RR^n \to \RR$ let us denote the zero set of $f$ by $Z(f) = \{x \in \RR^n \ | \ f(x) = 0\}.$
+\todo{intro CS O(n) notation}

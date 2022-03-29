@@ -1,5 +1,5 @@
 \chapter{Counting Circle Tangencies\label{chap:circle}}
-\todo{Kakeya proof with a twist}
+
 Here we shall discuss the problem of counting the number of tangencies in a suitably non-degenerate collection of circles. We say two circles are tangent if their intersection contains a single point.
 The set of unordered pairs of circles in a collection $\CE$ which are mutually tangent are called the tangencies of the collection and is denoted $\tau(\CE)$. 
 \section{Trivial Bounds}
@@ -248,14 +248,40 @@ Using our \hyperref[thm:trivial-circle-bound]{trivial bound} and the fact that t
 The argument for $I(C_1,C_2)$ is the similar to the above calculation, however there are now no intersections happening inside the cells by the definition of $C_2$.
  Fix $\beta(\gamma)$ in:
 \begin{align*}
-    I(C_1,C_2) &= \sum_{\beta(\gamma)\in C_1} \sum_{\beta(\gamma') \in C_2} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)] \\
+    |I(C_1,C_2)| &= \sum_{\beta(\gamma)\in C_1} \sum_{\beta(\gamma') \in C_2} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)] \\
     \intertext{and again the second sum is $\lesssim D$ due to Bezout and our non-degeneracy condition. Hence,}
     & \lesssim \sum_{\beta(\gamma)\in C_1} D = ND.
 \end{align*}
-\todo{Write up the C2-C2 case}
 
+Finally we need to handle the incidences between curves contained entirely in the zero-set, $I(C_2,C_2)$. 
+\[
+    |I(C_2,C_2)| = \sum_{\beta(\gamma), \beta(\gamma') \in C_2} \OO[\beta(\gamma) \cap \beta(\gamma') \neq \emptyset]
+\]
+Suppose $P$ was the minimal degree polynomial that partitioned the space as per Lemma \ref{lem:poly-part-var}. Then we can write $C_2$ as the union of disjoint sets:
+\[
+C_2 = \{\beta(\gamma) \subset Z(\partial_z P)\} \cup \{\beta(\gamma) \subset \RR^3 \backslash Z(\partial_z P)\}
+\]
+If all the curves are in $\{\beta(\gamma) \subset Z(\partial_z P)\}$, then we use the exact same technique as in Ellenberg-Solymosi-Zahl's Proof to control the size of this contribution by $\lesssim ND$.
 
+In the other case, there are at most a constant number of curves in $\{\beta(\gamma) \subset \RR^3 \backslash Z(\partial_z P)\}$, each of which can intersect $ Z(\partial_z P)$ at most $D$ times. 
+We recursively iterate this process now, examining now the set: 
+\[\{\beta(\gamma) \subset Z(\partial_z P)\} = \{\beta(\gamma) \subset Z(\partial^2_z P)\} \cup \{\beta(\gamma) \subset \RR^3 \backslash Z(\partial^2_z P)\}\]
+Again, if all the curves are in $Z(\partial^2_z P)$ the process stops and we proceed by the argument in Ellenberg-Solymosi-Zahl's Proof. In the other case, $\RR^3 \backslash Z(\partial^2_z P)$
+contains a constant number of curves which intersect $ Z(\partial^2_z P)$ at most $D$ times each. We can iterate this process at most $D$ times, so our sum becomes:
+\begin{align*}
+    |I(C_2,C_2)| &= ND + \sum_{i=1}^D D = ND + D^2
+\end{align*}
 
+Adding together our bounds we achieve:
+\begin{align*}
+    |I(C_1,C_1)|+|I(C_1,C_2)|+|I(C_2,C_2)| &\lesssim N^2D^{-1} + ND + ND + ND + D^2 \\
+    &\sim N^2D^{-1} + ND + D^2.
+\end{align*}
+We now optimise $D$ by setting $N^2D^{-1} \sim ND$ which gives $D \sim N^{1/2}$ and hence our bounds become:
+
+\begin{align*}
+    |I(C_1,C_1)|+|I(C_1,C_2)|+|I(C_2,C_2)| &\lesssim N^2N^{-1/2} + NN^{1/2} + (N^{1/2})^2 \sim N^{3/2}.
+\end{align*}
 
     
 \end{proof}

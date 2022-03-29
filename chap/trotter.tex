@@ -99,7 +99,7 @@ We define a line in $\RR^2$ as follows:
         \LL &= \{ \ell \ | \ \ell \text{ contains between R and 2R points of } \ES \} \end{align*}
     We begin by estimating how many lines pass through a given point of the regular grid $\ES$.
     Let $\ell \in \LL$ and $p \in \ES$. The closest point $p' \in \ES$ such that $p \neq p'$ and $p' \in \ell$ must lie
-    in a square centred at $p$ of side length $\sim N/R$. This follows from the fact that there are at least $R$\todo{check here} points of $\ES$ in $\ell$ and hence the
+    in a square centred at $p$ of side length $\sim N/R$. This follows from the fact that there are at least $\sim R$ points of $\ES$ in $\ell$ and hence the
     projections of these points to the axes can be separated by at most $\sim N/R$. Taking each possible combination of these we can conclude that there are $\lesssim N^2 / R^2$ in $\LL$ through a
     given point $p$.
 
@@ -122,7 +122,7 @@ We define a line in $\RR^2$ as follows:
 
 
 
-\section{Ham Sandwich Theorems}
+\section{Ham Sandwich Theorems \label{sect:ham-sandwich-thms}}
 The above examples suggest that the topology of $\RR^3$ plays a key role in this incidence problem. We shall now introduce the method of polynomial partitioning,
 which can be seen as the topological analogy to the \hyperref[lem:kaklem2]{vanishing lemma} we used in the previous chapters. 
 
@@ -242,7 +242,7 @@ many points in an algebraic surface of controlled degree, so we can try and use 
 which we need to deal with separately.
 
 
-\section{Proof of the Szemerédi-Trotter Theorem}
+\section{Proof of the Szemerédi-Trotter Theorem \label{sect:prf-of-ST}}
 We now can prove the \hyperref[thm:S-T]{Szemerédi-Trotter} theorem using polynomial partitioning.
 \begin{proof}[Proof of the Szemerédi-Trotter Theorem]
 Let $|\ES| = S$ and $|\LL| = L$.
@@ -293,4 +293,4 @@ it relies on the Borsuk Ulam theorem. It is a worthwhile heuristic to develop th
 where the best examples in a finite field (which is only equipped with the trivial topology) do not coincide with the best known examples over the reals.
 Secondly, the above proof illustrates the surprising power of polynomial partitioning. We are able to use very trivial bounds in each cell to achieve
 a asymptotically tight overall bound. 
-\todo{consider adding a digression on ST}
+
