@@ -27,4 +27,5 @@
 \contentsline {section}{\numberline {6.2}Lifting of circles to $\mathbb R^3$}{25}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Ellenberg-Solymosi-Zahl's Proof}{26}{section.6.3}%
 \contentsline {section}{\numberline {6.4}New Proof via Polynomial Partitioning}{28}{section.6.4}%
-\contentsline {chapter}{References}{33}{chapter*.23}%
+\contentsline {section}{\numberline {6.5}Sphere Tangencies in $\mathbb R^{3}$}{32}{section.6.5}%
+\contentsline {chapter}{References}{34}{chapter*.24}%

@@ -187,7 +187,9 @@ There are a few key differences between both methods of proof. In the following 
 it is no longer required to ensure the uniform distribution of tangent points among each circle in our collection, so we will not
 have to use Lemma \ref{lem:uniform-refine}.
 Secondly, we will partition $\RR^3$ using a polynomial of controlled degree and leverage our \hyperref[thm:trivial-circle-bound]{trivial bound} in each cell.
-Slight care will be needed to deal with intersections with curves in the zero set. We begin by introducing the main tool for this proof, 
+Slight care will be needed to deal with intersections of curves in the zero set, which we do via a recursive style argument.
+
+We begin by introducing the main tool for this proof, 
 an extension of the \hyperref[thm:PolyPartioning]{polynomial partitioning} theorem to algebraic varieties instead of just points (which are in some sense 0-dimensional varieties). 
 
 \begin{lemma}[Polynomial Partitioning for Algebraic Varieties]
@@ -282,6 +284,24 @@ We now optimise $D$ by setting $N^2D^{-1} \sim ND$ which gives $D \sim N^{1/2}$ 
 \begin{align*}
     |I(C_1,C_1)|+|I(C_1,C_2)|+|I(C_2,C_2)| &\lesssim N^2N^{-1/2} + NN^{1/2} + (N^{1/2})^2 \sim N^{3/2}.
 \end{align*}
-
-    
 \end{proof}
+\begin{remark}
+It was the hope of this author that utilising the topology of $\RR$ via polynomial partitioning would get us closer to the best example of $\Omega(N^{4/3})$ 
+similar to the improvement in the proof of the Szemerédi-Trotter theorem in the previous chapter. Alas, this was not the case.
+\end{remark}
+
+\section{Sphere Tangencies in $\RR^{3}$}
+Considering the analogous problem in $\RR^{3}$, two new difficulties emerge. 
+Firstly, our current non-degeneracy condition is not enough as we have new degenerate cases to consider where the trivial bound of $O(N^2)$ is achieved. 
+\begin{example}[Degenerate case in $\RR^{3}$]
+    \todo{halo example}
+\end{example}
+Due to cases like these, a new condition is required. A natural choice given this example seems to be restricting our collections to those which do not contain to many tangencies along any one low-degree algebraic curve. 
+
+Secondly, our simple Bézout lemma is no longer enough. An analogous lifting of a sphere $\gamma$ is given by:
+\[
+\beta(\gamma) = \left \{ (x,y,z,v,w) \in \RR^5 \ \big | \ (x-x_\gamma)^2 + (y-y_\gamma)^2 + (z-z_\gamma)^2 = r_\gamma^2, \ v = - \frac{x-x_\gamma}{z-z_\gamma}, \ w = - \frac{y-y_\gamma}{z-z_\gamma} \right \}.
+\]
+$\beta(\gamma)$ is a two-dimensional algebraic surface in $\RR^5$. An interpolating polynomial's zero set $Z(P)$ such as the one used in Ellenberg-Solymosi-Zahl's proof would be a 4-dimensional surface in $\RR^5$.
+These two surface could intersect in a 1-dimensional variety (i.e. at infinitely many points), hence it is no longer true to claim that $\beta(\gamma) \subset Z(P)$ due to $Z(P)$ containing too many points of $\beta(\gamma)$.
+ 

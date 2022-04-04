@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.2.19)  4 APR 2022 17:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.2.19)  4 APR 2022 18:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -789,7 +789,7 @@ Overfull \hbox (3.20865pt too wide) in paragraph at lines 8--10
  | 
  []
 
-<./images/ucc.png, id=127, 668.0157pt x 318.4698pt>
+<./images/ucc.png, id=131, 668.0157pt x 318.4698pt>
 File: ./images/ucc.png Graphic file (type png)
 <use ./images/ucc.png>
 Package pdftex.def Info: ./images/ucc.png  used on input line 48.
@@ -853,7 +853,7 @@ Overfull \hbox (6.49168pt too wide) in paragraph at lines 43--44
 []\OT1/cmr/m/n/10.95 In a sur-vey on the prob-lem, Wolff pro-posed a fi-nite ana-logue to the Kakeya Conjecture.[[]] 
  []
 
-<images/kakeya_ex_f32.png, id=245, 85.3624pt x 85.3624pt>
+<images/kakeya_ex_f32.png, id=250, 85.3624pt x 85.3624pt>
 File: images/kakeya_ex_f32.png Graphic file (type png)
 <use images/kakeya_ex_f32.png>
 Package pdftex.def Info: images/kakeya_ex_f32.png  used on input line 55.
@@ -930,39 +930,56 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 57.
 
 [25] [26] [27] [28]
-Overfull \hbox (6.09149pt too wide) in paragraph at lines 202--207
+Overfull \hbox (6.09149pt too wide) in paragraph at lines 204--209
 []\OT1/cmr/m/n/10.95 Relabel $\OMS/cmsy/m/n/10.95 C$ \OT1/cmr/m/n/10.95 as $^^@$ for con-ve-nience. Again,
  []
 
-
-Overfull \hbox (0.72185pt too wide) detected at line 238
+[29]
+Overfull \hbox (0.72185pt too wide) detected at line 240
 []
  []
 
-[29] [30]
-Overfull \hbox (3.49422pt too wide) in paragraph at lines 266--268
+[30]
+Overfull \hbox (3.49422pt too wide) in paragraph at lines 268--270
 []\OT1/cmr/m/n/10.95 In the other case, there are at most a con-stant num-ber of curves in $\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 ^^L\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^M\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^Z \U/msb/m/n/10.95 R[]\OMS/cmsy/m/n/10.95 n\OML/cmm/m/it/10.95 Z\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 @[]P\OT1/cmr/m/n/10.95 )\OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 ,
  []
 
-) (./fyp.bbl [31] [32
 
-]) [33] (./fyp.aux)
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 293.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 293.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 293.
+
+[31]
+Overfull \hbox (52.05368pt too wide) detected at line 304
+\OML/cmm/m/it/10.95 ^^L\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^M\OT1/cmr/m/n/10.95 ) = [] \OML/cmm/m/it/10.95 :
+ []
+
+) (./fyp.bbl [32] [33
+
+]) [34] (./fyp.aux)
 Package rerunfilecheck Info: File `fyp.out' has not changed.
-(rerunfilecheck)             Checksum: 37F441762A6DE19AF9EEE8877D63C867;5043.
+(rerunfilecheck)             Checksum: 89E7869410E58EBF6BD6565C19611976;5222.
  ) 
 Here is how much of TeX's memory you used:
- 28565 strings out of 478353
- 531029 string characters out of 5854635
- 824934 words of memory out of 5000000
- 46036 multiletter control sequences out of 15000+600000
+ 28578 strings out of 478353
+ 531267 string characters out of 5854635
+ 822081 words of memory out of 5000000
+ 46045 multiletter control sequences out of 15000+600000
  416877 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,14n,89p,680b,1069s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on fyp.pdf (37 pages, 531096 bytes).
+Output written on fyp.pdf (38 pages, 534789 bytes).
 PDF statistics:
- 614 PDF objects out of 1000 (max. 8388607)
- 525 compressed objects within 6 object streams
- 149 named destinations out of 1000 (max. 500000)
- 263 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 627 PDF objects out of 1000 (max. 8388607)
+ 537 compressed objects within 6 object streams
+ 153 named destinations out of 1000 (max. 500000)
+ 271 words of extra memory for PDF output out of 10000 (max. 10000000)
 
