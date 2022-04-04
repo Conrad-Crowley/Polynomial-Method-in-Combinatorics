@@ -1182,12 +1182,12 @@ INPUT ./chap/kakeya.tex
 INPUT chap/kakeya.tex
 INPUT ./chap/kakeya.tex
 INPUT chap/kakeya.tex
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT ./images/kakeya_ex_f32.png
 INPUT ./images/kakeya_ex_f32.png
 INPUT images/kakeya_ex_f32.png
 INPUT ./images/kakeya_ex_f32.png
 INPUT ./images/kakeya_ex_f32.png
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT ./chap/alon.tex
 INPUT chap/alon.tex
 INPUT ./chap/alon.tex

@@ -22,9 +22,7 @@ The Minkowski Dimension of the set $S$ is then defined as:
 $$\dim_M (S) = \lim_{\varepsilon \to 0} \frac{\log( N(\varepsilon))}{\log (1/\varepsilon)}.$$
 If this limit does not exist, one can still define the upper and lower Minkowski dimensions, 
 $\dim_{M_{\text{upper}}}$ and $\dim_{M_{\text{lower}}}$, by taking the limit superior and limit inferior respectively.
-
 \end{definition}
-
 \begin{definition}[Hausdorff Dimension]
     We define the $d$-dimensional Hausdorff measure of a set $S \subset \RR^n$ as: 
     $$\mathcal{H}^d(S)=\lim_{r \to 0} \inf \left\{\sum_i r_i^d:\text{ there is a countable cover of } S\text{ by balls with radii } 0 < r_i < r\right\}$$
@@ -37,20 +35,21 @@ In 1971, Davies produced a solution for the 2 dimensional case, proving that
 although the measure of a Kakeya set can be arbitrarily small, it must have Hausdorff (and hence Minkowski) dimension of 2.\cite{davies1971some}
 This resulted in the following conjectures:
 \begin{conjecture}[Kakeya Conjecture for the Minkowski Dimension]
-    Let $A$ be a Kakeya set in $\RR^n$. Then $\dim_M (A) = n$.
+    Let $A$ be a Kakeya set in $\RR^n$. Then $\dim_M (A) = n$. \label{conj:mink-kakeya}
 \end{conjecture}
-
 \begin{conjecture}[Kakeya Conjecture for the Hausdorff Dimension]
-    Let $A$ be a Kakeya set in $\RR^n$. Then $\dim_H (A) = n$.
+    Let $A$ be a Kakeya set in $\RR^n$. Then $\dim_H (A) = n$. \label{conj:haus-kakeya}
 \end{conjecture}
-\todo{Wolff finite fields}
+In a survey on the problem, Wolff proposed a finite analogue to the Kakeya Conjecture.\cite{wolff1999recent} 
 
+A Kakeya set in $\FP^n$ is a set that contains a line in every direction. The following section formalises the notion of a line in a finite set. The finite analogue to Conjectures \ref{conj:mink-kakeya} and \ref{conj:haus-kakeya} is:
+\thm{Kakeya Conjecture in Finite Fields}{If $A\subset \FP^n$ contains a translate of every line, then $|A| \gtrsim_n p^n $. \label{KakeyaConjecture}}
+This conjecture had a significant influence on the subject, inspiring work on the sum-product phenomenon in finite fields. From its postulation in 1999,
+little progress was made in the following years and it was assumed that the problem was roughly as difficult as the Euclidean case. 
 
-\section{Background}
-Analogous to the Euclidean case, we define lines in $\FP^n$ as the set:
-$$\mathcal{L} = \{x+ty : x,y \in \FP^n,  t \in \FP \}$$
+In 2008, Dvir published a remarkably simple proof of Theorem \ref{KakeyaConjecture} using basic facts about polynomials. 
+This proof revitalised interest in the polynomial method, and we shall explore its details later in this chapter. 
 
-A Kakeya set in $\FP^n$ is a set that contains a line in every direction.
 \begin{figure}[h]
 \centering 
 \includegraphics[width=0.3\textwidth]{images/kakeya_ex_f32.png}}
@@ -74,14 +73,41 @@ A finite field of order $q$ exists if and only if $q = p^k$ for some prime $p$ a
     \label{lem:finite-fields-poly-identity}
 \end{lemma}
 This lemma follows immediately from Fermat's Little Theorem.
-\todo{more needed here}
+
+Analogous to the Euclidean case, we define lines in $\FP^n$ as the set:
+$$\mathcal{L} = \{x+ty : x,y \in \FP^n,  t \in \FP \}.$$
+It should be noted that a line in a finite field $\FP^n$ contains exactly $|\FP|$ points.
 
 
+\section{Combinatorial attempts at the proof}
+To truly show the power of the polynomial method, we shall first explore purely combinational attempts 
+at estimating the sizes of Kakeya sets. All of the following estimates are much weaker than the bound in Theorem \ref{KakeyaConjecture}.
+We fix a finite field $\FF = \FF_{p^k}$ where $p$ is a prime. 
 
+Our first estimate gives a good bound for the $n$ = 2 case for the finite field Kakeya problem.
 
-\section{Combinatorial attempts at the proof} \todo{this section sucks, rewrite!}
-We fix a finite field $\FF = \FF_{p^k}$.
-\subsection{Bush Argument}
+\begin{lemma}
+    Suppose $s<|\FF|$. If $l_1, \dots, l_s$ are distinct lines in $\FF^n$, then their union has cardinality at least $(1/2)|\FF|s$. 
+
+    In particular, if $A \subset \FF^n$ is a Kakeya set, then we have:
+    \[
+      |A| \gtrsim |\FF|^2  
+    \] \label{lem:kak-first-estimate}
+\end{lemma} 
+\begin{proof}
+    We add the lines one at a time and track the cardinality of their union. The first line contains $|\FF|$ points. The second line must contain at least $|\FF| -1$ points not in the first line. Similarly the third line must contain at least $|\FF| -2$ points not in the first two lines, and so on. Thus the number of distinct points in the union of all $s$ lines is given by:
+    \[
+      \sum_{i=1}^{s} |\FF| - i + 1  > (1/2) |\FF| s.
+    \]
+
+    A Kakeya set always contains at least $|\FF|$ lines, so setting $s=|\FF|$ above yields:
+    \[
+        |A| > (1/2) |\FF|^2 
+    \]
+
+\end{proof}
+
+\subsection{Bush Argument} 
 Bourgain produced one of the first non-trivial estimates of the dimension in 1991.\cite{BUSH1991} We present the finite field analogue of his argument here.\cite{GUTH2016}
 \begin{theorem}[Bush Argument]
 If $l_1, \dots, l_M$ are lines in $\FF^n$, then the number of points in their union is at least 
@@ -91,8 +117,8 @@ $$|A| \gtrsim |\FF|^{\frac{n+1}{2}}$$
 \end{theorem}
 
 \prf{Let $X$ be the union of the lines $l_1, \dots, l_M.$ Each of these lines contains $|\FF|$ points of $X$,
-so we have $|\FF|M$ points to distribute over $X$. By the pigeonhole principle, there is a point $x \in X$ which lies in at least $|\FF|M |X|^{-1}$ of the lines $l_i$.
-\todo{ Im not sure what to expand on here - we could contradict by saying if this wasn't the case but that seems verbose}
+so we have $|\FF|M$ points to distribute over $X$. 
+By the pigeonhole principle, there is a point $x \in X$ which lies in at least $|\FF|M |X|^{-1}$ of the lines $l_i$.
 
 These set of lines $l_i$ through $x$ is called the bush of $x$. These lines are disjoint except at $x$, and their union 
 lies in $X$. So we have:
@@ -124,20 +150,13 @@ Due to Wolff. \cite{WOLFF1995}
         |A| \gtrsim |\FF|^{\frac{n+2}{2}}    
     \]
 \end{theorem}
+\todo{do we need to define a vector space here?}
 \begin{proof}
-    Let $X = \cup_i l_i$. If $l_i$ is a line in $A$, then the hairbrush with stem $l_i$ is
-    defined to be the set of lines $l_j$ which intersect $l_i$. An average point of $X$ lies in $|\FF|M |X|^{-1}$ lines $l_i$.
-    If each point of X was about average, then each hairbrush would contain $\gtrsim |\FF|^2 M |X|^{-1}$ lines. We claim
-    that there is always at least one hairbrush with $\geq (1/2)|\FF|^2M |X|^{-1}$ lines.  
+First we consider the case of $n = 2$. We prove a more general statement, which we will need for the $n>2$ case: Suppose that 
 
-   \todo{ Finish this proof}
 \end{proof}
 
 \section{Dvir's Proof \label{sect:Dvirs-proof}}
-
-In finite fields Kakeya's conjecture is as follows:
-\thm{Kakeya Conjecture in Finite Fields}{If $A\subset \FP^n$ contains a translate of every line, then $|A| \gtrsim_n p^n $. \label{KakeyaConjecture}}
-
 We shall prove this theorem via 3 surprisingly simple lemmas. This formulation of Dvir's proof is due to Gowers.\cite{GOW2020}
 
 \begin{lemma}[Parameter Counting] 
