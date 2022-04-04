@@ -110,33 +110,39 @@ Our first estimate gives a good bound for the $n$ = 2 case for the finite field 
 \subsection{Bush Argument} 
 Bourgain produced one of the first non-trivial estimates of the dimension in 1991.\cite{BUSH1991} We present the finite field analogue of his argument here.\cite{GUTH2016}
 \begin{theorem}[Bush Argument]
-If $l_1, \dots, l_M$ are lines in $\FF^n$, then the number of points in their union is at least 
-$$\frac12 M^{1/2} |\FF|$$
-In particular, if $A$ is a Kakeya set, then we have:
+
+If $A$ is a Kakeya set, then we have:
 $$|A| \gtrsim |\FF|^{\frac{n+1}{2}}$$
 \end{theorem}
 
-\prf{Let $X$ be the union of the lines $l_1, \dots, l_M.$ Each of these lines contains $|\FF|$ points of $X$,
-so we have $|\FF|M$ points to distribute over $X$. 
-By the pigeonhole principle, there is a point $x \in X$ which lies in at least $|\FF|M |X|^{-1}$ of the lines $l_i$.
+\begin{proof}
+    Let $\mu$ be a fixed multiplicity parameter to be chosen later. Then either there exists a point $p\in A$ such that there are $\mu$ lines passing through $p$,
+    or else every point in $A$ has less than $\mu$ lines passing through it.
 
-These set of lines $l_i$ through $x$ is called the bush of $x$. These lines are disjoint except at $x$, and their union 
-lies in $X$. So we have:
-\[
-(|\FF| -1) |\FF| M |X|^{-1} \leq |X|.
-\]
-Rearranging we get:
-\[
-\frac12 |\FF| M^{1/2} \leq |X|    
-\]
-A Kakeya set $A \subset \FF^n$ contains at least $ |\FF|^{n-1}$ lines. Setting $M= |\FF|^{n-1}$ yields:
-\[
-\frac12 |\FF||\FF|^{\frac{n-1}{2}} \sim |\FF|^{\frac{n-1 +2}{2}} =  |\FF|^{\frac{n+1}{2}} \lesssim |A|.
-\]
-}
+    In the first case, since the lines have distinct directions they must become disjoint when $p$ is removed. Hence,
+    \[
+      |A| \gtrsim \mu |\FF| .
+    \]
 
+    In the latter case, by considering the double sum and double counting:
+    \begin{align*}
+         \sum_{\ell \in K} \sum_{p \in A} \OO[p \in \ell] &= \sum_{\ell \in K} |\FF| = |\FF|^{n-1} |\FF| \\
+        \sum_{p \in A} \sum_{\ell \in K} \OO[p \in \ell] &\leq \sum_{p \in A} \mu = |A|\mu \\
+        \implies \frac{|\FF|^{n}}{\mu} \leq |A|.
+    \end{align*}
+    Now optimising $\mu$:
+    \begin{align*}
+        \frac{|\FF|^{n}}{\mu} &\sim \mu |\FF| \\
+        \mu &\sim |\FF|^{\frac{n-1}{2}}.
+    \end{align*}
+    This yields the bound:
+    \[
+        |A| \gtrsim |\FF||\FF|^{\frac{n-1}{2}} \sim |\FF|^{\frac{n+1}{2}}.
+    \]
 
-\subsection{Hair Brush Argument}
+\end{proof}
+
+\subsection{Hairbrush Argument}
 Due to Wolff. \cite{WOLFF1995}
 
 \begin{theorem}[Hair Brush Argument]
@@ -150,14 +156,49 @@ Due to Wolff. \cite{WOLFF1995}
         |A| \gtrsim |\FF|^{\frac{n+2}{2}}    
     \]
 \end{theorem}
-\todo{do we need to define a vector space here?}
 \begin{proof}
-First we consider the case of $n = 2$. We prove a more general statement, which we will need for the $n>2$ case: Suppose that 
+By Lemma \ref{lem:kak-first-estimate}, if $A_m \subset \FF^2$ is a set containing a line in $m$ different directions then $|A_m| \gtrsim m|\FF|$.
 
+Let $\mu$ be a fixed multiplicity parameter to be chosen later. We say a line $\ell$ is $\mu$-rich if for at least $|\FF|/2$ points $p\in \ell$ there are $\mu$ lines distinct from $p$
+in $A$ passing through $p$. Then either there exists a $\mu$-rich line or there does not. 
+
+Suppose a $\mu$-rich line exists, and denote this line by $\ell_\mu$. Consider the family of 2-dimensional planes $\Pi$ passing through $\ell_\mu$. 
+If a line $\ell$ intersects $\ell_\mu$ then there exists a unique plane $\pi \in \Pi$ such that $\ell, \ell_\mu \in \pi$. 
+Let $\LL_\pi := \{\ell \subset \pi \ | \ \ell \cap \ell_\mu \neq \emptyset \}$. The set $A \cap \pi$ is a set in $\FF^2$ that contains at least $|\LL_\pi|$
+lines, and hence by Lemma \ref{lem:kak-first-estimate} we have:
+\[
+|A \cap \pi| \gtrsim |\LL_\pi| |\FF|.
+\]
+Thus,
+\[
+    |A| \geq \sum_{\pi \in \Pi} |(A \cap pi) \backslash \ell_\mu| \gtrsim |\FF| \sum_{\pi \in \Pi} |\LL_\pi| \gtrsim \mu |\FF|^2,
+\]
+where the last inequality comes from the fact $\ell_\mu$ intersects at least $\mu |\FF|/2$ lines, which produces $\mu |\FF|/2$ planes as all these lines are distinct.
+
+Suppose there does not exist a $\mu$-rich line. Let 
+\[
+    A' = \{p \in A \ | \ p \text{ belongs to at most } \mu \text{ lines in }A \}.
+\]
+Since we assume there does not exist a $\mu$-rich line in $A$, for any line $\ell \subset A$ we have $|A' \cap \ell| > |F|/2$. 
+Proceeding by double counting, \todo{split this into two steps}
+\begin{align*}
+    |A| &\geq |A'|\geq \frac{1}{\mu} \sum_{p \in A'} \sum_{\ell \in A} \OO[p \in \ell] \\
+    &= \frac{1}{\mu} \sum_{\ell \in A} |A' \cap \ell| \gtrsim \frac{1}{\mu} |\FF|^{n-1}|\FF|\\
+    \implies |A| &\gtrsim \frac{|\FF|^n}{\mu}.
+\end{align*}
+We now optimise $\mu$:
+\begin{align*}
+    \frac{|\FF|^n}{\mu} &\sim \mu |\FF|^2 \\
+    \mu &\sim |\FF|^{\frac{n-2}{2}}
+\end{align*}
+Thus we achieve the bound:
+\[
+    |A| \gtrsim |\FF|^2|\FF|^{\frac{n-2}{2}} \sim |\FF|^{\frac{n+2}{2}}.
+\]
 \end{proof}
 
 \section{Dvir's Proof \label{sect:Dvirs-proof}}
-We shall prove this theorem via 3 surprisingly simple lemmas. This formulation of Dvir's proof is due to Gowers.\cite{GOW2020}
+We shall prove this theorem via 3 surprisingly simple lemmas. The general strategy of the proof is to assume a Kakeya set $A$ is of a limited size and find a low-degree non-zero polynomial that interpolates (contains in its zero set) the points in $A$. We then show that due to the structure of the Kakeya set the polynomial's zero set must contain many more points. This contradicts the fact our polynomial is non-zero and establishes the Kakeya Conjecture over finite fields.
 
 \begin{lemma}[Parameter Counting] 
 Let $\KK$ be a (not necessarily finite) field. If $A \subset \KK^n$ and $|A| < {{n+D} \choose {n}}$, there exists a non-zero polynomial $P(x_1,\dots, x_n)$ of degree $D$ that vanishes on $A$. \label{lem:paramcounting}
@@ -208,13 +249,12 @@ We let $x_1, \dots ,x_n$ be coordinates on $\FF^n$, and we write $P$ in the form
 $$P(x_1, \dots ,x_n) = \sum_{j=n}^{|\FF|-1} P_j(x_1, \dots x_{n-1}) x_n^j.$$
 
 Each $P_j$ are polynomials in $x_1, \dots x_{n-1}$ of degree less than $|\FF|$. Fix $x_1, \dots x_{n-1}$, and let $x_n$ vary. Now we have a polynomial in $x_n$ of degree less than $|\FF|$ that vanishes for all $x_n \in \FF$. By the base case this must be the zero polynomial. So each $P_j(x_1, \dots, x_{n-1}) = 0$ for all $j$ and for all $(x_1, \dots x_{n-1}) \in \FF^{n-1}$. Now by induction on $n$, each $P_j$ is the zero polynomial. Then $P$ is the zero polynomial as well. 
-
 }
 
 \begin{proof} [Proof of Theorem \ref{KakeyaConjecture}] 
-Assume $A \subset \FF^n$ is a Kakeya set, and that $|A| \leq \frac{|\FF|^n}{n!}$. Then by \ref{lem:paramcounting} we can find a 
-non-zero polynomial, say $P$, that vanishes on $A$. Now by \ref{lem:kaklem2} there exists a non-zero polynomial $\bar{P}$ that vanishes everywhere on $\FF^n$, and has degree less than $|\FF|$.
-Finally \ref{lem:kaklem3} says that such a $\bar{P}$ is necessarily the zero polynomial, a contradiction. We conclude that $|A| > \frac{|\FF|^n}{n!}$, or in other words:
+Assume $A \subset \FF^n$ is a Kakeya set, and that $|A| \leq \frac{|\FF|^n}{n!}$. Then by Lemma \ref{lem:paramcounting} we can find a 
+non-zero polynomial, say $P$, that vanishes on $A$. Now by Lemma \ref{lem:kaklem2} there exists a non-zero polynomial $\bar{P}$ that vanishes everywhere on $\FF^n$, and has degree less than $|\FF|$.
+Finally, Lemma \ref{lem:kaklem3} says that such a $\bar{P}$ is necessarily the zero polynomial, a contradiction. We conclude that $|A| > \frac{|\FF|^n}{n!}$, or in other words:
 $$
 |A| \gtrsim_n |\FF|^n.
 $$

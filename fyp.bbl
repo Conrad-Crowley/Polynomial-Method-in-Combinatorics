@@ -46,6 +46,13 @@ Thomas Wolff.
 \bibitem{michalek2010}
 {\em The American Mathematical Monthly}, 117(9):821--823, Nov 2010.
 
+\bibitem{chazelle1990counting}
+Bernard Chazelle, Herbert Edelsbrunner, Leonidas~J Guibas, Richard Pollack,
+  Raimund Seidel, Micha Sharir, and Jack Snoeyink.
+\newblock Counting and cutting cycles of lines and rods in space.
+\newblock In {\em Proceedings [1990] 31st Annual Symposium on Foundations of
+  Computer Science}, pages 242--251. IEEE, 1990.
+
 \bibitem{guth2008algebraic}
 Larry Guth and Nets~Hawk Katz.
 \newblock Algebraic methods in discrete analogs of the kakeya problem, 2008.

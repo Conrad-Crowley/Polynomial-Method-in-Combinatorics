@@ -1,11 +1,15 @@
 \chapter{The Joints Problem \label{chap:joints}}
-\todo{add fluff}
+The joints problem was first posed in 1990 by Chazelle et al.\cite{chazelle1990counting} They focused on the 3-dimensional case of the problem, establishing a lower bound of $\Omega (N^{3/2})$ and an upper bound estimate of $O(N^{7/4})$. 
+This upper bound exponent has fallen gradually throughout the years, the best result being due to Sharir and Feldman who established an upper bound of $O(N^{112/69})$. Their
+proof uses an array of tools from combinatorial geometry, including forbidden subgraphs in extremal graph theory, space decomposition techniques, and some results from the geometry of lines in space.
+
+
 \section{Background}
 Let $\LL$ be a set of distinct lines in $\RR^n$. A joint of $\LL$ is a point which lies in three non-coplanar lines of $\LL$.
 The joints problem consists of setting a sharp lower bound on the maximal number of joints that can be formed from a configuration of $L$ distinct lines.
 We denote this quantity $J(L)$. In other words $J(L)$ is the supremeum over all configurations of lines in $\RR^n$ in the number of joints.
 
-
+\section{Examples}
 We shall begin by examining an example based on a grid, with the hopes of gaining better intuition about the problem and formulating a conjecture. 
 \begin{example}Consider an $N \times N \times N$ regular grid of integer coordinates. We shall give a collection of lines such that each point of this grid is a joint for the collection.
 Let $\LL$ be the collection of all lines parallel to any of the Cartesian axes that intersect this a point in this grid.

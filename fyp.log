@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  4 APR 2022 12:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.2.19)  4 APR 2022 17:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/conrad/deve/fyp-combo/fyp.tex
-(/home/conrad/deve/fyp-combo/fyp.tex
+**/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex
+(/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2021-11-22> (/usr/share/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
@@ -789,7 +789,7 @@ Overfull \hbox (3.20865pt too wide) in paragraph at lines 8--10
  | 
  []
 
-<./images/ucc.png, id=123, 668.0157pt x 318.4698pt>
+<./images/ucc.png, id=127, 668.0157pt x 318.4698pt>
 File: ./images/ucc.png Graphic file (type png)
 <use ./images/ucc.png>
 Package pdftex.def Info: ./images/ucc.png  used on input line 48.
@@ -814,7 +814,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 ...ine {chapter}{References}{32}{chapter*.25}
+l.29 ... Polynomial Partitioning}{28}{section.6.4}
                                                   % [1
 
 
@@ -853,7 +853,7 @@ Overfull \hbox (6.49168pt too wide) in paragraph at lines 43--44
 []\OT1/cmr/m/n/10.95 In a sur-vey on the prob-lem, Wolff pro-posed a fi-nite ana-logue to the Kakeya Conjecture.[[]] 
  []
 
-<images/kakeya_ex_f32.png, id=241, 85.3624pt x 85.3624pt>
+<images/kakeya_ex_f32.png, id=246, 85.3624pt x 85.3624pt>
 File: images/kakeya_ex_f32.png Graphic file (type png)
 <use images/kakeya_ex_f32.png>
 Package pdftex.def Info: images/kakeya_ex_f32.png  used on input line 55.
@@ -866,20 +866,20 @@ See the caption package documentation for explanation.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4] [5 <./images/kakeya_ex_f32.png>] [6]
+[4] [5 <./images/kakeya_ex_f32.png>] [6] [7]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 163.
+(amsmath)                 on input line 204.
 
 
-Overfull \hbox (9.26088pt too wide) in paragraph at lines 175--175
+Overfull \hbox (9.26088pt too wide) in paragraph at lines 216--216
 []\OT1/cmr/m/n/10.95 Let now $\OML/cmm/m/it/10.95 p[]; [] ; p[]$ \OT1/cmr/m/n/10.95 be the points of $\OML/cmm/m/it/10.95 A$\OT1/cmr/m/n/10.95 . We con-sider the eval-u-a-tion map $\OML/cmm/m/it/10.95 E \OT1/cmr/m/n/10.95 : [][](\U/msb/m/n/10.95 K[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 !
  []
 
-[7] [8]) (./chap/alon.tex [9]
+[8] [9]) (./chap/alon.tex [10]
 Chapter 3.
-[10
+[11
 
 ]
 Overfull \hbox (7.98569pt too wide) in paragraph at lines 38--38
@@ -891,15 +891,18 @@ Overfull \hbox (7.98569pt too wide) in paragraph at lines 38--38
 [][][]\OT1/cmr/m/n/10.95 Generalise 
  []
 
-) (./chap/joints.tex [11]
+) (./chap/joints.tex [12]
 Chapter 4.
-[12
 
-] [13]) (./chap/trotter.tex [14]
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13
+
+] [14]) (./chap/trotter.tex [15]
 Chapter 5.
-[15
+[16
 
-] [16]
+] [17]
 Overfull \hbox (2.678pt too wide) in paragraph at lines 94--94
 [][][]\OT1/cmr/m/n/10.95 diagram?[]  
  []
@@ -909,9 +912,9 @@ Overfull \hbox (2.678pt too wide) in paragraph at lines 94--94
 [][][]\OT1/cmr/m/n/10.95 diagram?[]  
  []
 
-[17] [18] [19] [20] [21]) (./chap/circle.tex [22]
+[18] [19] [20] [21] [22]) (./chap/circle.tex [23]
 Chapter 6.
-[23
+[24
 
 ]
 
@@ -926,7 +929,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 57.
 
-[24] [25] [26] [27]
+[25] [26] [27] [28]
 Overfull \hbox (6.09149pt too wide) in paragraph at lines 202--207
 []\OT1/cmr/m/n/10.95 Relabel $\OMS/cmsy/m/n/10.95 C$ \OT1/cmr/m/n/10.95 as $^^@$ for con-ve-nience. Again,
  []
@@ -936,30 +939,30 @@ Overfull \hbox (0.72185pt too wide) detected at line 238
 []
  []
 
-[28] [29]
+[29] [30]
 Overfull \hbox (3.49422pt too wide) in paragraph at lines 266--268
 []\OT1/cmr/m/n/10.95 In the other case, there are at most a con-stant num-ber of curves in $\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 ^^L\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 ^^M\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^Z \U/msb/m/n/10.95 R[]\OMS/cmsy/m/n/10.95 n\OML/cmm/m/it/10.95 Z\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 @[]P\OT1/cmr/m/n/10.95 )\OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 ,
  []
 
-) (./fyp.bbl [30] [31
+) (./fyp.bbl [31] [32
 
-]) [32] (./fyp.aux)
+]) [33] (./fyp.aux)
 Package rerunfilecheck Info: File `fyp.out' has not changed.
-(rerunfilecheck)             Checksum: C6455A582E8BC2FA61BAEC10BAF03D68;4956.
+(rerunfilecheck)             Checksum: 77395B5693B9C2D5182F723F7BA909BB;5043.
  ) 
 Here is how much of TeX's memory you used:
- 28578 strings out of 478353
- 531258 string characters out of 5854636
- 827211 words of memory out of 5000000
- 46050 multiletter control sequences out of 15000+600000
+ 28574 strings out of 478353
+ 531225 string characters out of 5854635
+ 826079 words of memory out of 5000000
+ 46044 multiletter control sequences out of 15000+600000
  416877 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,14n,89p,655b,1069s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,14n,89p,680b,1069s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on fyp.pdf (36 pages, 523730 bytes).
+Output written on fyp.pdf (37 pages, 530344 bytes).
 PDF statistics:
- 601 PDF objects out of 1000 (max. 8388607)
- 513 compressed objects within 6 object streams
- 148 named destinations out of 1000 (max. 500000)
- 255 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 615 PDF objects out of 1000 (max. 8388607)
+ 526 compressed objects within 6 object streams
+ 150 named destinations out of 1000 (max. 500000)
+ 263 words of extra memory for PDF output out of 10000 (max. 10000000)
 
