@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.2.19)  4 APR 2022 17:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.2.19)  4 APR 2022 17:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -853,7 +853,7 @@ Overfull \hbox (6.49168pt too wide) in paragraph at lines 43--44
 []\OT1/cmr/m/n/10.95 In a sur-vey on the prob-lem, Wolff pro-posed a fi-nite ana-logue to the Kakeya Conjecture.[[]] 
  []
 
-<images/kakeya_ex_f32.png, id=246, 85.3624pt x 85.3624pt>
+<images/kakeya_ex_f32.png, id=245, 85.3624pt x 85.3624pt>
 File: images/kakeya_ex_f32.png Graphic file (type png)
 <use images/kakeya_ex_f32.png>
 Package pdftex.def Info: images/kakeya_ex_f32.png  used on input line 55.
@@ -948,21 +948,21 @@ Overfull \hbox (3.49422pt too wide) in paragraph at lines 266--268
 
 ]) [33] (./fyp.aux)
 Package rerunfilecheck Info: File `fyp.out' has not changed.
-(rerunfilecheck)             Checksum: 77395B5693B9C2D5182F723F7BA909BB;5043.
+(rerunfilecheck)             Checksum: 37F441762A6DE19AF9EEE8877D63C867;5043.
  ) 
 Here is how much of TeX's memory you used:
- 28574 strings out of 478353
- 531225 string characters out of 5854635
- 826079 words of memory out of 5000000
- 46044 multiletter control sequences out of 15000+600000
+ 28565 strings out of 478353
+ 531029 string characters out of 5854635
+ 824934 words of memory out of 5000000
+ 46036 multiletter control sequences out of 15000+600000
  416877 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,14n,89p,680b,1069s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on fyp.pdf (37 pages, 530344 bytes).
+Output written on fyp.pdf (37 pages, 531096 bytes).
 PDF statistics:
- 615 PDF objects out of 1000 (max. 8388607)
- 526 compressed objects within 6 object streams
- 150 named destinations out of 1000 (max. 500000)
+ 614 PDF objects out of 1000 (max. 8388607)
+ 525 compressed objects within 6 object streams
+ 149 named destinations out of 1000 (max. 500000)
  263 words of extra memory for PDF output out of 10000 (max. 10000000)
 

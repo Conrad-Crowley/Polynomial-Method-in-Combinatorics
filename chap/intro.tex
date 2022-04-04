@@ -53,6 +53,10 @@ The indicator function $\OO$ is defined on logical statements $X$ as follows:
       0 & \text{if X is false}.
   \end{cases}  
 \]
-
 For any function $f : \RR^n \to \RR$ let us denote the zero set of $f$ by $Z(f) = \{x \in \RR^n \ | \ f(x) = 0\}.$
-\todo{intro CS O(n) notation}
+We borrow from Computer Science the big O notation. For functions $f,g : \NN^+ \to \RR$ we write:
+\begin{align*}
+    f(N) &= O(g(N)) \iff \exists N_0, M \in \NN \text{ such that } f(n) \leq Mg(n) \forall n > N_0 \\
+    f(N) &= \Omega(g(n)) \iff g(N) = O(f(N)).
+\end{align*}
+These can be thought of as asymtopic upper and lower bounds respectively.
