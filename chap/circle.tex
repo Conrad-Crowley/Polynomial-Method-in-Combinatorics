@@ -208,7 +208,7 @@ We shall not prove this here. A proof of this can be found as Theorem 0.3 in the
 Relabel $\CE$ as $\Gamma$ for convenience. Again, we perform the lifting transform $\beta$ on each $\gamma \in \Gamma$. 
 We have a collection of $N$ 1-dimensional varieties in $\RR^3$ upon which we shall use our \hyperref[lem:poly-part-var]{polynomial partitioning} lemma
 to find a polynomial $P$ such that each cell of $\RR^n \backslash Z(P)$ intersects $\lesssim N D^{-2}$ varieties. 
-$\RR^3 \backslash Z(P)$ partitions the space into $D^3$ cells. 
+$\RR^3 \backslash Z(P)$ partitions the space into $\sim D^3$ cells. 
 Let us label the interior of each of these cells as $\{\Omega_i \ | \ 0 \leq i \lesssim D^3 \}$, and further label the set of varieties in $\Gamma$ that pass through a given cell $\Omega_i$ as $\Gamma_i$.
 
 We can now define the following complimentary sets based on whether the variety is contained entirely in $Z(P)$:
@@ -222,7 +222,7 @@ incidence sets and hence have the following expression for $|\tau(\Gamma)|$:
     I(C_1, C_1) &= \{(\beta(\gamma), \beta(\gamma')) \ |  \ \beta(\gamma), \beta(\gamma') \in C_1, \ \beta(\gamma) \cap \beta(\gamma') \neq \emptyset \} \\
     I(C_1, C_2) &= \{(\beta(\gamma), \beta(\gamma')) \ |  \ \beta(\gamma)\in C_1, \beta(\gamma') \in C_2, \ \beta(\gamma) \cap \beta(\gamma') \neq \emptyset \} \\
     I(C_2, C_2) &= \{(\beta(\gamma), \beta(\gamma')) \ |  \ \beta(\gamma), \beta(\gamma') \in C_2, \ \beta(\gamma) \cap \beta(\gamma') \neq \emptyset \} \\
-    |\tau(\Gamma)| &= |I(C_1, C_1)| + |I(C_1, C_2)| + |I(C_2, C_2)|
+    |\tau(\Gamma)| &= |I(C_1, C_1)| + |I(C_1, C_2)| + |I(C_2, C_2)|.
 \end{align*}
 We now proceed by calculating the cardinality each of these sets. The case for $I(C_1,C_1)$ will use our \hyperref[thm:trivial-circle-bound]{trivial bound} and bezout's
 theorem. Calculating for $I(C_1,C_2)$ is again straightforward by Bezout. 
@@ -302,9 +302,12 @@ Firstly, our current non-degeneracy condition is not sufficient as we have new d
 \end{example}
 Due to cases like these, a new condition is required. A natural choice given this example seems to be restricting our collections to those which do not contain to many tangencies along any one low-degree algebraic curve. 
 
-Secondly, our simple Bézout lemma is no longer enough. An analogous lifting of a sphere $\gamma$ is given by:
+Secondly, our simple Bézout lemma is no longer enough. An analogous lifting of a sphere $\gamma \subset \RR^3$ is given by:
 \[
-\beta(\gamma) = \left \{ (x,y,z,v,w) \in \RR^5 \ \big | \ (x-x_\gamma)^2 + (y-y_\gamma)^2 + (z-z_\gamma)^2 = r_\gamma^2, \ v = - \frac{x-x_\gamma}{z-z_\gamma}, \ w = - \frac{y-y_\gamma}{z-z_\gamma} \right \}.
+    \beta(\gamma) = \left\{ (x,y,z,v,w) \in \RR^5\ \middle\vert \begin{array}{l}
+        (x-x_\gamma)^2 + (y-y_\gamma)^2 + (z-z_\gamma)^2 = r_\gamma^2,\\
+        v = - \frac{x-x_\gamma}{z-z_\gamma}, \ w = - \frac{y-y_\gamma}{z-z_\gamma}.
+  \end{array}\right\}
 \]
 $\beta(\gamma)$ is a two-dimensional algebraic surface in $\RR^5$. An interpolating polynomial's zero set $Z(P)$ such as the one used in Ellenberg-Solymosi-Zahl's proof would be a 4-dimensional surface in $\RR^5$.
 These two surface could intersect in a 1-dimensional variety (i.e. at infinitely many points), hence it is no longer true to claim that $\beta(\gamma) \subset Z(P)$ due to $Z(P)$ containing too many points of $\beta(\gamma)$.
