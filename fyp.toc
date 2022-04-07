@@ -24,8 +24,8 @@
 \contentsline {section}{\numberline {5.5}Proof of the Szemerédi-Trotter Theorem }{21}{section.5.5}%
 \contentsline {chapter}{\numberline {6}Counting Circle Tangencies}{24}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Trivial Bounds}{24}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Lifting of circles to $\mathbb R^3$}{25}{section.6.2}%
+\contentsline {section}{\numberline {6.2}Lifting of circles to $\mathbb R^3$}{26}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Ellenberg-Solymosi-Zahl's Proof}{26}{section.6.3}%
-\contentsline {section}{\numberline {6.4}New Proof via Polynomial Partitioning}{28}{section.6.4}%
+\contentsline {section}{\numberline {6.4}New Proof via Polynomial Partitioning}{29}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Sphere Tangencies in $\mathbb R^{3}$}{32}{section.6.5}%
-\contentsline {chapter}{References}{34}{chapter*.24}%
+\contentsline {chapter}{References}{35}{chapter*.25}%

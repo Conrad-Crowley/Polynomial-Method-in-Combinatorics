@@ -1,7 +1,7 @@
-PWD /home/conrad/deve/Polynomial-Method-in-Combinatorics
+PWD /home/conrad/deve/fyp-combo
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex
+INPUT /home/conrad/deve/fyp-combo/fyp.tex
 OUTPUT fyp.log
 INPUT /usr/share/texmf-dist/tex/latex/base/report.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/report.cls
@@ -1211,6 +1211,11 @@ INPUT ./chap/circle.tex
 INPUT chap/circle.tex
 INPUT ./chap/circle.tex
 INPUT chap/circle.tex
+INPUT ./images/circles_degen_case_ManimCE_v0.15.1.png
+INPUT ./images/circles_degen_case_ManimCE_v0.15.1.png
+INPUT images/circles_degen_case_ManimCE_v0.15.1.png
+INPUT ./images/circles_degen_case_ManimCE_v0.15.1.png
+INPUT ./images/circles_degen_case_ManimCE_v0.15.1.png
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm

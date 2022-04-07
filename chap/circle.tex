@@ -33,12 +33,12 @@ Instead we shall look at collections of circles that satisfy a single non-degene
 such that no three are mutually tangent at a common point. The best known examples leverage our asymptotically tight \hyperref[thm:S-T]{Szemerédi-Trotter Theorem} examples:
 \begin{example}
     Let $\ES$, $\LL$ be collections of $N$ points and $N$ lines respectively such that the \hyperref[thm:S-T]{Szemerédi-Trotter Theorem}'s bound is asymptotically tight. 
-    In particular, they determine $\sim N^{4/3}$ point line incidences. 
+    In particular, they determine $\sim N^{4/3}$ point-line incidences. 
     Let $C_1$ denote the collection of unit circles centred at the points of $\ES$. 
     Let $C_2$ denote the collection of lines obtained by translating each line $\ell in \LL$ one unit in the $\ell^{\perp}$ direction.
     If $(p,\ell) \in \ES \times \LL$ is a point-line incidence from our original collection, then the corresponding circle-line pair will be tangent.
     Performing an inversion transform about a point that does not lie in any of the circles or lines, our collection $\CE = C_1 \cup C_2$ becomes a 
-    collection of $2N$ circles that determine $N^{4/3}$ tangencies.
+    collection of $2N$ circles that determine $N^{4/3}$ tangencies. \label{ex:circle-lower-bound}
  \end{example}
 
 We shall now present a bound from a recent paper of Ellenberg-Solymosi-Zahl which uses the polynomial method.\cite{ellenberg2016new}
@@ -296,7 +296,7 @@ similar to the improvement in the proof of the Szemerédi-Trotter theorem in the
 
 \section{Sphere Tangencies in $\RR^{3}$}
 Considering the analogous problem in $\RR^{3}$, two new difficulties emerge. 
-Firstly, our current non-degeneracy condition is not enough as we have new degenerate cases to consider where the trivial bound of $O(N^2)$ is achieved. 
+Firstly, our current non-degeneracy condition is not sufficient as we have new degenerate cases to consider where the trivial bound of $O(N^2)$ is achieved. 
 \begin{example}[Degenerate case in $\RR^{3}$]
     \todo{halo example}
 \end{example}
@@ -308,4 +308,32 @@ Secondly, our simple Bézout lemma is no longer enough. An analogous lifting of 
 \]
 $\beta(\gamma)$ is a two-dimensional algebraic surface in $\RR^5$. An interpolating polynomial's zero set $Z(P)$ such as the one used in Ellenberg-Solymosi-Zahl's proof would be a 4-dimensional surface in $\RR^5$.
 These two surface could intersect in a 1-dimensional variety (i.e. at infinitely many points), hence it is no longer true to claim that $\beta(\gamma) \subset Z(P)$ due to $Z(P)$ containing too many points of $\beta(\gamma)$.
- 
+
+The best example in the literature of a lower bound for such tangencies is produced in a similar fashion to the circles case. 
+In place of the Szemerédi-Trotter theorem we appeal to a corollary of a theorem of Rudnev which bounds the number of point-plane incidences in $\RR^3$:\cite{Rudnev2014planepoints}
+\begin{theorem}
+    Let $\ES$ be a finite set of points in $\RR^3$ and $\Pi$ a finite set of non-collinear planes in $\RR^3$. Assume further that $|\ES|> |\Pi|$.
+     Then the incidence set $I(\ES, \Pi)$ obeys:
+    \[
+        |I(\ES, \Pi)| \lesssim |\ES||\Pi|^{1/2}.
+    \] \label{thm:point-plane-incidences}
+\end{theorem}
+We now construct our lower bound utilising geometric inversion in $\RR^3$ analogous to Example \ref{ex:circle-lower-bound}.
+\todo{is this tight? EQ 2 Rudnev suggests N\^{7/5} is tight in R3}
+\begin{example}
+    Let $\ES$, $\Pi$ be collections of $N$ points and $N$ non-collinear planes respectively such that the Theorem \ref{thm:point-plane-incidences} is asymptotically tight. 
+    In particular, they determine $\sim N^{3/2}$ point-plane incidences. 
+    Let $C_1$ denote the collection of unit spheres centred at the points of $\ES$. 
+    Let $C_2$ denote the collection of planes obtained by translating each plane $\pi \in \Pi$ one unit in the $\pi^{\perp}$ direction.
+    If $(p,\pi) \in \ES \times \Pi$ is a point-plane incidence from our original collection, then the corresponding sphere-plane pair will be tangent.
+    Performing an inversion transform about a point that does not lie in any of the circles or planes, our collection $\CE = C_1 \cup C_2$ becomes a 
+    collection of $2N$ spheres that determine $N^{3/2}$ tangencies.
+ \end{example}
+
+ In Ellenberg-Solymosi-Zahl's paper,\cite{ellenberg2016new} they conjecture a bound for higher dimensional spheres:
+ \begin{conjecture}
+     Let $\CE$ be a collection of $(d-1)$-spheres in $\RR^d$. Then the number of distinct points of tangencies is $\lesssim |\CE|^{\frac{2d-1}{d}}.$
+ \end{conjecture}
+
+This is a somewhat weak conjecture, as the evidence to form it is simply the natural extension of the $\beta$-lifting technique into higher dimensions.
+As such, there is no evidence to suggest that it should be tight. 
