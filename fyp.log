@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  7 APR 2022 14:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  8 APR 2022 01:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -853,31 +853,30 @@ Overfull \hbox (6.49168pt too wide) in paragraph at lines 43--44
 []\OT1/cmr/m/n/10.95 In a sur-vey on the prob-lem, Wolff pro-posed a fi-nite ana-logue to the Kakeya Conjecture.[[]] 
  []
 
-<images/kakeya_ex_f32.png, id=252, 85.3624pt x 85.3624pt>
+[4]
+<images/kakeya_ex_f32.png, id=266, 85.3624pt x 85.3624pt>
 File: images/kakeya_ex_f32.png Graphic file (type png)
 <use images/kakeya_ex_f32.png>
-Package pdftex.def Info: images/kakeya_ex_f32.png  used on input line 55.
+Package pdftex.def Info: images/kakeya_ex_f32.png  used on input line 59.
 (pdftex.def)             Requested size: 128.0387pt x 128.04196pt.
 
+
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 56.
+(caption)                particular \caption on input line 60.
 See the caption package documentation for explanation.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[4] [5 <./images/kakeya_ex_f32.png>] [6] [7]
+[5 <./images/kakeya_ex_f32.png>] [6] [7]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 204.
+(amsmath)                 on input line 206.
 
-
-Overfull \hbox (9.26088pt too wide) in paragraph at lines 216--216
+[8]
+Overfull \hbox (9.26088pt too wide) in paragraph at lines 218--218
 []\OT1/cmr/m/n/10.95 Let now $\OML/cmm/m/it/10.95 p[]; [] ; p[]$ \OT1/cmr/m/n/10.95 be the points of $\OML/cmm/m/it/10.95 A$\OT1/cmr/m/n/10.95 . We con-sider the eval-u-a-tion map $\OML/cmm/m/it/10.95 E \OT1/cmr/m/n/10.95 : [][](\U/msb/m/n/10.95 K[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 !
  []
 
-[8] [9]) (./chap/alon.tex [10]
+[9]) (./chap/alon.tex [10]
 Chapter 3.
 [11
 
@@ -974,13 +973,13 @@ Package rerunfilecheck Info: File `fyp.out' has not changed.
 Here is how much of TeX's memory you used:
  28597 strings out of 478353
  531763 string characters out of 5854636
- 823163 words of memory out of 5000000
+ 824174 words of memory out of 5000000
  46057 multiletter control sequences out of 15000+600000
  416877 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,13n,89p,655b,1063s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on fyp.pdf (39 pages, 609829 bytes).
+Output written on fyp.pdf (39 pages, 610785 bytes).
 PDF statistics:
  644 PDF objects out of 1000 (max. 8388607)
  551 compressed objects within 6 object streams

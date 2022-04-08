@@ -42,7 +42,11 @@ This resulted in the following conjectures:
 \end{conjecture}
 In a survey on the problem, Wolff proposed a finite analogue to the Kakeya Conjecture.\cite{wolff1999recent} 
 
-A Kakeya set in $\FP^n$ is a set that contains a line in every direction. The following section formalises the notion of a line in a finite set. The finite analogue to Conjectures \ref{conj:mink-kakeya} and \ref{conj:haus-kakeya} is:
+A Kakeya set in $\FP^n$ is a set that contains a line in every direction. Analogous to the Euclidean case, we formally define lines in $\FP^n$  as the set:
+$$\mathcal{L} = \{x+ty : x,y \in \FP^n,  t \in \FP \}.$$
+It should be noted that a line in a finite field $\FP^n$ contains exactly $|\FP|$ points.
+Formally, directions in $\FP^n$ can be identified using the projective space $\mathbb{P}\FP^n  = \frac{\FP^n}{\FP^x}$.
+The finite analogue to Conjectures \ref{conj:mink-kakeya} and \ref{conj:haus-kakeya} is:
 \thm{Kakeya Conjecture in Finite Fields}{If $A\subset \FP^n$ contains a translate of every line, then $|A| \gtrsim_n p^n $. \label{KakeyaConjecture}}
 This conjecture had a significant influence on the subject, inspiring work on the sum-product phenomenon in finite fields. From its postulation in 1999,
 little progress was made in the following years and it was assumed that the problem was roughly as difficult as the Euclidean case. 
@@ -74,9 +78,7 @@ A finite field of order $q$ exists if and only if $q = p^k$ for some prime $p$ a
 \end{lemma}
 This lemma follows immediately from Fermat's Little Theorem.
 
-Analogous to the Euclidean case, we define lines in $\FP^n$ as the set:
-$$\mathcal{L} = \{x+ty : x,y \in \FP^n,  t \in \FP \}.$$
-It should be noted that a line in a finite field $\FP^n$ contains exactly $|\FP|$ points.
+
 
 
 \section{Combinatorial attempts at the proof}

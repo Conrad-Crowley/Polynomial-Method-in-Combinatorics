@@ -256,7 +256,7 @@ The argument for $I(C_1,C_2)$ is the similar to the above calculation, however t
 \begin{align*}
     |I(C_1,C_2)| &= \sum_{\beta(\gamma)\in C_1} \sum_{\beta(\gamma') \in C_2} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)] \\
     \intertext{and again the second sum is $\lesssim D$ due to Bezout and our non-degeneracy condition. Hence,}
-    & \lesssim \sum_{\beta(\gamma)\in C_1} D = ND.
+    & \lesssim \sum_{\beta(\gamma)\in C_1} D \leq ND.
 \end{align*}
 
 Finally we need to handle the incidences between curves contained entirely in the zero-set, $I(C_2,C_2)$. 
@@ -275,7 +275,7 @@ We recursively iterate this process now, examining now the set:
 Again, if all the curves are in $Z(\partial^2_z P)$ the process stops and we proceed by the argument in Ellenberg-Solymosi-Zahl's Proof. In the other case, $\RR^3 \backslash Z(\partial^2_z P)$
 contains a constant number of curves which intersect $ Z(\partial^2_z P)$ at most $D$ times each. We can iterate this process at most $D$ times, so our sum becomes:
 \begin{align*}
-    |I(C_2,C_2)| &= ND + \sum_{i=1}^D D = ND + D^2
+    |I(C_2,C_2)| &\lesssim ND + \sum_{i=1}^D D = ND + D^2
 \end{align*}
 
 Adding together our bounds we achieve:
