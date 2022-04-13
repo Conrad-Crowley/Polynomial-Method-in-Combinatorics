@@ -1,4 +1,25 @@
 \chapter{Proof of Bézout's Lemma}
+
+\begin{lemma}[Bezout Lemma for Curves in $\RR^3$]     \label{appendix:Bezout}
+    Let $Z(P)$ and $Z(Q_1,Q_2)$ be the zero sets of polynomials over $\RR[X,Y,Z]$ and that $P,Q_1,Q_2$ have no common factors.
+  Then we can bound their intersection:
+     \[|Z(P) \cap Z(Q_1,Q_2)| \lesssim \deg P \deg Q_1 \deg Q_2.\]
+ \end{lemma}
+\begin{proof}
+        \[\begin{tikzcd}
+            & {\frac{F_{D-\deg Q_2}[X,Y,Z]}{\langle Q_1 \rangle_{D- \deg Q_2}}} & {\frac{F_{D-\deg P}[X,Y,Z]}{\langle Q_1, Q_2 \rangle_{D- \deg P}}} \\
+            {F_D[X,Y,Z]} & {\frac{F_D[X,Y,Z]}{\langle Q_1 \rangle_D}} & {\frac{F_D[X,Y,Z]}{\langle Q_1, Q_2 \rangle_D}} & {\frac{F_D[X,Y,Z]}{\langle Q_1, Q_2, P \rangle_D}}
+            \arrow["\alpha", from=2-1, to=2-2]
+            \arrow["\beta", from=2-2, to=2-3]
+            \arrow["\gamma", from=2-3, to=2-4]
+            \arrow["{\beta'}", from=1-2, to=2-2]
+            \arrow["{\gamma'}", from=1-3, to=2-3]
+        \end{tikzcd}\]
+
+\end{proof}
+
+
+
 \chapter{Proof of Borsuk-Ulam Theorem}
     \begin{theorem}[Borsuk-Ulam]
         A map $\phi$ is said to be antipodal if it obeys $\phi (-x) = -\phi(x)$ for all $x$ in its domain. Suppose $\phi: \SP^N \to \RR^N$ is a continuous antipodal mapping. 
@@ -58,7 +79,7 @@ We present here a constructive proof first published by Freund.\cite{freund1981c
 \end{proof}
 
 \begin{proof}[Proof of Borsuk-Ulam from Tucker Lemma]
-    Let $f: \SP^n \to \RR^n$ be a continuous mapping, and let $B^n$ be the unit ball in the ``equator'' hyperplane of $\SP^n$. We define $g: B^n \to \RR^n$ by setting $g(x) = f(y) - f(-y)$, where $y$ is the point of the upper hemisphere of $\SP^n$ whose vertical projection on $B^n$ is $x$. The map $g$ is obviously antipodal on $\partial B^n = \SP^{n-1}$. For contradiction let us assume that $g(x) \neq 0$ everywhere. From the compactness of the ball we have the existance of an $\varepsilon > 0$ such that $\|g(x)\|_1 \geq \varepsilon$ for all $x$. Further, a continuous fraction on a compact set is uniformly continuous, and ths there exists a $\delta > 0$ such that if $\| x - x' \|_1 \leq \delta$ then $\|g(x) - g(x')\|_1 < \varepsilon/n$.
+    Let $f: \SP^n \to \RR^n$ be a continuous mapping, and let $B^n$ be the unit ball in the ``equator'' hyperplane of $\SP^n$. We define $g: B^n \to \RR^n$ by setting $g(x) = f(y) - f(-y)$, where $y$ is the point of the upper hemisphere of $\SP^n$ whose vertical projection on $B^n$ is $x$. The map $g$ is obviously antipodal on $\partial B^n = \SP^{n-1}$. For contradiction let us assume that $g(x) \neq 0$ everywhere. From the compactness of the ball we have the existence of an $\varepsilon > 0$ such that $\|g(x)\|_1 \geq \varepsilon$ for all $x$. Further, a continuous fraction on a compact set is uniformly continuous, and thus there exists a $\delta > 0$ such that if $\| x - x' \|_1 \leq \delta$ then $\|g(x) - g(x')\|_1 < \varepsilon/n$.
     
     Let us choose a special triangulation $T$ such that the diameter of each of its simplexes is at most $\delta$. We define a labelling of the vertices of $T$ as follows: $|\text{lab}(x)| = i$ if $|g_i(x)| = \max \{|g_1(x)|, \dots, |g_n(x)| \}$ and $\sgn \text{lab} (x) = \sgn g_i(x)$ (if the maximum is attained for more than one index, we take the first such index). From the Tucker Lemma we know there exists a complimentary edge $xx'$. Let $\text{lab}(x) = -\text{lab}(x') = i$, then $g(x)_i \geq \varepsilon/n$ and $g(x')_i \leq -\varepsilon/n$. Hence $\|g(x) - g(x') \|_1 \geq 2\varepsilon / n$, a contradiction. Therefore there exists a zero $x$ of the function $g$.
 \end{proof}

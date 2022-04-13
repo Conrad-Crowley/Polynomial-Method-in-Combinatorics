@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  13 APR 2022 18:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  13 APR 2022 19:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -662,7 +662,19 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Cskip=\skip100
 )
 \c@@todonotes@numberoftodonotes=\count345
-)
+) (/usr/share/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
+Package: tikz-cd 2021/05/04 v1.0 Commutative diagrams with TikZ
+ (/usr/share/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowinset=\dimen294
+\pgfarrowlength=\dimen295
+\pgfarrowwidth=\dimen296
+\pgfarrowlinewidth=\dimen297
+)))
 \@indexfile=\write4
 \openout4 = `fyp.idx'.
 
@@ -680,34 +692,34 @@ File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
 ) (./fyp.aux)
 \openout1 = `fyp.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count352
-\scratchdimen=\dimen294
+\scratchdimen=\dimen298
 \scratchbox=\box89
 \nofMPsegments=\count353
 \nofMParguments=\count354
 \everyMPshowfont=\toks50
 \MPscratchCnt=\count355
-\MPscratchDim=\dimen295
+\MPscratchDim=\dimen299
 \MPnumerator=\count356
 \makeMPintoPDFobject=\count357
 \everyMPtoPDFconversion=\toks51
@@ -724,7 +736,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count358
-Package hyperref Info: Link coloring OFF on input line 110.
+Package hyperref Info: Link coloring OFF on input line 113.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
@@ -734,9 +746,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count359
 )
-LaTeX Info: Redefining \ref on input line 110.
-LaTeX Info: Redefining \pageref on input line 110.
-LaTeX Info: Redefining \nameref on input line 110.
+LaTeX Info: Redefining \ref on input line 113.
+LaTeX Info: Redefining \pageref on input line 113.
+LaTeX Info: Redefining \nameref on input line 113.
  (./fyp.out) (./fyp.out)
 \@outlinefile=\write5
 \openout5 = `fyp.out'.
@@ -777,7 +789,7 @@ LaTeX Info: Redefining \nameref on input line 110.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 110.
+Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 113.
 
 (./chap/title.tex
 Overfull \hbox (3.20865pt too wide) in paragraph at lines 5--5
@@ -911,19 +923,9 @@ Overfull \hbox (2.678pt too wide) in paragraph at lines 94--94
 [][][]\OT1/cmr/m/n/10.95 diagram?[]  
  []
 
-[18]
-Overfull \hbox (5.38509pt too wide) in paragraph at lines 134--134
-[][][]\OT1/cmr/m/n/10.95 appendix, 
- []
-
-
-Overfull \hbox (5.38509pt too wide) in paragraph at lines 134--134
-[][][]\OT1/cmr/m/n/10.95 appendix, 
- []
-
-[19] [20] [21] [22]) (./chap/circle.tex [23]
+[18] [19] [20] [21] [22]) (./chap/circle.tex [23]
 Chapter 6.
-<images/circles_degen_case_ManimCE_v0.15.1.png, id=453, 2569.6pt x 1445.4pt>
+<images/circles_degen_case_ManimCE_v0.15.1.png, id=454, 2569.6pt x 1445.4pt>
 File: images/circles_degen_case_ManimCE_v0.15.1.png Graphic file (type png)
 <use images/circles_degen_case_ManimCE_v0.15.1.png>
 Package pdftex.def Info: images/circles_degen_case_ManimCE_v0.15.1.png  used on input line 27.
@@ -947,12 +949,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 61.
 
 [25 <./images/circles_degen_case_ManimCE_v0.15.1.png>] [26] [27] [28]
-Overfull \hbox (6.09149pt too wide) in paragraph at lines 208--213
+Overfull \hbox (6.09149pt too wide) in paragraph at lines 207--212
 []\OT1/cmr/m/n/10.95 Relabel $\OMS/cmsy/m/n/10.95 C$ \OT1/cmr/m/n/10.95 as $^^@$ for con-ve-nience. Again,
  []
 
 [29]
-Overfull \hbox (0.72185pt too wide) detected at line 244
+Overfull \hbox (0.72185pt too wide) detected at line 243
 []
  []
 
@@ -990,18 +992,18 @@ Package rerunfilecheck Info: File `fyp.out' has not changed.
 (rerunfilecheck)             Checksum: BE315ECC569CA08139A01B363B3B20FA;5684.
  ) 
 Here is how much of TeX's memory you used:
- 28636 strings out of 478353
- 532375 string characters out of 5854636
- 824388 words of memory out of 5000000
- 46077 multiletter control sequences out of 15000+600000
+ 29647 strings out of 478353
+ 564324 string characters out of 5854636
+ 851210 words of memory out of 5000000
+ 47069 multiletter control sequences out of 15000+600000
  417218 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,13n,89p,828b,1063s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,17n,89p,829b,1119s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on fyp.pdf (43 pages, 631351 bytes).
+Output written on fyp.pdf (43 pages, 636681 bytes).
 PDF statistics:
- 696 PDF objects out of 1000 (max. 8388607)
- 597 compressed objects within 6 object streams
- 175 named destinations out of 1000 (max. 500000)
+ 701 PDF objects out of 1000 (max. 8388607)
+ 601 compressed objects within 7 object streams
+ 176 named destinations out of 1000 (max. 500000)
  300 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -85,13 +85,12 @@ For those more algebraically inclined, what we are doing here is equivalent to l
 are preserving intersections.
 
 We will need a Bezout-type result which bounds the number of intersections between curves with no common components.
-\begin{lemma}[Bezout's Theorem for Plane Algebraic Curves]     \label{lem:Bezout}
-   Let $Z_1$ and $Z_2$ be the zero sets of two polynomials over $\RR[X,Y]$ and suppose $\deg Z_1 > \deg Z_2$. Then one of the following holds:
-   \begin{align*}
-    |Z_1 \cap Z_2 | &\leq \deg Z_1 \deg Z_2 \\
-    \text{ or } &Z_2 \subset Z_1
-   \end{align*}
+\begin{lemma}[Bezout Lemma for Curves in $\RR^3$]     \label{lem:Bezout}
+   Let $Z(P)$ and $Z(Q_1,Q_2)$ be the zero sets of polynomials over $\RR[X,Y,Z]$ and that $P,Q_1,Q_2$ have no common factors.
+ Then we can bound their intersection:
+    \[ |Z(P) \cap Z(Q_1,Q_2)| \lesssim \deg P \deg Q_1 \deg Q_2.\]
 \end{lemma}
+To preserve the flow of this chapter, the proof of this result has been moved to \hyperref[appendix:Bezout]{the appendix}.
 
 
 \section[Ellenberg-Solymosi-Zahl's Proof]{Ellenberg-Solymosi-Zahl's Proof of Theorem \ref{thm:circle-tangencies}}
@@ -259,6 +258,7 @@ The argument for $I(C_1,C_2)$ is the similar to the above calculation, however t
     & \lesssim \sum_{\beta(\gamma)\in C_1} D \leq ND.
 \end{align*}
 
+\todo{this is wrong - swap and fix}
 Finally we need to handle the incidences between curves contained entirely in the zero-set, $I(C_2,C_2)$. 
 \[
     |I(C_2,C_2)| = \sum_{\beta(\gamma), \beta(\gamma') \in C_2} \OO[\beta(\gamma) \cap \beta(\gamma') \neq \emptyset]
