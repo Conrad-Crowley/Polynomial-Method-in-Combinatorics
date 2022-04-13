@@ -87,4 +87,10 @@ Misha Rudnev.
 \newblock On the number of incidences between points and planes in three
   dimensions, 2014.
 
+\bibitem{freund1981constructive}
+Robert~M Freund and Michael~J Todd.
+\newblock A constructive proof of tucker's combinatorial lemma.
+\newblock {\em Journal of Combinatorial Theory, Series A}, 30(3):321--325,
+  1981.
+
 \end{thebibliography}
