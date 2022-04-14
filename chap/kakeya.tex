@@ -208,14 +208,21 @@ Let $\KK$ be a (not necessarily finite) field. If $A \subset \KK^n$ and $|A| < {
 
 \prf{ We first show the dimension of $\text{Poly}_D (\KK^n)$ is ${D+n} \choose{n}$. A basis for $\text{Poly}_D (\KK^n)$ is given by monomials of the form $x_1^{D_1}\dots x_n^{D_n}$, where $\sum_i D_i \leq D$, hence we just need to count the number of monomials.
 
-We can map a monomial $x_1^{D_1}\dots x_n^{D_n}$ to a string of $D$ $\star$'s and $n$ $|$'s as follows. Begin with $D_1$ $\star$'s, then place one $|$. We put now $D_2$ $\star$'s, and place a second $|$. We continue until we have placed $D_n$ $\star$'s followed by an $n^{\text{th}}$ $|$. Finally we place $D - \sum_i D_i \star$'s. This is a bijective map between the monomials in $\text{Poly}_D (\KK^n)$ and all the strings of $D$ $\star$'s and $n$ $|$'s. To count the strings, fix the $n$ $|$'s. Now we have $n+1$ bins to distribute our $D$ $\star$'s. 
-Therefore we have by the stars and bars theorem:
-$$\text{Poly}_D (\KK^n) = {{n+1 + D - 1} \choose{n+1 -1}} = {{n+D} \choose{n}}.$$
+We can map a monomial $x_1^{D_1}\dots x_n^{D_n}$ to a string of $D$ $\star$'s and $n$ $|$'s as follows. 
+Begin with $D_1$ $\star$'s, then place one $|$. We put now $D_2$ $\star$'s, and place a second $|$. 
+We continue until we have placed $D_n$ $\star$'s followed by an $n^{\text{th}}$ $|$. 
+Finally we place $D - \sum_i D_i \star$'s.
+ This is a bijective map between the monomials in $\text{Poly}_D (\KK^n)$ and all the strings of $D$ $\star$'s and $n$ $|$'s. 
+ To assemble such a string we distribute the $n$ $|$'s over $n+D$ spaces, and then fill the remainder with $\star$'s. Hence we get the binomial coefficient:
+$$\text{Poly}_D (\KK^n) = {{n+D} \choose{n}}.$$
 
-Let now $p_1, \dots, p_{|A|}$ be the points of $A$. We consider the evaluation map $E: \text{Poly}_D (\KK^n) \to \KK^{|A|}$ defined by:
+Now let $p_1, \dots, p_{|A|}$ be the points of $A$. We consider the evaluation map $E: \text{Poly}_D (\KK^n) \to \KK^{|A|}$ defined by:
 $$E(Q) = \left(Q(p_1), \dots, Q(p_{|A|})\right).$$
 
-This map is clearly linear. Its kernel $\ker E$ is exactly the set of polynomials in $\text{Poly}_D (\KK^n)$ that vanish on $A$. By assumption, the dimension of $\text{Poly}_D (\KK^n)$ is greater than $A$, so the dimension of the domain of $E$ is greater than the codomain of $E$. By the rank-nullity theorem, we conclude $E$ must have a non-trivial kernel. Thus there exists a non-zero polynomial $P \in \text{Poly}_D (\KK^n)$ that vanishes on $A$.} 
+This map is clearly linear. 
+Its kernel $\ker E$ is exactly the set of polynomials in $\text{Poly}_D (\KK^n)$ that vanish on $A$. 
+By assumption, the dimension of $\text{Poly}_D (\KK^n)$ is greater than $A$, so the dimension of the domain of $E$ is greater than the codomain of $E$. By the rank-nullity theorem, we conclude $E$ must have a non-trivial kernel. 
+Thus there exists a non-zero polynomial $P \in \text{Poly}_D (\KK^n)$ that vanishes on $A$.} 
 
 
 Note that if $D=|\FF|-1$, and $|A| \leq {{|\FF|+n-1} \choose{|\FF|-1}} = { {|\FF|+n-1} \choose{n}}$ we have a polynomial of degree $|\FF|-1$ that vanishes on $A$. Since $\frac{|\FF|^n}{n!} < {{|\FF|+n-1} \choose{n}}$,we can definitely find such a polynomial when $|A| \leq \frac{|\FF|^n}{n!}$.
@@ -228,7 +235,9 @@ Recall $P$ is a sum of monomials, and we use multi-index notation here with $\al
 $$P(x_1,x_2, \dots, x_n) = \sum_{|\alpha| \leq D} c_{\alpha} x_1^{\alpha_1}x_2^{\alpha_2}\dots x_n^{\alpha_n}. $$
 Now $P_{|\ell}$ can be written:
 $$P_{|\ell} = P(x+tz) = Q_{x,z}(t) = \sum_{|\alpha| \leq D} c_\alpha \prod_{i} (x_i + t z_i)^{\alpha_i}.$$
-We now wish to examine the degree $D$ term of $Q$, which is achieved by picking the $tz_i$ terms from each bracket in the product above. This gives the degree $D$ component of $Q$, $Q_{x,z,D}$, which has the form:
+We now wish to examine the degree $D$ term of $Q$,
+which consist in the terms of the expansion of the expression above obtained by the product of the $tz_i$ terms. 
+ This gives the degree $D$ component of $Q$, $Q_{x,z,D}$, which has the form:
 $$Q_{x,z,D} = t^D Q_D(z) = t^D \sum_{|\alpha| = D} c_\alpha \prod_i z_i.$$
 
 Now if $P_{|\ell}$ vanishes everywhere on $\ell$, since its dependence on $t$ is given by a polynomial of degree less than $|\FF|$, all its coefficients must be zero. 
