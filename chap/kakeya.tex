@@ -32,7 +32,7 @@ $\dim_{M_{\text{upper}}}$ and $\dim_{M_{\text{lower}}}$, by taking the limit sup
 These dimensions are related by the following inequality when they are all defined:
 $$\dim_H \leq \dim_{M_{\text{lower}}} \leq \dim_{M_{\text{upper}}}.$$
 In 1971, Davies produced a solution for the 2 dimensional case, proving that
-although the measure of a Kakeya set can be arbitrarily small, it must have Hausdorff (and hence Minkowski) dimension of 2.\cite{davies1971some}
+although the measure of a Kakeya set can be arbitrarily small, it must have Hausdorff and Minkowski dimension of 2.\cite{davies1971some}
 This resulted in the following conjectures:
 \begin{conjecture}[Kakeya Conjecture for the Minkowski Dimension]
     Let $A$ be a Kakeya set in $\RR^n$. Then $\dim_M (A) = n$. \label{conj:mink-kakeya}
@@ -47,7 +47,9 @@ $$\mathcal{L} = \{x+ty : x,y \in \FP^n,  t \in \FP \}.$$
 It should be noted that a line in a finite field $\FP^n$ contains exactly $|\FP|$ points.
 Formally, directions in $\FP^n$ can be identified using the projective space $\mathbb{P}\FP^n  = \frac{\FP^n}{\FP^x}$.
 The finite analogue to Conjectures \ref{conj:mink-kakeya} and \ref{conj:haus-kakeya} is:
-\thm{Kakeya Conjecture in Finite Fields}{If $A\subset \FP^n$ contains a translate of every line, then $|A| \gtrsim_n p^n $. \label{KakeyaConjecture}}
+\begin{theorem}[Kakeya Conjecture in Finite Fields]
+    If $A\subset \FP^n$ contains a translate of every line, then $|A| \geq \frac{1}{n!} |\FP|^n $. \label{KakeyaConjecture}
+\end{theorem}
 This conjecture had a significant influence on the subject, inspiring work on the sum-product phenomenon in finite fields. From its postulation in 1999,
 little progress was made in the following years and it was assumed that the problem was roughly as difficult as the Euclidean case. 
 
@@ -80,7 +82,7 @@ This lemma follows immediately from Fermat's Little Theorem.
 
 
 
-\section{Combinatorial attempts at the proof}
+\section{Combinatorial Attempts }
 To truly show the power of the polynomial method, we shall first explore purely combinational attempts 
 at estimating the sizes of Kakeya sets. All of the following estimates are much weaker than the bound in Theorem \ref{KakeyaConjecture}.
 We fix a finite field $\FF = \FF_{p^k}$ where $p$ is a prime. 
@@ -147,12 +149,7 @@ $$|A| \gtrsim |\FF|^{\frac{n+1}{2}}$$
 Due to Wolff. \cite{WOLFF1995}
 
 \begin{theorem}[Hair Brush Argument]
-    Suppose $l_1, \dots , l_M$ are lines in $\FF^n$, and that at most $|\FF| +1$ of the lines lie in any plane.
-    Then their union has cardinality at least 
-    \[
-        \frac{1}{3}    |\FF|^{3/2} M^{1/2}.
-    \]
-    In particular, if $A$ is a Kakeya set, then we have:
+    If $A$ is a Kakeya set, then we have:
     \[
         |A| \gtrsim |\FF|^{\frac{n+2}{2}}    
     \]

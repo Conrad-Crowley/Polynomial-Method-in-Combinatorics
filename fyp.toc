@@ -5,7 +5,7 @@
 \contentsline {section}{\numberline {1.2}Why polynomials?}{2}{section.1.2}%
 \contentsline {chapter}{\numberline {2}The Kakeya Problem in Finite Fields }{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Introduction to Finite Fields}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Combinatorial attempts at the proof}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Combinatorial Attempts }{5}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Bush Argument}{6}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Hairbrush Argument}{7}{subsection.2.2.2}%
 \contentsline {section}{\numberline {2.3}Dvir's Proof }{8}{section.2.3}%
