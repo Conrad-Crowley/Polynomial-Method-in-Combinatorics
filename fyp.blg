@@ -6,45 +6,45 @@ Database file #1: fyp.bib
 Warning--empty author in michalek2010
 Warning--empty title in michalek2010
 Warning--can't use both volume and number fields in guth2015polypartvar
-You've used 18 entries,
+You've used 19 entries,
             1791 wiz_defined-function locations,
-            555 strings with 5928 characters,
-and the built_in function-call counts, 3851 in all, are:
-= -- 352
-> -- 120
+            561 strings with 6048 characters,
+and the built_in function-call counts, 4055 in all, are:
+= -- 373
+> -- 124
 < -- 5
-+ -- 50
-- -- 32
-* -- 229
-:= -- 561
-add.period$ -- 50
-call.type$ -- 18
-change.case$ -- 15
++ -- 52
+- -- 33
+* -- 244
+:= -- 593
+add.period$ -- 53
+call.type$ -- 19
+change.case$ -- 16
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 176
-empty$ -- 429
-format.name$ -- 32
-if$ -- 892
+cite$ -- 22
+duplicate$ -- 185
+empty$ -- 451
+format.name$ -- 33
+if$ -- 936
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 14
-newline$ -- 85
-num.names$ -- 17
-pop$ -- 78
+int.to.str$ -- 19
+missing$ -- 15
+newline$ -- 90
+num.names$ -- 18
+pop$ -- 79
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 96
+skip$ -- 99
 stack$ -- 0
-substring$ -- 262
-swap$ -- 51
+substring$ -- 281
+swap$ -- 52
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 37
-width$ -- 20
-write$ -- 182
+while$ -- 40
+width$ -- 21
+write$ -- 193
 (There were 3 warnings)
