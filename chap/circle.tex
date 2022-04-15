@@ -267,15 +267,20 @@ Suppose $P$ was the minimal degree polynomial that partitioned the space as per 
 \[
 C_2 = \{\beta(\gamma) \subset Z(\partial_z P)\} \cup \{\beta(\gamma) \subset \RR^3 \backslash Z(\partial_z P)\}
 \]
-If all the curves are in $\{\beta(\gamma) \subset Z(\partial_z P)\}$, then we use the exact same technique as in Ellenberg-Solymosi-Zahl's Proof to control the size of this contribution by $\lesssim ND$.
+If all the curves are in $\{\beta(\gamma) \subset Z(\partial_z P)\}$, then we use the exact same technique as in Ellenberg-Solymosi-Zahl's Proof.
+Since $P$ was a minimal degree polynomial that partitioned the space, and $\partial_z P$ also partitioned space, then we must have that $P$ does not depend on $z$, or in other words $P(X,Y,Z) = Q(X,Y)$. Since $Z(Q)$ is of degree $D$, it can contain up to $D$ circles in the plane.  Using trivial bound we can control the size of this contribution by $\lesssim D^2$.
 
-In the other case, there are at most a constant number of curves in $\{\beta(\gamma) \subset \RR^3 \backslash Z(\partial_z P)\}$, each of which can intersect $ Z(\partial_z P)$ at most $D$ times. 
+In the other case, say there are some number $K_1$ curves in $\{\beta(\gamma) \subset \RR^3 \backslash Z(\partial_z P)\}$, each of which can intersect $ Z(\partial_z P)$ at most $D$ times. 
 We recursively iterate this process now, examining now the set: 
 \[\{\beta(\gamma) \subset Z(\partial_z P)\} = \{\beta(\gamma) \subset Z(\partial^2_z P)\} \cup \{\beta(\gamma) \subset \RR^3 \backslash Z(\partial^2_z P)\}\]
-Again, if all the curves are in $Z(\partial^2_z P)$ the process stops and we proceed by the argument in Ellenberg-Solymosi-Zahl's Proof. In the other case, $\RR^3 \backslash Z(\partial^2_z P)$
-contains a constant number of curves which intersect $ Z(\partial^2_z P)$ at most $D$ times each. We can iterate this process at most $D$ times, so our sum becomes:
+Again, if all the curves are in $Z(\partial^2_z P)$ the process stops and we proceed by the argument above. In the other case, $\RR^3 \backslash Z(\partial^2_z P)$
+contains $k_2$ curves which intersect $ Z(\partial^2_z P)$ at most $D$ times each. We can iterate this process at most $D$ times, as after the $D$-th derivative we are in the first case. The contributions from the second case become:
+\[
+    \lesssim \sum_{i=0}^D k_i D = D \sum_{i=0}^D k_i = DN
+\]
+
 \begin{align*}
-    |I(C_2,C_2)| &\lesssim ND + \sum_{i=1}^D D = ND + D^2
+    |I(C_2,C_2)| &\lesssim D^2 + ND
 \end{align*}
 
 Adding together our bounds we achieve:
