@@ -1,8 +1,7 @@
 \contentsline {chapter}{Table of Contents}{ii}{chapter*.2}%
 \contentsline {chapter}{List of Figures}{iii}{section*.3}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Preface to this Draft}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Why polynomials?}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.1}Why polynomials?}{1}{section.1.1}%
 \contentsline {chapter}{\numberline {2}The Kakeya Problem in Finite Fields }{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Combinatorial Attempts}{5}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Bush Argument}{6}{subsection.2.1.1}%
@@ -11,23 +10,23 @@
 \contentsline {chapter}{\numberline {3}The Polynomial Method in Additive Combinatorics }{11}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Combinatorial Nullstellensatz}{11}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Cauchy-Davenport Theorem}{12}{section.3.2}%
-\contentsline {chapter}{\numberline {4}The Joints Problem }{13}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Background}{13}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Examples}{13}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Solution of the Joints Problem}{14}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Szemerédi-Trotter Theorem }{16}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Background}{16}{section.5.1}%
-\contentsline {section}{\numberline {5.2}The Trivial Bound}{16}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Examples}{18}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Ham Sandwich Theorems }{19}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Proof of the Szemerédi-Trotter Theorem }{21}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Counting Circle Tangencies}{24}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Trivial Bounds}{24}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Lifting of circles to $\mathbb R^3$}{26}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Ellenberg-Solymosi-Zahl's Proof}{26}{section.6.3}%
-\contentsline {section}{\numberline {6.4}New Proof via Polynomial Partitioning}{29}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Sphere Tangencies in $\mathbb R^{3}$}{32}{section.6.5}%
-\contentsline {chapter}{References}{35}{chapter*.28}%
-\contentsline {chapter}{Appendices}{36}{section*.29}%
-\contentsline {chapter}{\numberline {A}Proof of Bézout's Lemma}{36}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Proof of Borsuk-Ulam Theorem}{37}{appendix.B}%
+\contentsline {chapter}{\numberline {4}The Joints Problem }{14}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Background}{14}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Examples}{14}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Solution of the Joints Problem}{15}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Szemerédi-Trotter Theorem }{17}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Background}{17}{section.5.1}%
+\contentsline {section}{\numberline {5.2}The Trivial Bound}{17}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Examples}{19}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Ham Sandwich Theorems }{20}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Proof of the Szemerédi-Trotter Theorem }{22}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Counting Circle Tangencies}{25}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Trivial Bounds}{25}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Lifting of circles to $\mathbb R^3$}{27}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Ellenberg-Solymosi-Zahl's Proof}{27}{section.6.3}%
+\contentsline {section}{\numberline {6.4}New Proof via Polynomial Partitioning}{30}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Sphere Tangencies in $\mathbb R^{3}$}{33}{section.6.5}%
+\contentsline {chapter}{References}{36}{chapter*.27}%
+\contentsline {chapter}{Appendices}{37}{section*.28}%
+\contentsline {chapter}{\numberline {A}Proof of Bézout's Lemma}{37}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Proof of Borsuk-Ulam Theorem}{38}{appendix.B}%
