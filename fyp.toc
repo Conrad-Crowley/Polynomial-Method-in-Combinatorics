@@ -26,7 +26,7 @@
 \contentsline {section}{\numberline {6.3}Ellenberg-Solymosi-Zahl's Proof}{27}{section.6.3}%
 \contentsline {section}{\numberline {6.4}New Proof via Polynomial Partitioning}{30}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Sphere Tangencies in $\mathbb R^{3}$}{33}{section.6.5}%
-\contentsline {chapter}{References}{36}{chapter*.27}%
-\contentsline {chapter}{Appendices}{37}{section*.28}%
+\contentsline {chapter}{References}{36}{chapter*.26}%
+\contentsline {chapter}{Appendices}{37}{section*.27}%
 \contentsline {chapter}{\numberline {A}Proof of Bézout's Lemma}{37}{appendix.A}%
 \contentsline {chapter}{\numberline {B}Proof of Borsuk-Ulam Theorem}{38}{appendix.B}%
