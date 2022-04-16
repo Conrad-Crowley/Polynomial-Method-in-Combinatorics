@@ -1,18 +1,16 @@
 \chapter{Szemerédi-Trotter Theorem \label{chap:trotter}}
 
-In this chapter we will study the application of the polynomial method to incidence geometry by proving a fundamental theorem in the field.
-Incidence geometry is the study of possible intersection patterns of simple geometric objects, such as lines or low degree curves. 
+
+Incidence geometry is the study of possible intersection patterns of simple geometric objects, such as lines or low degree curves. In this chapter we will study the application of the polynomial method to incidence geometry by proving a fundamental theorem in the field.
 We have already seen an incidence problem in the previous chapter on the Joints problem. 
-By developing the powerful tool of polynomial partitioning we shall see the key role that the topology of $\RR^n$ can play in such problems, 
-in contrast to the trivial topology of finite fields. 
+By developing the powerful tool of polynomial partitioning we shall see the key role that the topology of $\RR^n$ can play in such problems.
 
 
-\section{Background}
-The Szemerédi-Trotter theorem is a fundamental theorem to the field of incidence geometry, originally proved by an involved cell decomposition argument
-of Szemerédi and Trotter and later given a shorter proof using crossing numbers by Székely. 
+The Szemerédi-Trotter theorem is a fundamental result in the field of incidence geometry, originally proved by an involved cell decomposition argument
+of Szemerédi and Trotter and later given a shorter proof using the crossing-number inequality by Székely. 
 \begin{theorem}[Szemerédi-Trotter]
     Let $\ES \subset\RR^2$ be a finite set of points and
-    let $\LL \subset \RR^2$ be a finite set of lines. We define 
+    let $\LL$ be a finite set of lines in $\RR^2$. We define 
     \[I(\ES,\LL) = \{(p, \ell) \in \ES \times \LL \ | \ p \in \ell\}\] 
     to be the set of incidences between $\ES$ and $\LL$. 
    
@@ -24,35 +22,31 @@ of Szemerédi and Trotter and later given a shorter proof using crossing numbers
 \end{theorem}
 
 \section{The Trivial Bound}
-In planar geometry, we have the following dual statements: two points determine a line and every pair of lines intersect in at most one point.
+In planar geometry, we have the following dual statements: two points determine a line and every pair of lines intersect in at most one point. \todo{how to fix dual?}
 Using this we can prove the following bounds on $I(\ES,\LL)$:
-\begin{theorem}[Trivial Bounds]
-    For a set of points $\ES$ and lines $\LL$ we have
-    \[I(\ES,\LL)| \leq |\ES|^2 + |\LL|. \]
-    \[I(\ES,\LL)| \leq |\LL|^2 + |\ES|. \]
-    \label{thm:trivial-ST-bounds}
-\end{theorem}
+\begin{lemma}[Trivial Bounds]
+    For a set of points $\ES$ and lines $\LL$ we have \label{thm:trivial-ST-bounds}
+    \[|I(\ES,\LL)| \leq |\ES|^2 + |\LL|. \]
+    \[|I(\ES,\LL)| \leq |\LL|^2 + |\ES|. \]
+\end{lemma}
 \begin{proof}
 
 To see this, count the lines that have at most one point in $P$ on them. These contribute at most $|\LL|$ incidences.
 Every other line has at least two points in $\ES$. The total number of incidences on these lines is at most $|\ES|^2$
-as otherwise there would exist a $p\in \ES$ that lies on over $|\ES|$ lines, and each of these lines would have an additional 
+as otherwise by the pigeonhole principle there would exist a $p\in \ES$ that lies in over $|\ES|$ lines, and each of these lines would have an additional 
 point on it. This would imply there are more that $|\ES|$ points, a contradiction. 
 
 Interchanging the roles of $\LL$ and $\ES$ achieves the other bound as two lines intersect in at most one point.
 \end{proof}
 
-\begin{theorem}[Second Trivial Incidence Bound]
-    $$I(\ES,\LL) \lesssim |\ES|\cdot |\LL|^{\frac{1}{2}} + |\LL|$$
+\begin{lemma}[Second Trivial Incidence Bound]
+    $$|I(\ES,\LL)| \lesssim |\ES| |\LL|^{\frac{1}{2}} + |\LL|$$
     and
-    $$I(\ES,\LL) \lesssim |\LL|\cdot |\ES|^{\frac{1}{2}} + |\ES|.$$
+    $$|I(\ES,\LL)| \lesssim |\LL| |\ES|^{\frac{1}{2}} + |\ES|.$$
     \label{thm:pretty-trivial-ST-bounds}
-\end{theorem}
+\end{lemma}
 \begin{proof}
-    
-
-
-We now bound the number of incidences. 
+We bound the number of incidences using the Cauchy-Schwarz inequality followed by double counting.
 
 \begin{align*}
     |I(\ES,\LL)|^2 &= \left( \sum_{\ell \in \LL} \sum_{p \in \ES} \OO[p\in \ell] \right)^2 \\
@@ -68,7 +62,7 @@ Repeating the above proof interchanging the roles $\ES$ and $\LL$ achieves the o
 
 
 \section{Examples}
-We can not improve beyond our second trivial bounds in a finite field $\FF^2$. 
+We can not improve beyond the trivial bounds shown in Lemma \ref{thm:pretty-trivial-ST-bounds} in a finite field $\FF^2$. 
 \begin{example}[Finite Fields]
 Consider the set of points $\ES=\FF^2$ and let $\LL$ be the set of all lines 
 in $\FF^2$. Every line contains exactly $|\FF|$ many points of $\ES$, so we have $|\FF|^3$ incidences. 
@@ -77,19 +71,19 @@ $$
 I(\ES,\LL) = |\FF|^3 \sim (|\FF|^2)(|\FF|^2)^{1/2} + |\FF|^2.
 $$
 \end{example}
-In contrast, the following examples seem to be the best possible over $\RR$. We will later prove that these are the asymptotically tight case of the \hyperref[thm:S-T]{Szemerédi–Trotter Theorem}.
-We define a line in $\RR^2$ as follows:
+In contrast, the following examples turn out to be the best possible over $\RR$. We will later prove that these are optimal for the \hyperref[thm:S-T]{Szemerédi–Trotter Theorem}.
+We denote a line in $\RR^2$ as follows:
 \[
     \ell_{m,c} = \{(x,y) \in \RR^2 \ | \ y = mx+c\}.     
 \]
 \begin{example}
-    Consider the following collections in $\RR^2$:
+    Let $N$ be a large integer and consider the following collections in $\RR^2$
     \begin{align*}
-    \ES &= \{ (a,b) \in \ZZ^2 \ | \ a\in [1,N], b \in [1,2N^2] \} \\
-    \LL &= \{ \ell_{m,c} \in \RR^2 \ | \ m,c\in \ZZ, m\in [1,N], c \in [1,N^2] \} \end{align*}
+    \ES &= \{ (a,b) \in \ZZ^2 \ | \ a\in [1,N], b \in [1,2N^2] \}, \\
+    \LL &= \{ \ell_{m,c} \in \RR^2 \ | \ m,c\in \ZZ, m\in [1,N], c \in [1,N^2] \}. \end{align*}
     The collection $\ES$ contains $2N^3$ points and $\LL$ contains $N^3$ lines. Every line in $\LL$ contains $N$ points in $\ES$ as for each $x \in [1,N]$  the y-coordinate of $\ell_{m,c}$, $ mx+c$, gives a different integer in $[1,2N^2]$.
-    Hence there are $N^4$ incidences. Both sides of the \hyperref[thm:S-T]{Szemerédi-Trotter} inequality are comparable as 
-    $$ I(\ES,\LL) = N^4 \sim (N^3)^{\frac{2}{3}} (N^3)^{\frac{2}{3}} \sim |\ES|^{2/3} |\LL|^{2/3}$$
+    Hence there are $N^4$ incidences. Both sides of the \hyperref[thm:S-T]{Szemerédi-Trotter} (Theorem \ref{thm:S-T}) inequality are comparable as 
+    $$ |I(\ES,\LL)| = N^4 \sim (N^3)^{\frac{2}{3}} (N^3)^{\frac{2}{3}} \sim |\ES|^{2/3} |\LL|^{2/3} + |\ES| + |\LL|$$
 \end{example}
 \todo{diagram?}
 \begin{example}
@@ -97,25 +91,25 @@ We define a line in $\RR^2$ as follows:
     \begin{align*}
         \ES &= \{ (a,b) \in \ZZ^2 \ | \ (a,b) \in [-N/2,N/2] \times [-N/2,N/2] \} \\
         \LL &= \{ \ell \ | \ \ell \text{ contains between R and 2R points of } \ES \} \end{align*}
-    We begin by estimating how many lines pass through a given point of the regular grid $\ES$.
+    We begin by estimating how many lines of $\LL$ pass through a given point of the regular grid $\ES$.
     Let $\ell \in \LL$ and $p \in \ES$. The closest point $p' \in \ES$ such that $p \neq p'$ and $p' \in \ell$ must lie
     in a square centred at $p$ of side length $\sim N/R$. This follows from the fact that there are at least $\sim R$ points of $\ES$ in $\ell$ and hence the
-    projections of these points to the axes can be separated by at most $\sim N/R$. Taking each possible combination of these we can conclude that there are $\lesssim N^2 / R^2$ in $\LL$ through a
+    projections of these points to the axes can be separated by at most $\sim N/R$. Taking each possible combination of these we can conclude that there are $\lesssim N^2 / R^2$ lines in $\LL$ through a
     given point $p$.
 
     We now claim that there are $\gtrsim N^2 / R^2$ distinct such lines. We need only consider the points in the upper right quadrant of $\ES$ as the problem is symmetrical.
     Further, we restrict ourselves to considering lines with slopes $m$ satisfying $\frac{1}{2} < m < 2$. For such a line to contain $R$  points
-    of $\ES$ we require $m= \frac{l}{k} \in \QQ$ with $\gcd(l,k) =1$ and $l,k \in \left[\frac{N}{2R}, \frac{N}{R} \right]$. There are $\gtrsim N^2/R^2$ pairs, as the proportion of pairs that share a factor of 2 is $\frac{1}{2}^2$ and the proportion of pairs that share a factor 
-    of 3 is $\frac{1}{3}^2$, and in general the proportion that shares a factor of $k$ is $\frac{1}{k}^2$. We have that $\sum_{k>1} \frac{1}{k}^2 < \frac{2}{3} < 1$ and hence there are $\gtrsim N^2 /R^2$ distinct
+    of $\ES$ it is enough that $m= \frac{l}{k} \in \QQ$ with $\gcd(l,k) =1$ and $l,k \in \left[\frac{N}{2R}, \frac{N}{R} \right]$. There are $\gtrsim N^2/R^2$ such pairs ($l,k$), as the proportion of pairs that share a factor of 2 is $\frac{1}{2^2}$ and the proportion of pairs that share a factor 
+    of 3 is $\frac{1}{3^2}$, and in general the proportion that shares a factor of $k$ is $\frac{1}{k^2}$. We have that $\sum_{k>1} \frac{1}{k}^2 < \frac{2}{3} < 1$ and hence there are $\gtrsim N^2 /R^2$ distinct
     lines in $\LL$ through each point. Taking account of what we have shown: 
     \begin{align*}
         |\ES| &\sim N^2 \\ 
         |\LL| &\sim |\ES| \frac{N^2}{R^2} \frac{1}{R} \sim \frac{N^4}{R^3}\\
-        |I(\ES, \LL)| &\sim |\ES| \frac{N^2}{R^2} \sim \frac{N^4}{R^2}\\
+        |I(\ES, \LL)| &\sim |\ES| \frac{N^2}{R^2} \sim \frac{N^4}{R^2}.\\
     \end{align*}
-    we can see that both sides of the \hyperref[thm:S-T]{Szemerédi-Trotter} inequality are comparable:
+    we can see that both sides of the \hyperref[thm:S-T]{Szemerédi-Trotter} inequality (Theorem \ref{thm:S-T}) are comparable:
     \[
-    |I(\ES, \LL)| \sim \frac{N^4}{R^2} \sim (N^2)^{\frac{2}{3}} \left(\frac{N^4}{R^3}\right)^{\frac{2}{3}} \sim |\ES|^{\frac{2}{3}}|\LL|^{\frac{2}{3}}
+    |I(\ES, \LL)| \sim \frac{N^4}{R^2} \sim (N^2)^{\frac{2}{3}} \left(\frac{N^4}{R^3}\right)^{\frac{2}{3}} \sim |\ES|^{\frac{2}{3}}|\LL|^{\frac{2}{3}}.
     \]
 \end{example}
 \todo{add diagram (!)}
@@ -124,8 +118,9 @@ We define a line in $\RR^2$ as follows:
 
 \section{Ham Sandwich Theorems \label{sect:ham-sandwich-thms}}
 The above examples suggest that the topology of $\RR^3$ plays a key role in this incidence problem. We shall now introduce the method of polynomial partitioning,
-which can be seen as the topological analogy to the \hyperref[lem:kaklem2]{vanishing lemma} we used in the previous chapters. 
+which can be seen as the topological analogue to the \hyperref[lem:kaklem2]{vanishing lemma} (Lemma \ref{lem:kaklem2}) we used in the previous chapters. 
 
+The topological input in the proof will be provided by the following well-known result of Borsuk-Ulam.
 Let $\SP^n$ denote the unit $n$-sphere in $\RR^{n+1}$. 
 \begin{theorem}[Borsuk-Ulam]
     A map $\phi$ is said to be antipodal if it obeys $\phi (-x) = -\phi(x)$ for all $x$ in its domain. Suppose $\phi: \SP^N \to \RR^N$ is a continuous antipodal mapping. 
@@ -134,9 +129,9 @@ Let $\SP^n$ denote the unit $n$-sphere in $\RR^{n+1}$.
 In \hyperref[appendix:Borsuk-Ulam]{the appendix to this manuscript}, we present a beautiful combinatorial proof from Matousek's book \textit{Using the Borsuk-Ulam theorem}.\cite{matouvsek2003using}
 The proof proceeds by constructively proving the Tucker Lemma, and then using this to imply the Borsuk-Ulam theorem.
 
-Let us now define some useful notation going forward. 
+Let us now define some useful definitions going forward. 
 \begin{definition}[Bisection of a Set]
-A function $f :\RR^n \to \RR$ is said to bisect an open set $U$ with volume $\text{Vol}(U) < \infty$ if:
+A function $f :\RR^n \to \RR$ is said to bisect an open set $U$ with volume $\text{Vol}(U) < \infty$ if
 \[
     \text{Vol}\{x \in U \ | \ f(x) > 0 \} = \text{Vol}\{x \in U \ | \ f(x) < 0 \} = \frac{1}{2} \text{Vol}(U).
 \]
@@ -163,13 +158,13 @@ Then there exists a non-zero function $f \in V$ that bisects each $U_i$. \label{
 
 Define the functions $\{\phi_i\}_{i=1}^N$, $\phi_i: V\backslash \{0\} \to \RR$ by:
 \[
-\phi_i(f) = \text{Vol}(\{x\in U_i \ | \ f(x) > 0 \}) - \text{Vol}(\{x\in U_i \ |\ f(x) > 0 \}).
+\phi_i(f) = \text{Vol}(\{x\in U_i \ | \ f(x) > 0 \}) - \text{Vol}(\{x\in U_i \ |\ f(x) < 0 \}).
 \]
 Since $Z(f)$ has measure zero, it is easy to see that $\phi_i(f) = 0$ if and only if $f$ bisects $U_i$. 
 Notice also that $\phi_i(-f) = -\phi_i(f)$, hence $\phi_i$ is antipodal. 
 
-We now show each $\phi_i(F)$ is continuous.
-It is enough to show that if $U$ is a finite volume open set, then the measure of $\{x\in U\ |\ f(x)>0\}$ depends continuously on $f\in V \backslash \{0\}$.
+We now show each $\phi_i$ is continuous.
+It is enough to show that if $U$ is a finite volume\todo{is volume fine here?} open set, then the measure of $\{x\in U\ |\ f(x)>0\}$ depends continuously on $f\in V \backslash \{0\}$.
 
 Suppose $f_n \to f$ in $V$ for some $f,f_n \in V \backslash \{0\}$. $f_n$ converges to $f$ in the topology of $V$, 
 so it follows it must converge pointwise. Pick any $\varepsilon >0$. 
@@ -288,9 +283,9 @@ Considering the regime where $L > S^2$ and applying the \hyperref[thm:trivial-ST
 \]
 \end{proof}
 
-There are two key things to note about the above proof. First, the key role that the topology of $\RR^3$ plays. Topology is used in the proof of polynomial partitioning as
+There are two key things to note about the above proof. First, the key role that the topology of $\RR^2$ plays. Topology is used in the proof of polynomial partitioning as
 it relies on the Borsuk Ulam theorem. It is a worthwhile heuristic to develop that polynomial partitioning may be useful for incidence problems
 where the best examples in a finite field (which is only equipped with the trivial topology) do not coincide with the best known examples over the reals.
-Secondly, the above proof illustrates the surprising power of polynomial partitioning. We are able to use very trivial bounds in each cell to achieve
-a asymptotically tight overall bound. 
+Secondly, the above proof illustrates the surprising power of polynomial partitioning. We were able to use very trivial bounds in each cell to achieve
+an asymptotically tight overall bound. 
 

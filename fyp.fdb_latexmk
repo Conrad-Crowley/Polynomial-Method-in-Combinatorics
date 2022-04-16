@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex fyp"] 1650115971 "fyp.aux" "fyp.bbl" "fyp" 1650115975
+["bibtex fyp"] 1650118657 "fyp.aux" "fyp.bbl" "fyp" 1650118661
   "/usr/share/texmf-dist/bibtex/bst/base/unsrt.bst" 1640600964 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "fyp.aux" 1650115974 16552 b6181c15a76923147927a9507bfa4420 "pdflatex"
+  "fyp.aux" 1650118660 17048 35a4f788f7a3c653fe7442b6ff457c86 "pdflatex"
   "fyp.bib" 1650021024 6237 507465521df326af6aa36233da27a64f ""
   (generated)
   "fyp.bbl"
   "fyp.blg"
-["makeindex fyp.idx"] 1650115736 "fyp.idx" "fyp.ind" "fyp" 1650115975
-  "fyp.idx" 1650115972 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex fyp.idx"] 1650115736 "fyp.idx" "fyp.ind" "fyp" 1650118661
+  "fyp.idx" 1650118658 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "fyp.ilg"
   "fyp.ind"
-["pdflatex"] 1650115971 "/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex" "fyp.pdf" "fyp" 1650115975
+["pdflatex"] 1650118657 "/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex" "fyp.pdf" "fyp" 1650118661
   "/home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk" 1646225646 7808 02bbf091c98b2158c684d721941b3dbe ""
   "/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex" 1650017108 3719 d85ebd16301b1fe1dd435499aeaa68e1 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1640600964 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -236,17 +236,17 @@
   "chap/appendix.tex" 1649887205 7414 6fece11e5fa67605a42c10920d39034e ""
   "chap/circle.tex" 1650018856 26563 bc3589972492dedc364beca3abc5144b ""
   "chap/intro.tex" 1650109822 4030 8d2cc34f1f4bbda34e478437053dfed4 ""
-  "chap/joints.tex" 1650115967 6362 35f283e42c15926d9257024cbdab45c9 ""
+  "chap/joints.tex" 1650115980 6362 35f283e42c15926d9257024cbdab45c9 ""
   "chap/kakeya.tex" 1650029615 18333 056f2b0e1a8e57dc12e105dbfbd30f95 ""
   "chap/title.tex" 1646230316 928 110bfa4d51c88b6dca06acabfc815fd1 ""
-  "chap/trotter.tex" 1649887205 18766 fa15573f874fb53f861f4a40a5e9052a ""
-  "fyp.aux" 1650115974 16552 b6181c15a76923147927a9507bfa4420 "pdflatex"
-  "fyp.bbl" 1650115971 3406 06662fd5165890eb8770deb43492aa8b "bibtex fyp"
+  "chap/trotter.tex" 1650118652 19106 eb5e3e539bdc715fa6f97f6b6714d5b5 ""
+  "fyp.aux" 1650118660 17048 35a4f788f7a3c653fe7442b6ff457c86 "pdflatex"
+  "fyp.bbl" 1650118657 3406 06662fd5165890eb8770deb43492aa8b "bibtex fyp"
   "fyp.ind" 1650115736 0 d41d8cd98f00b204e9800998ecf8427e "makeindex fyp.idx"
-  "fyp.lof" 1650115974 570 5e514b1683b0de13b9bd22e7fe25d197 "pdflatex"
-  "fyp.out" 1650115974 5127 ccd064475b435d413e4491e56e2c7925 "pdflatex"
+  "fyp.lof" 1650118660 570 91f04c6e0584eb51b82bc766558834f6 "pdflatex"
+  "fyp.out" 1650118660 5022 3621f5e312078205046ac310635d644b "pdflatex"
   "fyp.tex" 1650017108 3719 d85ebd16301b1fe1dd435499aeaa68e1 ""
-  "fyp.toc" 1650115974 2500 ed45dd8b2e213cf3061bc2b7fdc0b590 "pdflatex"
+  "fyp.toc" 1650118660 2429 205d80d532788c96b47febdc2e3fa9dd "pdflatex"
   "images/circles_degen_case_ManimCE_v0.15.1.png" 1649346026 99309 d49212cd056c40fd26c82ca193756989 ""
   "images/kakeya_ex_f32.png" 1645224568 14426 917f32e033fd5ec603800c609d1fedc4 ""
   "images/ucc.png" 1646229889 304950 441d27ca6478ae0af827a4d866060b25 ""

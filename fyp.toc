@@ -14,18 +14,17 @@
 \contentsline {section}{\numberline {4.1}Examples}{14}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Solution of the Joints Problem}{15}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Szemerédi-Trotter Theorem }{17}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Background}{17}{section.5.1}%
-\contentsline {section}{\numberline {5.2}The Trivial Bound}{17}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Examples}{19}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Ham Sandwich Theorems }{20}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Proof of the Szemerédi-Trotter Theorem }{22}{section.5.5}%
+\contentsline {section}{\numberline {5.1}The Trivial Bound}{17}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Examples}{18}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Ham Sandwich Theorems }{20}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Proof of the Szemerédi-Trotter Theorem }{22}{section.5.4}%
 \contentsline {chapter}{\numberline {6}Counting Circle Tangencies}{25}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Trivial Bounds}{25}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Lifting of circles to $\mathbb R^3$}{27}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Ellenberg-Solymosi-Zahl's Proof}{27}{section.6.3}%
 \contentsline {section}{\numberline {6.4}New Proof via Polynomial Partitioning}{30}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Sphere Tangencies in $\mathbb R^{3}$}{33}{section.6.5}%
-\contentsline {chapter}{References}{36}{chapter*.30}%
-\contentsline {chapter}{Appendices}{37}{section*.31}%
+\contentsline {chapter}{References}{36}{chapter*.32}%
+\contentsline {chapter}{Appendices}{37}{section*.33}%
 \contentsline {chapter}{\numberline {A}Proof of Bézout's Lemma}{37}{appendix.A}%
 \contentsline {chapter}{\numberline {B}Proof of Borsuk-Ulam Theorem}{38}{appendix.B}%

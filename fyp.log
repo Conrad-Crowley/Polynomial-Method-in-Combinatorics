@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.2.19)  16 APR 2022 14:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.2.19)  16 APR 2022 15:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -801,7 +801,7 @@ Overfull \hbox (3.20865pt too wide) in paragraph at lines 8--10
  | 
  []
 
-<./images/ucc.png, id=131, 668.0157pt x 318.4698pt>
+<./images/ucc.png, id=127, 668.0157pt x 318.4698pt>
 File: ./images/ucc.png Graphic file (type png)
 <use ./images/ucc.png>
 Package pdftex.def Info: ./images/ucc.png  used on input line 48.
@@ -826,7 +826,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28 ...ine {chapter}{References}{36}{chapter*.30}
+l.27 ...ine {chapter}{References}{36}{chapter*.32}
                                                   % [1
 
 
@@ -866,7 +866,7 @@ Overfull \hbox (3.84293pt too wide) detected at line 27
  []
 
 [4]
-<images/kakeya_ex_f32.png, id=263, 85.3624pt x 85.3624pt>
+<images/kakeya_ex_f32.png, id=258, 85.3624pt x 85.3624pt>
 File: images/kakeya_ex_f32.png Graphic file (type png)
 <use images/kakeya_ex_f32.png>
 Package pdftex.def Info: images/kakeya_ex_f32.png  used on input line 75.
@@ -924,18 +924,18 @@ Chapter 5.
 [17
 
 ] [18]
-Overfull \hbox (2.678pt too wide) in paragraph at lines 94--94
+Overfull \hbox (2.678pt too wide) in paragraph at lines 88--88
 [][][]\OT1/cmr/m/n/10.95 diagram?[]  
  []
 
 
-Overfull \hbox (2.678pt too wide) in paragraph at lines 94--94
+Overfull \hbox (2.678pt too wide) in paragraph at lines 88--88
 [][][]\OT1/cmr/m/n/10.95 diagram?[]  
  []
 
 [19] [20] [21] [22] [23]) (./chap/circle.tex [24]
 Chapter 6.
-<images/circles_degen_case_ManimCE_v0.15.1.png, id=451, 2569.6pt x 1445.4pt>
+<images/circles_degen_case_ManimCE_v0.15.1.png, id=452, 2569.6pt x 1445.4pt>
 File: images/circles_degen_case_ManimCE_v0.15.1.png Graphic file (type png)
 <use images/circles_degen_case_ManimCE_v0.15.1.png>
 Package pdftex.def Info: images/circles_degen_case_ManimCE_v0.15.1.png  used on input line 27.
@@ -994,21 +994,21 @@ Appendix B.
 
 ] [39]) [40] (./fyp.aux)
 Package rerunfilecheck Info: File `fyp.out' has not changed.
-(rerunfilecheck)             Checksum: CCD064475B435D413E4491E56E2C7925;5127.
+(rerunfilecheck)             Checksum: 3621F5E312078205046AC310635D644B;5022.
  ) 
 Here is how much of TeX's memory you used:
- 29697 strings out of 478353
- 565533 string characters out of 5854635
- 861763 words of memory out of 5000000
- 47113 multiletter control sequences out of 15000+600000
+ 29713 strings out of 478353
+ 565917 string characters out of 5854635
+ 864757 words of memory out of 5000000
+ 47128 multiletter control sequences out of 15000+600000
  417218 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,17n,89p,854b,1119s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on fyp.pdf (44 pages, 639630 bytes).
+Output written on fyp.pdf (44 pages, 640726 bytes).
 PDF statistics:
- 699 PDF objects out of 1000 (max. 8388607)
- 599 compressed objects within 6 object streams
- 182 named destinations out of 1000 (max. 500000)
- 276 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 700 PDF objects out of 1000 (max. 8388607)
+ 600 compressed objects within 6 object streams
+ 183 named destinations out of 1000 (max. 500000)
+ 268 words of extra memory for PDF output out of 10000 (max. 10000000)
 
