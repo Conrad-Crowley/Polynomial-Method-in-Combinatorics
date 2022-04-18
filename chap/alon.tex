@@ -1,10 +1,9 @@
-\chapter{The Polynomial Method in Additive Combinatorics \label{chap:alon}}
+\chapter{Cauchy-Davenport Theorem \label{chap:alon}}
 In this chapter we shall discuss applications to the exciting field of additive combinatorics, where in 1990 Alon provided perhaps
-the first example of the polynomial method in action.\cite{alon1999combinatorial} This chapter is distinct from the other chapters in this manuscript as it deals with applications outside a geometric setting. It showcases a different polynomial method to the previous chapter, employing instead a combinatorial version of Hilbert's Nullstellensatz.
-
-We present Michalek's short, elementary, and direct proof of the combinatorial Nullstellensatz.\cite{michalek2010}
+the first example of a polynomial method in action (see \cite{alon1999combinatorial}). This chapter is distinct from the other chapters in this manuscript as it deals with applications outside a geometric setting. It showcases a different polynomial method to the previous chapter, employing instead a combinatorial version of Hilbert's Nullstellensatz.
+In \cite{michalek2010}, Michalek produced a short, elementary, and direct proof of the combinatorial Nullstellensatz which we present here.
 \section{Combinatorial Nullstellensatz}
-The German term \textit{Nullstellensatz} means ``theorem about zeros'', so it should come as no surprise that the theorem is precisely a statement about the general size and shape of sets of zeros of a polynomial depending on its highest degree terms. 
+\todo{check this}The German term \textit{Nullstellensatz} means ``theorem about zeros'', so it should come as no surprise that the theorem is precisely a statement about the general size and shape of sets of zeros of a polynomial depending on its highest degree terms. 
 
 The main idea behind the Nullstellensatz comes from the fact that a polynomial in one variable of degree $D$ cannot have more than $D$ roots. As a consequence of this if we have a set of $D+1$ elements they cannot all be roots of the same degree $D$ polynomial. In the univariate case this is not very useful, but when generalised to arbitrary dimension this simple fact can become surprisingly powerful. 
 
@@ -32,7 +31,7 @@ The main idea behind the Nullstellensatz comes from the fact that a polynomial i
     Take any $x \in \{a\} \times A_2 \times \dots \times A_n$ and evaluate $(\ref{eq:alon-fact})$. Since $P(x) = 0$ it follows that $R(x) = 0$. Hence $R$ vanishes identically on the slice $\{a\} \times A_2 \times \dots \times A_n$. Since $R$ is independent of $X_1$ it must also vanish identically on $A_1 \times A_2 \times \dots \times A_n$.
     Now take any $x \in A_1 \backslash \{a\} \times A_2 \times \dots \times A_n$ and evaluate $(\ref{eq:alon-fact})$. Since the $(X_1 - a)$ term is non-zero, $Q(x) =0$. So $Q$ vanishes on all $x \in A_1 \backslash \{a\} \times A_2 \times \dots \times A_n$, which contradicts the inductive hypothesis.
 \end{proof}
-\section{Cauchy-Davenport Theorem}
+\section{Proof of Cauchy-Davenport Theorem}
 To showcase the usefulness of the Combinatorial Nullstellensatz, we shall prove a classical result in Additive Combinatorics. 
 \begin{theorem} [Cauchy-Davenport Theorem]
     Let $A,B$ be non-empty subsets of $\ZZ_p$ for some $p$ prime. Define their sumset $A+B$ as follows:
@@ -48,7 +47,7 @@ To showcase the usefulness of the Combinatorial Nullstellensatz, we shall prove 
 
 \begin{proof}
     Let us tackle the two cases separately. First, assume that $\min \left\{p, |A| + |B| -1 \right\} = p$.
-    Then if $|A| + |B| > p$, $A$ and $B$ must intersect. \todo{expand PHP}
+    Then if $|A| + |B| > p$, $A$ and $B$ must intersect by the pigeonhole principle.
     For any $g \in \ZZ_p$ denote the set  $\left\{ g - x  \ | \ x \in B \  \right\} \subset \ZZ_p$ as $g-B$. Since $|g-B| = |B|$, we have that 
     $g-B$ and $A$ must intersect as well. Thus there exists some $a \in A$, $b \in B$ such that: 
     \begin{align*}

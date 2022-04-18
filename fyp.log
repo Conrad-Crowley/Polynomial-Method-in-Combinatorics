@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  18 APR 2022 15:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  18 APR 2022 15:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -890,11 +890,6 @@ Overfull \hbox (7.58795pt too wide) in paragraph at lines 227--227
 
 [9] [10]) (./chap/alon.tex [11]
 Chapter 3.
-
-Overfull \hbox (65.68254pt too wide) in paragraph at lines 5--6
-[]\OT1/cmr/m/n/10.95 We present Michalek's short, el-e-men-tary, and di-rect proof of the com-bi-na-to-rial Nullstellensatz.[[]] 
- []
-
 [12
 
 ] [13]) (./chap/joints.tex [14]
@@ -984,18 +979,18 @@ Appendix B.
 
 ] [40]) [41] (./fyp.aux)
 Package rerunfilecheck Info: File `fyp.out' has not changed.
-(rerunfilecheck)             Checksum: B016F8C0412F846095A08D1F64391DEA;5022.
+(rerunfilecheck)             Checksum: 2D92D95C893A76D0669A78A09A300A7D;4946.
  ) 
 Here is how much of TeX's memory you used:
  29733 strings out of 478353
  566265 string characters out of 5854636
- 869857 words of memory out of 5000000
+ 868829 words of memory out of 5000000
  47145 multiletter control sequences out of 15000+600000
  417218 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,17n,89p,829b,1119s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on fyp.pdf (45 pages, 644890 bytes).
+Output written on fyp.pdf (45 pages, 644569 bytes).
 PDF statistics:
  709 PDF objects out of 1000 (max. 8388607)
  607 compressed objects within 7 object streams

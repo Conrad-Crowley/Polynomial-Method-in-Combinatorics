@@ -7,9 +7,9 @@
 \contentsline {subsection}{\numberline {2.1.1}Bush Argument}{6}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Hairbrush Argument}{7}{subsection.2.1.2}%
 \contentsline {section}{\numberline {2.2}Dvir's Proof }{8}{section.2.2}%
-\contentsline {chapter}{\numberline {3}The Polynomial Method in Additive Combinatorics }{12}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Cauchy-Davenport Theorem }{12}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Combinatorial Nullstellensatz}{12}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Cauchy-Davenport Theorem}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Proof of Cauchy-Davenport Theorem}{13}{section.3.2}%
 \contentsline {chapter}{\numberline {4}The Joints Problem }{15}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Examples}{15}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Solution of the Joints Problem}{16}{section.4.2}%
