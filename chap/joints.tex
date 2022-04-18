@@ -6,7 +6,7 @@ The joints problem consists in obtaining a sharp upper bound on the maximal numb
 We denote this quantity $J(L)$. In other words $J(L)$ is the supremum over all configurations of lines in $\RR^n$ of the number of joints.
 
 The joints problem was first posed in 1990 by Chazelle et al in \cite{chazelle1990counting}. They focused on the 3-dimensional case of the problem, establishing a lower bound of $\Omega (N^{3/2})$ and an upper bound estimate of $O(N^{7/4})$. 
-This upper bound exponent has fallen gradually throughout the years, the best result prior to the application of the polynomial method being due to Sharir and Feldman who established an upper bound of $O(N^{112/69})$. Their
+This upper bound exponent has fallen gradually throughout the years, the best result prior to the application of the polynomial method being due to Sharir and Feldman in \cite{feldman2005improved} where they established an upper bound of $O(N^{112/69})$. Their
 proof uses an array of tools from combinatorial geometry, including forbidden subgraphs in extremal graph theory, space decomposition techniques, and some results from the geometry of lines in space.
 
 \section{Examples}
@@ -34,8 +34,8 @@ Thus we can see that $\sim N^{n-1}$ lines form $N^n$ joints in this manner. So t
 
 It turns out that the examples illustrated above provide asymptotically maximal configurations, that is, disregarding the best constant $C$ such that $J(L) \leq CL^{\frac{n}{n-1}}$.
 \section{Solution of the Joints Problem}
-This solution was first produced by Guth-Katz for the three-dimensional case,\cite{guth2008algebraic} and later extended to the general case by Quilodrán,\cite{quilodran2009joints} and independently at the same time by 
-Kaplan-Sharir-Shustin.\cite{kaplan2009lines} \todo{ref}
+This solution was first produced by Guth-Katz for the three-dimensional case in\cite{guth2008algebraic} and later extended to the general case by Quilodrán in \cite{quilodran2009joints} and independently at the same time by 
+Kaplan-Sharir-Shustin in \cite{kaplan2009lines}.  
 
 
 \begin{theorem}
@@ -44,8 +44,7 @@ Kaplan-Sharir-Shustin.\cite{kaplan2009lines} \todo{ref}
 \end{theorem}
 We begin with the fundamental lemma to this proof. \todo{poly method strat}
 \begin{lemma}
-    If $\LL$ is a set of lines in $\RR^n$ that determines $J$ joints, then one of the lines contains at most $nJ^{\frac{1}{n}}$ joints.
-\label{joints_bound}
+    If $\LL$ is a set of lines in $\RR^n$ that determines $J$ joints, then one of the lines contains at most $nJ^{\frac{1}{n}}$ joints. \label{joints_bound}
 \end{lemma}
 \begin{proof}
 Let $P$ be a non-zero polynomial that vanishes at every joint of $\LL$ and assume that the degree of $P$ is minimal. By parameter counting (Lemma \ref{lem:paramcounting}) the degree of $P$ is at most 
@@ -59,7 +58,7 @@ We now examine the gradient of $P$ at each joint in $\LL$. We will need a fact a
     If $x$ is a joint of $\LL$, and if a smooth function $F: \RR^n \to \RR$ vanishes on the lines of $\LL$, then $\nabla F$ vanishes at $x$. 
 \end{lemma}
 \begin{proof}
-    The joint $x$ is contained in $n$ non-coplanar lines $l_1, \dots, l_n$ with directions $v_1, v_2, \dots , v_n$ respectively. 
+    The joint $x$ is contained in $n$ non-coplanar lines $l_1, \dots, l_n$ with directions $v_1, \dots , v_n$ respectively. 
     Now consider the directional derivative for a particular $v_i$:
     \[
     \frac{\partial F}{\partial v_i} = \lim_{t \to 0} \frac{ \overbrace{F(x+ tv_i)}^{F \equiv 0 \text{ on a line in $\LL$}} - \overbrace{F(x)}^{F \equiv 0 \text{ on joints}}}{t} = \frac{0}{t} = 0.    

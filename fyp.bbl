@@ -35,6 +35,11 @@ Zeev Dvir.
 Jordan~S. Ellenberg, Jozsef Solymosi, and Joshua Zahl.
 \newblock New bounds on curve tangencies and orthogonalities, 2016.
 
+\bibitem[FS05]{feldman2005improved}
+Sharona Feldman and Micha Sharir.
+\newblock An improved bound for joints in arrangements of lines in space.
+\newblock {\em Discrete \& Computational Geometry}, 33(2):307--320, 2005.
+
 \bibitem[FT81]{freund1981constructive}
 Robert~M Freund and Michael~J Todd.
 \newblock A constructive proof of tucker's combinatorial lemma.

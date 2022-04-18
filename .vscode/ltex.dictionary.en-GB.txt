@@ -2,3 +2,4 @@ Kakeya
 nullstellensatz
 Szemerédi
 Szemerédi-Trotter
+supremum
