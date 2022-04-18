@@ -93,6 +93,16 @@ Misha Rudnev.
 \newblock On the number of incidences between points and planes in three
   dimensions, 2014.
 
+\bibitem[ST83]{szemeredi1983extremal}
+Endre Szemer{\'e}di and William~T. Trotter.
+\newblock Extremal problems in discrete geometry.
+\newblock {\em Combinatorica}, 3(3):381--392, 1983.
+
+\bibitem[Sz{\'e}97]{szekely1997crossing}
+L{\'a}szl{\'o}~A Sz{\'e}kely.
+\newblock Crossing numbers and hard erd{\H{o}}s problems in discrete geometry.
+\newblock {\em Combinatorics, Probability and Computing}, 6(3):353--358, 1997.
+
 \bibitem[Wol95]{WOLFF1995}
 Thomas Wolff.
 \newblock An improved bound for kakeya type maximal functions.

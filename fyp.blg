@@ -7,45 +7,45 @@ Warning--to sort, need author or key in michalek2010
 Warning--can't use both volume and number fields in guth2015polypartvar
 Warning--empty author in michalek2010
 Warning--empty title in michalek2010
-You've used 20 entries,
+You've used 22 entries,
             2543 wiz_defined-function locations,
-            680 strings with 7131 characters,
-and the built_in function-call counts, 7446 in all, are:
-= -- 744
-> -- 280
-< -- 17
-+ -- 93
-- -- 89
-* -- 515
-:= -- 1168
-add.period$ -- 56
-call.type$ -- 20
-change.case$ -- 111
-chr.to.int$ -- 20
-cite$ -- 25
-duplicate$ -- 306
-empty$ -- 603
-format.name$ -- 118
-if$ -- 1550
+            692 strings with 7387 characters,
+and the built_in function-call counts, 8216 in all, are:
+= -- 826
+> -- 307
+< -- 18
++ -- 101
+- -- 97
+* -- 575
+:= -- 1292
+add.period$ -- 62
+call.type$ -- 22
+change.case$ -- 122
+chr.to.int$ -- 22
+cite$ -- 27
+duplicate$ -- 335
+empty$ -- 663
+format.name$ -- 129
+if$ -- 1705
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 16
-newline$ -- 96
-num.names$ -- 57
-pop$ -- 133
+missing$ -- 18
+newline$ -- 106
+num.names$ -- 63
+pop$ -- 139
 preamble$ -- 1
-purify$ -- 134
+purify$ -- 147
 quote$ -- 0
-skip$ -- 267
+skip$ -- 291
 stack$ -- 0
-substring$ -- 451
-swap$ -- 53
-text.length$ -- 17
-text.prefix$ -- 12
+substring$ -- 515
+swap$ -- 55
+text.length$ -- 18
+text.prefix$ -- 13
 top$ -- 0
-type$ -- 152
+type$ -- 168
 warning$ -- 4
-while$ -- 69
-width$ -- 23
-write$ -- 245
+while$ -- 78
+width$ -- 25
+write$ -- 271
 (There were 4 warnings)
