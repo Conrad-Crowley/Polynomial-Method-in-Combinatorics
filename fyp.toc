@@ -7,24 +7,24 @@
 \contentsline {subsection}{\numberline {2.1.1}Bush Argument}{6}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Hairbrush Argument}{7}{subsection.2.1.2}%
 \contentsline {section}{\numberline {2.2}Dvir's Proof }{8}{section.2.2}%
-\contentsline {chapter}{\numberline {3}The Polynomial Method in Additive Combinatorics }{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Combinatorial Nullstellensatz}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Cauchy-Davenport Theorem}{12}{section.3.2}%
-\contentsline {chapter}{\numberline {4}The Joints Problem }{14}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Examples}{14}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Solution of the Joints Problem}{15}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Szemerédi-Trotter Theorem }{17}{chapter.5}%
-\contentsline {section}{\numberline {5.1}The Trivial Bound}{17}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Examples}{18}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Ham Sandwich Theorems }{20}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Proof of the Szemerédi-Trotter Theorem }{22}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Counting Circle Tangencies}{25}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Trivial Bounds}{25}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Lifting of circles to $\mathbb R^3$}{27}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Ellenberg-Solymosi-Zahl's Proof}{27}{section.6.3}%
-\contentsline {section}{\numberline {6.4}New Proof via Polynomial Partitioning}{30}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Sphere Tangencies in $\mathbb R^{3}$}{33}{section.6.5}%
-\contentsline {chapter}{References}{36}{chapter*.32}%
-\contentsline {chapter}{Appendices}{37}{section*.33}%
-\contentsline {chapter}{\numberline {A}Proof of Bézout's Lemma}{37}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Proof of Borsuk-Ulam Theorem}{38}{appendix.B}%
+\contentsline {chapter}{\numberline {3}The Polynomial Method in Additive Combinatorics }{12}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Combinatorial Nullstellensatz}{12}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Cauchy-Davenport Theorem}{13}{section.3.2}%
+\contentsline {chapter}{\numberline {4}The Joints Problem }{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Examples}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Solution of the Joints Problem}{16}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Szemerédi-Trotter Theorem }{18}{chapter.5}%
+\contentsline {section}{\numberline {5.1}The Trivial Bound}{18}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Examples}{19}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Ham Sandwich Theorems }{21}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Proof of the Szemerédi-Trotter Theorem }{23}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Counting Circle Tangencies}{26}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Trivial Bounds}{26}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Lifting of circles to $\mathbb R^3$}{28}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Ellenberg-Solymosi-Zahl's Proof}{28}{section.6.3}%
+\contentsline {section}{\numberline {6.4}New Proof via Polynomial Partitioning}{31}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Sphere Tangencies in $\mathbb R^{3}$}{34}{section.6.5}%
+\contentsline {chapter}{References}{37}{chapter*.34}%
+\contentsline {chapter}{Appendices}{38}{section*.35}%
+\contentsline {chapter}{\numberline {A}Proof of Bézout's Lemma}{38}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Proof of Borsuk-Ulam Theorem}{39}{appendix.B}%

@@ -1,101 +1,102 @@
-\begin{thebibliography}{10}
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{MBZ{\etalchar{+}}03}
 
-\bibitem{alon1999combinatorial}
+\bibitem[Alo99]{alon1999combinatorial}
 Noga Alon.
 \newblock Combinatorial nullstellensatz.
 \newblock {\em Combinatorics, Probability and Computing}, 8(1-2):7--29, 1999.
 
-\bibitem{2008DVIR}
-Zeev Dvir.
-\newblock On the size of kakeya sets in finite fields.
-\newblock {\em Journal of the American Mathematical Society},
-  22(4):1093–1097, Jun 2008.
-
-\bibitem{GOW2020}
-Timothy Gowers.
-\newblock Topics in combinatorics - cambridge tripos lecture notes, 2020.
-
-\bibitem{GUTH2016}
-L.~Guth.
-\newblock {\em Polynomial Methods in Combinatorics}.
-\newblock University Lecture Series. American Mathematical Society, 2016.
-
-\bibitem{pal1920elementares}
-J~Pal.
-\newblock {\"u}ber ein elementares variationsproblem danske videnskab. selskab.
-\newblock {\em Math. Fys. Meddel}, 3(2):10--35, 1920.
-
-\bibitem{davies1971some}
-Roy~O Davies.
-\newblock Some remarks on the kakeya problem.
-\newblock In {\em Mathematical Proceedings of the Cambridge Philosophical
-  Society}, volume 69-3, pages 417--421. Cambridge University Press, 1971.
-
-\bibitem{wolff1999recent}
-Thomas Wolff.
-\newblock Recent work connected with the kakeya problem.
-\newblock {\em Prospects in mathematics (Princeton, NJ, 1996)}, 2:129--162,
-  1999.
-
-\bibitem{BUSH1991}
+\bibitem[Bou91]{BUSH1991}
 Jean Bourga'in.
 \newblock Besicovitch type maximal operators and applications to fourier
   analysis.
 \newblock {\em Geometric \& Functional Analysis GAFA}, 1(2):147--187, 1991.
 
-\bibitem{WOLFF1995}
-Thomas Wolff.
-\newblock An improved bound for kakeya type maximal functions.
-\newblock {\em Revista Matemática Iberoamericana}, 11(3):651--674, 1995.
-
-\bibitem{michalek2010}
-{\em The American Mathematical Monthly}, 117(9):821--823, Nov 2010.
-
-\bibitem{chazelle1990counting}
+\bibitem[CEG{\etalchar{+}}90]{chazelle1990counting}
 Bernard Chazelle, Herbert Edelsbrunner, Leonidas~J Guibas, Richard Pollack,
   Raimund Seidel, Micha Sharir, and Jack Snoeyink.
 \newblock Counting and cutting cycles of lines and rods in space.
 \newblock In {\em Proceedings [1990] 31st Annual Symposium on Foundations of
   Computer Science}, pages 242--251. IEEE, 1990.
 
-\bibitem{guth2008algebraic}
+\bibitem[Dav71]{davies1971some}
+Roy~O Davies.
+\newblock Some remarks on the kakeya problem.
+\newblock In {\em Mathematical Proceedings of the Cambridge Philosophical
+  Society}, volume 69-3, pages 417--421. Cambridge University Press, 1971.
+
+\bibitem[Dvi08]{2008DVIR}
+Zeev Dvir.
+\newblock On the size of kakeya sets in finite fields.
+\newblock {\em Journal of the American Mathematical Society},
+  22(4):1093–1097, Jun 2008.
+
+\bibitem[ESZ16]{ellenberg2016new}
+Jordan~S. Ellenberg, Jozsef Solymosi, and Joshua Zahl.
+\newblock New bounds on curve tangencies and orthogonalities, 2016.
+
+\bibitem[FT81]{freund1981constructive}
+Robert~M Freund and Michael~J Todd.
+\newblock A constructive proof of tucker's combinatorial lemma.
+\newblock {\em Journal of Combinatorial Theory, Series A}, 30(3):321--325,
+  1981.
+
+\bibitem[GK08]{guth2008algebraic}
 Larry Guth and Nets~Hawk Katz.
 \newblock Algebraic methods in discrete analogs of the kakeya problem, 2008.
 
-\bibitem{quilodran2009joints}
-René Quilodrán.
-\newblock The joints problem in rn, 2009.
+\bibitem[Gow20]{GOW2020}
+Timothy Gowers.
+\newblock Topics in combinatorics - cambridge tripos lecture notes, 2020.
 
-\bibitem{kaplan2009lines}
+\bibitem[Gut15]{guth2015polypartvar}
+Larry Guth.
+\newblock Polynomial partitioning for a set of varieties.
+\newblock In {\em Mathematical Proceedings of the Cambridge Philosophical
+  Society}, volume 159, pages 459--469. Cambridge University Press, 2015.
+
+\bibitem[Gut16]{GUTH2016}
+L.~Guth.
+\newblock {\em Polynomial Methods in Combinatorics}.
+\newblock University Lecture Series. American Mathematical Society, 2016.
+
+\bibitem[KSS09]{kaplan2009lines}
 Haim Kaplan, Micha Sharir, and Eugenii Shustin.
 \newblock On lines and joints, 2009.
 
-\bibitem{matouvsek2003using}
+\bibitem[MBZ{\etalchar{+}}03]{matouvsek2003using}
 Ji{\v{r}}{\'\i} Matou{\v{s}}ek, Anders Bj{\"o}rner, G{\"u}nter~M Ziegler,
   et~al.
 \newblock {\em Using the Borsuk-Ulam theorem: lectures on topological methods
   in combinatorics and geometry}.
 \newblock Springer, 2003.
 
-\bibitem{ellenberg2016new}
-Jordan~S. Ellenberg, Jozsef Solymosi, and Joshua Zahl.
-\newblock New bounds on curve tangencies and orthogonalities, 2016.
+\bibitem[mic10]{michalek2010}
+{\em The American Mathematical Monthly}, 117(9):821--823, Nov 2010.
 
-\bibitem{guth2015polypartvar}
-Larry Guth.
-\newblock Polynomial partitioning for a set of varieties.
-\newblock In {\em Mathematical Proceedings of the Cambridge Philosophical
-  Society}, volume 159, pages 459--469. Cambridge University Press, 2015.
+\bibitem[Pal20]{pal1920elementares}
+J~Pal.
+\newblock {\"u}ber ein elementares variationsproblem danske videnskab. selskab.
+\newblock {\em Math. Fys. Meddel}, 3(2):10--35, 1920.
 
-\bibitem{Rudnev2014planepoints}
+\bibitem[Qui09]{quilodran2009joints}
+René Quilodrán.
+\newblock The joints problem in rn, 2009.
+
+\bibitem[Rud14]{Rudnev2014planepoints}
 Misha Rudnev.
 \newblock On the number of incidences between points and planes in three
   dimensions, 2014.
 
-\bibitem{freund1981constructive}
-Robert~M Freund and Michael~J Todd.
-\newblock A constructive proof of tucker's combinatorial lemma.
-\newblock {\em Journal of Combinatorial Theory, Series A}, 30(3):321--325,
-  1981.
+\bibitem[Wol95]{WOLFF1995}
+Thomas Wolff.
+\newblock An improved bound for kakeya type maximal functions.
+\newblock {\em Revista Matemática Iberoamericana}, 11(3):651--674, 1995.
+
+\bibitem[Wol99]{wolff1999recent}
+Thomas Wolff.
+\newblock Recent work connected with the kakeya problem.
+\newblock {\em Prospects in mathematics (Princeton, NJ, 1996)}, 2:129--162,
+  1999.
 
 \end{thebibliography}

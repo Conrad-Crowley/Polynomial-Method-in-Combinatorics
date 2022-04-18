@@ -30,8 +30,8 @@ $\dim_{M_{\text{upper}}}$ and $\dim_{M_{\text{lower}}}$, by taking the limit sup
 \end{definition}
 These dimensions are related by the following inequality when they are all defined:
 $$\dim_H \leq \dim_{M_{\text{lower}}} \leq \dim_{M_{\text{upper}}}.$$
-In 1971, Davies showed that
-although the measure of a Kakeya set in $\RR^2$ can be arbitrarily small, it must have Hausdorff and Minkowski dimension of 2.\cite{davies1971some}
+In 1971, Davies published \cite{davies1971some} showing that
+although the measure of a Kakeya set in $\RR^2$ can be arbitrarily small, it must have Hausdorff and Minkowski dimension of 2.
 This resulted in the following conjectures:
 \begin{conjecture}[Kakeya Conjecture for the Minkowski Dimension]
     Let $A$ be a Kakeya set in $\RR^n$. Then $\dim_M (A) = n$. \label{conj:mink-kakeya}
@@ -39,7 +39,7 @@ This resulted in the following conjectures:
 \begin{conjecture}[Kakeya Conjecture for the Hausdorff Dimension]
     Let $A$ be a Kakeya set in $\RR^n$. Then $\dim_H (A) = n$. \label{conj:haus-kakeya}
 \end{conjecture}
-In a survey on the problem, (see \cite{wolff1999recent} ) Wolff proposed a finite analogue to the Kakeya Conjecture.
+In a survey on the problem, (see \cite{wolff1999recent}) Wolff proposed a finite analogue to the Kakeya Conjecture.
 
 \begin{definition}[Finite Field]
     A finite field $\FF$ is a field of finite cardinality. 
@@ -52,10 +52,12 @@ It is known that finite field of order $q$ exists if and only if $q = p^k$ for s
     $$X^{|\FF|} - X =0$$
     identically in $\FF$. \label{lem:finite-fields-poly-identity}
 \end{lemma}
-This lemma follows immediately from Fermat's Little Theorem.
+\begin{proof}
+    This lemma follows immediately from Fermat's Little Theorem.
+\end{proof}
 
 
-A Kakeya set in $\FP^n$ is a set that contains a line in every direction. In analogy to the Euclidean case, we formally define lines in $\FP^n$ as the sets of the form:
+A Kakeya set in $\FP^n$ is a set that contains a line in every direction. In analogy to the Euclidean case, we formally define lines in $\FP^n$ as the sets of the form
 $$\ell_{x,y} = \{x+ty :  t \in \FP \}$$
 for some fixed $x,y \in \FP^n$ with $y\neq 0$.
 It should be noted that a line in a finite field $\FP^n$ contains exactly $|\FP|$ points.
@@ -93,7 +95,7 @@ Our first estimate shows that Conjecture \ref{KakeyaConjecture} is true for the 
 \begin{lemma}
     Suppose $s \leq |\FF|$. If $l_1, \dots, l_s$ are distinct lines in $\FF^n$, then their union has cardinality at least $(1/2)|\FF|s$. 
 
-    In particular, if $A \subset \FF^n$ is a Kakeya set, then we have:
+    In particular, if $A \subset \FF^n$ is a Kakeya set, then we have
     \[
       |A| \gtrsim |\FF|^2  
     \] \label{lem:kak-first-estimate}
@@ -112,12 +114,12 @@ Our first estimate shows that Conjecture \ref{KakeyaConjecture} is true for the 
 \end{proof}
 
 \subsection{Bush Argument} 
-Bourgain produced one of the first non-trivial estimates of the dimension in 1991.\cite{BUSH1991} We present the finite field analogue of his argument here.\cite{GUTH2016} This argument is known as the ``bush'' argument as we consider a point through which many lines, forming a ``bush'' around that point. 
+Bourgain produced one of the first non-trivial estimates of the dimension in 1991.\cite{BUSH1991} We present the finite field analogue of his argument here.\cite{GUTH2016} This argument is known as the ``bush'' argument as we consider a high-multiplicity point through which pass many lines, forming a ``bush'' around that point. 
 
 
 \begin{theorem}[Bush Argument]
 
-If $A$ is a Kakeya set, then we have:
+If $A$ is a Kakeya set, then we have
 $$|A| \gtrsim |\FF|^{\frac{n+1}{2}}$$
 \end{theorem}
 
@@ -136,7 +138,7 @@ $$|A| \gtrsim |\FF|^{\frac{n+1}{2}}$$
         \sum_{p \in A} \sum_{\ell \subset A} \OO[p \in \ell] &\leq \sum_{p \in A} \mu = |A|\mu \\
         \implies \frac{|\FF|^{n}}{\mu} \leq |A|.
     \end{align*}
-    Now optimise the two lower bounds by choosing $\mu \sim |\FF|^{\frac{n-1}{2}}$, so that in either of the above cases we obtain
+    Now we optimise the two lower bounds by choosing $\mu \sim |\FF|^{\frac{n-1}{2}}$, so that in either of the above cases we obtain
     \[
         |A| \gtrsim |\FF||\FF|^{\frac{n-1}{2}} \sim |\FF|^{\frac{n+1}{2}}.
     \]
@@ -144,24 +146,22 @@ $$|A| \gtrsim |\FF|^{\frac{n+1}{2}}$$
 \end{proof}
 
 \subsection{Hairbrush Argument}
-Due to Wolff. \cite{WOLFF1995}
+In \cite{WOLFF1995}, Wolff presented the ``hairbrush'' argument we made an incremental improvent over the argument of Bourgain. It is similar in spirit to the ``bush'' argument above, however instead of using just one point of high-multiplicity we instead consider a line (or ``stem'') containing many points of high-multiplicity. \todo{check this, diagram might be nice?}
 
 \begin{theorem}[Hair Brush Argument]
-    If $A$ is a Kakeya set, then we have:
+    If $A$ is a Kakeya set, then we have
     \[
-        |A| \gtrsim |\FF|^{\frac{n+2}{2}}    
+        |A| \gtrsim |\FF|^{\frac{n+2}{2}}.
     \]
 \end{theorem}
 \begin{proof}
-By Lemma \ref{lem:kak-first-estimate}, if $A_m \subset \FF^2$ is a set containing a line in $m$ different directions then $|A_m| \gtrsim m|\FF|$.
-
-Let $\mu$ be a fixed multiplicity parameter to be chosen later. We say a line $\ell$ is $\mu$-rich if for at least $|\FF|/2$ points $p\in \ell$ there are $\mu$ lines distinct from $p$
+Let $\mu$ be a fixed multiplicity parameter to be chosen later. We say a line $\ell$ is $\mu$-rich if for at least $|\FF|/2$ points $p\in \ell$ there are $\mu$ lines distinct from $\ell$
 in $A$ passing through $p$. Then either there exists a $\mu$-rich line or there does not. 
 
-Suppose a $\mu$-rich line exists, and denote this line by $\ell_\mu$. Consider the family of 2-dimensional planes $\Pi$ passing through $\ell_\mu$. 
+Suppose a $\mu$-rich line exists, and denote this line by $\ell_\mu$. Consider the family $\Pi$ of 2-dimensional planes passing through $\ell_\mu$. 
 If a line $\ell$ intersects $\ell_\mu$ then there exists a unique plane $\pi \in \Pi$ such that $\ell, \ell_\mu \in \pi$. 
-Let $\LL_\pi := \{\ell \subset \pi \ | \ \ell \cap \ell_\mu \neq \emptyset \}$. The set $A \cap \pi$ is a set in $\FF^2$ that contains at least $|\LL_\pi|$
-lines, and hence by Lemma \ref{lem:kak-first-estimate} we have:
+Let $\LL_\pi := \{\ell \subset \pi \ | \ \ell \cap \ell_\mu \neq \emptyset \}$. The set $A \cap \pi$ is a set in (an isomorphic copy of) $\FF^2$ that contains at least $|\LL_\pi|$
+lines, and hence by Lemma \ref{lem:kak-first-estimate} we have
 \[
 |A \cap \pi| \gtrsim |\LL_\pi| |\FF|.
 \]
@@ -169,11 +169,11 @@ Thus,
 \[
     |A| \geq \sum_{\pi \in \Pi} |(A \cap \pi) \backslash \ell_\mu| \gtrsim |\FF| \sum_{\pi \in \Pi} |\LL_\pi| \gtrsim \mu |\FF|^2,
 \]
-where the last inequality comes from the fact $\ell_\mu$ intersects at least $\mu |\FF|/2$ lines, which produces $\mu |\FF|/2$ planes as all these lines are distinct.
+where the last inequality comes from the fact $\ell_\mu$ intersects at least $\mu |\FF|/2$ lines, so since the planes $\Pi$ foliate $\FF^n$, the union $\cup_\Pi \LL_\pi$ contains at least all of these lines. \todo{what does foliate mean here?}
 
 Suppose there does not exist a $\mu$-rich line. Let 
 \[
-    A' = \{p \in A \ | \ p \text{ belongs to at most } \mu \text{ lines in }A \}.
+    A' = \{p \in A \ | \ p \text{ belongs to strictly less than } \mu \text{ lines in }A \}.
 \]
 Since we assume there does not exist a $\mu$-rich line in $A$, for any line $\ell \subset A$ we have $|A' \cap \ell| > |F|/2$. 
 Proceeding by double counting, \todo{split this into two steps}
@@ -182,12 +182,7 @@ Proceeding by double counting, \todo{split this into two steps}
     &= \frac{1}{\mu} \sum_{\ell \in A} |A' \cap \ell| \gtrsim \frac{1}{\mu} |\FF|^{n-1}|\FF|\\
     \implies |A| &\gtrsim \frac{|\FF|^n}{\mu}.
 \end{align*}
-We now optimise $\mu$:
-\begin{align*}
-    \frac{|\FF|^n}{\mu} &\sim \mu |\FF|^2 \\
-    \mu &\sim |\FF|^{\frac{n-2}{2}}
-\end{align*}
-Thus we achieve the bound:
+Now optimising the two lower bounds by choosing $\mu \sim |\FF|^{\frac{n-2}{2}}$, so that in either of the above cases we obtain the bound
 \[
     |A| \gtrsim |\FF|^2|\FF|^{\frac{n-2}{2}} \sim |\FF|^{\frac{n+2}{2}}.
 \]
@@ -197,16 +192,25 @@ Thus we achieve the bound:
 \begin{theorem}[Kakeya Conjecture in Finite Fields]
     If $A\subset \FP^n$ contains a line in every direction, then $|A| \geq \frac{1}{n!} |\FP|^n $. \label{thm:Kakeya}
 \end{theorem}
-We shall prove this theorem via three surprisingly elementary lemmas. The general strategy of the proof is to assume a Kakeya set $A$ is small and find a low-degree non-zero polynomial that interpolates (contains in its zero set) the points in $A$. We then show that due to the structure of the Kakeya set the polynomial's zero set must contain many more points. This contradicts the fact our polynomial is non-zero and of low-degree which  establishes the Kakeya Conjecture over finite fields.
+We shall prove this theorem via three surprisingly elementary lemmas. The general strategy of the proof is to assume the size of a Kakeya set $A$ is small and find a low-degree non-zero polynomial that interpolates (contains in its zero set) the points in $A$. We then show that due to the structure of the Kakeya set the polynomial's zero set must contain many more points. This contradicts the fact our polynomial is non-zero and of low-degree which  establishes the Kakeya Conjecture over finite fields.
 
-\todo{add remark interpolation result}
+\todo{Check this. Waffle?}
+The first lemma is a fundamental one to the polynomial method, exploiting the flexible interpolation properties of polynomials. Consider the problem of finding a non-zero polynomial in $\RR[X,Y]$ of the minimal possible degree that vanishes at the points $(i, 2^i)$ for $1\leq i \leq 10^{6}$. 
+If we try to find an explicit polynomial we may produce
+\begin{align*}
+    P_1(X,Y) &= \prod_{j=1}^{10^{6}} (X-j) 
+    \intertext{or perhaps}
+    P_2(X,Y) &= \prod_{j=1}^{10^{6}} (Y-2^j).
+\end{align*}
+Both $P_1$ and $P_2$ vanish on our points and it is difficult to explicitly produce a polynomial of much lower degree that also satisfies this property. Both $P_1$ and $P_2$ have a degree of $10^6$, and naively one might conjecture that the degree of any polynomial with this property is of the order of $10^6$. 
+Remarkably, the following lemma shows that we can find such a polynomial with a degree of at most $2000$.  Any polynomial in the space $\text{Poly}_{2000} (\RR^2)$ has over one million coefficients and the parameter counting argument exploits every one of them. As such the polynomial is quite difficult to explicitly write, but we can establish the existence of such a polynomial non-constructively.
 \begin{lemma}[Parameter Counting] 
-Let $\KK$ be a (not necessarily finite) field. If $A \subset \KK^n$ and $|A| < {{n+D} \choose {n}}$, there exists a non-zero polynomial $P(x_1,\dots, x_n)$ of degree at most $D$ that vanishes on $A$. \label{lem:paramcounting}
+Let $\KK$ be a (not necessarily finite) field. If $A \subset \KK^n$ and $|A| < {{n+D} \choose {n}}$, there exists a non-zero polynomial $P(X_1,\dots, X_n)$ of degree at most $D$ that vanishes on $A$. \label{lem:paramcounting}
 \end{lemma}
 
-\prf{ We first show the dimension of $\text{Poly}_D (\KK^n)$ is ${D+n} \choose{n}$. A basis for $\text{Poly}_D (\KK^n)$ is given by monomials of the form $x_1^{D_1}\dots x_n^{D_n}$, where $\sum_i D_i \leq D$, hence we just need to count the number of monomials.
+\prf{ We first show the dimension of $\text{Poly}_D (\KK^n)$ is ${D+n} \choose{n}$. A basis for $\text{Poly}_D (\KK^n)$ is given by monomials of the form $X_1^{D_1}\dots X_n^{D_n}$, where $\sum_i D_i \leq D$, hence we just need to count the number of monomials.
 
-We can map a monomial $x_1^{D_1}\dots x_n^{D_n}$ to a string of $D$ $\star$'s and $n$ $|$'s as follows. 
+We can map a monomial $X_1^{D_1}\dots X_n^{D_n}$ to a string of $D$ $\star$'s and $n$ $|$'s as follows. 
 Begin with $D_1$ $\star$'s, then place one $|$. We put now $D_2$ $\star$'s, and place a second $|$. 
 We continue until we have placed $D_n$ $\star$'s followed by an $n^{\text{th}}$ $|$. 
 Finally we place $D - \sum_i D_i \star$'s.
@@ -230,21 +234,21 @@ Since $\frac{|\FF|^n}{n!} < {{|\FF|+n-1} \choose{n}}$, we can definitely find su
 
 \begin{lemma}Suppose $A \subset \FF^n$ contains a line in every direction, and suppose that there exists a non-zero polynomial $P$ with degree $D<|\FF|$ that vanishes on $A$. Then there exists a non-zero degree $D$ polynomial $\bar{P}$ that vanishes everywhere on $\FF^n$. \label{lem:kaklem2} \end{lemma}
 
-\prf{ Choose a line in $A$, say $\ell = \{x+tz : t\in \FF \}$ with $x,z\in \FF^n$ and $z \neq 0$. Now we consider the restriction of our polynomial $P$ to the line $\ell$, $P_{|\ell}$.
+\prf{ Choose a line in $A$, say $\ell = \{x+ty : t\in \FF \}$ with $x,y\in \FF^n$ and $y \neq 0$. Now we consider the restriction of our polynomial $P$ to the line $\ell$, $P_{|\ell}$.
 Recall $P$ is a sum of monomials, and we use multi-index notation here with $\alpha = (\alpha_1, \alpha_2, \dots, \alpha_n), \ \alpha_i \in \NN \cup \{0\}$ and $|\alpha| =  \sum \alpha_i$. $P$ can be written as:
 $$P(x_1,x_2, \dots, x_n) = \sum_{|\alpha| \leq D} c_{\alpha} x_1^{\alpha_1}x_2^{\alpha_2}\dots x_n^{\alpha_n}. $$
 Now $P_{|\ell}$ can be written:
-$$P_{|\ell} = P(x+tz) = Q_{x,z}(t) = \sum_{|\alpha| \leq D} c_\alpha \prod_{i} (x_i + t z_i)^{\alpha_i}.$$
+$$P_{|\ell} = P(x+ty) = Q_{x,y}(t) = \sum_{|\alpha| \leq D} c_\alpha \prod_{i} (x_i + t y_i)^{\alpha_i}.$$
 We now wish to examine the degree $D$ term of $Q$,
-which consist in the terms of the expansion of the expression above obtained by the product of the $tz_i$ terms when $|\alpha| = D$. 
+which consist in the terms of the expansion of the expression above obtained by the product of the $ty_i$ terms when $|\alpha| = D$. 
  
 This is related to the degree $D$ component $Q_D$ of $Q$ by the identity
-$$Q_{x,z,D} = t^D Q_D(z) = t^D \sum_{|\alpha| = D} c_\alpha \prod_i z_i^{\alpha_i}.$$
+$$Q_{x,y,D} = t^D Q_D(y) = t^D \sum_{|\alpha| = D} c_\alpha \prod_i y_i^{\alpha_i}.$$
 
-Now if $P_{|\ell}$ vanishes everywhere on $\ell$, since its dependence on $t$ is given by a polynomial of degree less than $|\FF|$, all its coefficients must be zero. In particular we must have $Q_{x,z,D} = 0$.
+Now if $P_{|\ell}$ vanishes everywhere on $\ell$, since its dependence on $t$ is given by a polynomial of degree less than $|\FF|$, all its coefficients must be zero. In particular, we must have $Q_{x,y,D} = 0$.
 This is clear from the factor theorem, as we could write the roots of $P_{|\ell}$ as $(t-k_1)(t-k_2)\dots(t-k_{|\FF|})$; but this contradicts the fact $P$ is of degree $D < |\FF|$.
 
-Notice that $Q_{x,z,D}$ no longer depends on $x$, but on $z$ alone. In particular $Q_D(z) = 0$, but $z$ was an arbitrary non-zero element of $\FF^n$, and $Q_D(z)$ also vanishes at zero, so it vanishes everywhere. Thus we can pick $\bar{P}$ = $Q_D$, and we are done.
+Notice that $Q_{x,y,D}$ no longer depends on $x$, but on $y$ alone. In particular $Q_D(y) = 0$, but $y$ was an arbitrary non-zero element of $\FF^n$, and $Q_D(y)$ also vanishes at zero, so it vanishes everywhere. Thus we can pick $\bar{P}$ = $Q_D$, and we are done.
 }
 
 
@@ -256,11 +260,11 @@ Notice that $Q_{x,z,D}$ no longer depends on $x$, but on $z$ alone. In particula
 \prf{ We proceed by induction on $n$. For $n=1$, a non-zero polynomial that vanishes everywhere has $|\FF|$ roots, so must be at least of degree $|\FF|$.
 Let us assume that the statement holds in $\FF^{n-1}$, we now prove it must also hold for $\FF^n$.
 
-We proceed by contradiction, assuming that $P$ vanishes everywhere. We let $x_1, \dots ,x_n$\todo{capitalisation of these?} be coordinates on $\FF^n$, and we write $P$ in the form
+We proceed by contradiction, assuming that $P$ vanishes everywhere. We let $X_1, \dots ,X_n$ be coordinates on $\FF^n$, and we write $P$ in the form
 
-$$P(x_1, \dots ,x_n) = \sum_{j=n}^{|\FF|-1} P_j(x_1, \dots x_{n-1}) x_n^j.$$
+$$P(X_1, \dots ,X_n) = \sum_{j=n}^{|\FF|-1} P_j(X_1, \dots X_{n-1}) X_n^j.$$
 
-Each $P_j$ are polynomials in $x_1, \dots x_{n-1}$ of degree less than $|\FF|$. Fix $x_1, \dots x_{n-1}$, and let $x_n$ vary. Now we have a polynomial in $x_n$ of degree less than $|\FF|$ that vanishes for all $x_n \in \FF$. By the base case this must be the zero polynomial. So each $P_j(x_1, \dots, x_{n-1}) = 0$ for all $j$ and for all $(x_1, \dots x_{n-1}) \in \FF^{n-1}$. Now by induction on $n$, each $P_j$ is the zero polynomial. Then $P$ is the zero polynomial as well. 
+Each $P_j$ are polynomials in $X_1, \dots X_{n-1}$ of degree less than $|\FF|$. Fix $X_1, \dots X_{n-1}$, and let $X_n$ vary. Now we have a polynomial in $X_n$ of degree less than $|\FF|$ that vanishes for all $X_n \in \FF$. By the base case this must be the zero polynomial. So each $P_j(x_1, \dots, x_{n-1}) = 0$ for all $j$ and for all $(x_1, \dots x_{n-1}) \in \FF^{n-1}$. Now by induction on $n$, each $P_j$ is the zero polynomial. Then $P$ is the zero polynomial as well. 
 }
 We now combine these lemmas to establish the Kakeya conjecture over finite fields.
 \begin{proof} [Proof of Theorem \ref{thm:Kakeya}] 
@@ -271,3 +275,7 @@ $$
 |A| \gtrsim_n |\FF|^n.
 $$
 \end{proof}
+\todo{include this remark?}
+\begin{remark}
+    Theorem \ref{thm:Kakeya} lends a good degree of support for Conjectures \ref{conj:mink-kakeya} and \ref{conj:haus-kakeya} as it essentially rules out highly algebraic counter-examples.
+\end{remark}

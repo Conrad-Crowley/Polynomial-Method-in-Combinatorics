@@ -1,50 +1,51 @@
 This is BibTeX, Version 0.99d (TeX Live 2021/Arch Linux)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: fyp.aux
-The style file: unsrt.bst
+The style file: alpha.bst
 Database file #1: fyp.bib
+Warning--to sort, need author or key in michalek2010
+Warning--can't use both volume and number fields in guth2015polypartvar
 Warning--empty author in michalek2010
 Warning--empty title in michalek2010
-Warning--can't use both volume and number fields in guth2015polypartvar
 You've used 19 entries,
-            1791 wiz_defined-function locations,
-            561 strings with 6048 characters,
-and the built_in function-call counts, 4055 in all, are:
-= -- 373
-> -- 124
-< -- 5
-+ -- 52
-- -- 33
-* -- 244
-:= -- 593
+            2543 wiz_defined-function locations,
+            673 strings with 6968 characters,
+and the built_in function-call counts, 7030 in all, are:
+= -- 700
+> -- 261
+< -- 17
++ -- 86
+- -- 83
+* -- 482
+:= -- 1100
 add.period$ -- 53
 call.type$ -- 19
-change.case$ -- 16
-chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 185
-empty$ -- 451
-format.name$ -- 33
-if$ -- 936
-int.to.chr$ -- 0
-int.to.str$ -- 19
+change.case$ -- 105
+chr.to.int$ -- 19
+cite$ -- 24
+duplicate$ -- 292
+empty$ -- 573
+format.name$ -- 111
+if$ -- 1467
+int.to.chr$ -- 1
+int.to.str$ -- 0
 missing$ -- 15
-newline$ -- 90
-num.names$ -- 18
-pop$ -- 79
+newline$ -- 91
+num.names$ -- 54
+pop$ -- 130
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 127
 quote$ -- 0
-skip$ -- 99
+skip$ -- 254
 stack$ -- 0
-substring$ -- 281
+substring$ -- 418
 swap$ -- 52
-text.length$ -- 5
-text.prefix$ -- 0
+text.length$ -- 17
+text.prefix$ -- 12
 top$ -- 0
-type$ -- 0
-warning$ -- 3
-while$ -- 40
-width$ -- 21
-write$ -- 193
-(There were 3 warnings)
+type$ -- 144
+warning$ -- 4
+while$ -- 64
+width$ -- 22
+write$ -- 232
+(There were 4 warnings)
