@@ -1,15 +1,15 @@
 \chapter{Counting Circle Tangencies\label{chap:circle}}
 
 Here we shall discuss the problem of counting the number of tangencies in a suitably non-degenerate collection of circles. We say two circles are tangent if their intersection contains a single point.
-The set of unordered pairs of circles in a collection $\CE$ which are mutually tangent are called the tangencies of the collection and is denoted $\tau(\CE)$. 
+The set of pairs of circles in a collection $\CE$ which are mutually tangent are called the tangencies and the collection of all tangencies is denoted $\tau(\CE)$. 
 \section{Trivial Bounds}
-\begin{theorem}[Trivial Bound] \label{thm:trivial-circle-bound}
+\begin{lemma}[Trivial Bound] \label{lem:trivial-circle-bound}
     Let $\CE$ be an arbitrary finite collection of circles. Then the number of tangencies $|\tau(\CE)|$ is bounded as follows:
     \[
         |\tau(\CE)| \leq |\CE|^2.
     \] 
-\end{theorem}
-Stated for arbitrary collections of circles the problem is not particularly interesting as the above bound turns out to be asymptotically tight. 
+\end{lemma}
+Stated for arbitrary collections of circles the problem is not particularly interesting as the above bound turns out to be asymptotically tight, as the following example shows.
 \begin{example}
 Denote a circle centred at $(x,y)$ with radius $r$ as $\gamma (x,y,r)$.
 Consider the following collection of $N+1$ circles:
@@ -29,34 +29,34 @@ Hence $|\tau(\CE)| \sim N^2 \sim |\CE|^2$.
     \end{figure}
 \end{example}
 
-Instead we shall look at collections of circles that satisfy a single non-degeneracy condition. We consider collections of circles 
-such that no three are mutually tangent at a common point. The best known examples leverage our asymptotically tight \hyperref[thm:S-T]{Szemerédi-Trotter Theorem} examples:
+In light of this example, in order to obtain a non-trivial example we shall look at collections of circles that satisfy a non-degeneracy condition. We consider collections of circles 
+such that no three circles are mutually tangent at a common point. The best known examples for collections that satisfy this non-degeneracy condition leverage our asymptotically tight \hyperref[thm:S-T]{Szemerédi-Trotter Theorem} (Theorem \ref{thm:S-T}) examples:
 \begin{example}
     Let $\ES$, $\LL$ be collections of $N$ points and $N$ lines respectively such that the \hyperref[thm:S-T]{Szemerédi-Trotter Theorem}'s bound is asymptotically tight. 
     In particular, they determine $\sim N^{4/3}$ point-line incidences. 
     Let $C_1$ denote the collection of unit circles centred at the points of $\ES$. 
-    Let $C_2$ denote the collection of lines obtained by translating each line $\ell in \LL$ one unit in the $\ell^{\perp}$ direction.
+    Let $C_2$ denote the collection of lines obtained by translating each line $\ell \in \LL$ one unit in the $\ell^{\perp}$ direction.
     If $(p,\ell) \in \ES \times \LL$ is a point-line incidence from our original collection, then the corresponding circle-line pair will be tangent.
     Performing an inversion transform about a point that does not lie in any of the circles or lines, our collection $\CE = C_1 \cup C_2$ becomes a 
-    collection of $2N$ circles that determine $N^{4/3}$ tangencies. \label{ex:circle-lower-bound}
+    collection of $2N$ circles that determine at least $N^{4/3}$ tangencies. \label{ex:circle-lower-bound}
  \end{example}
 
 We shall now present a bound from a recent paper of Ellenberg-Solymosi-Zahl which uses the polynomial method.\cite{ellenberg2016new}
 
-\begin{theorem}
-    Given a finite collection $\CE$ of $N$ circles in the plane such that no three are tangent at a common point, 
+\begin{theorem}[\cite{ellenberg2016new}]
+    Given a finite collection $\CE$ of $N$ circles in the plane such that no three are mutually tangent at a common point, 
     then the number of tangencies $|\tau(\CE)|$ obeys:   \label{thm:circle-tangencies}
     \[
-        |\tau(\CE)| \lesssim N^{3/2}
+        |\tau(\CE)| \lesssim N^{3/2}.
     \]
 \end{theorem}
 
 It is not obvious how to apply the polynomial method in the current formulation. 
-We will perform a lifting  of our circles into algebraic curves $\RR^3$, 
-preserving tangencies between circles in the plane as intersections between their lifted curves in $\RR^3$. 
-This transforms the problem from a tangency problem to an incidence problem, and reduces the required degree of polynomial needed to interpolate.
+We will perform a lifting  of our circles into algebraic curves in $\RR^3$, 
+transforming tangencies between circles in the plane to intersections between their lifted curves in $\RR^3$. 
+This transforms the problem from a tangency problem to an incidence problem which can therefore be attacked with the tools available to incidence geometry. As an additional benefit to this lifting, it reduces the required degree of polynomial needed to interpolate the incidences.
 In general Lemma \ref{lem:paramcounting} tells us that if we are to interpolate a set of $M$ points in $\RR^d$ by a polynomial $P$, then the degree of $P$ is $O(M^{1/d})$, 
-so increasing the dimension of the problem yields a more controlled degree of the polynomial required.
+so increasing the dimension of the problem yields a lower degree of the polynomial required.
 
 \section{Lifting of circles to $\RR^3$}
 
@@ -64,7 +64,7 @@ We shall now discuss this lifting in detail. Let $\gamma \subset \RR^2$ be a cir
 We define the lifting transform of the circle as: \[
     \beta(\gamma) = \left \{ (x,y,z) \in \RR^3 \ \big | \ (x-x_\gamma)^2 + (y-y_\gamma)^2 = r_\gamma^2, \ z = - \frac{x-x_\gamma}{y-y_\gamma} \right \}.
 \]  
-Clearly $\beta(\gamma)$ is an algebraic curve, so now we shall examine the correspondence between mutually tangent circles. Notice that $z$ is defined as the reciprocal of the slope of the tangent line
+Clearly $\beta(\gamma)$ is an algebraic curve, so now we shall examine what happens to pairs of tangent circles under this transformation. Notice that $z$ is defined as the slope of the tangent line
 at the point $(x,y) \in \gamma$.
 
 \begin{lemma}
@@ -73,7 +73,7 @@ at the point $(x,y) \in \gamma$.
 \end{lemma}
 \begin{proof}
 If $\gamma$ and $\gamma'$ are tangent then there exists a point $(x,y) \in \gamma \cap \gamma'$ and
-at a point of tangency we have that the slopes of the tangent lines coincide for $\gamma$ and $\gamma'$. Explicitly $\frac{x-x_\gamma'}{y - y_\gamma'}= \frac{x-x_\gamma}{y - y_\gamma} = z$.
+at a point of tangency we have that the slopes of the tangent lines coincide for $\gamma$ and $\gamma'$. Explicitly $-\frac{x-x_\gamma'}{y - y_\gamma'}= -\frac{x-x_\gamma}{y - y_\gamma} = z$.
 Hence $(x,y,z) \in \beta(\gamma) \cap \beta(\gamma')$ and thus $ \beta(\gamma) \cap \beta(\gamma') \neq \emptyset$.
 
 In the other direction, assume there exists some $(x,y,z) \in \beta(\gamma) \cap \beta(\gamma')$. 
@@ -84,13 +84,13 @@ This one-to-one correspondence between tangencies in $\RR^2$ and incidences in $
 For those more algebraically inclined, what we are doing here is equivalent to looking at the tangent bundles of our circle in the projective space, hence we 
 are preserving intersections.
 
-We will need a Bezout-type result which bounds the number of intersections between curves with no common components.
-\begin{lemma}[Bezout Lemma for Curves in $\RR^3$]     \label{lem:Bezout}
-   Let $Z(P)$ and $Z(Q_1,Q_2)$ be the zero sets of polynomials over $\RR[X,Y,Z]$ and that $P,Q_1,Q_2$ have no common factors.
- Then we can bound their intersection:
+In the course of the proof we will need a Bezout-type result which bounds the number of intersections between a curve and a surface with no common components.
+\begin{lemma}[Bezout Lemma in $\RR^3$]     \label{lem:Bezout}
+   Let $Z(P)$ and $Z(Q_1,Q_2)$ be the zero sets of polynomials over $\RR[X,Y,Z]$ and suppose that $P,Q_1,Q_2$ have no pairwise common factors.
+ Then we can bound the cardinality of the intersection of the zero sets by
     \[ |Z(P) \cap Z(Q_1,Q_2)| \lesssim \deg P \deg Q_1 \deg Q_2.\]
 \end{lemma}
-To preserve the flow of this chapter, the proof of this result has been moved to \hyperref[appendix:Bezout]{the appendix}.
+To preserve the flow of this chapter, the proof of this result will be given in \hyperref[appendix:Bezout]{the appendix}.
 
 
 \section[Ellenberg-Solymosi-Zahl's Proof]{Ellenberg-Solymosi-Zahl's Proof of Theorem \ref{thm:circle-tangencies}}
@@ -99,14 +99,13 @@ are sufficiently uniformly distributed among our circles. We can refine our coll
 
 \begin{lemma}[Uniform Refinement]
     Let $\CE$ be a collection of $N$ circles and suppose that $|\tau(\CE)| \gtrsim N^{\alpha}$. 
-    Then we can refine our collection to a collection $\CE' \subset \CE$ such that every circle in $\CE'$ is mutually tangent to $\gtrsim N^{\alpha -1}$ other circles in $\CE'$, $|\tau(\CE')| \gtrsim N^{\alpha}$, and $|\CE'| \gtrsim N^{\alpha/2}$. \label{lem:uniform-refine}
+    Then we can refine our collection to a collection $\CE' \subset \CE$ such that every circle in $\CE'$ is tangent to $\gtrsim N^{\alpha -1}$ other circles in $\CE'$, $|\tau(\CE')| \gtrsim N^{\alpha}$, and $|\CE'| \gtrsim N^{\alpha/2}$. \label{lem:uniform-refine}
 \end{lemma}
 
 \begin{proof}
-We proceed by a stopping time argument.
-Let $\tau(\CE)$ be the set of tangencies of the circles in $\CE$. Let $\CE_0 = \CE$ and let $c_1$ be a fixed constant to be chosen later. If there exists a circle $\gamma \in \CE_0$ such that $|\{ \gamma' \ |\ (\gamma, \gamma') \in \tau(\CE_0)\}| < c_1 N^{1/2}$
+We proceed by a stopping-time argument.
+Let $\tau(\CE)$ be the set of tangencies of the circles in $\CE$ and let $c_0$ be a constant such that $|\tau(\CE)| \geq c_0 N^{\alpha}$. Let $\CE_0 = \CE$ and let $c_1$ be a fixed constant to be chosen later. If there exists a circle $\gamma \in \CE_0$ such that $|\{ \gamma' \ |\ (\gamma, \gamma') \in \tau(\CE_0)\}| < c_1 N^{1/2}$
 remove it from the collection and label the new refined collection as $\CE_1$. From this refined collection, if there exists a circle $\gamma$ such that $|\{\gamma'\ |\ (\gamma, \gamma') \in \tau(\CE_1)\}| < c_1 N^{1/2}$ we remove it and label the remaining collection as $\CE_2$.
-
 After repeating this process $M$ times until there are no more circles $\gamma$ that satisfy $|\{\gamma'\ |\ (\gamma, \gamma') \in \tau(\CE_M)\}| < c_1 N^{1/2}$, at each step removing a circle that contributes only a small number of tangencies, we attain a collection $\CE_M$.
  We claim that $|\tau(\CE_M)| \gtrsim N^{\alpha}$, and that $|\CE_M| \gtrsim N^{\alpha/2}$.
 
@@ -130,138 +129,144 @@ We can now prove the main theorem.
 \begin{proof}[Proof of Theorem \ref{thm:circle-tangencies}]
     Given an arbitrary collection of circles $\CE$ with $\gtrsim N^{3/2}$ tangencies, Lemma \ref{lem:uniform-refine} with $\alpha = \frac{3}{2}$ 
     allows us to reduce to a collection
-     $\Gamma$ where each circle is tangent to  $\gtrsim N^{1/2}$ other circles using the previous lemma. 
+     $\Gamma$ where each circle is tangent to  $\gtrsim N^{1/2}$ other circles. 
     After applying a small rotation, we can assume that the tangent line at each point of tangency does not point vertically in the $y$-direction.
-    Let $\beta (\Gamma) = \{ \beta(\gamma) : \gamma \in \Gamma \}$, where $\beta$ is the lifting transform defined earlier,
+    Let $\beta (\Gamma) = \{ \beta(\gamma) : \gamma \in \Gamma \}$, where $\beta$ is the lifting transform defined earlier.
     Recall from Lemma \ref{lem:beta-lift} that two circles $\gamma_1$ and $\gamma_2$ are tangent if and only if $\beta(\gamma_1) \cap \beta(\gamma_2) \neq \emptyset$.
 
     Suppose $(x,y,z) \in \beta(\gamma_1) \cap \beta(\gamma_2) $ for some $\gamma_1 \neq \gamma_2$. 
-    Then $$(0,0,1) \in \text{span} \left( T_{(x,y,z) }\beta (\gamma_1), T_{(x,y,z) }\beta (\gamma_2)\right).$$
+    Then we claim that $$(0,0,1) \in \text{span} \left( T_{(x,y,z) }\beta (\gamma_1), T_{(x,y,z) }\beta (\gamma_2)\right).$$
     In other words, at the intersection of $\beta(\gamma_1)$ and $\beta(\gamma_2)$ their tangent vectors span a vertical subspace of $\RR^3$. 
     We can establish this by examining a parameterisation of $\gamma_1$ and $\gamma_2$ in the neighbourhood of $(x,y)$.
-    Define $f_i (t), \ i \in \{1,2\}$ such that $(t+x, f_i(t))$ is a parameterisation of $\gamma_i$ in the neighbourhood of $(x,y)$ for all $t$ in a small neighbourhood of 0. In particular $f_i(0) = y$. Taking the first derivative and evaluating at $t=0$:
+    Define $f_i (t), \ i \in \{1,2\}$ such that $(x+t, f_i(t))$ is a parameterisation of $\gamma_i$ in the neighbourhood of $(x,y)$ for all $t$ in a small neighbourhood of 0. In particular $f_i(0) = y$. Since $(x+t, f_i(t))$ satisfies the equation of a circle $\gamma_i$ we have the relation \todo{enough or more?}
     \[
-        \frac{df_i}{dt}(0) = -\frac{x- x_{\gamma_i}}{y- y_{\gamma_i}}
+        (x+t - x_{\gamma_i})^2 +  (f_i(t) - y_{\gamma_i})^2 = r_{\gamma_i}^2.
+    \]
+    Taking the first derivative and evaluating at $t=0$
+    \[
+        \frac{df_i}{dt}(0) = -\frac{x- x_{\gamma_i}}{y- y_{\gamma_i}}.
     \]
     Since $\gamma_1$ is tangent to $\gamma_2$ at $(x,y)$ the slopes of their tangent lines coincide at that point so $\frac{df_1}{dt}(0) = \frac{df_2}{dt}(0)$. Now taking the second derivative and evaluating at $t=0$:
     \[
-        \frac{d^2f_i}{dt^2}(0) = -\frac{(y- y_{\gamma_i})^2 + (x- x_{\gamma_i})^2}{(y- y_{\gamma_i})^3} = -\frac{r^2_{\gamma_i}}{(y- y_{\gamma_i})^3} 
+        \frac{d^2f_i}{dt^2}(0) = -\frac{(y- y_{\gamma_i})^2 + (x- x_{\gamma_i})^2}{(y- y_{\gamma_i})^3} = -\frac{r^2_{\gamma_i}}{(y- y_{\gamma_i})^3} .
     \]
-    Since $\gamma_1$ and $\gamma_2$ are distinct quadratic curves, $\frac{d^2f_1}{dt^2}(0) \neq \frac{d^2f_2}{dt^2}(0)$. 
+    Since $\gamma_1$ and $\gamma_2$ are distinct circles, $\frac{d^2f_1}{dt^2}(0) \neq \frac{d^2f_2}{dt^2}(0)$. (In the case $r_{\gamma_1} = r_{\gamma_2}$, notice that the tangency must be external and hence $\text{sgn}(y-y_{\gamma_1})^3\neq \text{sgn}(y-y_{\gamma_2})^3$) \todo{messy?}
 
 
 
     In the neighbourhood of $(x,y,z)$, $\beta(\gamma_i)$ is parametrised by $\left(t,f_i (t) ,\frac{df_1}{dt}(t) \right)$ as the slope of the tangent to the circle is given by $\frac{df_1}{dt}(t)$.
      It follows that the tangent vector
     $\left(1,\frac{df_i}{dt}(0), \frac{d^2f_i}{dt^2} (0) \right)$ generates the vertical space $T_{(x,y,z)} \beta(\gamma_i)$. Thus 
-    \begin{align*} (0,0,1) &\in \text{span}\left( \left(1,\frac{df_1}{dt}(0), \frac{d^2f_1}{dt^2} (0) \right) - \left(1,\frac{df_2}{dt}(0), \frac{d^2f_2}{dt^2} (0) \right) \right)
-    \\ &\subset \text{span} \left( T_{(x,y,z) }\beta (\gamma_1), T_{(x,y,z) }\beta (\gamma_2)\right). 
-    \end{align*}
+    \begin{align} (0,0,1) &\in \text{span}\left( \left(1,\frac{df_1}{dt}(0), \frac{d^2f_1}{dt^2} (0) \right) - \left(1,\frac{df_2}{dt}(0), \frac{d^2f_2}{dt^2} (0) \right) \right) \nonumber
+    \\ &\subset \text{span} \left( T_{(x,y,z) }\beta (\gamma_1), T_{(x,y,z) }\beta (\gamma_2)\right). \label{eqn:z-span}
+    \end{align}
 
-    We will now interpolate all points of intersection with a minimal polynomial of suitably low degree, and show that if this contains too many intersections it must also contain the curves. 
-    Then due to the tangent vector spanning the $z$-axis we will be able to achieve a contradiction.
+    We will now interpolate $\sim N^{3/2}$\todo{$\sim$ vs $\gtrsim$} incidence points with a minimal polynomial whose degree we can control, and show that if this contains too many intersections it must also contain the curves. 
+    Then due to the tangent vectors spanning the $z$-axis at the incidence points we will be able to achieve a contradiction.
 
-    Let $P \in \RR[x,y,z]$ be a non-zero polynomial of minimal degree that vanishes on all intersections between the curves in $\beta (\Gamma)$. 
-    This polynomial interpolates $\sim N^{3/2}$ points in $\RR^3$, so by Lemma \ref{lem:paramcounting}
-    the degree of $P$ is $\lesssim \left(N^{3/2}\right)^{\frac{1}{3}} =  N^{1/2}$. 
+    For each $\beta(\gamma_i) \in \beta(\Gamma)$ define a collection $K_i$ as a set of $\sim N^{1/2}$ incidence points of $\beta(\gamma_i)$. Then $|\cup K_i| \lesssim N^{3/2}$.
+    Let $P \in \RR[x,y,z]$ be a non-zero polynomial of minimal degree that vanishes on all the incidence points in $\cup K_i$. 
+    This polynomial interpolates $\lesssim N^{3/2}$ points in $\RR^3$, so by Lemma \ref{lem:paramcounting}
+    the degree of $P$ is $\lesssim \left(N^{3/2}\right)^{\frac{1}{3}} =  N^{1/2}$. \todo{check}
 
     Due to our refinement each $\gamma \in \Gamma$ is 
-    tangent to $\gtrsim N^{1/2}$ circles and each of these tangencies occur at a distinct point by our non-degeneracy condition.   
-    Hence we have that $P$ vanishes at $\gtrsim N^{1/2}$ points on each curve in $\beta (\Gamma)$.
-    By \hyperref[lem:Bezout]{Bézout's theorem} we have that $P$ vanishes on all curves in $\beta(\Gamma)$ as:
+    tangent to $\gtrsim N^{1/2}$ circles and each of these tangencies occurs at a distinct point by the non-degeneracy condition.   
+    Hence we have that $P$ vanishes at $\gtrsim N^{1/2}$ points of each curve in $\beta (\Gamma)$.
+    By \hyperref[lem:Bezout]{Bézout's Lemma} (Lemma \ref{lem:Bezout}) we have that $P$ vanishes on all curves in $\beta(\Gamma)$ as
     \[
     \deg (P) \deg (\beta(\gamma))  \lesssim \# \{ P \cap \beta(\gamma)\}  
     \]
-    for suitable choice of constants. 
+    for suitable choice of implicit constants. 
 
-    By our result above, if $(x,y,z)$ is a point where two curves from $\beta (\Gamma)$ intersect, then $\partial_z P (x,y,z)  =0 $. 
+    By Equation \ref{eqn:z-span}, if $(x,y,z)$ is a point where two curves from $\beta (\Gamma)$ intersect, then $\partial_z P (x,y,z)  =0 $. 
     Thus by the same Bezout argument $\partial_z P$ is also a polynomial which vanishes on all curves in $\beta(\Gamma)$. 
 
-    Since $P$ was a non-zero polynomial of minimal degree that vanishes on all the curves in $\beta (\Gamma)$, we must conclude 
-    $\partial_z P \equiv$ 0. By the minimality if $P$ we must have that $P(x,y,z) = Q(x,y)$ for some $Q \in \RR[x,y]$ with degree $\lesssim N^{1/2}$. 
-    But this implies that there must be at least of the $N^{3/4}$ circles in our original collection must also be contained in $Z(Q)$.
-    This is a contradiction, as $Q$ has degree $\sim N^{1/2}$ whereas $\cup \gamma$ has degree $2N^{3/4}$.
+    Since $P$ was a non-zero polynomial of minimal degree that vanishes on all points of incidence in $\beta (\Gamma)$, we must conclude 
+    $\partial_z P \equiv$ 0 and hence we must have that $P(x,y,z) = Q(x,y)$ for some $Q \in \RR[x,y]$ with  $ \deg Q = \deg P \lesssim N^{1/2}$. 
+    But this implies that there must be at least of the $N^{3/4}$ circles in our original collection which are contained in $Z(Q)$.
+    This is a contradiction, as $Q$ has degree $\sim N^{1/2}$ whereas $\cup \gamma$ has degree $ \gtrsim N^{3/4}$.
     Thus $\beta(\Gamma)$ has $\lesssim N^{3/2}$ curve-curve incidences, so we can conclude that $\Gamma$ has $\lesssim N^{3/2}$ tangencies.
 \end{proof}
 
 \section[New Proof via Polynomial Partitioning]{A New Proof via Polynomial Partitioning for Varieties}
 In this section we shall present a new proof of Theorem \ref{thm:circle-tangencies}. 
-There are a few key differences between both methods of proof. In the following proof, 
+There are a few key differences between the two methods of proof. In the following proof, 
 it is no longer required to ensure the uniform distribution of tangent points among each circle in our collection, so we will not
 have to use Lemma \ref{lem:uniform-refine}.
-Secondly, we will partition $\RR^3$ using a polynomial of controlled degree and leverage our \hyperref[thm:trivial-circle-bound]{trivial bound} in each cell.
-Slight care will be needed to deal with intersections of curves in the zero set, which we do via a recursive style argument.
+Secondly, in a similar fashion to the proof of the Szemerédi-Trotter Theorem (Theorem \ref{thm:S-T}) in the previous chapter we will partition $\RR^3$ using a polynomial of controlled degree and leverage our trivial bound (Lemma \ref{lem:trivial-circle-bound}) in each cell.
+Slight care will be needed to deal with intersections of curves in the zero set, which we do via a recursive  argument.
 
 We begin by introducing the main tool for this proof, 
-an extension of the \hyperref[thm:PolyPartioning]{polynomial partitioning} theorem to algebraic varieties instead of just points (which are in some sense 0-dimensional varieties). 
+an extension of the \hyperref[thm:PolyPartioning]{polynomial partitioning} theorem (Theorem \ref{thm:PolyPartioning}) to algebraic varieties instead of just points (which are 0-dimensional varieties). 
 
+\todo{add def of variety}
+\todo{rephrase closer to \ref{thm:PolyPartioning}}
 \begin{lemma}[Polynomial Partitioning for Algebraic Varieties]
     Suppose $\Gamma$ is a set of $k$-dimensional varieties in $\RR^n$. For any positive integer $D$ there exists a non-zero polynomial $P$ of degree at
-    most $D$ such that each connected component of $\RR^n \backslash Z(P)$ intersects $\lesssim D^{k-n} |\Gamma|$ varieties $\gamma \in \Gamma$.
-    \label{lem:poly-part-var}
+    most $D$ such that each connected component of $\RR^n \backslash Z(P)$ intersects $\lesssim D^{k-n} |\Gamma|$ varieties of$\Gamma$.\label{lem:poly-part-var}
 \end{lemma}
-We shall not prove this here. A proof of this can be found as Theorem 0.3 in the original paper of Guth presenting the result.\cite{guth2015polypartvar}
-\todo{add sketch of proof?}
+We shall not prove this here. A proof of this result can be found as Theorem 0.3 in \cite{guth2015polypartvar}, the original paper of Guth presenting the result. The proof is in the same spirit as the proof Theorem \ref{thm:PolyPartioning} given in Chapter \ref{chap:trotter}, however some additional difficulties present themselves and a correct proof requires some care. One should notice that the $k=0$ case above recovers Theorem \ref{thm:PolyPartioning}.
 
 \begin{proof}[Proof of Theorem \ref{thm:circle-tangencies} by Polynomial Partitioning]
 Relabel $\CE$ as $\Gamma$ for convenience. Again, we perform the lifting transform $\beta$ on each $\gamma \in \Gamma$. 
-We have a collection of $N$ 1-dimensional varieties in $\RR^3$ upon which we shall use our \hyperref[lem:poly-part-var]{polynomial partitioning} lemma
-to find a polynomial $P$ such that each cell of $\RR^n \backslash Z(P)$ intersects $\lesssim N D^{-2}$ varieties. 
+We have a collection of $N$ 1-dimensional varieties in $\RR^3$ upon which we use our polynomial partitioning lemma (Lemma \ref{lem:poly-part-var})
+to find a polynomial $P$ such that each cell of $\RR^3 \backslash Z(P)$ intersects $\lesssim N D^{-2}$ varieties. 
 $\RR^3 \backslash Z(P)$ partitions the space into $\sim D^3$ cells. 
-Let us label the interior of each of these cells as $\{\Omega_i \ | \ 0 \leq i \lesssim D^3 \}$, and further label the set of varieties in $\Gamma$ that pass through a given cell $\Omega_i$ as $\Gamma_i$.
+Let us label the interior of each of these cells as $\{\Omega_i \ | \ 0 \leq i \lesssim D^3 \}$, and further label the set of varieties in $\Gamma$ that intersect a given cell $\Omega_i$ as $\Gamma_i$.
 
-We can now define the following complimentary sets based on whether the variety is contained entirely in $Z(P)$:
+We can now define the following complementary sets based on whether the variety is contained entirely in $Z(P)$:\todo{colon here ok or no?}
 \begin{align*}
-    C_1 &= \{ \beta(\gamma) \ |\ \beta(\gamma \not \subset Z(P) \}\\
-    C_2 &= \{ \beta(\gamma) \ |\ \beta(\gamma)  \subset Z(P) \}
+    C_1 &= \{ \beta(\gamma) \ |\ \beta(\gamma) \not \subset Z(P) \}\\
+    C_2 &= \{ \beta(\gamma) \ |\ \beta(\gamma)  \subset Z(P) \}.
 \end{align*}
-Notice here that $\beta(\Gamma) = C_1 \cup C_2$. Recalling the correspondence between incidences between our curves and tangencies of the circles, we define the following
-incidence sets and hence have the following expression for $|\tau(\Gamma)|$:
+Notice here that $\beta(\Gamma) = C_1 \cup C_2$. Recalling the correspondence between curve-incidences and  circle-tangencies, we define the following
+incidence sets for any subcollections $C$ and $C'$ of $\beta(\Gamma)$
 \begin{align*}
-    I(C_1, C_1) &= \{(\beta(\gamma), \beta(\gamma')) \ |  \ \beta(\gamma), \beta(\gamma') \in C_1, \ \beta(\gamma) \cap \beta(\gamma') \neq \emptyset \} \\
-    I(C_1, C_2) &= \{(\beta(\gamma), \beta(\gamma')) \ |  \ \beta(\gamma)\in C_1, \beta(\gamma') \in C_2, \ \beta(\gamma) \cap \beta(\gamma') \neq \emptyset \} \\
-    I(C_2, C_2) &= \{(\beta(\gamma), \beta(\gamma')) \ |  \ \beta(\gamma), \beta(\gamma') \in C_2, \ \beta(\gamma) \cap \beta(\gamma') \neq \emptyset \} \\
-    |\tau(\Gamma)| &= |I(C_1, C_1)| + |I(C_1, C_2)| + |I(C_2, C_2)|.
+    I(C, C') &= \{(\beta(\gamma), \beta(\gamma')) \ |  \ \beta(\gamma) \in C', \ \beta(\gamma') \in C, \ \beta(\gamma) \cap \beta(\gamma') \neq \emptyset \}.
 \end{align*}
-We now proceed by calculating the cardinality each of these sets. The case for $I(C_1,C_1)$ will use our \hyperref[thm:trivial-circle-bound]{trivial bound} and Bezout's
-theorem. Calculating for $I(C_1,C_2)$ is again straightforward by Bezout. 
-The interesting case here is $I(C_2,C_2)$, where we will be forced to argue via a recursive style of argument.
+Hence we can express $|\tau(\Gamma)|$ as the sum
+\[
+    |\tau(\Gamma)| = |I(C_1, C_1)| + 2|I(C_1, C_2)| + |I(C_2, C_2)|.  
+\]
+We now proceed to bound the cardinality for each of these sets. For $I(C_1,C_1)$ will use our trivial bound (Lemma \ref{lem:trivial-circle-bound}) and Bézout's
+lemma (Lemma \ref{lem:Bezout}).\todo{lemma or Lemma} Bounding the cardinality for $I(C_1,C_2)$ is again straightforward by Bézout. 
+The interesting case here is $I(C_2,C_2)$, where we will be forced to argue via a recursive argument.
 
-We begin with the intersections that occur between varieties not entirely contained in the zero set:
+We begin with $I(C_1,C_1)$, that is, the intersections that occur between varieties not entirely contained in the zero set. We proceed by partitioning $I(C_1,C_1)$ according to whether the incidence occurs within a cell or on $Z(P)$, explicitly \todo{check english}
 \begin{align*}
     I(C_1,C_1) = &\{ (\beta(\gamma), \beta(\gamma')) \ |  \ \beta(\gamma), \beta(\gamma') \in C_1, \ \beta(\gamma) \cap \beta(\gamma') \in \RR^3 \backslash Z(P)\} \\
-                & \cup \{ (\beta(\gamma), \beta(\gamma')) \ |  \ \beta(\gamma), \beta(\gamma') \in C_1, \ \beta(\gamma) \cap \beta(\gamma') \in Z(P)\}
+                & \cup \{ (\beta(\gamma), \beta(\gamma')) \ |  \ \beta(\gamma), \beta(\gamma') \in C_1, \ \beta(\gamma) \cap \beta(\gamma') \in Z(P)\}.
 \end{align*}
-Hence we have:
+Hence we have
 \begin{align*}
     |I(C_1,C_1)| &= \sum_{\beta(\gamma), \beta(\gamma') \in C_1} \OO[\beta(\gamma) \cap \beta(\gamma') \in \RR^3 \backslash Z(P)] + 
                   \sum_{\beta(\gamma), \beta(\gamma') \in C_1} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)] \\
                  &= \sum_{\beta(\gamma), \beta(\gamma') \in C_1} \sum_i \OO[\beta(\gamma) \cap \beta(\gamma') \in \Omega_i] +
                  \sum_{\beta(\gamma), \beta(\gamma') \in C_1} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)]\\
                  &= \sum_i \sum_{\beta(\gamma), \beta(\gamma') \in \Gamma_i}  \OO[\beta(\gamma) \cap \beta(\gamma') \in \Omega_i] +
-                  \sum_{\beta(\gamma), \beta(\gamma') \in C_1} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)]
+                  \sum_{\beta(\gamma), \beta(\gamma') \in C_1} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)].
 \end{align*}
-Using our \hyperref[thm:trivial-circle-bound]{trivial bound} and the fact that there are $\lesssim ND^{-2}$ varieties intesecting a given cell we attain:
+Using our trivial bound (Lemma \ref{lem:trivial-circle-bound}) and the fact that there are $\lesssim ND^{-2}$ varieties intersecting a given cell we attain
 \begin{align*}
                  &\lesssim \sum_i \left(\frac{N}{D^2}\right)^2 + \sum_{\beta(\gamma), \beta(\gamma') \in C_1} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)] \\
-                 &= D^3 N^2 D^{-4} + \sum_{\beta(\gamma)\in C_1} \sum_{\beta(\gamma') \in C_1} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)]\\
-                 \intertext{Fixing $\beta(\gamma)$ we see that the latter sum must be $\lesssim D$ by Bezout's lemma in conjunction with our non-degeneracy condition.}
+                 &\sim D^3 N^2 D^{-4} + \sum_{\beta(\gamma)\in C_1} \sum_{\beta(\gamma') \in C_1} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)].
+                 \intertext{For each fixed $\beta(\gamma) \in C_1$ we see by Bezout's Lemma (Lemma \ref{lem:Bezout}) that $\beta(\gamma)$ can intersect $Z(P)$ in at most $\lesssim D$ points. Since all the intersections in the latter sum are of this type, we have that each $\beta(\gamma)$ contributes at most $\lesssim D$ to the sum, and summing over all possible $\beta(\gamma)'s \in C_1$ we obtain}
                  &\lesssim  N^2 D^{-1} + \sum_{\beta(\gamma)\in C_1} D \\
-                 &= N^2D^{-1} + ND.
+                 &\sim N^2D^{-1} + ND.
 \end{align*}
 
-The argument for $I(C_1,C_2)$ is the similar to the above calculation, however there are now no intersections happening inside the cells by the definition of $C_2$.
- Fix $\beta(\gamma)$ in:
+
+The argument for $I(C_1,C_2)$ is similar to the one above, however there are now no intersections happening inside the cells by the definition of $C_2$.
 \begin{align*}
     |I(C_1,C_2)| &= \sum_{\beta(\gamma)\in C_1} \sum_{\beta(\gamma') \in C_2} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)] \\
-    \intertext{and again the second sum is $\lesssim D$ due to Bezout and our non-degeneracy condition. Hence,}
-    & \lesssim \sum_{\beta(\gamma)\in C_1} D \leq ND.
+    \intertext{Again thanks to Bezout's Lemma (Lemma \ref{lem:Bezout}) we have that the latter sum is $\lesssim D$. Hence}
+    |I(C_1,C_2)|& \lesssim \sum_{\beta(\gamma)\in C_1} D \leq ND.
 \end{align*}
 
-\todo{this is wrong - swap and fix}
+\todo{rewrite this part}
 Finally we need to handle the incidences between curves contained entirely in the zero-set, $I(C_2,C_2)$. 
 \[
-    |I(C_2,C_2)| = \sum_{\beta(\gamma), \beta(\gamma') \in C_2} \OO[\beta(\gamma) \cap \beta(\gamma') \neq \emptyset]
+    |I(C_2,C_2)| = \sum_{\beta(\gamma), \beta(\gamma') \in C_2} \OO[\beta(\gamma) \cap \beta(\gamma') \neq \emptyset].
 \]
 Suppose $P$ was the minimal degree polynomial that partitioned the space as per Lemma \ref{lem:poly-part-var}. Then we can write $C_2$ as the union of disjoint sets:
 \[
@@ -285,7 +290,7 @@ contains $k_2$ curves which intersect $ Z(\partial^2_z P)$ at most $D$ times eac
 
 Adding together our bounds we achieve:
 \begin{align*}
-    |I(C_1,C_1)|+|I(C_1,C_2)|+|I(C_2,C_2)| &\lesssim N^2D^{-1} + ND + ND + ND + D^2 \\
+    |I(C_1,C_1)|+2|I(C_1,C_2)|+|I(C_2,C_2)| &\lesssim N^2D^{-1} + ND + ND + ND + D^2 \\
     &\sim N^2D^{-1} + ND + D^2.
 \end{align*}
 We now optimise $D$ by setting $N^2D^{-1} \sim ND$ which gives $D \sim N^{1/2}$ and hence our bounds become:
@@ -295,42 +300,41 @@ We now optimise $D$ by setting $N^2D^{-1} \sim ND$ which gives $D \sim N^{1/2}$ 
 \end{align*}
 \end{proof}
 \begin{remark}
-It was the hope of this author that utilising the topology of $\RR$ via polynomial partitioning would get us closer to the best example of $\Omega(N^{4/3})$ 
-similar to the improvement in the proof of the Szemerédi-Trotter theorem in the previous chapter. Alas, this was not the case.
+    Since polynomial partitioning exploits the topology of $\RR^n$ in an essential manner, it would have been reasonable to expect an improvement over the exponent 3/2 via the argument above. Alas, this was not the case.
 \end{remark}
 
-\section{Sphere Tangencies in $\RR^{3}$}
+\section{Considerations for the case of Sphere Tangencies in $\RR^{3}$}[The Case of Sphere Tangencies in $\RR^{3}$]\todo{capitalisation?}
 Considering the analogous problem in $\RR^{3}$, two new difficulties emerge. 
 Firstly, our current non-degeneracy condition is not sufficient as we have new degenerate cases to consider where the trivial bound of $O(N^2)$ is achieved. 
 \begin{example}[Degenerate case in $\RR^{3}$]
     \todo{halo example}
 \end{example}
-Due to cases like these, a new condition is required. A natural choice given this example seems to be restricting our collections to those which do not contain to many tangencies along any one low-degree algebraic curve. 
+Due to cases like these, a new condition is required. A natural choice given this example would seem to be restricting our collections to those which do not contain too many tangencies along any one low-degree algebraic curve on the surface of a sphere. 
 
 Secondly, our simple Bézout lemma is no longer enough. An analogous lifting of a sphere $\gamma \subset \RR^3$ is given by:
 \[
     \beta(\gamma) = \left\{ (x,y,z,v,w) \in \RR^5\ \middle\vert \begin{array}{l}
         (x-x_\gamma)^2 + (y-y_\gamma)^2 + (z-z_\gamma)^2 = r_\gamma^2,\\
-        v = - \frac{x-x_\gamma}{z-z_\gamma}, \ w = - \frac{y-y_\gamma}{z-z_\gamma}.
-  \end{array}\right\}
+        v = - \frac{x-x_\gamma}{z-z_\gamma}, \ w = - \frac{y-y_\gamma}{z-z_\gamma}
+  \end{array}\right\}.
 \]
 $\beta(\gamma)$ is a two-dimensional algebraic surface in $\RR^5$. An interpolating polynomial's zero set $Z(P)$ such as the one used in Ellenberg-Solymosi-Zahl's proof would be a 4-dimensional surface in $\RR^5$.
-These two surface could intersect in a 1-dimensional variety (i.e. at infinitely many points), hence it is no longer true to claim that $\beta(\gamma) \subset Z(P)$ due to $Z(P)$ containing too many points of $\beta(\gamma)$.
+These two surfaces could intersect along a 1-dimensional variety (i.e. at infinitely many points), hence we can no longer argue that $\beta(\gamma) \subset Z(P)$ due to $Z(P)$ containing too many points of $\beta(\gamma)$.
 
-The best example in the literature of a lower bound for such tangencies is produced in a similar fashion to the circles case. 
+The best example of a lower bound for such tangencies is produced in a similar fashion to the circles case (Example \ref{ex:circle-lower-bound}). 
 In place of the Szemerédi-Trotter theorem we appeal to a corollary of a theorem of Rudnev which bounds the number of point-plane incidences in $\RR^3$:\cite{Rudnev2014planepoints}
 \begin{theorem}
-    Let $\ES$ be a finite set of points in $\RR^3$ and $\Pi$ a finite set of non-collinear planes in $\RR^3$. Assume further that $|\ES|> |\Pi|$.
-     Then the incidence set $I(\ES, \Pi)$ obeys:
+    Let $\ES$ be a finite set of points in $\RR^3$ and $\Pi$ a finite set of non-collinear planes in $\RR^3$. Assume further that $|\ES|> |\Pi|$. \label{thm:point-plane-incidences}
+     Then the incidence set $I(\ES, \Pi)$ obeys
     \[
         |I(\ES, \Pi)| \lesssim |\ES||\Pi|^{1/2}.
-    \] \label{thm:point-plane-incidences}
-\end{theorem}
-We now construct our lower bound utilising geometric inversion in $\RR^3$ analogous to Example \ref{ex:circle-lower-bound}.
+    \] 
+\end{theorem} \todo{change this to be correct}
+We now construct our lower bound utilising geometric inversion in $\RR^3$ analogously to Example \ref{ex:circle-lower-bound}.
 \todo{is this tight? EQ 2 Rudnev suggests N\^{7/5} is tight in R3}
 \begin{example}
     Let $\ES$, $\Pi$ be collections of $N$ points and $N$ non-collinear planes respectively such that the Theorem \ref{thm:point-plane-incidences} is asymptotically tight. 
-    In particular, they determine $\sim N^{3/2}$ point-plane incidences. 
+    In particular, they determine $\sim N^{7/5}$ point-plane incidences. 
     Let $C_1$ denote the collection of unit spheres centred at the points of $\ES$. 
     Let $C_2$ denote the collection of planes obtained by translating each plane $\pi \in \Pi$ one unit in the $\pi^{\perp}$ direction.
     If $(p,\pi) \in \ES \times \Pi$ is a point-plane incidence from our original collection, then the corresponding sphere-plane pair will be tangent.
@@ -338,10 +342,10 @@ We now construct our lower bound utilising geometric inversion in $\RR^3$ analog
     collection of $2N$ spheres that determine $N^{3/2}$ tangencies.
  \end{example}
 
- In Ellenberg-Solymosi-Zahl's paper,\cite{ellenberg2016new} they conjecture a bound for higher dimensional spheres:
+ In \cite{ellenberg2016new}, the authors conjectured a bound for higher dimensional spheres: \todo{colon here?}
  \begin{conjecture}
      Let $\CE$ be a collection of $(d-1)$-spheres in $\RR^d$. Then the number of distinct points of tangencies is $\lesssim |\CE|^{\frac{2d-1}{d}}.$
  \end{conjecture}
 
-This is a somewhat weak conjecture, as the evidence to form it is simply the natural extension of the $\beta$-lifting technique into higher dimensions.
+This is a somewhat weak conjecture, as the evidence to form it is simply the natural extension of the $\beta$-lifting technique into higher dimensions. \todo{rewrite sentence}
 As such, there is no evidence to suggest that it should be tight. 

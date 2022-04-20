@@ -16,15 +16,15 @@
 \contentsline {chapter}{\numberline {5}Szemerédi-Trotter Theorem }{18}{chapter.5}%
 \contentsline {section}{\numberline {5.1}The Trivial Bounds}{18}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Examples}{20}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Ham Sandwich Theorems }{21}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Proof of the Szemerédi-Trotter Theorem }{24}{section.5.4}%
+\contentsline {section}{\numberline {5.3}Ham Sandwich Theorems }{22}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Proof of the Szemerédi-Trotter Theorem }{25}{section.5.4}%
 \contentsline {chapter}{\numberline {6}Counting Circle Tangencies}{27}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Trivial Bounds}{27}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Lifting of circles to $\mathbb R^3$}{29}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Ellenberg-Solymosi-Zahl's Proof}{29}{section.6.3}%
 \contentsline {section}{\numberline {6.4}New Proof via Polynomial Partitioning}{32}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Sphere Tangencies in $\mathbb R^{3}$}{35}{section.6.5}%
-\contentsline {chapter}{References}{38}{chapter*.46}%
-\contentsline {chapter}{Appendices}{39}{section*.47}%
+\contentsline {section}{\numberline {6.5}Considerations for the case of Sphere Tangencies in $\mathbb R^{3}$}{35}{section.6.5}%
+\contentsline {chapter}{References}{38}{chapter*.58}%
+\contentsline {chapter}{Appendices}{39}{section*.59}%
 \contentsline {chapter}{\numberline {A}Proof of Bézout's Lemma}{39}{appendix.A}%
 \contentsline {chapter}{\numberline {B}Proof of Borsuk-Ulam Theorem}{40}{appendix.B}%

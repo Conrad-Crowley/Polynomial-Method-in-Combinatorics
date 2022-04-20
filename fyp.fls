@@ -1229,6 +1229,11 @@ INPUT ./chap/trotter.tex
 INPUT chap/trotter.tex
 INPUT ./chap/trotter.tex
 INPUT chap/trotter.tex
+INPUT ./images/STEX1_ManimCE_v0.15.1.png
+INPUT ./images/STEX1_ManimCE_v0.15.1.png
+INPUT images/STEX1_ManimCE_v0.15.1.png
+INPUT ./images/STEX1_ManimCE_v0.15.1.png
+INPUT ./images/STEX1_ManimCE_v0.15.1.png
 INPUT ./chap/circle.tex
 INPUT chap/circle.tex
 INPUT ./chap/circle.tex

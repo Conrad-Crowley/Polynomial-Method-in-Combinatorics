@@ -89,7 +89,7 @@ First we examine two trivial examples that explain the necessity of the $|\ES| +
     \]
 \end{example}
 The next two examples deal with the more general case, where the $(|\ES||\LL|)^{2/3}$ term dominates Theorem \ref{thm:S-T}. 
-\begin{example}
+\begin{example} \label{ex:ST-1}
     Let $N$ be a large integer and consider the following collections in $\RR^2$
     \begin{align*}
     \ES &= \{ (a,b) \in \ZZ^2 \ | \ a\in [1,N], b \in [1,2N^2] \}, \\
@@ -98,7 +98,13 @@ The next two examples deal with the more general case, where the $(|\ES||\LL|)^{
     Hence there are $N^4$ incidences. Both sides of the \hyperref[thm:S-T]{Szemerédi-Trotter} (Theorem \ref{thm:S-T}) inequality are comparable as 
     $$ |I(\ES,\LL)| = N^4 \sim (N^3)^{\frac{2}{3}} (N^3)^{\frac{2}{3}} \sim |\ES|^{2/3} |\LL|^{2/3} + |\ES| + |\LL|.$$
 \end{example}
-\todo{diagram?}
+\begin{figure}[h]
+    \centering 
+    \includegraphics[width=0.8\textwidth]{images/STEX1_ManimCE_v0.15.1.png}
+    \caption{Example \ref{ex:ST-1} in the case $N=3$. (with the $x,y$ axis reversed)}
+\end{figure}
+
+
 \begin{example}
     Let $N \gg 1$ be a large even integer and let $1<R \ll N$ be another integer. Consider the collections in $\RR^2$:
     \begin{align*}
@@ -192,7 +198,7 @@ Now we choose $n$ sufficiently large that $|f_n (x) - f(x)| < \delta$ on $U\back
     |m&\left(\{x\in U \ |\ f_n(x)>0\}\right) - m\left(\{x\in U\ |\ f(x)>0\}\right)| \\
     &\leq |m\left(\{x\in U\ |\ f_n(x)>0\}\right)| + |m\left(\{x\in U\ |\ f(x)>0\}\right)| \\
     &< 2 \varepsilon. 
-\end{align*}\todo{proof is incoorect.}
+\end{align*}\todo{proof is incorrect.}
 Since $\varepsilon$ was arbitrary each $\phi_i$ is continuous.
 
 We now combine each $\phi_i$ into the map $\phi : V\backslash \{0\} \to \RR^N$ by $\phi = (\phi_1, \dots, \phi_N)$.
