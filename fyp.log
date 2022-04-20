@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  20 APR 2022 10:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  20 APR 2022 17:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -826,7 +826,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 ...ine {chapter}{References}{38}{chapter*.58}
+l.27 ...ine {chapter}{References}{39}{chapter*.44}
                                                   % [1
 
 
@@ -881,10 +881,10 @@ See the caption package documentation for explanation.
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 208.
+(amsmath)                 on input line 209.
 
 
-Overfull \hbox (7.58795pt too wide) in paragraph at lines 227--227
+Overfull \hbox (7.58795pt too wide) in paragraph at lines 228--228
 []\OT1/cmr/m/n/10.95 Now let $\OML/cmm/m/it/10.95 p[]; [] ; p[]$ \OT1/cmr/m/n/10.95 be the points of $\OML/cmm/m/it/10.95 A$\OT1/cmr/m/n/10.95 . We con-sider the eval-u-a-tion map $\OML/cmm/m/it/10.95 E \OT1/cmr/m/n/10.95 : [][](\U/msb/m/n/10.95 K[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 !
  []
 
@@ -904,10 +904,10 @@ Chapter 5.
 [18
 
 ] [19]
-<images/STEX1_ManimCE_v0.15.1.png, id=421, 1927.2pt x 1084.05pt>
+<images/STEX1_ManimCE_v0.15.1.png, id=414, 1927.2pt x 1084.05pt>
 File: images/STEX1_ManimCE_v0.15.1.png Graphic file (type png)
 <use images/STEX1_ManimCE_v0.15.1.png>
-Package pdftex.def Info: images/STEX1_ManimCE_v0.15.1.png  used on input line 103.
+Package pdftex.def Info: images/STEX1_ManimCE_v0.15.1.png  used on input line 105.
 (pdftex.def)             Requested size: 341.43437pt x 192.0439pt.
 
 
@@ -917,12 +917,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: Marginpar on page 23 moved.
 
-
-LaTeX Warning: Marginpar on page 23 moved.
-
-[23] [24] [25]) (./chap/circle.tex [26]
+[23] [24] [25] [26]) (./chap/circle.tex [27]
 Chapter 6.
-<images/circles_degen_case_ManimCE_v0.15.1.png, id=497, 2569.6pt x 1445.4pt>
+<images/circles_degen_case_ManimCE_v0.15.1.png, id=493, 2569.6pt x 1445.4pt>
 File: images/circles_degen_case_ManimCE_v0.15.1.png Graphic file (type png)
 <use images/circles_degen_case_ManimCE_v0.15.1.png>
 Package pdftex.def Info: images/circles_degen_case_ManimCE_v0.15.1.png  used on input line 27.
@@ -930,9 +927,9 @@ Package pdftex.def Info: images/circles_degen_case_ManimCE_v0.15.1.png  used on 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[27
+[28
 
-] [28 <./images/circles_degen_case_ManimCE_v0.15.1.png>]
+] [29 <./images/circles_degen_case_ManimCE_v0.15.1.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 61.
@@ -945,21 +942,21 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 61.
 
-[29] [30] [31]
+[30] [31] [32]
 
-LaTeX Warning: Marginpar on page 32 moved.
+LaTeX Warning: Marginpar on page 33 moved.
 
 
 Overfull \hbox (6.09149pt too wide) in paragraph at lines 211--216
 []\OT1/cmr/m/n/10.95 Relabel $\OMS/cmsy/m/n/10.95 C$ \OT1/cmr/m/n/10.95 as $^^@$ for con-ve-nience. Again,
  []
 
-[32]
+[33]
 Overfull \hbox (0.72185pt too wide) detected at line 248
 []
  []
 
-[33] [34]
+[34] [35]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 306.
@@ -982,41 +979,43 @@ Overfull \hbox (27.65012pt too wide) in paragraph at lines 306--306
 [][][]\OT1/cmr/m/n/10.95 capitalisation?[]  
  []
 
-[35]
+[36]
 
-LaTeX Warning: Marginpar on page 36 moved.
+LaTeX Warning: Marginpar on page 37 moved.
 
 
-LaTeX Warning: Marginpar on page 36 moved.
+LaTeX Warning: Marginpar on page 37 moved.
 
-) (./fyp.bbl [36] [37
+) (./fyp.bbl [37] [38
 
-]) [38] (./chap/appendix.tex
+]) [39] (./chap/appendix.tex
 Appendix A.
-[39
+[40
 
 
 ]
 Appendix B.
-[40
+[41
 
-] [41]) [42] (./fyp.aux)
+] [42]) [43] (./fyp.aux)
 Package rerunfilecheck Info: File `fyp.out' has not changed.
-(rerunfilecheck)             Checksum: D2D51267EB137C77FF01D16401C62ABC;5121.
+(rerunfilecheck)             Checksum: 7F070313BD746BB6057B6B337C527880;5121.
  ) 
 Here is how much of TeX's memory you used:
- 29966 strings out of 478353
- 571605 string characters out of 5854636
- 893675 words of memory out of 5000000
- 47347 multiletter control sequences out of 15000+600000
- 417218 words of font info for 85 fonts, out of 8000000 for 9000
+ 29855 strings out of 478353
+ 568858 string characters out of 5854636
+ 882328 words of memory out of 5000000
+ 47242 multiletter control sequences out of 15000+600000
+ 419061 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,17n,89p,829b,1127s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on fyp.pdf (46 pages, 699095 bytes).
+ 84i,17n,89p,829b,1121s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on fyp.pdf (47 pages, 707857 bytes).
 PDF statistics:
- 780 PDF objects out of 1000 (max. 8388607)
- 670 compressed objects within 7 object streams
- 216 named destinations out of 1000 (max. 500000)
+ 778 PDF objects out of 1000 (max. 8388607)
+ 665 compressed objects within 7 object streams
+ 205 named destinations out of 1000 (max. 500000)
  273 words of extra memory for PDF output out of 10000 (max. 10000000)
 

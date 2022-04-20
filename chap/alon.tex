@@ -3,9 +3,11 @@ In this chapter we shall discuss applications to the exciting field of additive 
 the first example of a polynomial method in action (see \cite{alon1999combinatorial}). This chapter is distinct from the other chapters in this manuscript as it deals with applications outside a geometric setting. It showcases a different polynomial method to the previous chapter, employing instead a combinatorial version of Hilbert's Nullstellensatz.
 In \cite{michalek2010}, Michalek produced a short, elementary, and direct proof of the combinatorial Nullstellensatz which we present here.
 \section{Combinatorial Nullstellensatz}
-\todo{check this}The German term \textit{Nullstellensatz} means ``theorem about zeros'', so it should come as no surprise that the theorem is precisely a statement about the general size and shape of sets of zeros of a polynomial depending on its highest degree terms. 
+The German term \textit{Nullstellensatz} means ``theorem about zeros'', so it should come as no surprise that the theorem is 
+precisely a statement about the general size and shape of sets of zeros of a polynomial depending on its highest degree terms. 
 
-The main idea behind the Nullstellensatz comes from the fact that a polynomial in one variable of degree $D$ cannot have more than $D$ roots. As a consequence of this if we have a set of $D+1$ elements they cannot all be roots of the same degree $D$ polynomial. In the univariate case this is not very useful, but when generalised to arbitrary dimension this simple fact can become surprisingly powerful. 
+The main idea behind the Nullstellensatz comes from the fact that a polynomial in one variable of degree $D$ cannot have more than $D$ roots. 
+As a consequence of this if we have a set of $D+1$ elements they cannot all be roots of the same degree $D$ polynomial. In the univariate case this is somewhat elementary, but it has a very non-trivial extension to grids of points in arbitrary dimensions. 
 
 \begin{theorem}[Combinatorial Nullstellensatz]
     Let $\KK$ be a (not necessarily finite) field, and let $P(X_1,\dots, X_n) \in \KK[X_1,\dots, X_n]$ be a polynomial in $n$ variables with coefficients in $\KK$. Suppose the coefficient of $X_1^{k_1}X_2^{k_2}\dots X_n^{k_n}$ is non-zero and further suppose $\deg P = \sum_{i=1}^n k_i$, where each $k_i$ is a non-negative integer.
@@ -33,7 +35,7 @@ The main idea behind the Nullstellensatz comes from the fact that a polynomial i
 \end{proof}
 \section{Proof of Cauchy-Davenport Theorem}
 To showcase the usefulness of the Combinatorial Nullstellensatz, we shall prove a classical result in Additive Combinatorics. 
-\begin{theorem} [Cauchy-Davenport Theorem]
+\begin{theorem} [Cauchy-Davenport Theorem] \label{thm:C-D}
     Let $A,B$ be non-empty subsets of $\ZZ_p$ for some $p$ prime. Define their sumset $A+B$ as follows:
     \[
     A + B = 
@@ -67,6 +69,18 @@ To showcase the usefulness of the Combinatorial Nullstellensatz, we shall prove 
     ${|A|+|B| - 2} \choose {|A|- 1}$, which is non-zero in $\ZZ_p$ as the binomial coefficient is not divisible by $p$ if all its factors are less than $p$. Applying Theorem \ref{thm:comb-nullstellensatz} we see that there 
     must exist some $(a,b) \in A \times B$ such that $f(a,b) \neq 0$, a contradiction.
 \end{proof}
-\begin{remark}
-    This bound is indeed tight. Choosing $A$ and $B$ to be singletons, $|A+B| =1$, achieving the bound.
-\end{remark}
+
+The Cauchy-Davenport Theorem (Theorem \ref{thm:C-D}) is indeed tight as illustrated by the following two examples.
+
+\begin{example}
+    Fix $b \in \ZZ_p$ and consider the subsets of $\ZZ_p$ given by
+    \begin{align*}
+        A &= \{t b \ | \ 1\leq t \leq m \},\\
+        B &= \{t' b \ | \ 1\leq t' \leq n \}.
+        \intertext{Then we have}
+        A+B &= \{(t-t') b \ | \ 1\leq t \leq m, \ 1\leq t' \leq m \}
+        \intertext{ which produces ea}
+        |A+B| &= m + n -1 = |A| + |B| -1
+    \end{align*}
+\end{example} \todo{fix example}
+Choosing $A$ and $B$ to be singletons, $|A+B| =1$, achieving the bound.

@@ -78,7 +78,6 @@ This proof revitalised interest in the polynomial method, and we shall explore i
 \caption{An example of a Kakeya set (shaded) in $\FF_3^2$.}
 {\label{kak_ex_f32}
 \end{figure}
-\todo{big example}
 
 
 
@@ -146,7 +145,8 @@ $$|A| \gtrsim |\FF|^{\frac{n+1}{2}}$$
 \end{proof}
 
 \subsection{Hairbrush Argument}
-In \cite{WOLFF1995}, Wolff presented the ``hairbrush'' argument we made an incremental improvent over the argument of Bourgain. It is similar in spirit to the ``bush'' argument above, however instead of using just one point of high-multiplicity we instead consider a line (or ``stem'') containing many points of high-multiplicity. \todo{check this, diagram might be nice?}
+In \cite{WOLFF1995}, Wolff presented the ``hairbrush'' argument we made an incremental improvement over the argument of Bourgain. It is similar in spirit to the ``bush'' argument above, 
+however instead of using just one point of high-multiplicity we instead consider a line (or ``stem'') containing many points of high-multiplicity.
 
 \begin{theorem}[Hair Brush Argument]
     If $A$ is a Kakeya set, then we have
@@ -169,17 +169,17 @@ Thus,
 \[
     |A| \geq \sum_{\pi \in \Pi} |(A \cap \pi) \backslash \ell_\mu| \gtrsim |\FF| \sum_{\pi \in \Pi} |\LL_\pi| \gtrsim \mu |\FF|^2,
 \]
-where the last inequality comes from the fact $\ell_\mu$ intersects at least $\mu |\FF|/2$ lines, so since the planes $\Pi$ foliate $\FF^n$, the union $\cup_\Pi \LL_\pi$ contains at least all of these lines. \todo{what does foliate mean here?}
+where the last inequality comes from the fact $\ell_\mu$ intersects at least $\mu |\FF|/2$ lines, so since the planes $\Pi$ foliate $\FF^n$, the union $\cup_\Pi \LL_\pi$ contains at least all of these lines.
 
 Suppose there does not exist a $\mu$-rich line. Let 
 \[
     A' = \{p \in A \ | \ p \text{ belongs to strictly less than } \mu \text{ lines in }A \}.
 \]
 Since we assume there does not exist a $\mu$-rich line in $A$, for any line $\ell \subset A$ we have $|A' \cap \ell| > |F|/2$. 
-Proceeding by double counting, \todo{split this into two steps}
+Proceeding by double counting, 
 \begin{align*}
-    |A| &\geq |A'|\geq \frac{1}{\mu} \sum_{p \in A'} \sum_{\ell \in A} \OO[p \in \ell] \\
-    &= \frac{1}{\mu} \sum_{\ell \in A} |A' \cap \ell| \gtrsim \frac{1}{\mu} |\FF|^{n-1}|\FF|\\
+    |A| &\geq |A'|\geq \frac{1}{\mu} \sum_{p \in A'} \sum_{\ell \subset A} \OO[p \in \ell] \\
+    &= \frac{1}{\mu} \sum_{\ell \subset A} |A' \cap \ell| \gtrsim \frac{1}{\mu} |\FF|^{n-1}|\FF|\\
     \implies |A| &\gtrsim \frac{|\FF|^n}{\mu}.
 \end{align*}
 Now optimising the two lower bounds by choosing $\mu \sim |\FF|^{\frac{n-2}{2}}$, so that in either of the above cases we obtain the bound
@@ -194,16 +194,17 @@ Now optimising the two lower bounds by choosing $\mu \sim |\FF|^{\frac{n-2}{2}}$
 \end{theorem}
 We shall prove this theorem via three surprisingly elementary lemmas. The general strategy of the proof is to assume the size of a Kakeya set $A$ is small and find a low-degree non-zero polynomial that interpolates (contains in its zero set) the points in $A$. We then show that due to the structure of the Kakeya set the polynomial's zero set must contain many more points. This contradicts the fact our polynomial is non-zero and of low-degree which  establishes the Kakeya Conjecture over finite fields.
 
-\todo{Check this. Waffle?}
-The first lemma is a fundamental one to the polynomial method, exploiting the flexible interpolation properties of polynomials. Consider the problem of finding a non-zero polynomial in $\RR[X,Y]$ of the minimal possible degree that vanishes at the points $(i, 2^i)$ for $1\leq i \leq 10^{6}$. 
+
+The first lemma is a fundamental one to the polynomial method, exploiting the flexible interpolation properties of polynomials. 
+Consider the problem of finding a non-zero polynomial in $\RR[X,Y,Z]$ of the minimal possible degree that vanishes at the points $(j,k, 2^{j^k})$ for $1\leq i \leq 10^{6}$. 
 If we try to find an explicit polynomial we may produce
 \begin{align*}
-    P_1(X,Y) &= \prod_{j=1}^{10^{6}} (X-j) 
+    P(X,Y,Z) &= \prod_{j,k=1}^{10^{6}} (X-j) (Y-k) 
     \intertext{or perhaps}
-    P_2(X,Y) &= \prod_{j=1}^{10^{6}} (Y-2^j).
+    Q(X,Y,Z) &= \prod_{j,k=1}^{10^{6}} (Z-2^{j^k}).
 \end{align*}
-Both $P_1$ and $P_2$ vanish on our points and it is difficult to explicitly produce a polynomial of much lower degree that also satisfies this property. Both $P_1$ and $P_2$ have a degree of $10^6$, and naively one might conjecture that the degree of any polynomial with this property is of the order of $10^6$. 
-Remarkably, the following lemma shows that we can find such a polynomial with a degree of at most $2000$.  Any polynomial in the space $\text{Poly}_{2000} (\RR^2)$ has over one million coefficients and the parameter counting argument exploits every one of them. As such the polynomial is quite difficult to explicitly write, but we can establish the existence of such a polynomial non-constructively.
+Both $P$ and $Q$ vanish on our points and it is difficult to explicitly produce a polynomial of much lower degree that also satisfies this property. $Q$ has a degree of $10^12$, and naively one might conjecture that the degree of any polynomial with this property is of the order of $10^12$. 
+Remarkably, the following lemma shows that we can find such a polynomial with a degree of about $\sim 18000$. This polynomial has roughly $18000^3$ coefficients and as such the polynomial is quite difficult to explicitly write, but we can establish the existence of such a polynomial non-constructively. \todo{come back to this}
 \begin{lemma}[Parameter Counting] 
 Let $\KK$ be a (not necessarily finite) field. If $A \subset \KK^n$ and $|A| < {{n+D} \choose {n}}$, there exists a non-zero polynomial $P(X_1,\dots, X_n)$ of degree at most $D$ that vanishes on $A$. \label{lem:paramcounting}
 \end{lemma}
@@ -275,7 +276,7 @@ $$
 |A| \gtrsim_n |\FF|^n.
 $$
 \end{proof}
-\todo{include this remark?}
+
 \begin{remark}
-    Theorem \ref{thm:Kakeya} lends a good degree of support for Conjectures \ref{conj:mink-kakeya} and \ref{conj:haus-kakeya} as it essentially rules out highly algebraic counter-examples.
+    Theorem \ref{thm:Kakeya} lends a good degree of support for Conjectures \ref{conj:mink-kakeya} and \ref{conj:haus-kakeya} as it essentially rules out purely algebraic counter-examples.
 \end{remark}

@@ -1,7 +1,7 @@
 \chapter{Szemerédi-Trotter Theorem \label{chap:trotter}}
 
 
-Incidence geometry is the study of possible intersection patterns \todo{change phrase to something} of simple geometric objects, such as lines or low degree curves. 
+Incidence geometry is the quantitive study of incidence relations between simple geometric objects, such as lines or low degree curves. 
 In this chapter we will study the application of the polynomial method to incidence geometry by proving a fundamental theorem in the field.
 We have already seen an incidence problem in the previous chapter on the Joints problem. 
 By developing the powerful tool of polynomial partitioning we shall see the key role that the topology of $\RR^n$ can play in such problems.
@@ -9,7 +9,7 @@ By developing the powerful tool of polynomial partitioning we shall see the key 
 
 The Szemerédi-Trotter theorem is a fundamental result in the field of incidence geometry, originally proved by an involved cell decomposition argument
 of Szemerédi and Trotter in \cite{szemeredi1983extremal} and later given a shorter proof using the crossing-number inequality by Székely in \cite{szekely1997crossing}. 
-\begin{theorem}[Szemerédi-Trotter]
+\begin{theorem}[Szemerédi-Trotter]     \label{thm:S-T}
     Let $\ES \subset\RR^2$ be a finite set of points and
     let $\LL$ be a finite set of lines in $\RR^2$. We define 
     \[I(\ES,\LL) = \{(p, \ell) \in \ES \times \LL \ | \ p \in \ell\}\] 
@@ -17,18 +17,17 @@ of Szemerédi and Trotter in \cite{szemeredi1983extremal} and later given a shor
    
     Then
     \[
-        |I(\ES, \LL)| \lesssim \left(|\ES||\LL|\right)^{2/3} + |\ES| + |\LL|
+        |I(\ES, \LL)| \lesssim \left(|\ES||\LL|\right)^{2/3} + |\ES| + |\LL|.
     \]
-    \label{thm:S-T}
 \end{theorem}
 
 \section{The Trivial Bounds}
-In planar geometry, we have the following dual statements: two points determine a line and every pair of lines intersect in at most one point. \todo{how to fix dual?}
+In planar geometry, we have the following dual statements: two points determine at least one line and every pair of lines intersect in at most one point.
 Using this we can prove the following bounds on $I(\ES,\LL)$:
 \begin{lemma}[Trivial Bounds]
     For a set of points $\ES$ and lines $\LL$ we have \label{thm:trivial-ST-bounds}
-    \[|I(\ES,\LL)| \leq |\ES|^2 + |\LL|. \]
-    \[|I(\ES,\LL)| \leq |\LL|^2 + |\ES|. \]
+   \begin{align*} |I(\ES,\LL)| &\leq |\ES|^2 + |\LL|, \intertext{and}
+    |I(\ES,\LL)| &\leq |\LL|^2 + |\ES|. \end{align*}
 \end{lemma}
 \begin{proof}
 
@@ -39,11 +38,14 @@ point on it. This would imply there are more that $|\ES|$ points, a contradictio
 
 Interchanging the roles of $\LL$ and $\ES$ achieves the other bound as two lines intersect in at most one point.
 \end{proof}
-
+By double counting we can achieve a slightly less trivial bound, which as we will see in the next section turns out to be tight in finite fields.
 \begin{lemma}[Double Counting Bounds]
-    $$|I(\ES,\LL)| \lesssim |\ES| |\LL|^{\frac{1}{2}} + |\LL|$$
-    and
-    $$|I(\ES,\LL)| \lesssim |\LL| |\ES|^{\frac{1}{2}} + |\ES|.$$ \label{lem:double-counting-st-bounds}
+For a set of points $\ES$ and lines $\LL$ we have \label{lem:double-counting-st-bounds}
+    \begin{align*}
+        |I(\ES,\LL)| &\lesssim |\ES| |\LL|^{\frac{1}{2}} + |\LL|, 
+        \intertext{and}
+        |I(\ES,\LL)| &\lesssim |\LL| |\ES|^{\frac{1}{2}} + |\ES|.
+    \end{align*}
 \end{lemma}
 \begin{proof}
 We bound the number of incidences using the Cauchy-Schwarz inequality followed by double counting.
@@ -83,7 +85,7 @@ First we examine two trivial examples that explain the necessity of the $|\ES| +
     \[  
         |I(\ES,\LL)| = |\LL| \sim 1 + |\LL| + |\LL|^{\frac23}.   
     \]
-    Consider the dual case \todo{dual?} where $|\LL| = 1$ and suppose all $|\ES|$ points in $\ES$ lie on $\LL$. Again we have
+    Consider the dual case where $|\LL| = 1$ and suppose all $|\ES|$ points in $\ES$ lie on $\LL$. Again we have
     \[
         |I(\ES,\LL)| = |\ES| \sim 1 + |\ES| + |\ES|^{\frac23}. 
     \]
@@ -151,7 +153,7 @@ The proof proceeds by constructively proving the Tucker Lemma, and then using th
 
 Let us now define some useful definitions going forward. 
 \begin{definition}[Bisection of a Set]
-A function $f :\RR^n \to \RR$ is said to bisect an open set $U$ with volume $\text{Vol}(U) < \infty$ if
+A function $f :\RR^n \to \RR$ is said to bisect an open set $U$ with volume\footnote{This is just the Lebesgue measure.} $\text{Vol}(U) < \infty$ if
 \[
     \text{Vol}\{x \in U \ | \ f(x) > 0 \} = \text{Vol}\{x \in U \ | \ f(x) < 0 \} = \frac{1}{2} \text{Vol}(U).
 \]
@@ -163,15 +165,14 @@ and
 \[
   |\{x \in S \ | \ f(x) < 0\}| \leq \frac{|S|}{2}.
 \]
-
 \end{definition}
 
 We now show that as a consequence of Theorem \ref{thm:Borsuk-Ulam}, it is always possible to find a non-zero continuous function that
-bisects every open set in a collection. \todo{check this}
+bisects every open set in a collection. 
 \begin{theorem}[General Ham Sandwich Theorem]
 Let V be a finite dimensional vector space of continuous functions $f:\RR^n \to \RR$ such that for any non-zero function $f$,
  $Z(f)$ has zero Lebesgue measure. 
-Let $U_1,U_2,\dots,U_N \subset \RR^n$ be finite volume \todo{measure vs vol? I use vol above} open sets with $N< \dim V$. 
+Let $U_1,U_2,\dots,U_N \subset \RR^n$ be finite volume open sets with $N< \dim V$. 
 
 Then there exists a non-zero function $f \in V$ that bisects each $U_i$. \label{thm:GenHamSand}
 \end{theorem}
@@ -185,7 +186,7 @@ Since $Z(f)$ has measure zero, it is easy to see that $\phi_i(f) = 0$ if and onl
 Notice also that $\phi_i(-f) = -\phi_i(f)$, hence $\phi_i$ is antipodal. 
 
 We now show each $\phi_i$ is continuous.
-It is enough to show that if $U$ is a finite volume\todo{is volume fine here?} open set, then the measure of $\{x\in U\ |\ f(x)>0\}$ depends continuously on $f\in V \backslash \{0\}$.
+It is enough to show that if $U$ is a finite volume open set, then the measure of $\{x\in U\ |\ f(x)>0\}$ depends continuously on $f\in V \backslash \{0\}$.
 
 Suppose $f_n \to f$ in $V$ for some $f,f_n \in V \backslash \{0\}$. $f_n$ converges to $f$ in the topology of $V$, 
 so it follows it must converge pointwise. Pick any $\varepsilon >0$. 
@@ -193,12 +194,16 @@ By Egorov's theorem, we can find a subset $E\subset U$ so that $f_n \to f$ unifo
 By hypothesis, $m(Z(f)) =0$ and $m(U) < \infty$. 
 Since the Lebesgue measure is continuous we can choose $\delta$ such that $m\left(\{x\in U\ \big |\ |f(x)|<\delta\}\right) < \varepsilon$.
 
-Now we choose $n$ sufficiently large that $|f_n (x) - f(x)| < \delta$ on $U\backslash E$. Then we have by the triangle inequality:
+Now we choose $n$ sufficiently large that $|f_n (x) - f(x)| < \delta$ on $U\backslash E$. Then we have
 \begin{align*}
-    |m&\left(\{x\in U \ |\ f_n(x)>0\}\right) - m\left(\{x\in U\ |\ f(x)>0\}\right)| \\
+    |m&\left(\{x\in U \ |\ f_n(x)>0\}\right) - m\left(\{x\in U\ |\ f(x)>0\}\right)|\\
     &\leq |m\left(\{x\in U\ |\ f_n(x)>0\}\right)| + |m\left(\{x\in U\ |\ f(x)>0\}\right)| \\
+    &= | m\left(\{x\in U \ |\ f_n(x)>0,  f> 0 \}\right)| + |m\left(\{x\in U \ |\ f_n(x)>0,  f< 0 \}\right)|   \\
+    & \quad - |m\left(\{x\in U \ |\  f> 0, f_n(x)>0 \}\right)| - |m\left(\{x\in U \ |\  f> 0, f_n(x)<0 \}\right) | \\
+    &= |m\left(\{x\in U \ |\ f_n(x)>0, f< 0\}\right)| - |m\left(\{x\in U\ |\ f(x)>0,  f_n<0\}\right)|
+    \intertext{These two remaining terms are symmetrical, so we only need bound one of them. We continue to bound}
     &< 2 \varepsilon. 
-\end{align*}\todo{proof is incorrect.}
+\end{align*}
 Since $\varepsilon$ was arbitrary each $\phi_i$ is continuous.
 
 We now combine each $\phi_i$ into the map $\phi : V\backslash \{0\} \to \RR^N$ by $\phi = (\phi_1, \dots, \phi_N)$.

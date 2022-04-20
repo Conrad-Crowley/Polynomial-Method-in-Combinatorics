@@ -51,7 +51,7 @@ Let $P$ be a non-zero polynomial that vanishes at every joint of $\LL$ and assum
 $nJ^{\frac{1}{n}}$. (To see this, set $D = \lfloor nJ^{\frac{1}{n}}\rfloor$ and then notice that $J < {{D+n}\choose {n}}$.)
 
 We proceed by contradiction. Assume every line contains more than $nJ^{\frac{1}{n}}$ joints.
- Now $P$ must vanish on every line in $\LL$ as the degree of $P$ is less than the number of joints contained in the line, which are the points of intersection between the line and $Z(P)$. \todo{check this was distracted}
+ Now $P$ must vanish on every line in $\LL$ as the degree of $P$ is less than the number of joints contained in the line, which are points of intersection between the line and $Z(P)$.
 
 We now examine the gradient of $P$ at each joint in $\LL$. We will need a fact about gradients for this, which we encapsulate in the following lemma for clarity.
 \begin{lemma}
@@ -83,8 +83,7 @@ $n J(L) ^{\frac{1}{n}}$ joints. By repeating this process, we get the chain of i
 &\vdots\\
     &\leq L \left[ n (J(L))^{\frac{1}{n}}\right].
     \intertext{Rearranging we have}
-    J(L)^ {\frac{n-1}{n}} &\lesssim_n L \\
-    J(L) &\lesssim_n L ^{\frac{n}{n-1}}.
+    J(L)^ {\frac{n-1}{n}} &\lesssim_n L \implies J(L) \lesssim_n L ^{\frac{n}{n-1}}.
 \end{align*}
 \end{proof}
-\todo{one less line in above proof?}
+
