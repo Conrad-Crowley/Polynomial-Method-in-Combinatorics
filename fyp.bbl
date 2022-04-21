@@ -1,4 +1,5 @@
-\begin{thebibliography}{CEGea90}
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{CEG{\etalchar{+}}90}
 
 \bibitem[Alo99]{alon1999combinatorial}
 Noga Alon.
@@ -12,8 +13,8 @@ Jean Bourgain.
   analysis.
 \newblock {\em Geom. Funct. Anal.}, 1(2):147--187, 1991.
 
-\bibitem[CEGea90]{chazelle1990counting}
-Bernard Chazelle, Herbert Edelsbrunner, Leonidas~J. Guibas, and et~al.
+\bibitem[CEG{\etalchar{+}}90]{chazelle1990counting}
+Bernard Chazelle, Herbert Edelsbrunner, Leonidas~J. Guibas, et~al.
 \newblock Counting and cutting cycles of lines and rods in space.
 \newblock In {\em 31st {A}nnual {S}ymposium on {F}oundations of {C}omputer
   {S}cience, {V}ol. {I}, {II} ({S}t. {L}ouis, {MO}, 1990)}, pages 242--251.
@@ -76,42 +77,47 @@ Ji\v{r}\'{\i} Matou\v{s}ek.
 \newblock Lectures on topological methods in combinatorics and geometry,
   Written in cooperation with Anders Bj\"{o}rner and G\"{u}nter M. Ziegler.
 
-\bibitem[mic10]{michalek2010}
-{\em The American Mathematical Monthly}, 117(9):821--823, Nov 2010.
+\bibitem[Mic10]{michalek2010}
+Mateusz Michalek.
+\newblock A short proof of combinatorial {N}ullstellensatz.
+\newblock {\em Amer. Math. Monthly}, 117(9):821--823, 2010.
 
 \bibitem[Pal20]{pal1920elementares}
-J~Pal.
-\newblock {\"u}ber ein elementares variationsproblem danske videnskab. selskab.
-\newblock {\em Math. Fys. Meddel}, 3(2):10--35, 1920.
+Julius Pal.
+\newblock {\"U}ber ein elementares variationsproblem, det kgl. danske
+  videnskab. selskab.
+\newblock {\em Math. Fys. Meddel}, 3(2):1--35, 1920.
 
-\bibitem[Qui09]{quilodran2009joints}
-René Quilodrán.
-\newblock The joints problem in rn, 2009.
+\bibitem[Qui10]{quilodran2009joints}
+Ren\'{e} Quilodr\'{a}n.
+\newblock The joints problem in {$\Bbb R^n$}.
+\newblock {\em SIAM J. Discrete Math.}, 23(4):2211--2213, 2009/10.
 
-\bibitem[Rud14]{Rudnev2014planepoints}
+\bibitem[Rud18]{Rudnev2014planepoints}
 Misha Rudnev.
 \newblock On the number of incidences between points and planes in three
-  dimensions, 2014.
+  dimensions.
+\newblock {\em Combinatorica}, 38(1):219--254, 2018.
 
 \bibitem[ST83]{szemeredi1983extremal}
-Endre Szemer{\'e}di and William~T. Trotter.
+Endre Szemer\'{e}di and William~T. Trotter, Jr.
 \newblock Extremal problems in discrete geometry.
-\newblock {\em Combinatorica}, 3(3):381--392, 1983.
+\newblock {\em Combinatorica}, 3(3-4):381--392, 1983.
 
 \bibitem[Sz{\'e}97]{szekely1997crossing}
-L{\'a}szl{\'o}~A Sz{\'e}kely.
-\newblock Crossing numbers and hard erd{\H{o}}s problems in discrete geometry.
-\newblock {\em Combinatorics, Probability and Computing}, 6(3):353--358, 1997.
+L{\'a}szl{\'o}~A. Sz{\'e}kely.
+\newblock Crossing numbers and hard {E}rd{\H o}s problems in discrete geometry.
+\newblock {\em Combin. Probab. Comput.}, 6(3):353--358, 1997.
 
 \bibitem[Wol95]{WOLFF1995}
 Thomas Wolff.
-\newblock An improved bound for kakeya type maximal functions.
-\newblock {\em Revista Matemática Iberoamericana}, 11(3):651--674, 1995.
+\newblock An improved bound for {K}akeya type maximal functions.
+\newblock {\em Rev. Mat. Iberoamericana}, 11(3):651--674, 1995.
 
 \bibitem[Wol99]{wolff1999recent}
 Thomas Wolff.
-\newblock Recent work connected with the kakeya problem.
-\newblock {\em Prospects in mathematics (Princeton, NJ, 1996)}, 2:129--162,
-  1999.
+\newblock Recent work connected with the {K}akeya problem.
+\newblock In {\em Prospects in mathematics ({P}rinceton, {NJ}, 1996)}, pages
+  129--162. Amer. Math. Soc., Providence, RI, 1999.
 
 \end{thebibliography}
