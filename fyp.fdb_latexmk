@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex fyp"] 1650522367 "fyp.aux" "fyp.bbl" "fyp" 1650522434
+["bibtex fyp"] 1650527007 "fyp.aux" "fyp.bbl" "fyp" 1650527010
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1640600964 23907 a5f93555796fb564b924339521f10a7c ""
-  "fyp.aux" 1650522433 20812 5a2ca7d71dda3c6e93f98f7c221664fb "pdflatex"
-  "fyp.bib" 1650299560 6804 275a02a05609238834f3e7da8fc6f928 ""
+  "fyp.aux" 1650527010 20167 18fb6cb98258cf5ff421ca5d6b55ba2d "pdflatex"
+  "fyp.bib" 1650527006 10085 3052906d262ed497c48f1d43b9daeeec ""
   (generated)
   "fyp.bbl"
   "fyp.blg"
-["makeindex fyp.idx"] 1650472314 "fyp.idx" "fyp.ind" "fyp" 1650522434
-  "fyp.idx" 1650522431 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex fyp.idx"] 1650524009 "fyp.idx" "fyp.ind" "fyp" 1650527010
+  "fyp.idx" 1650527008 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "fyp.ilg"
   "fyp.ind"
-["pdflatex"] 1650522430 "/home/conrad/deve/fyp-combo/fyp.tex" "fyp.pdf" "fyp" 1650522434
+["pdflatex"] 1650527007 "/home/conrad/deve/fyp-combo/fyp.tex" "fyp.pdf" "fyp" 1650527010
   "/home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk" 1646356189 7808 49d8366966125c2f42e831b5c61d917b ""
   "/home/conrad/deve/fyp-combo/fyp.tex" 1650301638 3719 0b4b300b78194a1aaded10e75c0a42f8 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1640600964 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -238,22 +238,22 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1640600964 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1641483608 4243317 6cd4c1d3b72728bfa7db8ef2e14c0430 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1641483600 2920114 c6ca520693a34e9ab79e50b53040a0ad ""
-  "chap/alon.tex" 1650522430 6733 05df04bf743cbd12bf2732d9c71c5f02 ""
+  "chap/alon.tex" 1650522949 6732 83bcf73c6db59661964c208272133efe ""
   "chap/appendix.tex" 1649873863 7414 6fece11e5fa67605a42c10920d39034e ""
   "chap/circle.tex" 1650446285 28508 8692095f7299ad98110fb86b8b4e0e4f ""
   "chap/intro.tex" 1650136716 4030 8d2cc34f1f4bbda34e478437053dfed4 ""
-  "chap/joints.tex" 1650464875 6323 8258836cf463f32b45fc15aee45b20a8 ""
+  "chap/joints.tex" 1650523174 6446 c322f4a96e5cc7676243fd447078979a ""
   "chap/kakeya.tex" 1650463883 19904 68f5aa7ce625b4c0fe890afea94a1c96 ""
   "chap/title.tex" 1646266902 928 110bfa4d51c88b6dca06acabfc815fd1 ""
-  "chap/trotter.tex" 1650472314 22440 7c651770c0349339488cb7d4ad78c943 ""
-  "fyp.aux" 1650522433 20812 5a2ca7d71dda3c6e93f98f7c221664fb "pdflatex"
-  "fyp.bbl" 1650522367 4251 bb775df0e244ac590e4b36570093176b "bibtex fyp"
-  "fyp.ind" 1650472314 0 d41d8cd98f00b204e9800998ecf8427e "makeindex fyp.idx"
-  "fyp.lof" 1650522433 731 d154f0f8dd6cdcd55b551cee38f4e901 "pdflatex"
-  "fyp.out" 1650522433 5121 e979f0978bba85652f20a747b5f8a1b6 "pdflatex"
+  "chap/trotter.tex" 1650525239 22879 2f278e9caae8a638a71cbb458c6c25f6 ""
+  "fyp.aux" 1650527010 20167 18fb6cb98258cf5ff421ca5d6b55ba2d "pdflatex"
+  "fyp.bbl" 1650527007 4263 27441ccea3edca08d8eab347364132b9 "bibtex fyp"
+  "fyp.ind" 1650524009 0 d41d8cd98f00b204e9800998ecf8427e "makeindex fyp.idx"
+  "fyp.lof" 1650527010 731 882259258e4e87db7be9c744a7419b1e "pdflatex"
+  "fyp.out" 1650527010 5121 c4862376ee1ced4313c62552206d624c "pdflatex"
   "fyp.tex" 1650301638 3719 0b4b300b78194a1aaded10e75c0a42f8 ""
-  "fyp.toc" 1650522433 2447 d5b78865578e41ab42bd3cdb8c5edf44 "pdflatex"
-  "images/STEX1_ManimCE_v0.15.1.png" 1650446400 60564 6ca0919c7aa4e1d2d114bd0403c1c82a ""
+  "fyp.toc" 1650527010 2447 bd1defb53ae9dd3f2d87611f350d706b "pdflatex"
+  "images/STEX1_ManimCE_v0.15.1.png" 1650525029 73313 293da6774db6aafef1e8ca1a9ae64159 ""
   "images/circles_degen_case_ManimCE_v0.15.1.png" 1649169311 99309 d49212cd056c40fd26c82ca193756989 ""
   "images/kakeya_ex_f32.png" 1634059698 14426 917f32e033fd5ec603800c609d1fedc4 ""
   "images/ucc.png" 1646266902 304950 441d27ca6478ae0af827a4d866060b25 ""

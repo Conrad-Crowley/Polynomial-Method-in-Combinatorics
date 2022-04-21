@@ -1,54 +1,53 @@
-\newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{MBZ{\etalchar{+}}03}
+\begin{thebibliography}{CEGea90}
 
 \bibitem[Alo99]{alon1999combinatorial}
 Noga Alon.
-\newblock Combinatorial nullstellensatz.
-\newblock {\em Combinatorics, Probability and Computing}, 8(1-2):7--29, 1999.
+\newblock Combinatorial {N}ullstellensatz.
+\newblock volume~8, pages 7--29. 1999.
+\newblock Recent trends in combinatorics (M\'{a}trah\'{a}za, 1995).
 
 \bibitem[Bou91]{BUSH1991}
-Jean Bourga'in.
-\newblock Besicovitch type maximal operators and applications to fourier
+Jean Bourgain.
+\newblock Besicovitch type maximal operators and applications to {F}ourier
   analysis.
-\newblock {\em Geometric \& Functional Analysis GAFA}, 1(2):147--187, 1991.
+\newblock {\em Geom. Funct. Anal.}, 1(2):147--187, 1991.
 
-\bibitem[CEG{\etalchar{+}}90]{chazelle1990counting}
-Bernard Chazelle, Herbert Edelsbrunner, Leonidas~J Guibas, Richard Pollack,
-  Raimund Seidel, Micha Sharir, and Jack Snoeyink.
+\bibitem[CEGea90]{chazelle1990counting}
+Bernard Chazelle, Herbert Edelsbrunner, Leonidas~J. Guibas, and et~al.
 \newblock Counting and cutting cycles of lines and rods in space.
-\newblock In {\em Proceedings [1990] 31st Annual Symposium on Foundations of
-  Computer Science}, pages 242--251. IEEE, 1990.
+\newblock In {\em 31st {A}nnual {S}ymposium on {F}oundations of {C}omputer
+  {S}cience, {V}ol. {I}, {II} ({S}t. {L}ouis, {MO}, 1990)}, pages 242--251.
+  IEEE Comput. Soc. Press, Los Alamitos, CA, 1990.
 
 \bibitem[Dav71]{davies1971some}
-Roy~O Davies.
-\newblock Some remarks on the kakeya problem.
-\newblock In {\em Mathematical Proceedings of the Cambridge Philosophical
-  Society}, volume 69-3, pages 417--421. Cambridge University Press, 1971.
+Roy~O. Davies.
+\newblock Some remarks on the {K}akeya problem.
+\newblock {\em Proc. Cambridge Philos. Soc.}, 69:417--421, 1971.
 
-\bibitem[Dvi08]{2008DVIR}
+\bibitem[Dvi09]{2008DVIR}
 Zeev Dvir.
-\newblock On the size of kakeya sets in finite fields.
-\newblock {\em Journal of the American Mathematical Society},
-  22(4):1093–1097, Jun 2008.
+\newblock On the size of {K}akeya sets in finite fields.
+\newblock {\em J. Amer. Math. Soc.}, 22(4):1093--1097, 2009.
 
 \bibitem[ESZ16]{ellenberg2016new}
 Jordan~S. Ellenberg, Jozsef Solymosi, and Joshua Zahl.
-\newblock New bounds on curve tangencies and orthogonalities, 2016.
+\newblock New bounds on curve tangencies and orthogonalities.
+\newblock {\em Discrete Anal.}, pages Paper No. 18, 22, 2016.
 
 \bibitem[FS05]{feldman2005improved}
 Sharona Feldman and Micha Sharir.
 \newblock An improved bound for joints in arrangements of lines in space.
-\newblock {\em Discrete \& Computational Geometry}, 33(2):307--320, 2005.
+\newblock {\em Discrete Comput. Geom.}, 33(2):307--320, 2005.
 
 \bibitem[FT81]{freund1981constructive}
-Robert~M Freund and Michael~J Todd.
-\newblock A constructive proof of tucker's combinatorial lemma.
-\newblock {\em Journal of Combinatorial Theory, Series A}, 30(3):321--325,
-  1981.
+Robert~M. Freund and Michael~J. Todd.
+\newblock A constructive proof of {T}ucker's combinatorial lemma.
+\newblock {\em J. Combin. Theory Ser. A}, 30(3):321--325, 1981.
 
-\bibitem[GK08]{guth2008algebraic}
+\bibitem[GK10]{guth2008algebraic}
 Larry Guth and Nets~Hawk Katz.
-\newblock Algebraic methods in discrete analogs of the kakeya problem, 2008.
+\newblock Algebraic methods in discrete analogs of the {K}akeya problem.
+\newblock {\em Adv. Math.}, 225(5):2828--2839, 2010.
 
 \bibitem[Gow20]{GOW2020}
 Timothy Gowers.
@@ -57,24 +56,25 @@ Timothy Gowers.
 \bibitem[Gut15]{guth2015polypartvar}
 Larry Guth.
 \newblock Polynomial partitioning for a set of varieties.
-\newblock In {\em Mathematical Proceedings of the Cambridge Philosophical
-  Society}, volume 159, pages 459--469. Cambridge University Press, 2015.
+\newblock {\em Math. Proc. Cambridge Philos. Soc.}, 159(3):459--469, 2015.
 
 \bibitem[Gut16]{GUTH2016}
-L.~Guth.
-\newblock {\em Polynomial Methods in Combinatorics}.
-\newblock University Lecture Series. American Mathematical Society, 2016.
+Larry Guth.
+\newblock {\em Polynomial methods in combinatorics}, volume~64 of {\em
+  University Lecture Series}.
+\newblock American Mathematical Society, Providence, RI, 2016.
 
-\bibitem[KSS09]{kaplan2009lines}
+\bibitem[KSS10]{kaplan2009lines}
 Haim Kaplan, Micha Sharir, and Eugenii Shustin.
-\newblock On lines and joints, 2009.
+\newblock On lines and joints.
+\newblock {\em Discrete Comput. Geom.}, 44(4):838--843, 2010.
 
-\bibitem[MBZ{\etalchar{+}}03]{matouvsek2003using}
-Ji{\v{r}}{\'\i} Matou{\v{s}}ek, Anders Bj{\"o}rner, G{\"u}nter~M Ziegler,
-  et~al.
-\newblock {\em Using the Borsuk-Ulam theorem: lectures on topological methods
-  in combinatorics and geometry}.
-\newblock Springer, 2003.
+\bibitem[Mat03]{matouvsek2003using}
+Ji\v{r}\'{\i} Matou\v{s}ek.
+\newblock {\em Using the {B}orsuk-{U}lam theorem}.
+\newblock Universitext. Springer-Verlag, Berlin, 2003.
+\newblock Lectures on topological methods in combinatorics and geometry,
+  Written in cooperation with Anders Bj\"{o}rner and G\"{u}nter M. Ziegler.
 
 \bibitem[mic10]{michalek2010}
 {\em The American Mathematical Monthly}, 117(9):821--823, Nov 2010.

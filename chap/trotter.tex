@@ -52,14 +52,20 @@ We bound the number of incidences using the Cauchy-Schwarz inequality followed b
 
 \begin{align*}
     |I(\ES,\LL)|^2 &= \left( \sum_{\ell \in \LL} \sum_{p \in \ES} \OO[p\in \ell] \right)^2
-    \intertext{Applying the Cauchy-Schwarz on $\LL$ we attain}
-    & \leq |\LL|\cdot \sum_{\ell \in \LL} \left( \sum_{p \in \ES} \OO[p\in \ell] \right)^2 \\
+    \intertext{Applying the Cauchy-Schwarz inequality on the collection $\LL$ we attain}
+    & \leq |\LL| \cdot \sum_{\ell \in \LL} \left( \sum_{p \in \ES} \OO[p\in \ell] \right)^2 \\
     &= |\LL|\cdot \sum_{p_1,p_2 \in \ES} \sum_{\ell \in \LL}   \OO[p_1\in \ell] \OO[p_2\in \ell]    \\
-    & \leq |\LL|\cdot ( |I(\ES,\LL)| + |\ES|^2)\\ 
-    &\leq |\LL|^2 + 2|\LL|\cdot |\ES|^2 \qquad \text{ (Using Lemma \ref{thm:trivial-ST-bounds}) }\\ 
-\end{align*}    \todo{extra step needed here - split up sum and do triple thing}
+    &=|\LL|\left( \sum_{p_1=p_2 \in \ES} \sum_{\ell \in \LL}   \OO[p_1\in \ell] \OO[p_2\in \ell] \right. \\
+    &\left. \qquad + \sum_{p_1\neq p_2 \in \ES} \sum_{\ell \in \LL}   \OO[p_1\in \ell] \OO[p_2\in \ell]\right). 
+\end{align*} 
+\begin{align*}
+    \intertext{The diagonal terms above give a contribution of $|I(\ES,\LL)|$ by definition. The off diagonal terms can be trivially bounded by $|\ES|^2$. Hence}
+    |I(\ES,\LL)|^2 & \leq |\LL| ( |I(\ES,\LL)| + |\ES|^2).
+    \intertext{Using Lemma \ref{thm:trivial-ST-bounds} to bound the $|I(\ES,\LL)|$ term we achieve}
+    |I(\ES,\LL)|^2 &\leq |\LL|^2 + 2|\LL| |\ES|^2. \\ 
+\end{align*}   
 This implies
-$$I(\ES,\LL) \lesssim |\ES|\cdot |\LL|^{\frac{1}{2}} + |\LL|.$$ 
+$$I(\ES,\LL) \lesssim |\ES||\LL|^{\frac{1}{2}} + |\LL|.$$ 
 Repeating the above proof interchanging the roles $\ES$ and $\LL$ achieves the other bound.
 \end{proof}
 
@@ -102,7 +108,7 @@ The next two examples deal with the more general case, where the $(|\ES||\LL|)^{
 \end{example}
 \begin{figure}[h]
     \centering 
-    \includegraphics[width=0.8\textwidth]{images/STEX1_ManimCE_v0.15.1.png}
+    \includegraphics[width=\textwidth]{images/STEX1_ManimCE_v0.15.1.png}
     \caption{Example \ref{ex:ST-1} in the case $N=3$. (with the $x,y$ axis reversed)}
 \end{figure}
 
@@ -153,7 +159,7 @@ The proof proceeds by constructively proving the Tucker Lemma, and then using th
 
 Let us now define some useful definitions going forward. 
 \begin{definition}[Bisection of a Set]
-A function $f :\RR^n \to \RR$ is said to bisect an open set $U$ with volume\footnote{This is just the Lebesgue measure.} $\text{Vol}(U) < \infty$ if
+A function $f :\RR^n \to \RR$ is said to bisect an open set $U$ with volume\footnote{Volume is given by the Lebesgue measure.} $\text{Vol}(U) < \infty$ if
 \[
     \text{Vol}\{x \in U \ | \ f(x) > 0 \} = \text{Vol}\{x \in U \ | \ f(x) < 0 \} = \frac{1}{2} \text{Vol}(U).
 \]
@@ -201,7 +207,7 @@ Now we choose $n$ sufficiently large that $|f_n (x) - f(x)| < \delta$ on $U\back
     &= | m\left(\{x\in U \ |\ f_n(x)>0,  f> 0 \}\right)| + |m\left(\{x\in U \ |\ f_n(x)>0,  f< 0 \}\right)|   \\
     & \quad - |m\left(\{x\in U \ |\  f> 0, f_n(x)>0 \}\right)| - |m\left(\{x\in U \ |\  f> 0, f_n(x)<0 \}\right) | \\
     &= |m\left(\{x\in U \ |\ f_n(x)>0, f< 0\}\right)| - |m\left(\{x\in U\ |\ f(x)>0,  f_n<0\}\right)|
-    \intertext{These two remaining terms are symmetrical, so we only need bound one of them. We continue to bound}
+    \intertext{These two remaining terms are symmetrical, so we only need to bound one of them. We proceed by  to bound}
     &< 2 \varepsilon. 
 \end{align*}
 Since $\varepsilon$ was arbitrary each $\phi_i$ is continuous.

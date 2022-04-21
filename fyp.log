@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  21 APR 2022 07:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  21 APR 2022 08:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -826,7 +826,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 ...ine {chapter}{References}{39}{chapter*.43}
+l.27 ...ine {chapter}{References}{39}{chapter*.41}
                                                   % [1
 
 
@@ -903,23 +903,19 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Chapter 5.
 [18
 
-] [19]
-<images/STEX1_ManimCE_v0.15.1.png, id=413, 1927.2pt x 1084.05pt>
+] [19] [20]
+<images/STEX1_ManimCE_v0.15.1.png, id=412, 1927.2pt x 1084.05pt>
 File: images/STEX1_ManimCE_v0.15.1.png Graphic file (type png)
 <use images/STEX1_ManimCE_v0.15.1.png>
-Package pdftex.def Info: images/STEX1_ManimCE_v0.15.1.png  used on input line 105.
-(pdftex.def)             Requested size: 341.43437pt x 192.0439pt.
+Package pdftex.def Info: images/STEX1_ManimCE_v0.15.1.png  used on input line 111.
+(pdftex.def)             Requested size: 426.79135pt x 240.06316pt.
+ [21 <./images/STEX1_ManimCE_v0.15.1.png>] [22] [23]
 
+LaTeX Warning: Marginpar on page 24 moved.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[20] [21 <./images/STEX1_ManimCE_v0.15.1.png>] [22]
-
-LaTeX Warning: Marginpar on page 23 moved.
-
-[23] [24] [25] [26]) (./chap/circle.tex [27]
+[24] [25] [26]) (./chap/circle.tex [27]
 Chapter 6.
-<images/circles_degen_case_ManimCE_v0.15.1.png, id=492, 2569.6pt x 1445.4pt>
+<images/circles_degen_case_ManimCE_v0.15.1.png, id=485, 2569.6pt x 1445.4pt>
 File: images/circles_degen_case_ManimCE_v0.15.1.png Graphic file (type png)
 <use images/circles_degen_case_ManimCE_v0.15.1.png>
 Package pdftex.def Info: images/circles_degen_case_ManimCE_v0.15.1.png  used on input line 27.
@@ -999,23 +995,23 @@ Appendix B.
 
 ] [42]) [43] (./fyp.aux)
 Package rerunfilecheck Info: File `fyp.out' has not changed.
-(rerunfilecheck)             Checksum: E979F0978BBA85652F20A747B5F8A1B6;5121.
+(rerunfilecheck)             Checksum: C4862376EE1CED4313C62552206D624C;5121.
  ) 
 Here is how much of TeX's memory you used:
- 29846 strings out of 478353
- 568654 string characters out of 5854636
- 882180 words of memory out of 5000000
- 47234 multiletter control sequences out of 15000+600000
+ 29827 strings out of 478353
+ 568238 string characters out of 5854636
+ 880911 words of memory out of 5000000
+ 47217 multiletter control sequences out of 15000+600000
  419061 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,17n,89p,829b,1121s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on fyp.pdf (47 pages, 707563 bytes).
+Output written on fyp.pdf (47 pages, 710202 bytes).
 PDF statistics:
- 776 PDF objects out of 1000 (max. 8388607)
- 663 compressed objects within 7 object streams
- 204 named destinations out of 1000 (max. 500000)
+ 769 PDF objects out of 1000 (max. 8388607)
+ 662 compressed objects within 7 object streams
+ 202 named destinations out of 1000 (max. 500000)
  273 words of extra memory for PDF output out of 10000 (max. 10000000)
 
