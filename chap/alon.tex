@@ -70,17 +70,16 @@ To showcase the usefulness of the Combinatorial Nullstellensatz, we shall prove 
     must exist some $(a,b) \in A \times B$ such that $f(a,b) \neq 0$, a contradiction.
 \end{proof}
 
-The Cauchy-Davenport Theorem (Theorem \ref{thm:C-D}) is indeed tight as illustrated by the following two examples.
+The Cauchy-Davenport Theorem (Theorem \ref{thm:C-D}) is indeed tight as illustrated by the following example.
 
 \begin{example}
     Fix $b \in \ZZ_p$ and consider the subsets of $\ZZ_p$ given by
     \begin{align*}
         A &= \{t b \ | \ 1\leq t \leq m \},\\
         B &= \{t' b \ | \ 1\leq t' \leq n \}.
-        \intertext{Then we have}
-        A+B &= \{(t-t') b \ | \ 1\leq t \leq m, \ 1\leq t' \leq m \}
-        \intertext{ which produces ea}
-        |A+B| &= m + n -1 = |A| + |B| -1
+        \intertext{Notice that $|A|=m$ and $|B| = n$. Their sumset is given by}
+        A+B &= \{(t+t') b \ | \ 1\leq t \leq m, \ 1\leq t' \leq m \}.
+        \intertext{ The $(t+t')$ term takes on every value between 2 and $m+n$ at least once. Hence}
+        |A+B| &= m + n -1 = |A| + |B| -1.
     \end{align*}
-\end{example} \todo{fix example}
-Choosing $A$ and $B$ to be singletons, $|A+B| =1$, achieving the bound.
+\end{example} 
