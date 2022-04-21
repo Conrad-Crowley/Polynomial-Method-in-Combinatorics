@@ -203,8 +203,11 @@ If we try to find an explicit polynomial we may produce
     \intertext{or perhaps}
     Q(X,Y,Z) &= \prod_{j,k=1}^{10^{6}} (Z-2^{j^k}).
 \end{align*}
-Both $P$ and $Q$ vanish on our points and it is difficult to explicitly produce a polynomial of much lower degree that also satisfies this property. $Q$ has a degree of $10^12$, and naively one might conjecture that the degree of any polynomial with this property is of the order of $10^12$. 
-Remarkably, the following lemma shows that we can find such a polynomial with a degree of about $\sim 18000$. This polynomial has roughly $18000^3$ coefficients and as such the polynomial is quite difficult to explicitly write, but we can establish the existence of such a polynomial non-constructively. \todo{come back to this}
+Both $P$ and $Q$ vanish on our points and it is difficult to explicitly produce a polynomial of much lower degree that also satisfies this property.
+One might consider taking the product of linear factors in $\RR[X,Y,Z]$, constructing the polynomial to vanish on sets of planes defined by three points in the collection.
+Such a polynomial has a degree of $\lceil \frac{1}{3} 10^{12}\rceil $, which is slight improvement on 
+$Q$ which has a degree of $10^{12}$. Naively one might conjecture that the degree of any polynomial with this property is of the order of $10^{12}$. 
+Remarkably, the following lemma shows that we can find such a polynomial with a degree of about $\sim 18000$. This polynomial has roughly $\sim 18000^3$ coefficients and as such the polynomial is quite difficult to explicitly write, but we can establish the existence of such a polynomial non-constructively. \todo{come back to this}
 \begin{lemma}[Parameter Counting] 
 Let $\KK$ be a (not necessarily finite) field. If $A \subset \KK^n$ and $|A| < {{n+D} \choose {n}}$, there exists a non-zero polynomial $P(X_1,\dots, X_n)$ of degree at most $D$ that vanishes on $A$. \label{lem:paramcounting}
 \end{lemma}
