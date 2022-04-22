@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex fyp"] 1650634543 "fyp.aux" "fyp.bbl" "fyp" 1650634607
+["bibtex fyp"] 1650647563 "fyp.aux" "fyp.bbl" "fyp" 1650647610
   "/usr/share/texmf-dist/bibtex/bst/base/alpha.bst" 1640600964 23907 a5f93555796fb564b924339521f10a7c ""
-  "fyp.aux" 1650634606 15763 535c5f0bf856ebfc83f326a1fa4f0a12 "pdflatex"
+  "fyp.aux" 1650647610 15784 7ac2a7a25e7f25148d6d9c6f52efa620 "pdflatex"
   "fyp.bib" 1650576912 13136 8f9837cc293cd6c1835d3e842895d91f ""
   (generated)
   "fyp.bbl"
   "fyp.blg"
-["makeindex fyp.idx"] 1650618285 "fyp.idx" "fyp.ind" "fyp" 1650634607
-  "fyp.idx" 1650634604 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex fyp.idx"] 1650647414 "fyp.idx" "fyp.ind" "fyp" 1650647610
+  "fyp.idx" 1650647607 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "fyp.ilg"
   "fyp.ind"
-["pdflatex"] 1650634603 "/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex" "fyp.pdf" "fyp" 1650634607
+["pdflatex"] 1650647606 "/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex" "fyp.pdf" "fyp" 1650647610
   "/home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk" 1646225646 7808 02bbf091c98b2158c684d721941b3dbe ""
   "/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex" 1650479568 3719 0b4b300b78194a1aaded10e75c0a42f8 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1640600964 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -240,21 +240,21 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1640600964 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1645285067 4243317 6cd4c1d3b72728bfa7db8ef2e14c0430 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1645285026 2920107 e3ac758adfae0b7fb31b54fc2d3b03c4 ""
-  "chap/alon.tex" 1650573273 6732 83bcf73c6db59661964c208272133efe ""
+  "chap/alon.tex" 1650645678 6718 8e227e262f2052af3e10a4587a331978 ""
   "chap/appendix.tex" 1649887205 7414 6fece11e5fa67605a42c10920d39034e ""
-  "chap/circle.tex" 1650618491 28798 fc4b4162da4c17b3d6520f3a8d7040d7 ""
+  "chap/circle.tex" 1650647604 28907 1c99abfa0d33de637296590538b0d7dc ""
   "chap/intro.tex" 1650109822 4030 8d2cc34f1f4bbda34e478437053dfed4 ""
-  "chap/joints.tex" 1650573273 6446 c322f4a96e5cc7676243fd447078979a ""
-  "chap/kakeya.tex" 1650573273 20190 15f93ece9dc69e4a88cac3312af93c2d ""
+  "chap/joints.tex" 1650645844 6475 5eb47900ca0beb657f453a8acb23e22a ""
+  "chap/kakeya.tex" 1650646271 20565 af0f1ecac962508d0627a99b961dc0c6 ""
   "chap/title.tex" 1646230316 928 110bfa4d51c88b6dca06acabfc815fd1 ""
-  "chap/trotter.tex" 1650634602 22892 24c60715abc01ae81aba7cfb12c20b5a ""
-  "fyp.aux" 1650634606 15763 535c5f0bf856ebfc83f326a1fa4f0a12 "pdflatex"
-  "fyp.bbl" 1650634543 5065 3c73f607f80d42778a024e406830b1ff "bibtex fyp"
-  "fyp.ind" 1650618285 0 d41d8cd98f00b204e9800998ecf8427e "makeindex fyp.idx"
-  "fyp.lof" 1650634606 954 3f32f0bc370950f9b270e8ca34f0affe "pdflatex"
-  "fyp.out" 1650634606 5020 4ccca098026e67c367a1f605d53f9d43 "pdflatex"
+  "chap/trotter.tex" 1650646241 23010 bbe677a9b060f4b59c0467edb3253f2a ""
+  "fyp.aux" 1650647610 15784 7ac2a7a25e7f25148d6d9c6f52efa620 "pdflatex"
+  "fyp.bbl" 1650647563 5065 3c73f607f80d42778a024e406830b1ff "bibtex fyp"
+  "fyp.ind" 1650647414 0 d41d8cd98f00b204e9800998ecf8427e "makeindex fyp.idx"
+  "fyp.lof" 1650647610 954 3f32f0bc370950f9b270e8ca34f0affe "pdflatex"
+  "fyp.out" 1650647610 5020 4ccca098026e67c367a1f605d53f9d43 "pdflatex"
   "fyp.tex" 1650479568 3719 0b4b300b78194a1aaded10e75c0a42f8 ""
-  "fyp.toc" 1650634606 2428 849e8e25828958210f36de47fac27124 "pdflatex"
+  "fyp.toc" 1650647610 2428 e2edc8f9e0db5f2cfa3ecf7a236ef5f7 "pdflatex"
   "images/STEX1_ManimCE_v0.15.1.png" 1650573273 73313 293da6774db6aafef1e8ca1a9ae64159 ""
   "images/circles_degen_case_ManimCE_v0.15.1.png" 1649346026 99309 d49212cd056c40fd26c82ca193756989 ""
   "images/degenr3.png" 1650618147 184065 6150374a41cf8056fc2920cf56f55520 ""

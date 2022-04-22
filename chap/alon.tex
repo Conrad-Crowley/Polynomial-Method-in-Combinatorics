@@ -25,9 +25,9 @@ As a consequence of this if we have a set of $D+1$ elements they cannot all be r
     Suppose that $P$ satisfies the assumptions of the theorem but $P(x) = 0$ for every $x \in A_1 \times \dots \times A_n$.
     Without loss of generality $k_1 > 0.$ Fixing $a\in A_1$ we can write
     \begin{align}
-        P = (x_1-a)Q +R \label{eq:alon-fact}
+        P = (X_1-a)Q +R \label{eq:alon-fact}
     \end{align}
-    by the usual long division of polynomials. The degree of $R$ in $x_1$ must be strictly less than $\deg(X_1-a)$, so $R$ is independent of $X_1$. Thus it follows that $Q$ must have a monomial with non-zero coefficient of the form $X_1^{k_{1} -1} X_2^{k_2} \dots X_n^{k_n}$ and 
+    by the usual long division of polynomials. The degree of $R$ in $X_1$ must be strictly less than $\deg(X_1-a)$, so $R$ is independent of $X_1$. Thus it follows that $Q$ must have a monomial with non-zero coefficient of the form $X_1^{k_{1} -1} X_2^{k_2} \dots X_n^{k_n}$ and 
     $\deg (Q) = D-1$.
 
     Take any $x \in \{a\} \times A_2 \times \dots \times A_n$ and evaluate $(\ref{eq:alon-fact})$. Since $P(x) = 0$ it follows that $R(x) = 0$. Hence $R$ vanishes identically on the slice $\{a\} \times A_2 \times \dots \times A_n$. Since $R$ is independent of $X_1$ it must also vanish identically on $A_1 \times A_2 \times \dots \times A_n$.
@@ -36,12 +36,12 @@ As a consequence of this if we have a set of $D+1$ elements they cannot all be r
 \section{Proof of Cauchy-Davenport Theorem}
 To showcase the usefulness of the Combinatorial Nullstellensatz, we shall prove a classical result in Additive Combinatorics. 
 \begin{theorem} [Cauchy-Davenport Theorem] \label{thm:C-D}
-    Let $A,B$ be non-empty subsets of $\ZZ_p$ for some $p$ prime. Define their sumset $A+B$ as follows:
+    Let $A,B$ be non-empty subsets of $\ZZ_p$ for some prime $p$. Define their sumset $A+B$ as 
     \[
     A + B = 
     \left\{ x \in \ZZ_p\ | \ x = a+b \text{  for some } a\in A, \ b \in B \right\}.
     \]
-    Then we have:
+    Then we have
     \[
     |A+B| \geq  \min \left\{p, |A| + |B| -1 \right\}.
     \]
@@ -51,10 +51,9 @@ To showcase the usefulness of the Combinatorial Nullstellensatz, we shall prove 
     Let us tackle the two cases separately. First, assume that $\min \left\{p, |A| + |B| -1 \right\} = p$.
     Then if $|A| + |B| > p$, $A$ and $B$ must intersect by the pigeonhole principle.
     For any $g \in \ZZ_p$ denote the set  $\left\{ g - x  \ | \ x \in B \  \right\} \subset \ZZ_p$ as $g-B$. Since $|g-B| = |B|$, we have that 
-    $g-B$ and $A$ must intersect as well. Thus there exists some $a \in A$, $b \in B$ such that: 
+    $g-B$ and $A$ must intersect as well. Thus there exists some $a \in A$, $b \in B$ such that
     \begin{align*}
-        g& -b = a \\
-        g& = a+b.
+        g& -b = a \implies g = a+b.
     \end{align*}
     Our choice of $g$ was arbitrary, so it follows that $A+B = \ZZ_p$ and hence $|A+B| = p$.
 
@@ -65,7 +64,7 @@ To showcase the usefulness of the Combinatorial Nullstellensatz, we shall prove 
     \]
     Since $A+B \subset C$, $f(a,b) =0$ for all $(a,b) \in A\times B$. Further, the degree of $f$ is $\deg f = |C| = |A| + |B| -2$. 
     We can now appeal to the \hyperref[thm:comb-nullstellensatz]{Combinatorial Nullstellensatz} to yield a contradiction. Let $k_1 = |A| -1$, and $k_2 = |B|-1$. 
-    Now $\deg f = k_1 + k_2$, and the coefficient of $x^{k_1}y^{k_2}$ is
+    Now $\deg f = k_1 + k_2$, and the coefficient of $X^{k_1}Y^{k_2}$ is
     ${|A|+|B| - 2} \choose {|A|- 1}$, which is non-zero in $\ZZ_p$ as the binomial coefficient is not divisible by $p$ if all its factors are less than $p$. Applying Theorem \ref{thm:comb-nullstellensatz} we see that there 
     must exist some $(a,b) \in A \times B$ such that $f(a,b) \neq 0$, a contradiction.
 \end{proof}

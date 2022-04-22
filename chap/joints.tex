@@ -10,7 +10,7 @@ This upper bound exponent has fallen gradually throughout the years, the best re
 proof uses an array of tools from combinatorial geometry, including forbidden subgraphs in extremal graph theory, space decomposition techniques, and some results from the geometry of lines in space.
 
 \section{Examples}
-We shall begin by examining an example based on a grid, in order to gain better intuition about the problem and formulating a conjecture. 
+We shall begin by examining an example based on a grid, in order to gain better intuition about the problem and to formulate a conjecture. 
 \begin{example}Consider an $N \times N \times N$ regular grid of integer coordinates in $\RR^3$. We shall give a collection of lines such that each point of this grid is a joint for the collection.
 Let $\LL$ be the collection of all lines parallel to any of the Cartesian axes that intersect a point in this grid.
 For each horizontal $N \times N$ layer, there are $N+N = 2N$ such lines that intersect our grid. 
@@ -32,9 +32,9 @@ of the above example. Each additional dimension increases the number of lines by
 Thus we can see that $\sim N^{n-1}$ lines form $N^n$ joints in this manner. So the number of joints is $\sim |\LL|^{\frac{n}{n-1}}$.
 \end{example}
 
-It turns out that the examples illustrated above provide asymptotically maximal configurations, that is, disregarding the best constant $C$ such that $J(L) \leq CL^{\frac{n}{n-1}}$.
+It turns out that the examples illustrated above provide asymptotically maximal configurations, that is, the best configurations disregarding the best constant $C$ such that $J(L) \leq CL^{\frac{n}{n-1}}$.
 \section{Solution of the Joints Problem}
-This solution was first produced by Guth-Katz for the three-dimensional case in\cite{guth2008algebraic} and later extended to the general case by Quilodrán in \cite{quilodran2009joints} and independently at the same time by 
+This solution was first produced by Guth-Katz for the three-dimensional case in \cite{guth2008algebraic} and later extended to the general case by Quilodrán in \cite{quilodran2009joints} and independently at the same time by 
 Kaplan-Sharir-Shustin in \cite{kaplan2009lines}.  
 
 
@@ -59,9 +59,9 @@ We now examine the gradient of $P$ at each joint in $\LL$. We will need a fact a
 \end{lemma}
 \begin{proof}
     The joint $x$ is contained in $n$ non-coplanar lines $l_1, \dots, l_n$ with directions $v_1, \dots , v_n$ respectively. 
-    Now consider the directional derivative for a particular $v_i$:
+    Now consider the directional derivative for a particular $v_i$
     \[
-    \frac{\partial F}{\partial v_i} = \lim_{t \to 0} \frac{ \overbrace{F(x+ tv_i)}^{F \equiv 0 \text{ on a line in $\LL$}} - \overbrace{F(x)}^{F \equiv 0 \text{ on joints}}}{t} = \frac{0}{t} = 0.    
+    \frac{\partial F}{\partial v_i} (x) = \lim_{t \to 0} \frac{ \overbrace{F(x+ tv_i)}^{F \equiv 0 \text{ on a line in $\LL$}} - \overbrace{F(x)}^{F \equiv 0 \text{ on joints}}}{t} = \frac{0}{t} = 0.    
     \]
     Notice that $ \frac{\partial F}{\partial v_i} = \langle \nabla F, v_i\rangle$ so since we have this for each $v_i$, and the set of $v_i$'s form a basis of $\RR^n$ we have that $\nabla F(x) = 0$.
 \end{proof}

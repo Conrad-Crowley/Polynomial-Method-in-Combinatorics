@@ -5,7 +5,7 @@ Work on the Kakeya problem can be traced back to the Russian mathematician Abram
 However, 1917 was a turbulent year as it marked the end of
 the Russian Empire and the start of the Russian civil war. Due to this and the ensuing blockade of Russian ports there was scarce communication with the outside world.
 Thus Besicovitch could not have known of a Japanese mathematician Kakeya who asked also in 1917 a related question: What is the smallest area of a convex set within which
-one can rotate a needle by 180 degrees in the plane? Julius Pal answered this question in 1921 with the equilateral triangle.\cite{pal1920elementares} The 
+one can rotate a needle by 180 degrees in the plane? Julius Pal answered this question in 1921 with the equilateral triangle in \cite{pal1920elementares}. The 
 more interesting problem obtained by dropping the convexity condition remained open. In 1924, after leaving the newly formed Soviet Union for Copenhagen, Besicovitch discovered this
 problem and by modifying his previous construction produced a solution in 1925. This lead to the more general questions being asked about Kakeya sets in higher dimensions.
 \begin{definition}[Kakeya Set in $\RR^n$]
@@ -13,19 +13,19 @@ problem and by modifying his previous construction produced a solution in 1925. 
 \end{definition}
 Besicovitch's construction showed that these sets can have arbitrarily small measures, even attaining zero, in $\RR^2$. Further, a straightforward process allows to extend the construction of these measure-zero sets to the case of arbitrary dimension.
 
-Given that kakeya sets can have measure zero, the natural question then arises, are Kakeya sets fractal in Nature? This leads one to consider the dimension of Kakeya sets as a quantification of their fractal nature. There are many notions of dimensions that can be investigated, but we restrict ourselves to the Minkowski and Hausdorff dimensions.
+Given that Kakeya sets can have measure zero, the natural question then arises, are Kakeya sets fractal in nature? This leads one to consider the dimension of Kakeya sets as a quantification of their fractal nature. There are many notions of dimensions that can be investigated, but we restrict ourselves to the Minkowski and Hausdorff dimensions.
 
 \begin{definition}[Minkowski Dimension]
 Given a set $S \subset \RR^n$, define $N(\varepsilon)$ to be the number of cubes of side length $\varepsilon$ required to cover the set.
-The \textbf{Minkowski Dimension} of the set $S$ is then defined as:
+The \textbf{Minkowski Dimension} of the set $S$ is then defined as
 $$\dim_M (S) = \lim_{\varepsilon \to 0} \frac{\log( N(\varepsilon))}{\log (1/\varepsilon)}.$$
 If this limit does not exist, one can still define the upper and lower Minkowski dimensions, 
 $\dim_{M_{\text{upper}}}$ and $\dim_{M_{\text{lower}}}$, by taking the limit superior and limit inferior respectively.
 \end{definition}
 \begin{definition}[Hausdorff Dimension]
-    We define the $d$-dimensional Hausdorff measure of a set $S \subset \RR^n$ as: 
+    We define the $d$-dimensional Hausdorff measure of a set $S \subset \RR^n$ as
     $$\mathcal{H}^d(S)=\lim_{r \to 0} \inf \left\{\sum_i r_i^d:\text{ there is a countable cover of } S\text{ by balls with radii } 0 < r_i < r\right\}.$$
-    Then we can define the \textbf{Hausdorff dimension} of the set $S$ to be:
+    Then we can define the \textbf{Hausdorff dimension} of the set $S$ to be
     $$\dim_H (S) = \inf \{ d \geq 0 : \mathcal{H}^d(S) = 0 \}.   $$
 \end{definition}
 These dimensions are related by the following inequality when they are all defined:
@@ -39,13 +39,13 @@ This resulted in the following conjectures:
 \begin{conjecture}[Kakeya Conjecture for the Hausdorff Dimension]
     Let $A$ be a Kakeya set in $\RR^n$. Then $\dim_H (A) = n$. \label{conj:haus-kakeya}
 \end{conjecture}
-In a survey on the problem, (see \cite{wolff1999recent}) Wolff proposed a finite analogue to the Kakeya Conjecture.
+In a survey on the problem, (see \cite{wolff1999recent}) Wolff proposed a finite analogue to the Kakeya Conjecture. We begin with some preliminaries so we can formally state this analogue.
 
 \begin{definition}[Finite Field]
-    A \textbf{finite field} $\FF$ is a field of finite cardinality. 
-    The cardinality $|\FF|$ of a finite field is called the \textbf{order} of the finite field.
+    A \textbf{finite field} $\FP$ is a field of finite cardinality. 
+    The cardinality $|\FP| = q$ of a finite field is called the \textbf{order} of the finite field.
 \end{definition}
-It is known that finite field of order $q$ exists if and only if $q = p^k$ for some prime $p$ and integer $k$. 
+It is known that finite field of order $q$ exists if and only if $q = p^k$ for some prime $p$ and integer $k$. For the rest of this chapter we let $q$ be of this form.
 
 \begin{lemma}
     Each element $X$ in a finite field $\FF$ satisfies the identity:
@@ -64,12 +64,12 @@ It should be noted that a line in a finite field $\FP^n$ contains exactly $|\FP|
 Formally, directions in $\FP^n$ can be identified using the projective space $\mathbb{P}\FP^n  = \FP^n/\FP^\times$. In this projective space, two lines $y$ and $y'$ are equivalent if $y'$ is a translation of $y$.
 The finite analogue to Conjectures \ref{conj:mink-kakeya} and \ref{conj:haus-kakeya} is:
 \begin{conjecture}[Kakeya Conjecture in Finite Fields]
-    If $A\subset \FP^n$ contains a line in every direction, then $|A| \geq \frac{1}{n!} |\FP|^n $. \label{KakeyaConjecture}
+    If $A\subset \FP^n$ contains a line in every direction, then $|A| \gtrsim_n |\FP|^n $. \label{KakeyaConjecture}
 \end{conjecture}
 This conjecture had a significant influence on the subject, inspiring work on the sum-product phenomenon in finite fields. From its postulation in 1999,
 little progress was made in the following years and it was assumed that the problem was roughly as difficult as the Euclidean case. 
 
-In 2008, Dvir published a remarkably simple proof of Conjecture \ref{KakeyaConjecture} using basic facts about polynomials. 
+In 2008, Dvir published a remarkably simple proof of Conjecture \ref{KakeyaConjecture} using elementary facts about polynomials (See \cite{2008DVIR}). 
 This proof revitalised interest in the polynomial method, and we shall explore its details later in this chapter. 
 
 \begin{figure}[h]
@@ -92,12 +92,12 @@ We fix a finite field $\FF = \FF_{p^k}$ where $p$ is a prime.
 Our first estimate shows that Conjecture \ref{KakeyaConjecture} is true for the $n$ = 2 case.
 
 \begin{lemma}
-    Suppose $s \leq |\FF|$. If $l_1, \dots, l_s$ are distinct lines in $\FF^n$, then their union has cardinality at least $(1/2)|\FF|s$. 
+    Suppose $s \leq |\FF|$. If $l_1, \dots, l_s$ are distinct lines in $\FF^n$, then their union has cardinality at least $(1/2)|\FF|s$. \label{lem:kak-first-estimate}
 
     In particular, if $A \subset \FF^n$ is a Kakeya set, then we have
     \[
-      |A| \gtrsim |\FF|^2  
-    \] \label{lem:kak-first-estimate}
+      |A| \gtrsim |\FF|^2.
+    \] 
 \end{lemma} 
 \begin{proof}
     We add the lines together one at a time and track the cardinality of their union. The first line contains $|\FF|$ points. The second line must contain at least $|\FF| -1$ points not in the first line. Similarly the third line must contain at least $|\FF| -2$ points not in the first two lines, and so on. Thus the number of distinct points in the union of all $s$ lines is given by
@@ -113,20 +113,19 @@ Our first estimate shows that Conjecture \ref{KakeyaConjecture} is true for the 
 \end{proof}
 
 \subsection{Bush Argument} 
-Bourgain produced one of the first non-trivial estimates of the dimension in 1991.\cite{BUSH1991} We present the finite field analogue of his argument here.\cite{GUTH2016} This argument is known as the ``bush'' argument as we consider a high-multiplicity point through which pass many lines, forming a ``bush'' around that point. 
+Bourgain produced one of the first non-trivial estimates of the dimension in his work \cite{BUSH1991}. We present the finite field analogue of his argument here (See \cite{GUTH2016}). This argument is known as the ``bush'' argument as we consider a high-multiplicity point through which pass many lines, forming a ``bush'' around that point. 
 
 
 \begin{theorem}[Bush Argument]
-
-If $A$ is a Kakeya set, then we have
-$$|A| \gtrsim |\FF|^{\frac{n+1}{2}}$$
+If $A \subset \FF^n$ is a Kakeya set, then we have
+$$|A| \gtrsim |\FF|^{\frac{n+1}{2}}.$$
 \end{theorem}
 
 \begin{proof}
     Let $\mu$ be a fixed multiplicity parameter to be chosen later. Either there exists a point $p\in A$ such that there are $\mu$ lines passing through $p$,
     or else every point in $A$ has less than $\mu$ lines passing through it.
 
-    In the first case, since the lines have distinct directions they must become disjoint when $p$ is removed. Hence,
+    In the first case, since the lines have distinct directions they must become disjoint when $p$ is removed. Hence
     \[
       |A| \gtrsim \mu |\FF| .
     \]
@@ -145,18 +144,18 @@ $$|A| \gtrsim |\FF|^{\frac{n+1}{2}}$$
 \end{proof}
 
 \subsection{Hairbrush Argument}
-In \cite{WOLFF1995}, Wolff presented the ``hairbrush'' argument we made an incremental improvement over the argument of Bourgain. It is similar in spirit to the ``bush'' argument above, 
+In \cite{WOLFF1995}, Wolff presented the ``hairbrush'' argument where he made an incremental improvement over the argument of Bourgain. It is similar in spirit to the ``bush'' argument above, 
 however instead of using just one point of high-multiplicity we instead consider a line (or ``stem'') containing many points of high-multiplicity.
 
 \begin{theorem}[Hair Brush Argument]
-    If $A$ is a Kakeya set, then we have
+    If $A \subset \FF^n$ is a Kakeya set, then we have
     \[
         |A| \gtrsim |\FF|^{\frac{n+2}{2}}.
     \]
 \end{theorem}
 \begin{proof}
 Let $\mu$ be a fixed multiplicity parameter to be chosen later. We say a line $\ell$ is $\mu$-rich if for at least $|\FF|/2$ points $p\in \ell$ there are $\mu$ lines distinct from $\ell$
-in $A$ passing through $p$. Then either there exists a $\mu$-rich line or there does not. 
+in $A$ passing through $p$. Either there exists a $\mu$-rich line or there does not. 
 
 Suppose a $\mu$-rich line exists, and denote this line by $\ell_\mu$. Consider the family $\Pi$ of 2-dimensional planes passing through $\ell_\mu$. 
 If a line $\ell$ intersects $\ell_\mu$ then there exists a unique plane $\pi \in \Pi$ such that $\ell, \ell_\mu \in \pi$. 
@@ -189,8 +188,9 @@ Now optimising the two lower bounds by choosing $\mu \sim |\FF|^{\frac{n-2}{2}}$
 \end{proof}
 
 \section{Dvir's Proof \label{sect:Dvirs-proof}}
+Again we fix $\FF = \FF_{p^{q}}$ for some prime $p$.
 \begin{theorem}[Kakeya Conjecture in Finite Fields]
-    If $A\subset \FP^n$ contains a line in every direction, then $|A| \geq \frac{1}{n!} |\FP|^n $. \label{thm:Kakeya}
+    If $A\subset \FF^n$ contains a line in every direction, then $|A| \geq \frac{1}{n!} |\FF|^n $. \label{thm:Kakeya}
 \end{theorem}
 We shall prove this theorem via three surprisingly elementary lemmas. The general strategy of the proof is to assume the size of a Kakeya set $A$ is small and find a low-degree non-zero polynomial that interpolates (contains in its zero set) the points in $A$. We then show that due to the structure of the Kakeya set the polynomial's zero set must contain many more points. This contradicts the fact our polynomial is non-zero and of low-degree which  establishes the Kakeya Conjecture over finite fields.
 
@@ -219,10 +219,10 @@ Begin with $D_1$ $\star$'s, then place one $|$. We put now $D_2$ $\star$'s, and 
 We continue until we have placed $D_n$ $\star$'s followed by an $n^{\text{th}}$ $|$. 
 Finally we place $D - \sum_i D_i \star$'s.
  This is a bijective map between the monomials in $\text{Poly}_D (\KK^n)$ and all the strings of $D$ $\star$'s and $n$ $|$'s. 
- To assemble such a string we distribute the $n$ $|$'s over $n+D$ spaces, and then fill the remainder with $\star$'s. Hence we get the binomial coefficient:
+ To assemble such a string we distribute the $n$ $|$'s over $n+D$ spaces, and then fill the remainder with $\star$'s. Hence we get the binomial coefficient
 $$\text{Poly}_D (\KK^n) = {{n+D} \choose{n}}.$$
 
-Now let $p_1, \dots, p_{|A|}$ be the points of $A$. We consider the evaluation map $E: \text{Poly}_D (\KK^n) \to \KK^{|A|}$ defined by:
+Now let $p_1, \dots, p_{|A|}$ be the points of $A$. We consider the evaluation map $E: \text{Poly}_D (\KK^n) \to \KK^{|A|}$ defined by
 $$E(Q) = \left(Q(p_1), \dots, Q(p_{|A|})\right).$$
 
 This map is clearly linear. 
@@ -232,16 +232,16 @@ Thus there exists a non-zero polynomial $P \in \text{Poly}_D (\KK^n)$ that vanis
 
 
 Note that if $D=|\FF|-1$, and $|A| \leq {{|\FF|+n-1} \choose{|\FF|-1}} = { {|\FF|+n-1} \choose{n}}$ we have a polynomial of degree at most $|\FF|-1$ that vanishes on $A$. 
-Since $\frac{|\FF|^n}{n!} < {{|\FF|+n-1} \choose{n}}$, we can definitely find such a polynomial when $|A| \leq \frac{|\FF|^n}{n!}$. The restriction of $D=|\FF|-1$ is somewhat necessary due to the fact that polynomials with a factor of $X^{|\FF|} - X$ vanish identically by Lemma \ref{lem:finite-fields-poly-identity}.
+Since $\frac{|\FF|^n}{n!} < {{|\FF|+n-1} \choose{n}}$, we can certainly find such a polynomial when $|A| \leq \frac{|\FF|^n}{n!}$. The restriction of $D=|\FF|-1$ is somewhat necessary due to the fact that polynomials with a factor of $X^{|\FF|} - X$ vanish identically by Lemma \ref{lem:finite-fields-poly-identity}.
 
 
 
 \begin{lemma}Suppose $A \subset \FF^n$ contains a line in every direction, and suppose that there exists a non-zero polynomial $P$ with degree $D<|\FF|$ that vanishes on $A$. Then there exists a non-zero degree $D$ polynomial $\bar{P}$ that vanishes everywhere on $\FF^n$. \label{lem:kaklem2} \end{lemma}
 
 \prf{ Choose a line in $A$, say $\ell = \{x+ty : t\in \FF \}$ with $x,y\in \FF^n$ and $y \neq 0$. Now we consider the restriction of our polynomial $P$ to the line $\ell$, $P_{|\ell}$.
-Recall $P$ is a sum of monomials, and we use multi-index notation here with $\alpha = (\alpha_1, \alpha_2, \dots, \alpha_n), \ \alpha_i \in \NN \cup \{0\}$ and $|\alpha| =  \sum \alpha_i$. $P$ can be written as:
-$$P(x_1,x_2, \dots, x_n) = \sum_{|\alpha| \leq D} c_{\alpha} x_1^{\alpha_1}x_2^{\alpha_2}\dots x_n^{\alpha_n}. $$
-Now $P_{|\ell}$ can be written:
+Recall $P$ is a sum of monomials, and we use multi-index notation here with $\alpha = (\alpha_1, \alpha_2, \dots, \alpha_n), \ \alpha_i \in \NN \cup \{0\}$ and $|\alpha| =  \sum \alpha_i$. $P$ can be written as
+$$P(X_1,X_2, \dots, X_n) = \sum_{|\alpha| \leq D} c_{\alpha} X_1^{\alpha_1}X_2^{\alpha_2}\dots X_n^{\alpha_n}. $$
+Now $P_{|\ell}$ can be written
 $$P_{|\ell} = P(x+ty) = Q_{x,y}(t) = \sum_{|\alpha| \leq D} c_\alpha \prod_{i} (x_i + t y_i)^{\alpha_i}.$$
 We now wish to examine the degree $D$ term of $Q$,
 which consist in the terms of the expansion of the expression above obtained by the product of the $ty_i$ terms when $|\alpha| = D$. 
@@ -255,9 +255,7 @@ This is clear from the factor theorem, as we could write the roots of $P_{|\ell}
 Notice that $Q_{x,y,D}$ no longer depends on $x$, but on $y$ alone. In particular $Q_D(y) = 0$, but $y$ was an arbitrary non-zero element of $\FF^n$, and $Q_D(y)$ also vanishes at zero, so it vanishes everywhere. Thus we can pick $\bar{P}$ = $Q_D$, and we are done.
 }
 
-
-
-
+Finally, we show that any non-zero polynomial in $\FF[X_1, \dots, X_n]$ with degree less than $|\FF|$ cannot be zero everywhere in $\FF^n$.
 
 \lem{Let $P$ be a non-zero polynomial on $\FF^n$ with degree less than $|\FF|$. Then $P$ does not vanish everywhere. \label{lem:kaklem3}}
 
@@ -274,7 +272,7 @@ We now combine these lemmas to establish the Kakeya conjecture over finite field
 \begin{proof} [Proof of Theorem \ref{thm:Kakeya}] 
 Assume $A \subset \FF^n$ is a Kakeya set, and that $|A| \leq \frac{|\FF|^n}{n!}$. Then by Lemma \ref{lem:paramcounting} we can find a 
 non-zero polynomial of degree at most $|\FF|-1$, say $P$, that vanishes on $A$. Now by Lemma \ref{lem:kaklem2} there exists a non-zero polynomial $\bar{P}$ that vanishes everywhere on $\FF^n$, and has degree less than $|\FF|$.
-Finally, Lemma \ref{lem:kaklem3} says that such a $\bar{P}$ is necessarily the zero polynomial, a contradiction. We conclude that $|A| > \frac{|\FF|^n}{n!}$, or in other words:
+Finally, Lemma \ref{lem:kaklem3} says that such a $\bar{P}$ is necessarily the zero polynomial, a contradiction. We conclude that $|A| > \frac{|\FF|^n}{n!}$, or in other words
 $$
 |A| \gtrsim_n |\FF|^n.
 $$

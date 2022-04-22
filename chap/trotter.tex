@@ -8,7 +8,7 @@ By developing the powerful tool of polynomial partitioning we shall see the key 
 
 
 The Szemerédi-Trotter theorem is a fundamental result in the field of incidence geometry, originally proved by an involved cell decomposition argument
-of Szemerédi and Trotter in \cite{szemeredi1983extremal} and later given a shorter proof using the crossing-number inequality by Székely in \cite{szekely1997crossing}. 
+of Szemerédi-Trotter in \cite{szemeredi1983extremal} and later given a shorter proof using the crossing-number inequality by Székely in \cite{szekely1997crossing}. 
 \begin{theorem}[Szemerédi-Trotter]     \label{thm:S-T}
     Let $\ES \subset\RR^2$ be a finite set of points and
     let $\LL$ be a finite set of lines in $\RR^2$. We define 
@@ -71,7 +71,7 @@ Repeating the above proof interchanging the roles $\ES$ and $\LL$ achieves the o
 
 
 \section{Examples}
-We can not improve beyond the double counting bounds shown in Lemma \ref{lem:double-counting-st-bounds} in a finite field $\FF^2$. 
+The following example shows we can not improve beyond the double counting bounds shown in Lemma \ref{lem:double-counting-st-bounds} in a finite field $\FF^2$. 
 \begin{example}[Finite Fields]
 Consider the set of points $\ES=\FF^2$ and let $\LL$ be the set of all lines 
 in $\FF^2$. Every line contains exactly $|\FF|$ many points of $\ES$, so we have $|\FF|^3$ incidences. 
@@ -114,10 +114,10 @@ The next two examples deal with the more general case, where the $(|\ES||\LL|)^{
 
 
 \begin{example}
-    Let $N>1$ be a large even integer and let $1<R \lesssim N$ be another integer. Consider the collections in $\RR^2$:
+    Let $N>1$ be a large even integer and let $1<R \lesssim N$ be another integer. Consider the collections in $\RR^2$ given by
     \begin{align*}
-        \ES &= \{ (a,b) \in \ZZ^2 \ | \ (a,b) \in [-N/2,N/2] \times [-N/2,N/2] \} \\
-        \LL &= \{ \ell \ | \ \ell \text{ contains between R and 2R points of } \ES \} \end{align*}
+        \ES &= \{ (a,b) \in \ZZ^2 \ | \ (a,b) \in [-N/2,N/2] \times [-N/2,N/2] \}, \\
+        \LL &= \{ \ell \ | \ \ell \text{ contains between R and 2R points of } \ES \}. \end{align*}
     We begin by estimating how many lines of $\LL$ pass through a given point of the regular grid $\ES$.
     Let $\ell \in \LL$ and $p \in \ES$. The closest point $p' \in \ES$ such that $p \neq p'$ and $p' \in \ell$ must lie
     in a square centred at $p$ of side length $\sim N/R$. This follows from the fact that there are at least $\sim R$ points of $\ES$ in $\ell$ and hence the
@@ -134,7 +134,7 @@ The next two examples deal with the more general case, where the $(|\ES||\LL|)^{
         |\LL| &\sim |\ES| \frac{N^2}{R^2} \frac{1}{R} \sim \frac{N^4}{R^3},\\
         |I(\ES, \LL)| &\sim |\ES| \frac{N^2}{R^2} \sim \frac{N^4}{R^2}.\\
     \end{align*}
-    We can see that both sides of the \hyperref[thm:S-T]{Szemerédi-Trotter} inequality (Theorem \ref{thm:S-T}) are comparable:
+    We can see that both sides of the \hyperref[thm:S-T]{Szemerédi-Trotter} inequality (Theorem \ref{thm:S-T}) are comparable as
     \[
     |I(\ES, \LL)| \sim \frac{N^4}{R^2} \sim (N^2)^{\frac{2}{3}} \left(\frac{N^4}{R^3}\right)^{\frac{2}{3}} \sim |\ES|^{\frac{2}{3}}|\LL|^{\frac{2}{3}} + |\ES| + |\LL|.
     \]
@@ -154,7 +154,7 @@ Let $\SP^n$ denote the unit $n$-sphere in $\RR^{n+1}$.
     A map $\phi$ is said to be antipodal if it obeys $\phi (-x) = -\phi(x)$ for all $x$ in its domain. Suppose $\phi: \SP^N \to \RR^N$ is a continuous antipodal mapping. 
     Then the image of $\phi$ contains 0. \label{thm:Borsuk-Ulam}
 \end{theorem}
-In \hyperref[appendix:Borsuk-Ulam]{the appendix to this manuscript}, we present a beautiful combinatorial proof from Matousek's book \textit{Using the Borsuk-Ulam theorem} (see \cite{matouvsek2003using}).
+In \hyperref[appendix:Borsuk-Ulam]{the appendix to this manuscript} (see Appendix \ref{appendix:Borsuk-Ulam}), we present a beautiful combinatorial proof from Matousek's book \textit{Using the Borsuk-Ulam theorem} (see \cite{matouvsek2003using}).
 The proof proceeds by constructively proving the Tucker Lemma, and then using this to imply the Borsuk-Ulam theorem.
 
 Let us now define some useful definitions going forward. 
@@ -165,7 +165,7 @@ A function $f :\RR^n \to \RR$ is said to bisect an open set $U$ with volume\foot
 \]
 Analogously, a function $f$ is said to bisect a finite set $S$ if both
 \[
-  |\{x \in S \ | \ f(x) > 0\}| \leq \frac{|S|}{2}   
+  |\{x \in S \ | \ f(x) > 0\}| \leq \frac{|S|}{2},   
 \]
 and 
 \[
@@ -277,7 +277,7 @@ which we need to deal with separately.
 
 
 \section{Proof of the Szemerédi-Trotter Theorem \label{sect:prf-of-ST}}
-We now can prove the \hyperref[thm:S-T]{Szemerédi-Trotter} Theorem using polynomial partitioning.
+We now can prove the \hyperref[thm:S-T]{Szemerédi-Trotter} Theorem (Theorem \ref{thm:S-t}) using polynomial partitioning.
 \begin{proof}[Proof of the Szemerédi-Trotter Theorem]
 Let $|\ES| = S$ and $|\LL| = L$. 
 
@@ -309,13 +309,13 @@ We begin by examining the $I(\ES_c, \LL)$ term
  &\leq \sum_{i \in \Pi} \ES_i^2 + \sum_{i \in \Pi} \LL_i.
 \intertext{If a line $\ell$ is not contained entirely in $Z(P)$ then it can intersect $Z(P)$ at most $D$ times, 
 so each line intersects at most $D+1$ cells. Hence $\sum_{i \in \Pi} L_i \leq (D+1)L$. So we have}
-&\lesssim LD + SD^{-2} \sum_{i \in \Pi} S_i\\ &\leq LD + S^2D^{-2}.
+|I(\ES_c, \LL)| &\lesssim LD + SD^{-2} \sum_{i \in \Pi} S_i\\ &\leq LD + S^2D^{-2}.
 \end{align*} 
 
 
 The number of lines in $\LL_z$ is at most $D$ as $Z(P)$ can contain at most $D$ degree 1 factors. So we have by our \hyperref[thm:trivial-ST-bounds]{trivial bounds} (Lemma \ref{thm:trivial-ST-bounds})
 $$|I(\ES_z, \LL_z)| \leq S + D^2.$$
-Each line in $\LL_c$ has at most $D$ intersection points with $Z(P)$ so it has at most $D$ incidences with $\ES_z$. Hence:
+Each line in $\LL_c$ has at most $D$ intersection points with $Z(P)$ so it has at most $D$ incidences with $\ES_z$. Hence
  $$|I(\ES_z, \LL_c)| \leq LD.$$
 Together we have now 
 $$|I(\ES, \LL)| \lesssim LD + S^2D^{-2} +S + D^2.$$
