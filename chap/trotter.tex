@@ -55,7 +55,7 @@ We bound the number of incidences using the Cauchy-Schwarz inequality followed b
     \intertext{Applying the Cauchy-Schwarz inequality on the collection $\LL$ we attain}
     & \leq |\LL| \cdot \sum_{\ell \in \LL} \left( \sum_{p \in \ES} \OO[p\in \ell] \right)^2 \\
     &= |\LL|\cdot \sum_{p_1,p_2 \in \ES} \sum_{\ell \in \LL}   \OO[p_1\in \ell] \OO[p_2\in \ell]    \\
-    &=|\LL|\left( \sum_{p_1=p_2 \in \ES} \sum_{\ell \in \LL}   \OO[p_1\in \ell] \OO[p_2\in \ell] \right. \\
+    &=|\LL|\left( \sum_{p_1=p_2 \in \ES} \sum_{\ell \in \LL}   \OO[p_1\in \ell] \right. \\
     &\left. \qquad + \sum_{p_1\neq p_2 \in \ES} \sum_{\ell \in \LL}   \OO[p_1\in \ell] \OO[p_2\in \ell]\right). 
 \end{align*} 
 \begin{align*}
@@ -114,7 +114,7 @@ The next two examples deal with the more general case, where the $(|\ES||\LL|)^{
 
 
 \begin{example}
-    Let $N$ be a large even integer and let $1<R \lesssim N$ be another integer. Consider the collections in $\RR^2$:
+    Let $N>1$ be a large even integer and let $1<R \lesssim N$ be another integer. Consider the collections in $\RR^2$:
     \begin{align*}
         \ES &= \{ (a,b) \in \ZZ^2 \ | \ (a,b) \in [-N/2,N/2] \times [-N/2,N/2] \} \\
         \LL &= \{ \ell \ | \ \ell \text{ contains between R and 2R points of } \ES \} \end{align*}
@@ -214,24 +214,24 @@ Since $\varepsilon$ was arbitrary each $\phi_i$ is continuous.
 
 We now combine each $\phi_i$ into the map $\phi : V\backslash \{0\} \to \RR^N$ by $\phi = (\phi_1, \dots, \phi_N)$.
  Since $\dim V > N$, select a subspace $W < V$ such that $\dim W = N+1$. 
-Now choose an isomorphism of $W$ with $\RR^{N+1}$, and think of $\SP^N$ as a subset of $W$ \todo{Explain that $\phi$ is actually a function on the unit sphere of V}.
+Now choose an isomorphism of $W$ with $\RR^{N+1}$ and notice that since for all $\lambda >0$ we have $\phi (\lambda x) = \phi(x)$ and hence that $\phi$ is simply a function on the unit sphere. 
 Now the map $\phi: \SP^N \to \RR^N$ is antipodal and continuous. 
 By the Borsuk-Ulam Theorem, there exists an $f\in \SP^N \subset V\backslash \{0\}$ such that $\phi(f) = 0$.
 \end{proof}
-We are now going to use the Ham Sandwich Theorem to extend the conclusion to the bijection of finite sets also.
-The main idea will be to construct sets of arbitrarily small measure around each of our points in the finite set and apply the previous theorem.\todo{check}
+We are now going to use the Ham Sandwich Theorem to extend the conclusion to the bisection of finite sets also.
+The main idea will be to replace each of our points in the finite set with $\delta$-balls and apply the previous theorem.
 \begin{corollary}[Finite Ham Sandwich Theorem]
     Let $S_1, \dots , S_N$ be finite sets in $\RR^n$ and let $D$ be such that $N < {{D+n}\choose{n}}$. 
     Then there exists a non-zero $P\in \operatorname{Poly}_D (\RR^n)$ that bisects each $S_i$.  \label{thm:FiniteHamSandwich} 
 \end{corollary}
 
 \begin{proof}
-    Let us equip the space\todo{V or poly Rn?} with the $L^1$ norm.
+    Let us equip the space $\operatorname{Poly}_D (\RR^n)$ with the $L^1$ norm.
     For each $\delta>0$, define $U_{i, \delta}$ to be the union of $\delta$-balls centred at the points of $S_i$. 
     By Theorem \ref{thm:GenHamSand}, we can find a non-zero $P_{\delta}$ with degree at most $D$ that bisects each $U_{i, \delta}$. 
     By rescaling we can assume $P_{\delta} \in \SP^M \subset \text{Poly}_D (\RR^n) \backslash \{0\}$.
     Since $\SP^M$ compact, we can find a sequence $\delta_m \to 0$ so that $P_{\delta_{m}}$ converges to $P$ in $\SP^M$.
-    Since the coefficients of $P_{\delta_{m}}$ converge t1o those of $P$, $P_{\delta_{m}}$ converges to $P$ uniformly on compact sets.
+    Since the coefficients of $P_{\delta_{m}}$ converge to those of $P$, $P_{\delta_{m}}$ converges to $P$ uniformly on compact sets.
 
     We claim $P$ bisects each $S_i$. 
     By contradiction, suppose $P>0$ on more than half the points of $S_i$, say on the points of $S_i^+$. 
@@ -245,7 +245,7 @@ The main idea will be to construct sets of arbitrarily small measure around each
 We now utilise the above results to prove a powerful cell decomposition technique known as polynomial partitioning.
 \begin{theorem}[Polynomial Partitioning]
     If $S$ is a finite subset of $\RR^n$ and $D$ any degree, there exists
-    a polynomial $P$ of degree $D$ such that $\RR \backslash Z(P)$ is a disjoint union of \todo{$\sim$ or $\lesssim$}$\sim D^n$ open sets $O_i$ each containing
+    a polynomial $P$ of degree at most $D$ such that $\RR^n \backslash Z(P)$ is a disjoint union of $\sim D^n$ open sets $O_i$ referred to as cells each containing
     $\lesssim_n |S|D^{-n}$ points. \label{thm:PolyPartioning}
  \end{theorem}
  
@@ -292,7 +292,7 @@ Hence we need only consider the case $S^{\frac{1}{2}} \leq L \leq S^2$.
 
 Let $D$ be a fixed degree to be chosen later. By Theorem \ref{thm:PolyPartioning}, there
 exists a polynomial $P$ of degree $D$ such that $\RR^2 \backslash Z(P)$ splits into $\sim D^2$ disjoint open sets each containing $\lesssim SD^{-2}$ points of $\ES$. 
-Let $\{O_{i} \ | \ i \in \Pi\}$ denote the family of these components and let $\ES_i = \ES \cap O_i$ and $\LL_i$ denote the lines that intersect the interior of each $O_i$ respectively.
+Let $\{O_{i} \ | \ i \in \Pi\}$ denote the family of the cells in the decomposition. Let $\ES_i = \ES \cap O_i$ and $\LL_i$ denote the lines that intersect the interior of each $O_i$ respectively.
 We define the following pairs of complementary sets
 \begin{align*}
     \ES_c &=\{x \in \ES \ |\ x \not \in Z(p)\}\\
@@ -305,15 +305,15 @@ $$|I(\ES, \LL)| = |I(\ES_c, \LL)| + |I(\ES_z, \LL_z)| + |I(\ES_z, \LL_c)|.$$
 We begin by examining the $I(\ES_c, \LL)$ term
 \begin{align*}
 |I(\ES_c, \LL)| &= \sum_{i \in \Pi} |I(\ES_i, \LL_i)|.
-\intertext{Using our \hyperref[thm:trivial-ST-bounds]{trivial bound} in each cell we attain}
+\intertext{Using our \hyperref[thm:trivial-ST-bounds]{trivial bound} (Lemma \ref{thm:trivial-ST-bounds}) in each cell we attain}
  &\leq \sum_{i \in \Pi} \ES_i^2 + \sum_{i \in \Pi} \LL_i.
-\intertext{If a line $\ell$ is not contained entirely in $Z(P)$ then it can intersect $P$ at most $D$ times, 
+\intertext{If a line $\ell$ is not contained entirely in $Z(P)$ then it can intersect $Z(P)$ at most $D$ times, 
 so each line intersects at most $D+1$ cells. Hence $\sum_{i \in \Pi} L_i \leq (D+1)L$. So we have}
 &\lesssim LD + SD^{-2} \sum_{i \in \Pi} S_i\\ &\leq LD + S^2D^{-2}.
 \end{align*} 
 
 
-The number of lines in $\LL_z$ is at most $D$ as $Z(P)$ can contain at most $D$ degree 1 factors.\todo{check} So we have by our \hyperref[thm:trivial-ST-bounds]{trivial bounds} (Lemma \ref{thm:trivial-ST-bounds})
+The number of lines in $\LL_z$ is at most $D$ as $Z(P)$ can contain at most $D$ degree 1 factors. So we have by our \hyperref[thm:trivial-ST-bounds]{trivial bounds} (Lemma \ref{thm:trivial-ST-bounds})
 $$|I(\ES_z, \LL_z)| \leq S + D^2.$$
 Each line in $\LL_c$ has at most $D$ intersection points with $Z(P)$ so it has at most $D$ incidences with $\ES_z$. Hence:
  $$|I(\ES_z, \LL_c)| \leq LD.$$
@@ -330,7 +330,7 @@ Finally combining this with our result for the regime where $L>S^2$ we achieve t
 \]
 \end{proof}
 
-There are two key things to note about the above proof. First, the key role that the topology of $\RR^2$ plays. We use topology twice in the above proof. Firstly by using polynomial partitioning, which itself is a consequence of the Borsuk-Ulam theorem from topology. We also appeal to topology in our claim that each line intersects at most $\deg P +1$ components of $\RR^2 \backslash Z(P)$. \todo{check} It is a worthwhile heuristic to develop that polynomial partitioning may be useful for incidence problems
+There are two key things to note about the above proof. First, the key role that the topology of $\RR^2$ plays. We use topology twice in the above proof. Firstly by using polynomial partitioning, which itself is a consequence of the Borsuk-Ulam theorem from topology. We also appeal to topology in our claim that each line intersects at most $\deg P +1$ cells of $\RR^2 \backslash Z(P)$.  It is a worthwhile heuristic to develop that polynomial partitioning may be useful for incidence problems
 where the best examples in a finite field (which is only equipped with the trivial topology) do not coincide with the best known examples over the reals.
 Secondly, the above proof illustrates the surprising power of polynomial partitioning. We were able to use very trivial bounds in each cell to achieve
 an asymptotically tight overall bound. 

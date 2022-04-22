@@ -150,7 +150,7 @@ We can now prove the main theorem.
     \[
         \frac{d^2f_i}{dt^2}(0) = -\frac{(y- y_{\gamma_i})^2 + (x- x_{\gamma_i})^2}{(y- y_{\gamma_i})^3} = -\frac{r^2_{\gamma_i}}{(y- y_{\gamma_i})^3} .
     \]
-    Since $\gamma_1$ and $\gamma_2$ are distinct circles, $\frac{d^2f_1}{dt^2}(0) \neq \frac{d^2f_2}{dt^2}(0)$. (In the case $r_{\gamma_1} = r_{\gamma_2}$, notice that the tangency must be external and hence $\text{sgn}(y-y_{\gamma_1})^3\neq \text{sgn}(y-y_{\gamma_2})^3$) \todo{messy?}
+    Since $\gamma_1$ and $\gamma_2$ are distinct circles, $\frac{d^2f_1}{dt^2}(0) \neq \frac{d^2f_2}{dt^2}(0)$. (In the case $r_{\gamma_1} = r_{\gamma_2}$, notice that the tangency must be external and hence $\text{sgn}(y-y_{\gamma_1})^3\neq \text{sgn}(y-y_{\gamma_2})^3$)
 
 
 
@@ -161,13 +161,13 @@ We can now prove the main theorem.
     \\ &\subset \text{span} \left( T_{(x,y,z) }\beta (\gamma_1), T_{(x,y,z) }\beta (\gamma_2)\right). \label{eqn:z-span}
     \end{align}
 
-    We will now interpolate $\sim N^{3/2}$\todo{$\sim$ vs $\gtrsim$} incidence points with a minimal polynomial whose degree we can control, and show that if this contains too many intersections it must also contain the curves. 
+    We will now interpolate $\sim N^{3/2}$ incidence points with a minimal polynomial whose degree we can control, and show that if this contains too many intersections it must also contain the curves. 
     Then due to the tangent vectors spanning the $z$-axis at the incidence points we will be able to achieve a contradiction.
 
-    For each $\beta(\gamma_i) \in \beta(\Gamma)$ define a collection $K_i$ as a set of $\sim N^{1/2}$ incidence points of $\beta(\gamma_i)$. Then $|\cup K_i| \lesssim N^{3/2}$.
-    Let $P \in \RR[x,y,z]$ be a non-zero polynomial of minimal degree that vanishes on all the incidence points in $\cup K_i$. 
+    For each $\beta(\gamma) \in \beta(\Gamma)$ define a collection $K_\gamma$ as a set of $\sim N^{1/2}$ incidence points of $\beta(\gamma)$. Then $|\cup_\Gamma K_\gamma| \lesssim N^{3/2}$.
+    Let $P \in \RR[x,y,z]$ be a non-zero polynomial of minimal degree that vanishes on all the incidence points in $\cup_\Gamma K_\gamma$. 
     This polynomial interpolates $\lesssim N^{3/2}$ points in $\RR^3$, so by Lemma \ref{lem:paramcounting}
-    the degree of $P$ is $\lesssim \left(N^{3/2}\right)^{\frac{1}{3}} =  N^{1/2}$. \todo{check}
+    the degree of $P$ is $\lesssim \left(N^{3/2}\right)^{\frac{1}{3}} =  N^{1/2}$.
 
     Due to our refinement each $\gamma \in \Gamma$ is 
     tangent to $\gtrsim N^{1/2}$ circles and each of these tangencies occurs at a distinct point by the non-degeneracy condition.   
@@ -203,7 +203,7 @@ an extension of the \hyperref[thm:PolyPartioning]{polynomial partitioning} theor
 \todo{rephrase closer to \ref{thm:PolyPartioning}}
 \begin{lemma}[Polynomial Partitioning for Algebraic Varieties]
     Suppose $\Gamma$ is a set of $k$-dimensional varieties in $\RR^n$. For any positive integer $D$ there exists a non-zero polynomial $P$ of degree at
-    most $D$ such that each connected component of $\RR^n \backslash Z(P)$ intersects $\lesssim D^{k-n} |\Gamma|$ varieties of$\Gamma$.\label{lem:poly-part-var}
+    most $D$ such that each connected component of $\RR^n \backslash Z(P)$ intersects $\lesssim D^{k-n} |\Gamma|$ varieties of $\Gamma$.\label{lem:poly-part-var}
 \end{lemma}
 We shall not prove this here. A proof of this result can be found as Theorem 0.3 in \cite{guth2015polypartvar}, the original paper of Guth presenting the result. The proof is in the same spirit as the proof Theorem \ref{thm:PolyPartioning} given in Chapter \ref{chap:trotter}, however some additional difficulties present themselves and a correct proof requires some care. One should notice that the $k=0$ case above recovers Theorem \ref{thm:PolyPartioning}.
 
@@ -214,9 +214,9 @@ to find a polynomial $P$ such that each cell of $\RR^3 \backslash Z(P)$ intersec
 $\RR^3 \backslash Z(P)$ partitions the space into $\sim D^3$ cells. 
 Let us label the interior of each of these cells as $\{\Omega_i \ | \ 0 \leq i \lesssim D^3 \}$, and further label the set of varieties in $\Gamma$ that intersect a given cell $\Omega_i$ as $\Gamma_i$.
 
-We can now define the following complementary sets based on whether the variety is contained entirely in $Z(P)$:\todo{colon here ok or no?}
+We can now define the following complementary sets based on whether the variety is contained entirely in $Z(P)$:
 \begin{align*}
-    C_1 &= \{ \beta(\gamma) \ |\ \beta(\gamma) \not \subset Z(P) \}\\
+    C_1 &= \{ \beta(\gamma) \ |\ \beta(\gamma) \not \subset Z(P) \},\\
     C_2 &= \{ \beta(\gamma) \ |\ \beta(\gamma)  \subset Z(P) \}.
 \end{align*}
 Notice here that $\beta(\Gamma) = C_1 \cup C_2$. Recalling the correspondence between curve-incidences and  circle-tangencies, we define the following
@@ -229,10 +229,10 @@ Hence we can express $|\tau(\Gamma)|$ as the sum
     |\tau(\Gamma)| = |I(C_1, C_1)| + 2|I(C_1, C_2)| + |I(C_2, C_2)|.  
 \]
 We now proceed to bound the cardinality for each of these sets. For $I(C_1,C_1)$ will use our trivial bound (Lemma \ref{lem:trivial-circle-bound}) and Bézout's
-lemma (Lemma \ref{lem:Bezout}).\todo{lemma or Lemma} Bounding the cardinality for $I(C_1,C_2)$ is again straightforward by Bézout. 
+Lemma (Lemma \ref{lem:Bezout}). Bounding the cardinality for $I(C_1,C_2)$ is again straightforward by Bézout. 
 The interesting case here is $I(C_2,C_2)$, where we will be forced to argue via a recursive argument.
 
-We begin with $I(C_1,C_1)$, that is, the intersections that occur between varieties not entirely contained in the zero set. We proceed by partitioning $I(C_1,C_1)$ according to whether the incidence occurs within a cell or on $Z(P)$, explicitly \todo{check english}
+We begin with $I(C_1,C_1)$, that is, the intersections that occur between varieties not entirely contained in the zero set. We proceed by partitioning $I(C_1,C_1)$ according to whether the incidence occurs within a cell or on $Z(P)$, explicitly 
 \begin{align*}
     I(C_1,C_1) = &\{ (\beta(\gamma), \beta(\gamma')) \ |  \ \beta(\gamma), \beta(\gamma') \in C_1, \ \beta(\gamma) \cap \beta(\gamma') \in \RR^3 \backslash Z(P)\} \\
                 & \cup \{ (\beta(\gamma), \beta(\gamma')) \ |  \ \beta(\gamma), \beta(\gamma') \in C_1, \ \beta(\gamma) \cap \beta(\gamma') \in Z(P)\}.
@@ -303,11 +303,15 @@ We now optimise $D$ by setting $N^2D^{-1} \sim ND$ which gives $D \sim N^{1/2}$ 
     Since polynomial partitioning exploits the topology of $\RR^n$ in an essential manner, it would have been reasonable to expect an improvement over the exponent 3/2 via the argument above. Alas, this was not the case.
 \end{remark}
 
-\section{Considerations for the case of Sphere Tangencies in $\RR^{3}$}[The Case of Sphere Tangencies in $\RR^{3}$]\todo{capitalisation?}
+\section[The Case of Sphere Tangencies in $\RR^{3}$]{Considerations for the Case of Sphere Tangencies in $\RR^{3}$}\todo{capitalisation?}
 Considering the analogous problem in $\RR^{3}$, two new difficulties emerge. 
 Firstly, our current non-degeneracy condition is not sufficient as we have new degenerate cases to consider where the trivial bound of $O(N^2)$ is achieved. 
 \begin{example}[Degenerate case in $\RR^{3}$]
-    \todo{halo example}
+    \begin{figure}[h]
+        \centering 
+        \includegraphics[width=0.8\textwidth]{images/degenr3.png}
+        \caption{A collection of spheres in $\RR^3$ which satisfy the non-degeneracy condition the earlier section yet achieves $N^2$ tangencies.}
+        \end{figure}
 \end{example}
 Due to cases like these, a new condition is required. A natural choice given this example would seem to be restricting our collections to those which do not contain too many tangencies along any one low-degree algebraic curve on the surface of a sphere. 
 
@@ -322,16 +326,17 @@ $\beta(\gamma)$ is a two-dimensional algebraic surface in $\RR^5$. An interpolat
 These two surfaces could intersect along a 1-dimensional variety (i.e. at infinitely many points), hence we can no longer argue that $\beta(\gamma) \subset Z(P)$ due to $Z(P)$ containing too many points of $\beta(\gamma)$.
 
 The best example of a lower bound for such tangencies is produced in a similar fashion to the circles case (Example \ref{ex:circle-lower-bound}). 
-In place of the Szemerédi-Trotter theorem we appeal to a corollary of a theorem of Rudnev which bounds the number of point-plane incidences in $\RR^3$:\cite{Rudnev2014planepoints}
-\begin{theorem}
-    Let $\ES$ be a finite set of points in $\RR^3$ and $\Pi$ a finite set of non-collinear planes in $\RR^3$. Assume further that $|\ES|> |\Pi|$. \label{thm:point-plane-incidences}
-     Then the incidence set $I(\ES, \Pi)$ obeys
+In place of the Szemerédi-Trotter theorem we appeal to a result of \cite{Guibas1990}, later refined by the authors in \cite{Sharir2007} to remove a subpolynomial term.\footnote{The original bound in \cite{Guibas1990} was multiplied by a factor of $|\ES|^\delta|\Pi|^\delta$ for some $\delta>0$.}
+\begin{theorem}[\cite{Guibas1990} , \cite{Sharir2007}]
+    Let $\ES$ be a finite set of points in $\RR^3$ and $\Pi$ a finite set of collinear planes in $\RR^3$ such that no three are collinear. \label{thm:point-plane-incidences}
+    Then the incidence set $I(\ES, \Pi)$ obeys
     \[
-        |I(\ES, \Pi)| \lesssim |\ES||\Pi|^{1/2}.
+        |I(\ES, \Pi)| \lesssim |\ES|^{4/5}|\Pi|^{3/5} + |\ES| + |\Pi|.
     \] 
-\end{theorem} \todo{change this to be correct}
+\end{theorem}
+The above bound is indeed tight as shown by a construction in \cite{Knauer2003}.
 We now construct our lower bound utilising geometric inversion in $\RR^3$ analogously to Example \ref{ex:circle-lower-bound}.
-\todo{is this tight? EQ 2 Rudnev suggests N\^{7/5} is tight in R3}
+
 \begin{example}
     Let $\ES$, $\Pi$ be collections of $N$ points and $N$ non-collinear planes respectively such that the Theorem \ref{thm:point-plane-incidences} is asymptotically tight. 
     In particular, they determine $\sim N^{7/5}$ point-plane incidences. 
@@ -342,7 +347,7 @@ We now construct our lower bound utilising geometric inversion in $\RR^3$ analog
     collection of $2N$ spheres that determine $N^{3/2}$ tangencies.
  \end{example}
 
- In \cite{ellenberg2016new}, the authors conjectured a bound for higher dimensional spheres: \todo{colon here?}
+ In \cite{ellenberg2016new}, the authors conjectured a bound for higher dimensional spheres:
  \begin{conjecture}
      Let $\CE$ be a collection of $(d-1)$-spheres in $\RR^d$. Then the number of distinct points of tangencies is $\lesssim |\CE|^{\frac{2d-1}{d}}.$
  \end{conjecture}

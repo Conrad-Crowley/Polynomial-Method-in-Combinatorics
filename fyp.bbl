@@ -7,6 +7,19 @@ Noga Alon.
 \newblock volume~8, pages 7--29. 1999.
 \newblock Recent trends in combinatorics (M\'{a}trah\'{a}za, 1995).
 
+\bibitem[AS07]{Sharir2007}
+Roel Apfelbaum and Micha Sharir.
+\newblock Large complete bipartite subgraphs in incidence graphs of points and
+  hyperplanes.
+\newblock {\em SIAM J. Discrete Math.}, 21(3):707--725, 2007.
+
+\bibitem[BK03]{Knauer2003}
+Peter Brass and Christian Knauer.
+\newblock On counting point-hyperplane incidences.
+\newblock volume~25, pages 13--20. 2003.
+\newblock Special issue on the European Workshop on Computational
+  Geometry---CG01 (Berlin).
+
 \bibitem[Bou91]{BUSH1991}
 Jean Bourgain.
 \newblock Besicovitch type maximal operators and applications to {F}ourier
@@ -29,6 +42,12 @@ Roy~O. Davies.
 Zeev Dvir.
 \newblock On the size of {K}akeya sets in finite fields.
 \newblock {\em J. Amer. Math. Soc.}, 22(4):1093--1097, 2009.
+
+\bibitem[EGS90]{Guibas1990}
+Herbert Edelsbrunner, Leonidas Guibas, and Micha Sharir.
+\newblock The complexity of many cells in arrangements of planes and related
+  problems.
+\newblock {\em Discrete Comput. Geom.}, 5(2):197--216, 1990.
 
 \bibitem[ESZ16]{ellenberg2016new}
 Jordan~S. Ellenberg, Jozsef Solymosi, and Joshua Zahl.
@@ -92,12 +111,6 @@ Julius Pal.
 Ren\'{e} Quilodr\'{a}n.
 \newblock The joints problem in {$\Bbb R^n$}.
 \newblock {\em SIAM J. Discrete Math.}, 23(4):2211--2213, 2009/10.
-
-\bibitem[Rud18]{Rudnev2014planepoints}
-Misha Rudnev.
-\newblock On the number of incidences between points and planes in three
-  dimensions.
-\newblock {\em Combinatorica}, 38(1):219--254, 2018.
 
 \bibitem[ST83]{szemeredi1983extremal}
 Endre Szemer\'{e}di and William~T. Trotter, Jr.
