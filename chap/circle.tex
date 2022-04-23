@@ -265,30 +265,82 @@ The argument for $I(C_1,C_2)$ is similar to the one above, however there are now
     |I(C_1,C_2)|& \lesssim \sum_{\beta(\gamma)\in C_1} D \leq ND.
 \end{align*}
 
-\todo{rewrite this part}
-Finally we need to handle the incidences between curves contained entirely in the zero-set, $I(C_2,C_2)$. 
+Finally we need to handle the incidences between curves contained entirely in the zero-set, $I(C_2,C_2)$. We can write
 \[
     |I(C_2,C_2)| = \sum_{\beta(\gamma), \beta(\gamma') \in C_2} \OO[\beta(\gamma) \cap \beta(\gamma') \neq \emptyset].
 \]
-Suppose $P$ was the minimal degree polynomial that partitioned the space as per Lemma \ref{lem:poly-part-var}. Then we can write $C_2$ as the union of disjoint sets:
-\[
-C_2 = \{\beta(\gamma) \subset Z(\partial_z P)\} \cup \{\beta(\gamma) \subset \RR^3 \backslash Z(\partial_z P)\}
-\]
-If all the curves are in $\{\beta(\gamma) \subset Z(\partial_z P)\}$, then we use the exact same technique as in Ellenberg-Solymosi-Zahl's Proof.
-Since $P$ was a minimal degree polynomial that partitioned the space, and $\partial_z P$ also partitioned space, then we must have that $P$ does not depend on $z$, or in other words $P(X,Y,Z) = Q(X,Y)$. Since $Z(Q)$ is of degree $D$, it can contain up to $D$ circles in the plane.  Using trivial bound we can control the size of this contribution by $\lesssim D^2$.
 
-In the other case, say there are some number $K_1$ curves in $\{\beta(\gamma) \subset \RR^3 \backslash Z(\partial_z P)\}$, each of which can intersect $ Z(\partial_z P)$ at most $D$ times. 
-We recursively iterate this process now, examining now the set: 
-\[\{\beta(\gamma) \subset Z(\partial_z P)\} = \{\beta(\gamma) \subset Z(\partial^2_z P)\} \cup \{\beta(\gamma) \subset \RR^3 \backslash Z(\partial^2_z P)\}\]
-Again, if all the curves are in $Z(\partial^2_z P)$ the process stops and we proceed by the argument above. In the other case, $\RR^3 \backslash Z(\partial^2_z P)$
-contains $k_2$ curves which intersect $ Z(\partial^2_z P)$ at most $D$ times each. We can iterate this process at most $D$ times, as after the $D$-th derivative we are in the first case. The contributions from the second case become:
+This is a slightly more technical undertaking than the previous two cases.
+We proceed by considering the class of polynomials whose zero set contains every curve in $C_2$, formally defined as
 \[
-    \lesssim \sum_{i=0}^D k_i D = D \sum_{i=0}^D k_i = DN
+    \mathcal P_0 = \{  R(X,Y,Z) \in \RR[X,Y,Z] \ | \ \forall \beta(\gamma) \in C_2, \ \beta(\gamma) \subset Z(R) \}.  
 \]
 
+$\mathcal P_0$ is non-empty, as by the definition of $C_2$ it at least contains the partitioning polynomial $P$. Let us take the polynomial in $\mathcal P_0$ of minimal degree and label it $P_0$. \todo{expand on this maybe}Then $Z(\partial_z P_0)$ contains all the points of $I(C_2,C_2)$.  Either $\partial_z P_0 \equiv 0$ or it is not. 
+
+In the first case, we must have that $P_0(X,Y,Z) = Q(X,Y)$ for some polynomial $Q \in \RR[X,Y]$. $Z(Q)$ contains all the circles $\gamma$ such that $\beta (\gamma) \in C_2$ (to see this, notice that $\beta(\gamma)$ restricted to $\RR^2$ is just $\gamma$). $Z(Q)$ contains $\lesssim \deg \partial_z P_0$ circles, hence we can trivially bound the incidences here by $|I(C_2,C_2)| \leq (\deg \partial_z P_0 )^2 \lesssim D^2$.
+
+In the second case, we must have that $ \deg \partial_z P_0 < \deg P_0 \leq D$. We now define a new complementary pair of sets as 
 \begin{align*}
-    |I(C_2,C_2)| &\lesssim D^2 + ND
+    C_1^{(1)} &= \{ \beta(\gamma) \in C_2 \ | \  \beta(\gamma) \not \subset Z(\partial_z P_0)  \}, \\
+    C_2^{(1)} &=  \{ \beta(\gamma) \in C_2 \ | \  \beta(\gamma) \subset Z(\partial_z P_0)  \}.
 \end{align*}
+
+Using these sets we can express 
+\begin{align*}
+    |I(C_2,C_2)| &= \left| I\left(C_1^{(1)}, C_1^{(1)}\right) \right|+ \left|I\left(C_1^{(1)}, C_2^{(1)}\right)\right| +\left| I\left(C_2^{(1)}, C_2^{(1)}\right)\right| \\
+    &= \left|I\left(C_1^{(1)}, C_2\right)\right| +\left| I\left(C_2^{(1)}, C_2^{(1)}\right)\right|. 
+\end{align*}
+We have that $\left|  I\left(C_1^{(1)}, C_2\right)\right| \lesssim \left|C_1^{(1)} \right| D$, and will we now repeat this process to bound $\left|I \left(C_2^{(1)}, C_2^{(1)}\right)\right|.$
+
+We now move into the next step of the recursion. Now we consider the class of polynomials
+\[
+    \mathcal P_1 = \{ R(X,Y,Z) \in \RR[X,Y,Z] \ | \ \forall \beta(\gamma) \in C_2^{(1)}, \beta(\gamma) \subset Z(R) \}. 
+\]
+
+$\mathcal P_1$ is non-empty, as by the definition of $C_2^{(1)}$ it at least contains the polynomial $\partial_z P_0$ (and hence the minimal degree polynomial in $\mathcal{P}_1$ is of degree at most $D-1$). Let us take the polynomial in $\mathcal P_1$ of minimal degree and label it $P_1$. Again we have that $Z(\partial_z P_1)$ contains all the points of $I\left(C_2^{(1)},C_2^{(1)}\right)$.  Again by the law of the excluded middle we have either $\partial_z P_1 \equiv 0$ or it is not. 
+
+In the first case, again we must have that $P_1(X,Y,Z) = Q(X,Y)$ for some polynomial $Q \in \RR[X,Y]$. $Z(Q)$ contains all the circles $\gamma$ such that $\beta (\gamma) \in C_2$, of which there are  $\lesssim \deg \partial_z P_0$. Hence we can trivially bound the incidences here by \[\left|I\left(C_2^{(1)},C_2^{(1)}\right)\right| \leq (\deg \partial_z P_1 )^2 \lesssim D^2.\] If this is the case the recursion ends. 
+
+In the second case, we must have that $ \deg \partial_z P_1 < \deg P_1 < \deg \partial_z P_0 \lesssim D$. We now define a new complementary pair of sets as 
+\begin{align*}
+    C_1^{(2)} &= \{ \beta(\gamma) \in C_2 \ | \  \beta(\gamma) \not \subset Z(\partial_z P_1)  \}, \\
+    C_2^{(2)} &=  \{ \beta(\gamma) \in C_2 \ | \  \beta(\gamma) \subset Z(\partial_z P_1)  \}.
+\end{align*}
+
+Using these sets we can express 
+\begin{align*}
+    \left|I\left(C_2^{(1)},C_2^{(1)}\right)\right| &= \left| I\left(C_1^{(2)}, C_1^{(2)}\right) \right|+ \left|I\left(C_1^{(2)}, C_2^{(2)}\right)\right| +\left| I\left(C_2^{(2)}, C_2^{(2)}\right)\right| \\
+    &= \left|I\left(C_1^{(2)}, C_2^{(1)}\right)\right| +\left| I\left(C_2^{(2)}, C_2^{(2)}\right)\right|. 
+\end{align*}
+We have that $\left|  I\left(C_1^{(2)}, C_2^{(1)}\right)\right| \lesssim \left|C_1^{(2)} \right| D$. Again, we can continue the recursion to bound $\left|I \left(C_2^{(2)}, C_2^{(2)}\right)\right|.$
+
+In the $i$-th step of our recursion, we define
+\[
+    \mathcal P_i  = \{ R(X,Y,Z) \in \RR[X,Y,Z] \ | \ \forall \beta(\gamma) \in C_2^{(i)}, \beta(\gamma) \subset Z(R) \}. 
+\]
+This will always be non-empty as by the definition of $C_2^{(i)}$, it always contains at least the polynomial $\partial_z P_{i-1}$. The polynomial of minimal degree in $\mathcal P_i$, denoted $P_i$, is of strictly smaller degree than $P_{i-1}$. Hence our recursion must end after at most $D$ steps. At each step, either $\partial_z P_i \equiv 0$ or it is not. 
+
+If $\partial_z P_i \equiv 0$, we can bound the contribution of this step by 
+\[\left|I\left(C_2^{(i)},C_2^{(i)}\right)\right| \lesssim D^2\] 
+and our recursion ends.
+
+In the second case, we again define the complementary sets
+\begin{align*}
+    C_1^{(i+1)} &= \{ \beta(\gamma) \in C_2 \ | \  \beta(\gamma) \not \subset Z(\partial_z P_i)  \}, \\
+    C_2^{(i+1)} &=  \{ \beta(\gamma) \in C_2 \ | \  \beta(\gamma) \subset Z(\partial_z P_i)  \}.
+\end{align*}
+As before, these will lead to a contribution of $\lesssim \left|  C_1^{(i+1)}\right| D + \left|I \left( C_2^{(i+1)},C_2^{(i+1)} \right) \right|$. The process continues on the latter term.
+
+Let us collect the contributions from each step of our recursion. At the terminal step of the process, say step $J$,  we collect a term of $\lesssim D^2$. Collecting the terms preceeding this, we are able to bound the contribution by 
+\[
+    \sum_{i=0}^{J-1} \left| C_1^{(i+1)} \right| D \lesssim N D
+\]
+by using the trivial facts that $\sum_{i=0}^{J-1} \left| C_1^{(i+1)} \right| \leq |C_2|$ and that $C_2$ contains at most $N$ curves. Hence we can conclude that
+\[
+  |I(C_2,C_2)| \lesssim D^2 + ND  
+\]
+
 
 Adding together our bounds we achieve
 \begin{align*}
@@ -320,7 +372,7 @@ Due to cases like these, a new condition is required. A natural choice given thi
 Secondly, our simple Bézout lemma is no longer enough. An analogous lifting of a sphere $\gamma \subset \RR^3$ is given by
 
 \begin{align*}
-    \beta(\gamma) = \Biggl \{ (x,y,z,v,w) \in \RR^5 \ | \ &(x-x_\gamma)^2 + (y-y_\gamma)^2 + (z-z_\gamma)^2 = r_\gamma^2, \\
+    \beta(\gamma) = \Biggl \{ (x,y,z,v,w) \in \RR^5 \  \big | \ &(x-x_\gamma)^2 + (y-y_\gamma)^2 + (z-z_\gamma)^2 = r_\gamma^2, \\
      &v = - \frac{x-x_\gamma}{z-z_\gamma}, \ w = - \frac{y-y_\gamma}{z-z_\gamma} \qquad  \Biggr \} .
 \end{align*}
 

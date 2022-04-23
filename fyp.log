@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.2.19)  22 APR 2022 18:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.2.19)  23 APR 2022 14:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -826,7 +826,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 ...ine {chapter}{References}{40}{chapter*.26}
+l.27 ...ine {chapter}{References}{41}{chapter*.26}
                                                   % [1
 
 
@@ -949,53 +949,50 @@ Overfull \hbox (0.72185pt too wide) detected at line 250
 []
  []
 
-[34] [35]
+[34] [35] [36] [37]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 308.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 308.
+(hyperref)                removing `math shift' on input line 360.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 308.
+(hyperref)                removing `superscript' on input line 360.
 
 
-Overfull \hbox (27.65012pt too wide) in paragraph at lines 308--308
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 360.
+
+
+Overfull \hbox (27.65012pt too wide) in paragraph at lines 360--360
 [][][]\OT1/cmr/m/n/10.95 capitalisation?[]  
  []
 
 
-Overfull \hbox (27.65012pt too wide) in paragraph at lines 308--308
+Overfull \hbox (27.65012pt too wide) in paragraph at lines 360--360
 [][][]\OT1/cmr/m/n/10.95 capitalisation?[]  
  []
 
-<images/degenr3.png, id=576, 1167.36125pt x 538.01pt>
+<images/degenr3.png, id=583, 1167.36125pt x 538.01pt>
 File: images/degenr3.png Graphic file (type png)
 <use images/degenr3.png>
-Package pdftex.def Info: images/degenr3.png  used on input line 314.
+Package pdftex.def Info: images/degenr3.png  used on input line 366.
 (pdftex.def)             Requested size: 341.43437pt x 157.35703pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[36] [37 <./images/degenr3.png>]) (./fyp.bbl [38] [39
+[38 <./images/degenr3.png>]) (./fyp.bbl [39] [40
 
 ]
 
 Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead on input line 112.
 
-) [40] (./chap/appendix.tex
+) [41] (./chap/appendix.tex
 Appendix A.
-[41
+[42
 
 
 ]
 Appendix B.
-[42
+[43
 
-] [43]) [44] (./fyp.aux)
+] [44]) [45] (./fyp.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1003,9 +1000,9 @@ Package rerunfilecheck Info: File `fyp.out' has not changed.
 (rerunfilecheck)             Checksum: 4CCCA098026E67C367A1F605D53F9D43;5020.
  ) 
 Here is how much of TeX's memory you used:
- 29703 strings out of 478353
- 565389 string characters out of 5854635
- 850518 words of memory out of 5000000
+ 29704 strings out of 478353
+ 565396 string characters out of 5854635
+ 853514 words of memory out of 5000000
  47103 multiletter control sequences out of 15000+600000
  419061 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1015,10 +1012,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on fyp.pdf (48 pages, 881891 bytes).
+Output written on fyp.pdf (49 pages, 886153 bytes).
 PDF statistics:
- 780 PDF objects out of 1000 (max. 8388607)
- 666 compressed objects within 7 object streams
- 191 named destinations out of 1000 (max. 500000)
+ 784 PDF objects out of 1000 (max. 8388607)
+ 669 compressed objects within 7 object streams
+ 192 named destinations out of 1000 (max. 500000)
  278 words of extra memory for PDF output out of 10000 (max. 10000000)
 
