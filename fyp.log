@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.2.19)  23 APR 2022 14:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.2.19)  23 APR 2022 15:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -811,7 +811,19 @@ Package pdftex.def Info: ./images/ucc.png  used on input line 48.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/ucc.png
 
 pdfTeX warning: pdflatex (file ./images/ucc.png): large interlaced PNG might cause out of memory (use non-interlaced PNG to fix this)
->]) (./fyp.toc
+>]) (./chap/abstract.texpdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3 \end{abstract}
+                   [1
+
+]) (./chap/acknowledgements.tex)pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.146 \clearpage
+                 [1
+
+] (./fyp.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -826,9 +838,8 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 ...ine {chapter}{References}{41}{chapter*.26}
+l.27 ...ine {chapter}{References}{41}{chapter*.27}
                                                   % [1
-
 
 
 ])
@@ -866,7 +877,7 @@ Overfull \hbox (3.84293pt too wide) detected at line 27
  []
 
 [4]
-<images/kakeya_ex_f32.png, id=265, 85.3624pt x 85.3624pt>
+<images/kakeya_ex_f32.png, id=272, 85.3624pt x 85.3624pt>
 File: images/kakeya_ex_f32.png Graphic file (type png)
 <use images/kakeya_ex_f32.png>
 Package pdftex.def Info: images/kakeya_ex_f32.png  used on input line 77.
@@ -904,7 +915,7 @@ Chapter 5.
 [18
 
 ] [19] [20]
-<images/STEX1_ManimCE_v0.15.1.png, id=415, 1927.2pt x 1084.05pt>
+<images/STEX1_ManimCE_v0.15.1.png, id=423, 1927.2pt x 1084.05pt>
 File: images/STEX1_ManimCE_v0.15.1.png Graphic file (type png)
 <use images/STEX1_ManimCE_v0.15.1.png>
 Package pdftex.def Info: images/STEX1_ManimCE_v0.15.1.png  used on input line 111.
@@ -915,7 +926,7 @@ LaTeX Warning: Reference `thm:S-t' on page 25 undefined on input line 280.
 
 [25] [26]) (./chap/circle.tex [27]
 Chapter 6.
-<images/circles_degen_case_ManimCE_v0.15.1.png, id=485, 2569.6pt x 1445.4pt>
+<images/circles_degen_case_ManimCE_v0.15.1.png, id=492, 2569.6pt x 1445.4pt>
 File: images/circles_degen_case_ManimCE_v0.15.1.png Graphic file (type png)
 <use images/circles_degen_case_ManimCE_v0.15.1.png>
 Package pdftex.def Info: images/circles_degen_case_ManimCE_v0.15.1.png  used on input line 31.
@@ -972,7 +983,7 @@ Overfull \hbox (27.65012pt too wide) in paragraph at lines 360--360
 [][][]\OT1/cmr/m/n/10.95 capitalisation?[]  
  []
 
-<images/degenr3.png, id=583, 1167.36125pt x 538.01pt>
+<images/degenr3.png, id=591, 1167.36125pt x 538.01pt>
 File: images/degenr3.png Graphic file (type png)
 <use images/degenr3.png>
 Package pdftex.def Info: images/degenr3.png  used on input line 366.
@@ -997,13 +1008,13 @@ Appendix B.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `fyp.out' has not changed.
-(rerunfilecheck)             Checksum: 4CCCA098026E67C367A1F605D53F9D43;5020.
+(rerunfilecheck)             Checksum: B629DE10E7DE175B8F37E7E917531CF6;5020.
  ) 
 Here is how much of TeX's memory you used:
- 29704 strings out of 478353
- 565396 string characters out of 5854635
+ 29714 strings out of 478353
+ 565619 string characters out of 5854635
  853514 words of memory out of 5000000
- 47103 multiletter control sequences out of 15000+600000
+ 47107 multiletter control sequences out of 15000+600000
  419061 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,17n,89p,854b,1092s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1012,10 +1023,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on fyp.pdf (49 pages, 886161 bytes).
+Output written on fyp.pdf (51 pages, 887488 bytes).
 PDF statistics:
- 784 PDF objects out of 1000 (max. 8388607)
- 669 compressed objects within 7 object streams
- 192 named destinations out of 1000 (max. 500000)
+ 792 PDF objects out of 1000 (max. 8388607)
+ 675 compressed objects within 7 object streams
+ 193 named destinations out of 1000 (max. 500000)
  278 words of extra memory for PDF output out of 10000 (max. 10000000)
 
