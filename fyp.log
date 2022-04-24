@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.2.19)  23 APR 2022 15:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  24 APR 2022 19:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex
-(/home/conrad/deve/Polynomial-Method-in-Combinatorics/fyp.tex
+**/home/conrad/deve/fyp-combo/fyp.tex
+(/home/conrad/deve/fyp-combo/fyp.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2021-11-22> (/usr/share/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2021/10/04 v1.4n Standard LaTeX document class
@@ -811,10 +811,22 @@ Package pdftex.def Info: ./images/ucc.png  used on input line 48.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/ucc.png
 
 pdfTeX warning: pdflatex (file ./images/ucc.png): large interlaced PNG might cause out of memory (use non-interlaced PNG to fix this)
->]) (./chap/abstract.texpdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
+>]) (./chap/abstract.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 6.
+ (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3 \end{abstract}
+l.7 \end{abstract}
                    [1
 
 ]) (./chap/acknowledgements.tex)pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
@@ -823,19 +835,7 @@ l.3 \end{abstract}
 l.146 \clearpage
                  [1
 
-] (./fyp.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 4.
- (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
+] (./fyp.tocpdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.27 ...ine {chapter}{References}{41}{chapter*.27}
@@ -896,4 +896,137 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 
 
 Overfull \hbox (7.58795pt too wide) in paragraph at lines 231--231
-[]\OT1/cmr/m/n/10.95 Now let $\OML/cmm/m/it/10.95 p[]; [] ; p[]$ \OT1/cmr/m/n/10.95 be the points of $\OML/cmm/m/it/10.95 A$\OT1/cmr/m/n/10.95 . We con-sider the eval-u-a-tion map $\OML/cmm/m/it/10.95 E \OT1/cmr/m/n/10.95 : [][](\U/msb/m/n/10.9
+[]\OT1/cmr/m/n/10.95 Now let $\OML/cmm/m/it/10.95 p[]; [] ; p[]$ \OT1/cmr/m/n/10.95 be the points of $\OML/cmm/m/it/10.95 A$\OT1/cmr/m/n/10.95 . We con-sider the eval-u-a-tion map $\OML/cmm/m/it/10.95 E \OT1/cmr/m/n/10.95 : [][](\U/msb/m/n/10.95 K[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 !
+ []
+
+[9] [10]) (./chap/alon.tex [11]
+Chapter 3.
+[12
+
+] [13]) (./chap/joints.tex [14]
+Chapter 4.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15
+
+] [16]) (./chap/trotter.tex [17]
+Chapter 5.
+[18
+
+] [19] [20]
+<images/STEX1_ManimCE_v0.15.1.png, id=423, 1927.2pt x 1084.05pt>
+File: images/STEX1_ManimCE_v0.15.1.png Graphic file (type png)
+<use images/STEX1_ManimCE_v0.15.1.png>
+Package pdftex.def Info: images/STEX1_ManimCE_v0.15.1.png  used on input line 111.
+(pdftex.def)             Requested size: 426.79135pt x 240.06316pt.
+ [21 <./images/STEX1_ManimCE_v0.15.1.png>] [22] [23] [24]
+
+LaTeX Warning: Reference `thm:S-t' on page 25 undefined on input line 280.
+
+[25] [26]) (./chap/circle.tex [27]
+Chapter 6.
+<images/circles_degen_case_ManimCE_v0.15.1.png, id=492, 2569.6pt x 1445.4pt>
+File: images/circles_degen_case_ManimCE_v0.15.1.png Graphic file (type png)
+<use images/circles_degen_case_ManimCE_v0.15.1.png>
+Package pdftex.def Info: images/circles_degen_case_ManimCE_v0.15.1.png  used on input line 31.
+(pdftex.def)             Requested size: 341.43437pt x 192.05493pt.
+[28
+
+] [29 <./images/circles_degen_case_ManimCE_v0.15.1.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 65.
+
+[30] [31] [32]
+
+LaTeX Warning: Marginpar on page 33 moved.
+
+
+Overfull \hbox (6.09149pt too wide) in paragraph at lines 213--218
+[]\OT1/cmr/m/n/10.95 Relabel $\OMS/cmsy/m/n/10.95 C$ \OT1/cmr/m/n/10.95 as $^^@$ for con-ve-nience. Again,
+ []
+
+[33]
+Overfull \hbox (0.72185pt too wide) detected at line 250
+[]
+ []
+
+[34] [35] [36] [37]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 360.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 360.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 360.
+
+
+Overfull \hbox (27.65012pt too wide) in paragraph at lines 360--360
+[][][]\OT1/cmr/m/n/10.95 capitalisation?[]  
+ []
+
+
+Overfull \hbox (27.65012pt too wide) in paragraph at lines 360--360
+[][][]\OT1/cmr/m/n/10.95 capitalisation?[]  
+ []
+
+<images/degenr3.png, id=591, 1167.36125pt x 538.01pt>
+File: images/degenr3.png Graphic file (type png)
+<use images/degenr3.png>
+Package pdftex.def Info: images/degenr3.png  used on input line 366.
+(pdftex.def)             Requested size: 341.43437pt x 157.35703pt.
+[38 <./images/degenr3.png>]) (./fyp.bbl [39] [40
+
+]
+
+Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead on input line 112.
+
+) [41] (./chap/appendix.tex
+Appendix A.
+[42
+
+
+]
+Appendix B.
+[43
+
+] [44]) [45] (./fyp.aux)
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `fyp.out' has not changed.
+(rerunfilecheck)             Checksum: B629DE10E7DE175B8F37E7E917531CF6;5020.
+ ) 
+Here is how much of TeX's memory you used:
+ 29714 strings out of 478353
+ 565544 string characters out of 5854636
+ 853514 words of memory out of 5000000
+ 47107 multiletter control sequences out of 15000+600000
+ 419061 words of font info for 93 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,17n,89p,829b,1092s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on fyp.pdf (51 pages, 888436 bytes).
+PDF statistics:
+ 792 PDF objects out of 1000 (max. 8388607)
+ 675 compressed objects within 7 object streams
+ 193 named destinations out of 1000 (max. 500000)
+ 278 words of extra memory for PDF output out of 10000 (max. 10000000)
+
