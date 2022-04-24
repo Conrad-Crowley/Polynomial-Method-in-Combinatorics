@@ -2,7 +2,7 @@
 
 Here we shall discuss the problem of counting the number of tangencies in a suitably non-degenerate collection of circles. We say two circles are tangent if their intersection contains a single point.
 The set of pairs of circles in a collection $\CE$ which are mutually tangent are called the tangencies and the collection of all tangencies is denoted $\tau(\CE)$. 
-\section{Trivial Bounds}
+
 \begin{lemma}[Trivial Bound] \label{lem:trivial-circle-bound}
     Let $\CE$ be an arbitrary finite collection of circles. Then the number of tangencies $|\tau(\CE)|$ is bounded by
     \[
@@ -10,8 +10,8 @@ The set of pairs of circles in a collection $\CE$ which are mutually tangent are
     \] 
 \end{lemma}
 \begin{proof}
-    For each pair of circles there can be at most one tangency between them.
-    Hence each circle is tangent to at most $|\CE|$ circles. The bound follows.
+    For each pair of circles in $\CE$ there can be at most one tangency between them.
+    Since there are $\leq |\CE|^2$ pairs, the bound follows.
 \end{proof}
 Stated for arbitrary collections of circles the problem is not particularly interesting as the above bound turns out to be asymptotically tight, as the following example shows.
 \begin{example}
@@ -121,13 +121,11 @@ For the first claim, observe that at each step $i$ we are reducing $\tau(\CE_i)$
 We now provide a lower bound on the cardinality of our refined set $\CE_M$. We have the trivial inequality $|\tau(\CE_M)| \leq |\CE_M|^{2}$. 
 Combining this with the result above, we attain $|\CE_M| \gtrsim |N|^{\alpha/2}$.
 \end{proof}
-In a similar fashion to our arguments in the Kakeya\todo{write coherent sentence} problem we will be arguing by contradiction, however here we will be arguing that if the zero set of a polynomial contains too many of a certain first type of object, 
-it must contain many more of a second kind of object. 
 
-
-
-
-We can now prove the main theorem. 
+We can now prove the main theorem using a strategy is similar to that of Chapter \ref*{chap:kakeya}. We assume that there are $\gtrsim N^{3/2}$ points of incidence and argue by contradiciton.
+We will find a polynomial which has a zero set containing
+many points of incidence between our curves, and then use the structure of the problem to claim that this polynomial's zero set must then also contain all the circles in the collection.
+We do this to achieve a contradiction as the degree of our polynomial will be too low to contain this many circles in its zero set.
 \begin{proof}[Proof of Theorem \ref{thm:circle-tangencies}]
     Given an arbitrary collection of circles $\CE$ with $\gtrsim N^{3/2}$ tangencies, Lemma \ref{lem:uniform-refine} with $\alpha = \frac{3}{2}$ 
     allows us to reduce to a collection
@@ -204,8 +202,8 @@ an extension of the \hyperref[thm:PolyPartioning]{polynomial partitioning} theor
 \todo{add def of variety}
 \todo{rephrase closer to \ref{thm:PolyPartioning}}
 \begin{lemma}[Polynomial Partitioning for Algebraic Varieties]
-    Suppose $\Gamma$ is a set of $k$-dimensional varieties in $\RR^n$. For any positive integer $D$ there exists a non-zero polynomial $P$ of degree at
-    most $D$ such that each connected component of $\RR^n \backslash Z(P)$ intersects $\lesssim D^{k-n} |\Gamma|$ varieties of $\Gamma$.\label{lem:poly-part-var}
+    If $\Gamma$ is a finite set of $k$-dimensional varieties in $\RR^n$ and $D$ any degree, there exists a non-zero polynomial $P$ of degree at
+    most $D$ such that each disjoint open set of $\RR^n \backslash Z(P)$ intersects $\lesssim D^{k-n} |\Gamma|$ varieties of $\Gamma$.\label{lem:poly-part-var}
 \end{lemma}
 We shall not prove this here. A proof of this result can be found as Theorem 0.3 in \cite{guth2015polypartvar}, the original paper of Guth presenting the result. The proof is in the same spirit as the proof Theorem \ref{thm:PolyPartioning} given in Chapter \ref{chap:trotter}, however some additional difficulties present themselves and a correct proof requires some care. One should notice that the $k=0$ case above recovers Theorem \ref{thm:PolyPartioning}.
 
@@ -367,7 +365,9 @@ Firstly, our current non-degeneracy condition is not sufficient as we have new d
         \caption{A collection of spheres in $\RR^3$ which satisfy the non-degeneracy condition the earlier section yet achieves $N^2$ tangencies.}
         \end{figure}
 \end{example}
-Due to cases like these, a new condition is required. A natural choice given this example would seem to be restricting our collections to those which do not contain too many tangencies along any one low-degree algebraic curve on the surface of a sphere. 
+Due to cases like these a new condition is required. 
+A natural choice given this example would seem to be restricting our collections to those which do not contain too many tangencies 
+along any one low-degree algebraic curve on the surface of a sphere. 
 
 Secondly, our simple Bézout lemma is no longer enough. An analogous lifting of a sphere $\gamma \subset \RR^3$ is given by
 

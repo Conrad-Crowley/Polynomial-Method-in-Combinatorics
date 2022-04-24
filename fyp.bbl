@@ -7,6 +7,12 @@ Noga Alon.
 \newblock volume~8, pages 7--29. 1999.
 \newblock Recent trends in combinatorics (M\'{a}trah\'{a}za, 1995).
 
+\bibitem[Alo03]{ALON2003}
+Noga Alon.
+\newblock Non-constructive proofs in {C}ombinatorics.
+\newblock Online Lecture Notes
+  (http://www.math.tau.ac.il/{$\sim$}nogaa/PDFS/nocon.pdf), 2003.
+
 \bibitem[AS07]{Sharir2007}
 Roel Apfelbaum and Micha Sharir.
 \newblock Large complete bipartite subgraphs in incidence graphs of points and
@@ -68,10 +74,6 @@ Robert~M. Freund and Michael~J. Todd.
 Larry Guth and Nets~Hawk Katz.
 \newblock Algebraic methods in discrete analogs of the {K}akeya problem.
 \newblock {\em Adv. Math.}, 225(5):2828--2839, 2010.
-
-\bibitem[Gow20]{GOW2020}
-Timothy Gowers.
-\newblock Topics in combinatorics - cambridge tripos lecture notes, 2020.
 
 \bibitem[Gut15]{guth2015polypartvar}
 Larry Guth.

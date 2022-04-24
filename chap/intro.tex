@@ -1,42 +1,36 @@
 \chapter{Introduction}
-The following is a short exposition of the polynomial method in combinatorics. 
-It is perhaps already misleading to call this the polynomial method 
-as there are in fact a collection of polynomial methods that have applications in combinatorics, the first example of this being known since the 1990s
-where Alon's proved a combinatorial version of Hibert's Nullstellensatz.\cite{alon1999combinatorial} We examine this result in detail
-in Chapter \ref{chap:alon}. In 2008 Dvir produced a remarkably short resolution to the finite field analogue of the Kakeya Conjecture which provided
-a new framework and enthusiasm for the polynomial method in combinatorial problems.\cite{2008DVIR} We will explore this proof in the next chapter. 
+The following is a short exposition of polynomial methods in combinatorics. Polynomial methods are a collection of techniques which use polynomial interpolation and rigidity properties
+of polynomials to control the size of collections of objects with a certain structure. 
+The first example of this technique was presented in the 1990s in \cite{alon1999combinatorial},  which we examine in detail
+in Chapter \ref{chap:alon}. The modern conception of the polynomial method was pioneered by Dvir in 2008 (See \cite{2008DVIR}), where he produced a remarkably short resolution to the finite field analogue of the Kakeya Conjecture which provided
+a new framework and enthusiasm for the polynomial method in combinatorial problems. We will explore this proof in the next chapter. 
 
-The most striking feature of the following proofs is that they leverage polynomials in problems which on the surface appear not to have anything to 
-do with polynomials. Generally, extremal configurations of these problems tend to have a lot of algebraic structure and this is exactly what these methods exploit using polynomials. 
-
+The most striking feature of the following proofs is that they leverage certain properties of polynomials in problems which on the surface appear not to have anything to 
+do with polynomials. Generally, extremal configurations of these problems tend to admit a lot of algebraic structure and this is exactly what these methods exploit using polynomials. 
 
 
-In Chapter \ref{chap:kakeya} we will use a low degree polynomial to interpolate a certain set of objects. We will then show that the zero set of the polynomial can not contain 
-too many objects of this type due to the inherent structure of these objects. In Chapter \ref{chap:joints} we will $\dots$ \todo{do something indeed}.
-Chapter \ref{chap:trotter} introduces the idea of using a polynomial to partition the plane into a degree-controlled number of cells each containing at most some uniform amount of points.\todo{weak}
-Chapter \ref{chap:circle} will discuss a proof that first uses a similar strategy to Chapter \ref{chap:kakeya}, however in this proof we will be interpolating
-objects of one type and then proving that the polynomial's zero set cannot contain too many objects of some second related type. 
-We then provide a new proof of the same theorem which uses an extension of the polynomial partitioning seen in \ref{chap:trotter}, the key difference being that
-instead of controlling the number of points in each cell we will control the number of varieties that intersect any given cell. Finally, in Chapter \ref{chap:alon} we will provide an example
-of the polynomial method being used outside the context of incidence geometry.
+\section{Why Polynomials?}
+It is perhaps wise to discuss here what features of polynomials make them particularly powerful when dealing with problems in Combinatorics. 
+Polynomials are perhaps some of the simplest of mathematical objects, as once we define a field they are simply a combination of the addition and multiplication operation between elements. 
+It is not immediately obvious why such simple objects may prove to be so useful.
 
-\section{Why polynomials?}
-\todo{this section}
+There are two key properties of polynomials that this collection of methods exploit.
+Firstly, we use the fact that there are roughly $\sim D^n$ coefficients of a polynomial in $n$ variables of degree at most $D$ (See Lemma \ref{lem:paramcounting}).  This is utilised 
+in an essential manner when we try to find polynomials that contain objects in their zero set. We can contain a set of size $M$ in the zero set of
+a polynomial with degree at most $O(M^{1/n}$). In other word, we have a lot of flexibility in choosing a polynomial.
+Secondly, and in sharp contrast, polynomials behave extremely rigidly when restricted to lines. We mean by this that the zero set of a polynomial of degree $D$ can intersect 
+a line in at most $D$ points if the line is not contained within said zero set. The gap between this flexibility of choosing a polynomial and rigidity of restricting to lines provides
+us with a surprisingly powerful technique. 
 
-Points to possibly mention here:
-\begin{enumerate}
-    \item choosing a polynomial has $D^n$ degrees of freedom [$\text{Poly}_D(\FF^n) \sim D^n$]
-    \item polynomials behave rigidly on lines, having only $D$ degrees of freedom.
-    \item ``parameter counting - vanishing lemma'' method. 
-    \item Non constructive method of finding a polynomial is reminiscent of probabilistic method.\cite{GOW2020} \cite{GUTH2016}
-    \item ill-formed thoughts that polynomials extract information about finite series analogous to generating functions and infinite series. 
-\end{enumerate}
+Another striking thing about the method is the non-constructive manner in which the polynomials are usually used. 
+We often cannot explicitly find a satisfactory polynomial to use for our purposes, instead we opt to use arguments from Linear Algebra to establish the
+existence of a polynomial with such properties. This is reminiscent of other methods in combinatorics, such as the Probabilistic Method or the Topological Method (See \cite{ALON2003} for a survey of these methods.). 
 
-\section*{Notation}
+\section{Notation}
 We introduce some convenient notation here. We write that $A \lesssim_n B$ to mean that there exists some constant
 $C(n)$ which depends on $n$ such that $A \leq C(n) B$. Further, we write that $A \sim_n B$ if $A \lesssim_n B$ and $B \lesssim_n A$.
 
-We write $\text{Poly}_D (\KK^n)$ to represent the space of polynomials in $n$ variables with coefficients in $\KK$ and degree at most $D$.
+We write $\text{Poly}_D (\KK^n)$ to represent the space of polynomials in $n$ variables with coefficients in a field $\KK$ and degree at most $D$.
 
 The indicator function $\OO$ is defined on logical statements $X$ as follows:
 \[
@@ -52,4 +46,4 @@ We borrow from Computer Science the big O notation. For functions $f,g : \NN^+ \
     f(N) &= O(g(N)) \iff \exists N_0, M \in \NN \text{ such that } f(n) \leq Mg(n) \forall n > N_0 \\
     f(N) &= \Omega(g(n)) \iff g(N) = O(f(N)).
 \end{align*}
-These can be thought of as asymtopic upper and lower bounds respectively.
+These can be thought of as asymptotic upper and lower bounds respectively.

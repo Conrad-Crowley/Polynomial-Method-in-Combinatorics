@@ -203,13 +203,25 @@ Since the Lebesgue measure is continuous we can choose $\delta$ such that $m\lef
 Now we choose $n$ sufficiently large that $|f_n (x) - f(x)| < \delta$ on $U\backslash E$. Then we have
 \begin{align*}
     |m&\left(\{x\in U \ |\ f_n(x)>0\}\right) - m\left(\{x\in U\ |\ f(x)>0\}\right)|\\
-    &\leq |m\left(\{x\in U\ |\ f_n(x)>0\}\right)| + |m\left(\{x\in U\ |\ f(x)>0\}\right)| \\
-    &= | m\left(\{x\in U \ |\ f_n(x)>0,  f> 0 \}\right)| + |m\left(\{x\in U \ |\ f_n(x)>0,  f< 0 \}\right)|   \\
-    & \quad - |m\left(\{x\in U \ |\  f> 0, f_n(x)>0 \}\right)| - |m\left(\{x\in U \ |\  f> 0, f_n(x)<0 \}\right) | \\
-    &= |m\left(\{x\in U \ |\ f_n(x)>0, f< 0\}\right)| - |m\left(\{x\in U\ |\ f(x)>0,  f_n<0\}\right)|
-    \intertext{These two remaining terms are symmetrical, so we only need to bound one of them. We proceed by  to bound}
-    &< 2 \varepsilon. 
+    &= | m\left(\{x\in U \ |\ f_n(x)>0,  f(x)> 0 \}\right) + m\left(\{x\in U \ |\ f_n(x)>0,  f(x)< 0 \}\right)   \\
+    & \quad - m\left(\{x\in U \ |\  f(x)> 0, f_n(x)>0 \}\right) - m\left(\{x\in U \ |\  f(x)> 0, f_n(x)<0 \}\right) | \\
+    &= |m\left(\{x\in U \ |\ f_n(x)>0, f(x)< 0\}\right) - m\left(\{x\in U\ |\ f(x)>0,  f_n(x)<0\}\right)|.
+    \intertext{By the triangle inequality we have}
+    &\leq m\left(\{x\in U \ |\ f_n(x)>0, f(x)< 0\}\right) + m\left(\{x\in U\ |\ f(x)>0,  f_n(x)<0\}\right).
 \end{align*}
+The remaining two terms are symmetrical, so we proceed by bounding $m\left(\{x\in U\ |\ f(x)>0,  f_n(x)<0\}\right)$. We can write 
+\begin{align*}
+    m\left(\{x\in U\ |\ f(x)>0,  f_n(x)<0\}\right) &=  m\left(\{x\in U  \ |\ f(x)>0,  f_n(x)<0\} \cap E \right)  \\
+     & \quad+ m\left(\{x\in U  \ |\ f(x)>0,  f_n(x)<0\}  \backslash E \right)  \\ 
+     &< \varepsilon + m\left(\{x\in U  \ |\ f(x)>0,  f_n(x)<0\} \backslash E \right) .
+     \intertext{We claim that $\{x\in U \ |\ f(x)>0,  f_n(x)<0\}  \backslash E  \subset \{x\in U \ |\ |f(x)| < \delta\} \backslash E$. Notice that if $f(x)>0$ and $f_n(x) < 0$ we have}
+     |f(x)| &= f(x) = f_n(x) + f(x) -f_n(x) < \delta \intertext{and similarly that}
+     |f_n(x)| &= -f_n(x) = + f(x) -f_n(x)  -f(x) < \delta. 
+\end{align*}
+This establishes our claim and we can conclude that 
+\[
+    m\left(\{x\in U\ |\ f(x)>0,  f_n(x)<0\}\right) < 2\varepsilon.
+\]
 Since $\varepsilon$ was arbitrary each $\phi_i$ is continuous.
 
 We now combine each $\phi_i$ into the map $\phi : V\backslash \{0\} \to \RR^N$ by $\phi = (\phi_1, \dots, \phi_N)$.
@@ -245,7 +257,7 @@ The main idea will be to replace each of our points in the finite set with $\del
 We now utilise the above results to prove a powerful cell decomposition technique known as polynomial partitioning.
 \begin{theorem}[Polynomial Partitioning]
     If $S$ is a finite subset of $\RR^n$ and $D$ any degree, there exists
-    a polynomial $P$ of degree at most $D$ such that $\RR^n \backslash Z(P)$ is a disjoint union of $\sim D^n$ open sets $O_i$ referred to as cells each containing
+    a non-zero polynomial $P$ of degree at most $D$ such that $\RR^n \backslash Z(P)$ is a disjoint union of $\sim D^n$ open sets $O_i$ referred to as cells each containing
     $\lesssim_n |S|D^{-n}$ points. \label{thm:PolyPartioning}
  \end{theorem}
  
@@ -263,9 +275,9 @@ We now utilise the above results to prove a powerful cell decomposition techniqu
  Continuing this process to define polynomials $P_3, P_4, \dots$, where the polynomial $P_j$ simultaneously bisects $2^{j-1}$ finite sets. 
  By the \hyperref[thm:FiniteHamSandwich]{Finite Ham Sandwich Theorem}, we can find a polynomial of degree $\lesssim 2^{j/n}$ that simultaneously bisects $2^{j-1}$ finite sets.
   
- Repeating this procedure $J$ times, and defining $P = \prod_{i=1}^{J} P_i$, $\RR^n \backslash Z(P)$ is the disjoint union of $2^J$ open sets each containing $ \leq |S|2^{-J}$
- points of $S$. Now we choose $D$ such that $\deg(P) < D$ which is equivalent to $\sum_{j=0}^J c(n) 2^{j/n} \leq D$. But $\sum_{j=0}^J 2^{j/n}$ is a geometric series so we can find $\deg (P) < D$ for $D \leq c(n) 2^{J/n}$. \todo{unsure how to rephrase this}
- The number of points in each $O_i$ is $\leq |S| 2^{-J} \leq c(n) |S| D^{-n}$
+If we repeat this procedure $J$ times and defining $P = \prod_{i=1}^{J} P_i$, then $\RR^n \backslash Z(P)$ is the disjoint union of $2^J$ open sets each containing $\leq |S|2^{-J}$
+ points of $S$. Now we choose the largest $J$ such that $\deg(P) < D$ which is equivalent to $\sum_{j=0}^J c(n) 2^{j/n} \leq D$. But $\sum_{j=0}^J 2^{j/n}$ is a geometric series so we can arrange that $\deg (P) < D$ for $D \leq c(n) 2^{J/n}$.
+ The number of points in each $O_i$ is $\leq |S| 2^{-J} \leq c(n) |S| D^{-n}.$
  \end{proof}
 
 There is a crucial point to note about polynomial partitioning. 

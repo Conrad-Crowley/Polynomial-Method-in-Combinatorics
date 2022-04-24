@@ -11,16 +11,16 @@ Warning--can't use both volume and number fields in Knauer2003
 Warning--empty publisher in Knauer2003
 You've used 24 entries,
             2543 wiz_defined-function locations,
-            721 strings with 7938 characters,
-and the built_in function-call counts, 9955 in all, are:
-= -- 1052
+            720 strings with 7985 characters,
+and the built_in function-call counts, 9964 in all, are:
+= -- 1055
 > -- 332
 < -- 22
 + -- 109
 - -- 103
 * -- 712
-:= -- 1552
-add.period$ -- 79
+:= -- 1553
+add.period$ -- 80
 call.type$ -- 24
 change.case$ -- 132
 chr.to.int$ -- 24
@@ -28,13 +28,13 @@ cite$ -- 30
 duplicate$ -- 420
 empty$ -- 776
 format.name$ -- 140
-if$ -- 2075
+if$ -- 2078
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 25
-newline$ -- 126
+newline$ -- 127
 num.names$ -- 72
-pop$ -- 112
+pop$ -- 111
 preamble$ -- 1
 purify$ -- 158
 quote$ -- 0
@@ -48,6 +48,6 @@ top$ -- 0
 type$ -- 184
 warning$ -- 6
 while$ -- 104
-width$ -- 29
-write$ -- 320
+width$ -- 28
+write$ -- 322
 (There were 6 warnings)
