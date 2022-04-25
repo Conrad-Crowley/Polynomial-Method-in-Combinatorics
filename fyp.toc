@@ -27,4 +27,4 @@
 \contentsline {chapter}{References}{43}{chapter*.20}%
 \contentsline {chapter}{Appendices}{44}{section*.21}%
 \contentsline {chapter}{\numberline {A}Proof of Bézout's Lemma}{44}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Proof of Borsuk-Ulam Theorem}{45}{appendix.B}%
+\contentsline {chapter}{\numberline {B}Proof of the Borsuk-Ulam Theorem}{45}{appendix.B}%

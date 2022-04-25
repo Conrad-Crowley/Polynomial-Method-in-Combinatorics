@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  25 APR 2022 12:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.6)  25 APR 2022 13:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -952,6 +952,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 65.
 
+
+LaTeX Warning: Reference `appendix:Bezout' on page 31 undefined on input line 96.
+
 [31] [32] [33]
 
 LaTeX Warning: Marginpar on page 34 moved.
@@ -989,7 +992,7 @@ Overfull \hbox (27.65012pt too wide) in paragraph at lines 361--361
 [][][]\OT1/cmr/m/n/10.95 capitalisation?[]  
  []
 
-<images/degenr3.png, id=579, 1167.36125pt x 538.01pt>
+<images/degenr3.png, id=577, 1167.36125pt x 538.01pt>
 File: images/degenr3.png Graphic file (type png)
 <use images/degenr3.png>
 Package pdftex.def Info: images/degenr3.png  used on input line 369.
@@ -1014,25 +1017,25 @@ Appendix B.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `fyp.out' has not changed.
-(rerunfilecheck)             Checksum: 7543AD01E154B186ABB27450952EC6C4;4987.
+(rerunfilecheck)             Checksum: 1E4C0327074F6C332E2C2B0A88B11B50;5010.
  ) 
 Here is how much of TeX's memory you used:
- 29662 strings out of 478353
- 564450 string characters out of 5854636
- 844902 words of memory out of 5000000
+ 29663 strings out of 478353
+ 564466 string characters out of 5854636
+ 844868 words of memory out of 5000000
  47064 multiletter control sequences out of 15000+600000
  419061 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,17n,89p,829b,1092s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,17n,89p,587b,1092s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </home/conrad/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on fyp.pdf (53 pages, 889875 bytes).
+Output written on fyp.pdf (53 pages, 890449 bytes).
 PDF statistics:
- 783 PDF objects out of 1000 (max. 8388607)
- 664 compressed objects within 7 object streams
- 184 named destinations out of 1000 (max. 500000)
+ 785 PDF objects out of 1000 (max. 8388607)
+ 666 compressed objects within 7 object streams
+ 185 named destinations out of 1000 (max. 500000)
  278 words of extra memory for PDF output out of 10000 (max. 10000000)
 

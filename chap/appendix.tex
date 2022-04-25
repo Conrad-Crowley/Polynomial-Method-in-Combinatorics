@@ -1,11 +1,12 @@
 \chapter{Proof of Bézout's Lemma}
 
-\begin{lemma}[Bezout Lemma for Curves in $\RR^3$]     \label{appendix:Bezout}
-    Let $Z(P)$ and $Z(Q_1,Q_2)$ be the zero sets of polynomials over $\RR[X,Y,Z]$ and that $P,Q_1,Q_2$ have no common factors.
-  Then we can bound their intersection:
-     \[|Z(P) \cap Z(Q_1,Q_2)| \lesssim \deg P \deg Q_1 \deg Q_2.\]
+\begin{lemma}[Bézout Lemma in $\RR^3$ (Lemma \ref{lem:Bezout})]    
+    Let $Z(P)$ and $Z(Q_1,Q_2)$ be the zero sets of polynomials over $\RR[X,Y,Z]$ and suppose that $P,Q_1,Q_2$ have no pairwise common factors.
+  Then we can bound the cardinality of the intersection of the zero sets by
+     \[ |Z(P) \cap Z(Q_1,Q_2)| \lesssim \deg P \deg Q_1 \deg Q_2.\]
  \end{lemma}
 \begin{proof}
+    Let $F_D [X,Y,Z] = \operatorname{Poly}_D (\RR[X,Y,Z])$ for convenience. 
         \[\begin{tikzcd}
             & {\frac{F_{D-\deg Q_2}[X,Y,Z]}{\langle Q_1 \rangle_{D- \deg Q_2}}} & {\frac{F_{D-\deg P}[X,Y,Z]}{\langle Q_1, Q_2 \rangle_{D- \deg P}}} \\
             {F_D[X,Y,Z]} & {\frac{F_D[X,Y,Z]}{\langle Q_1 \rangle_D}} & {\frac{F_D[X,Y,Z]}{\langle Q_1, Q_2 \rangle_D}} & {\frac{F_D[X,Y,Z]}{\langle Q_1, Q_2, P \rangle_D}}
@@ -20,50 +21,56 @@
 
 
 
-\chapter{Proof of Borsuk-Ulam Theorem}
-    \begin{theorem}[Borsuk-Ulam]
+\chapter{Proof of the Borsuk-Ulam Theorem}
+    \begin{theorem}[Borsuk-Ulam (Theorem \ref{thm:Borsuk-Ulam})]
         A map $\phi$ is said to be antipodal if it obeys $\phi (-x) = -\phi(x)$ for all $x$ in its domain. Suppose $\phi: \SP^N \to \RR^N$ is a continuous antipodal mapping. 
         Then the image of $\phi$ contains 0. \label{appendix:Borsuk-Ulam}
     \end{theorem}
-We present here a combinational proof due to Matousek.\cite{matouvsek2003using} 
+We present here a combinatorial proof due to Matousek (See \cite{matouvsek2003using}).
 
-Let $\|x\|_1$ be the $L_1$ norm of $x$. Define $B^n$ as the unit ball with respect to the $L_1$ norm, 
+Let $\|x\|_1$ be the $L^1$ norm of $x$. Define $B^n$ as the unit ball with respect to the $L_1$ norm, 
 that is: $B^n = \{x\in \RR^n \ \big | \ \|x\|_1 \leq 1 \}$.
+\begin{definition}
+    A simplex is the convex hull of an affinely independent set of vectors in $\RR^n$. The convex hull of an arbitrary subset of vertices of a simplex is called a face of the simplex.
 
-A simplex is the convex hull of an affinely independent set in $\RR^n$. A family of simplexes $\Delta = \{\sigma_1,\sigma_2, \dots, \sigma_m\}$ is called a \textbf{simplicial complex} if the following conditions hold:
-\begin{enumerate}
-    \item Each non-empty face of any simplex $\sigma \in \Delta$ is also a simplex of $\Delta$.
-    \item $\sigma_1, \sigma_2 \in \Delta \implies \sigma_1 \cap \sigma_2$ is a face of both $\sigma_1$ and $\sigma_2$.
-\end{enumerate}
+    A family of simplexes $\Delta = \{\sigma_1,\sigma_2, \dots, \sigma_m\}$ is called a \textbf{simplicial complex} if the following conditions hold:
+    \begin{enumerate}
+        \item Each non-empty face of any simplex $\sigma \in \Delta$ is also a simplex of $\Delta$.
+        \item $\sigma_1, \sigma_2 \in \Delta \implies \sigma_1 \cap \sigma_2$ is a face of both $\sigma_1$ and $\sigma_2$.
+    \end{enumerate}
+    The union of all simplexes in a simplicial complex $\Delta$ is denoted by $\| \Delta \|$.
+\end{definition}
+
+
 A simplicial complex $T$ is a \textbf{special triangulation} of $B^n$ if all the following hold:
 \begin{enumerate}
-    \item $\|T\| = B^n$
+    \item $\|T\| = B^n$.
     \item $T$ is a refinement of the triangulation of $B^n$ given by cutting the coordinate hyperplanes. (In other words, no simplex of $T$ spans over a boundary of an orthant)
     \item $T$ is symmetrical around the origin.
 \end{enumerate}
 
-To prove the Borsuk-Ulam theorem, we first prove the Tucker Lemma. This lemma can be thought of as the combinational analogue to the Borsuk-Ulam Theorem.
+To prove the Borsuk-Ulam theorem, we first prove the Tucker Lemma. This lemma can be thought of as the combinatorial analogue of the Borsuk-Ulam Theorem.
 We present here a constructive proof first published by Freund.\cite{freund1981constructive}
 \begin{lemma}[Tucker Lemma]
     Let the vertices of an arbitrary special triangulation $T$ be denoted by labels $\text{lab} (u) \in \{\pm1, \pm2,\dots ,\pm n\}$
-    in such a way that the vertices $u \in \partial B^n$ on the boundary satisfies $\text{lab} (-u) = -\text{lab} (u)$. Then there exists a 1-simplex (an edge) in $T$ which is complimentary, that is its two vertices $x,x'$ satisfy $\text{lab} (-x) = -\text{lab} (x')$.
+    in such a way that the vertices $u \in \partial B^n$ on the boundary satisfies $\text{lab} (-u) = -\text{lab} (u)$. Then there exists a 1-simplex (an edge) in $T$ which is complementary, that is its two vertices $x,x'$ satisfy $\text{lab} (-x) = -\text{lab} (x')$.
 \end{lemma} 
 \begin{proof}
     Let $T$ be a special triangulation of $B^n$. For a simplex $\sigma \in T$ we set $\sgn \sigma = (\sgn x_1, \sgn x_2, \dots, \sgn x_n)$, where $x$ is an arbitrary point 
-    of the interior of $\sigma$. This definition is well-defined, as special triangulations refines the orthants of $\RR^n$ and thus the signs of each coordinate do not change in the interior of $\sigma$. 
+    of the interior of $\sigma$. This definition is well-posed, as special triangulations refine the orthants of $\RR^n$ and thus the signs of each coordinate do not change in the interior of $\sigma$. 
     We say $\sigma$ is \textbf{completely labelled} if the following holds for each $0\leq i\leq n$: if $\sgn(\sigma)_i =1$, then at least one of the vertices of $\sigma$ is labelled by the number $i$, and if 
     if $\sgn(\sigma)_i =-1$, then at least one of the vertices of $\sigma$ is labelled by the number $-i$.
 
-    We now define a graph $G$ whose vertices are all completely labelled simplexes, and in which two vertices $\sigma, \sigma' \in T$ are connected by an edge if:
+    We now define a graph $G$ whose vertices consist of all the completely labelled simplexes of $T$, and in which two vertices $\sigma, \sigma' \in T$ are connected by an edge if:
     \begin{enumerate}
-        \item[(a)] $\sigma, \sigma' \in \partial B^n = S^{n-1}$ and $\sigma = -\sigma'$, or
-        \item[(b)] $\sigma$ is a $k$-simplex and $\sigma'$ is its $(k-1)$-face whose vertices are already labelled by all numbers required for a complete labelling of $\sigma$.
+        \item[(a)] $\sigma, \sigma' \subset \partial B^n = S^{n-1}$ and $\sigma = -\sigma'$, or
+        \item[(b)] $\sigma$ is a $k$-simplex and $\sigma'$ is one of its $(k-1)$-face whose vertices are already labelled by all numbers required for a complete labelling of $\sigma$.
     \end{enumerate}
 
     The degree of a completely labelled simplex is the number of completely labelled simplexes adjacent to it in $G$.
 
     The simplex $\{0\}$ has degree $1$ in $G$, since it is connected to exactly the edge of the triangulation which is completely labelled by $\text{lab}(0)$. 
-    We now prove that any other vertex $\sigma$ of $G$ has degree 2 except when $\sigma$ contains a complimentary edge. 
+    We now prove that any other vertex $\sigma$ of $G$ has degree 2 except when $\sigma$ contains a complementary edge. 
     Since a graph cannot contain only one vertex of odd degree, the lemma will be established. 
 
     Let $\sgn \sigma$ have $k$ non-zero components, then the dimension of $\sigma$ is either $k$ or $k-1$. 
@@ -75,11 +82,17 @@ We present here a constructive proof first published by Freund.\cite{freund1981c
         \item repeats one of the $k$ obligatory labels in which case $\sigma$ is adjacent to two of its faces, or
         \item it is opposite to one of the obligatory labels in which case we have a complimentary edge, or \item it is yet another number not in the $k$ obligatory labels, in which case the neighbours of $\sigma$ are its completely labelled face and one adjacent simplex of larger dimension determined by the extra label. 
     \end{itemize}
-    In both cases without a complimentary edge we have two neighbours.
+    In both cases without a complementary edge we have two neighbours.
 \end{proof}
 
 \begin{proof}[Proof of Borsuk-Ulam from Tucker Lemma]
-    Let $f: \SP^n \to \RR^n$ be a continuous mapping, and let $B^n$ be the unit ball in the ``equator'' hyperplane of $\SP^n$. We define $g: B^n \to \RR^n$ by setting $g(x) = f(y) - f(-y)$, where $y$ is the point of the upper hemisphere of $\SP^n$ whose vertical projection on $B^n$ is $x$. The map $g$ is obviously antipodal on $\partial B^n = \SP^{n-1}$. For contradiction let us assume that $g(x) \neq 0$ everywhere. From the compactness of the ball we have the existence of an $\varepsilon > 0$ such that $\|g(x)\|_1 \geq \varepsilon$ for all $x$. Further, a continuous fraction on a compact set is uniformly continuous, and thus there exists a $\delta > 0$ such that if $\| x - x' \|_1 \leq \delta$ then $\|g(x) - g(x')\|_1 < \varepsilon/n$.
+    Let $f: \SP^N \to \RR^N$ be a continuous mapping, and let $B^N$ be the unit ball in an ``equator'' hyperplane of $\SP^N$. 
+    We define $g: B^N \to \RR^N$ by setting $g(x) = f(y) - f(-y)$, where $y$ is the point of the upper hemisphere of $\SP^N$ whose vertical projection on $B^N$ is $x$. 
+    The map $g$ is obviously antipodal on $\partial B^N = \SP^{N-1}$. For contradiction let us assume that $g(x) \neq 0$ everywhere. 
+    From the compactness of the ball we have the existence of an $\varepsilon > 0$ such that $\|g(x)\|_1 \geq \varepsilon$ for all $x$. 
+    Further, a continuous function on a compact set is uniformly continuous, and thus there exists a $\delta > 0$ such that if $\| x - x' \|_1 \leq \delta$ then $\|g(x) - g(x')\|_1 < \varepsilon/N$.
     
-    Let us choose a special triangulation $T$ such that the diameter of each of its simplexes is at most $\delta$. We define a labelling of the vertices of $T$ as follows: $|\text{lab}(x)| = i$ if $|g_i(x)| = \max \{|g_1(x)|, \dots, |g_n(x)| \}$ and $\sgn \text{lab} (x) = \sgn g_i(x)$ (if the maximum is attained for more than one index, we take the first such index). From the Tucker Lemma we know there exists a complimentary edge $xx'$. Let $\text{lab}(x) = -\text{lab}(x') = i$, then $g(x)_i \geq \varepsilon/n$ and $g(x')_i \leq -\varepsilon/n$. Hence $\|g(x) - g(x') \|_1 \geq 2\varepsilon / n$, a contradiction. Therefore there exists a zero $x$ of the function $g$.
+    Let us choose a special triangulation $T$ such that the diameter of each of its simplexes is at most $\delta$. 
+    We define a labelling of the vertices of $T$ as follows: $|\text{lab}(x)| = i$ if $|g_i(x)| = \max \{|g_1(x)|, \dots, |g_N(x)| \}$ and $\sgn \text{lab} (x) = \sgn g_i(x)$ (if the maximum is attained for more than one index, we take the first such index). 
+    From the Tucker Lemma we know there exists a complementary edge $xx'$. Let $\text{lab}(x) = -\text{lab}(x') = i$, then $g(x)_i \geq \varepsilon/N$ and $g(x')_i \leq -\varepsilon/N$. Hence $\|g(x) - g(x') \|_1 \geq 2\varepsilon / N$, a contradiction. Therefore there exists a zero $x$ of the function $g$.
 \end{proof}
