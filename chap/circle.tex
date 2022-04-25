@@ -95,7 +95,7 @@ In the course of the proof we will need a Bezout-type result which bounds the nu
 \end{lemma}
 To preserve the flow of this chapter, the proof of this result will be given in Appendix \ref{appendix:Bezout}.
 
-\section[Ellenberg-Solymosi-Zahl's Proof]{Ellenberg-Solymosi-Zahl's Proof of Theorem \ref{thm:circle-tangencies}}
+\section[Ellenberg-Solymosi-Zahl's Proof]{Ellenberg-Solymosi-Zahl's Proof of Theorem \ref{thm:circle-tangencies} \label{sect:Zahl-Proof}}
 In this proof, we will need to ensure our tangencies
 are sufficiently uniformly distributed among our circles. We can refine our collection such that this is the case by the following lemma.
 
@@ -212,7 +212,7 @@ Relabel $\CE$ as $\Gamma$ for convenience. Again, we perform the lifting transfo
 We have a collection of $N$ 1-dimensional varieties in $\RR^3$ upon which we use our polynomial partitioning lemma (Lemma \ref{lem:poly-part-var})
 to find a polynomial $P$ such that each cell of $\RR^3 \backslash Z(P)$ intersects $\lesssim N D^{-2}$ varieties. 
 $\RR^3 \backslash Z(P)$ partitions the space into $\sim D^3$ cells. 
-Let us label the interior of each of these cells as $\{\Omega_i \ | \ 0 \leq i \lesssim D^3 \}$, and further label the set of varieties in $\Gamma$ that intersect a given cell $\Omega_i$ as $\Gamma_i$.
+Let us label the interior of each of these cells as $\Omega_i$ for $0 \leq i \lesssim D^3$, and further label the set of varieties in $\Gamma$ that intersect a given cell $\Omega_i$ as $\Gamma_i$.
 
 We can now define the following complementary sets based on whether the variety is contained entirely in $Z(P)$:
 \begin{align*}
@@ -250,9 +250,9 @@ Using our trivial bound (Lemma \ref{lem:trivial-circle-bound}) and the fact that
 \begin{align*}
                  &\lesssim \sum_i \left(\frac{N}{D^2}\right)^2 + \sum_{\beta(\gamma), \beta(\gamma') \in C_1} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)] \\
                  &\sim D^3 N^2 D^{-4} + \sum_{\beta(\gamma)\in C_1} \sum_{\beta(\gamma') \in C_1} \OO[\beta(\gamma) \cap \beta(\gamma') \in Z(P)].
-                 \intertext{For each fixed $\beta(\gamma) \in C_1$ we see by Bézout's Lemma (Lemma \ref{lem:Bezout}) that $\beta(\gamma)$ can intersect $Z(P)$ in at most $\lesssim D$ points. Since all the intersections in the latter sum are of this type, we have that each $\beta(\gamma)$ contributes at most $\lesssim D$ to the sum, and summing over all possible $\beta(\gamma)'s \in C_1$ we obtain}
+                 \intertext{For each fixed $\beta(\gamma) \in C_1$ we see by Bézout's Lemma (Lemma \ref{lem:Bezout}) that $\beta(\gamma)$ can intersect $Z(P)$ in at most $\lesssim D$ points. Since all the intersections in the latter sum occur in $Z(P)$, we have that each $\beta(\gamma)$ contributes at most $\lesssim D$ to the sum, and summing over all possible $\beta(\gamma)'s \in C_1$ we obtain}
                  &\lesssim  N^2 D^{-1} + \sum_{\beta(\gamma)\in C_1} D \\
-                 &\sim N^2D^{-1} + ND.
+                 &\lesssim N^2D^{-1} + ND.
 \end{align*}
 
 
@@ -263,22 +263,23 @@ The argument for $I(C_1,C_2)$ is similar to the one above, however there are now
     |I(C_1,C_2)|& \lesssim \sum_{\beta(\gamma)\in C_1} D \leq ND.
 \end{align*}
 
-Finally we need to handle the incidences between curves contained entirely in the zero-set, $I(C_2,C_2)$. We can write
-\[
-    |I(C_2,C_2)| = \sum_{\beta(\gamma), \beta(\gamma') \in C_2} \OO[\beta(\gamma) \cap \beta(\gamma') \neq \emptyset].
-\]
-
+Finally we need to handle the incidences between curves contained entirely in the zero-set, $I(C_2,C_2)$.
 This is a slightly more technical undertaking than the previous two cases.
 We proceed by considering the class of polynomials whose zero set contains every curve in $C_2$, formally defined as
 \[
     \mathcal P_0 = \{  R(X,Y,Z) \in \RR[X,Y,Z] \ | \ \forall \beta(\gamma) \in C_2, \ \beta(\gamma) \subset Z(R) \}.  
 \]
 
-$\mathcal P_0$ is non-empty, as by the definition of $C_2$ it at least contains the partitioning polynomial $P$. Let us take the polynomial in $\mathcal P_0$ of minimal degree and label it $P_0$. \todo{expand on this maybe}Then $Z(\partial_z P_0)$ contains all the points of $I(C_2,C_2)$.  Either $\partial_z P_0 \equiv 0$ or it is not. 
+$\mathcal P_0$ is non-empty, as by the definition of $C_2$ it at least contains the partitioning polynomial $P$. Let us take the polynomial in $\mathcal P_0$ of minimal degree and label it $P_0$. 
+As seen in the proof in Section \ref{sect:Zahl-Proof}, since the curves are entirely contained in $Z(P_0)$, and at a point of incidence we have $\partial_z P_0 =0$, we conclude $Z(\partial_z P_0)$ contains all the points in the set $I(C_2,C_2)$.  Either $\partial_z P_0 \equiv 0$ or it is not. 
 
-In the first case, we must have that $P_0(X,Y,Z) = Q(X,Y)$ for some polynomial $Q \in \RR[X,Y]$. $Z(Q)$ contains all the circles $\gamma$ such that $\beta (\gamma) \in C_2$ (to see this, notice that $\beta(\gamma)$ restricted to $\RR^2$ is just $\gamma$). $Z(Q)$ contains $\lesssim \deg \partial_z P_0$ circles, hence we can trivially bound the incidences here by $|I(C_2,C_2)| \leq (\deg \partial_z P_0 )^2 \lesssim D^2$.
+In the first case, we must have that $P_0(X,Y,Z) = Q(X,Y)$ for some polynomial $Q \in \RR[X,Y]$. 
+$Z(Q)$ contains all the circles $\gamma$ such that $\beta (\gamma) \in C_2$ (to see this, notice that $\beta(\gamma)$ restricted to $\RR^2$ is just $\gamma$). 
+By Bézout's Lemma, $Z(Q)$ contains at most $\lesssim \deg \partial_z P_0$ circles, hence we can trivially bound the incidences here by $|I(C_2,C_2)| \leq (\deg \partial_z P_0 )^2 \lesssim D^2$.
+In this case there is nothing left to do as we have bounded $|I(C_2, C_2)|$, so the recursion stops.
 
-In the second case, we must have that $ \deg \partial_z P_0 < \deg P_0 \leq D$. We now define a new complementary pair of sets as 
+In the second case, we must have that $ \deg \partial_z P_0 < \deg P_0 \leq D$. Since $P_0$ was of minimal degree in $\mathcal P_0$, $Z(\partial_z P)$ cannot contain all the curves of $C_2$.
+Therefore we can split the collection into a complementary pair of sets  
 \begin{align*}
     C_1^{(1)} &= \{ \beta(\gamma) \in C_2 \ | \  \beta(\gamma) \not \subset Z(\partial_z P_0)  \}, \\
     C_2^{(1)} &=  \{ \beta(\gamma) \in C_2 \ | \  \beta(\gamma) \subset Z(\partial_z P_0)  \}.
@@ -286,10 +287,11 @@ In the second case, we must have that $ \deg \partial_z P_0 < \deg P_0 \leq D$. 
 
 Using these sets we can express 
 \begin{align*}
-    |I(C_2,C_2)| &= \left| I\left(C_1^{(1)}, C_1^{(1)}\right) \right|+ \left|I\left(C_1^{(1)}, C_2^{(1)}\right)\right| +\left| I\left(C_2^{(1)}, C_2^{(1)}\right)\right| \\
+    |I(C_2,C_2)| &= \left| I\left(C_1^{(1)}, C_1^{(1)}\right) \right|+2 \left|I\left(C_1^{(1)}, C_2^{(1)}\right)\right| +\left| I\left(C_2^{(1)}, C_2^{(1)}\right)\right| 
+    \intertext{Notice that since all points of incidence belong to $Z(\partial_z P_0)$, the set $I\left(C_1^{(1)}, C_1^{(1)}\right)$ is empty. Hence}
     &= \left|I\left(C_1^{(1)}, C_2\right)\right| +\left| I\left(C_2^{(1)}, C_2^{(1)}\right)\right|. 
 \end{align*}
-We have that $\left|  I\left(C_1^{(1)}, C_2\right)\right| \lesssim \left|C_1^{(1)} \right| D$, and will we now repeat this process to bound $\left|I \left(C_2^{(1)}, C_2^{(1)}\right)\right|.$
+It follows from Bézout's Lemma via the same argument given before that $\left|  I\left(C_1^{(1)}, C_2\right)\right| \lesssim \left|C_1^{(1)} \right| D$, and we will now repeat this process to bound $\left|I \left(C_2^{(1)}, C_2^{(1)}\right)\right|.$
 
 We now move into the next step of the recursion. Now we consider the class of polynomials
 \[
@@ -300,10 +302,11 @@ $\mathcal P_1$ is non-empty, as by the definition of $C_2^{(1)}$ it at least con
 
 In the first case, again we must have that $P_1(X,Y,Z) = Q(X,Y)$ for some polynomial $Q \in \RR[X,Y]$. $Z(Q)$ contains all the circles $\gamma$ such that $\beta (\gamma) \in C_2$, of which there are  $\lesssim \deg \partial_z P_0$. Hence we can trivially bound the incidences here by \[\left|I\left(C_2^{(1)},C_2^{(1)}\right)\right| \leq (\deg \partial_z P_1 )^2 \lesssim D^2.\] If this is the case the recursion ends. 
 
-In the second case, we must have that $ \deg \partial_z P_1 < \deg P_1 < \deg \partial_z P_0 \lesssim D$. We now define a new complementary pair of sets as 
+In the second case, we must have that $ \deg \partial_z P_1 < \deg P_1 < \deg \partial_z P_0 \lesssim D$. Again, since $P_1$ was of minimal degree in $\mathcal P_1$, $Z(\partial_z P_1)$ cannot contain all the curves
+of $C_2$. Hence we now define a new complementary pair of sets as 
 \begin{align*}
-    C_1^{(2)} &= \{ \beta(\gamma) \in C_2 \ | \  \beta(\gamma) \not \subset Z(\partial_z P_1)  \}, \\
-    C_2^{(2)} &=  \{ \beta(\gamma) \in C_2 \ | \  \beta(\gamma) \subset Z(\partial_z P_1)  \}.
+    C_1^{(2)} &= \{ \beta(\gamma) \in C_2^{(1)} \ | \  \beta(\gamma) \not \subset Z(\partial_z P_1)  \}, \\
+    C_2^{(2)} &=  \{ \beta(\gamma) \in C_2^{(1)} \ | \  \beta(\gamma) \subset Z(\partial_z P_1)  \}.
 \end{align*}
 
 Using these sets we can express 
@@ -325,8 +328,8 @@ and our recursion ends.
 
 In the second case, we again define the complementary sets
 \begin{align*}
-    C_1^{(i+1)} &= \{ \beta(\gamma) \in C_2 \ | \  \beta(\gamma) \not \subset Z(\partial_z P_i)  \}, \\
-    C_2^{(i+1)} &=  \{ \beta(\gamma) \in C_2 \ | \  \beta(\gamma) \subset Z(\partial_z P_i)  \}.
+    C_1^{(i+1)} &= \{ \beta(\gamma) \in C_2^{(i)} \ | \  \beta(\gamma) \not \subset Z(\partial_z P_i)  \}, \\
+    C_2^{(i+1)} &=  \{ \beta(\gamma) \in C_2^{(i)} \ | \  \beta(\gamma) \subset Z(\partial_z P_i)  \}.
 \end{align*}
 As before, these will lead to a contribution of $\lesssim \left|  C_1^{(i+1)}\right| D + \left|I \left( C_2^{(i+1)},C_2^{(i+1)} \right) \right|$. The process continues on the latter term.
 
@@ -334,7 +337,7 @@ Let us collect the contributions from each step of our recursion. At the termina
 \[
     \sum_{i=0}^{J-1} \left| C_1^{(i+1)} \right| D \lesssim N D
 \]
-by using the trivial facts that $\sum_{i=0}^{J-1} \left| C_1^{(i+1)} \right| \leq |C_2|$ and that $C_2$ contains at most $N$ curves. Hence we can conclude that
+by using the face that all $ C_1^{(i+1)}$ are disjoint subsets of $C_2$ and that $C_2$ contains at most $N$ curves, we can conclude that
 \[
   |I(C_2,C_2)| \lesssim D^2 + ND.
 \]
@@ -358,11 +361,13 @@ We now optimise $D$ by setting $N^2D^{-1} \sim ND$ which gives $D \sim N^{1/2}$ 
 \section[The Case of Sphere Tangencies in $\RR^{3}$]{Considerations for the Case of Sphere Tangencies in $\RR^{3}$}\todo{capitalisation?}
 Considering the analogous problem in $\RR^{3}$, two new difficulties emerge. 
 Firstly, our current non-degeneracy condition is not sufficient as we have new degenerate cases to consider where the trivial bound of $O(N^2)$ is achieved. 
-\begin{example}[Degenerate case in $\RR^{3}$]
+\begin{example}[Degenerate case in $\RR^{3}$, \cite{ZahlSpheres}]
+    Consider the two collections of $N$ spheres illustrated in Figure \ref{fig:degen-3d}. Under the union of these collections, each sphere in the first collection is tangent to $\sim N$ spheres in the second collection at $N$ distinct points. 
+    Hence the union is a collection of $2N$ spheres that produces $N^2$ tangencies. Note that for each sphere in the first collection, all of its tangencies with the second collection occur along a circle on the surface of the sphere.
     \begin{figure}[h]
         \centering 
         \includegraphics[width=0.8\textwidth]{images/degenr3.png}
-        \caption{A collection of spheres in $\RR^3$ which satisfy the non-degeneracy condition the earlier section yet achieves $N^2$ tangencies.}
+        \caption{Two collections of $N$ spheres in $\RR^3$, whose union satisfies the non-degeneracy condition the earlier section yet achieves $N^2$ tangencies. \label{fig:degen-3d}}
         \end{figure}
 \end{example}
 Due to cases like these a new condition is required. 

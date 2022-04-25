@@ -9,45 +9,45 @@ Warning--empty publisher in alon1999combinatorial
 Warning--empty booktitle in Knauer2003
 Warning--can't use both volume and number fields in Knauer2003
 Warning--empty publisher in Knauer2003
-You've used 24 entries,
+You've used 25 entries,
             2543 wiz_defined-function locations,
-            720 strings with 7985 characters,
-and the built_in function-call counts, 9964 in all, are:
-= -- 1055
-> -- 332
-< -- 22
-+ -- 109
-- -- 103
-* -- 712
-:= -- 1553
-add.period$ -- 80
-call.type$ -- 24
-change.case$ -- 132
-chr.to.int$ -- 24
-cite$ -- 30
-duplicate$ -- 420
-empty$ -- 776
-format.name$ -- 140
-if$ -- 2078
+            727 strings with 8107 characters,
+and the built_in function-call counts, 10322 in all, are:
+= -- 1093
+> -- 340
+< -- 23
++ -- 111
+- -- 105
+* -- 739
+:= -- 1611
+add.period$ -- 83
+call.type$ -- 25
+change.case$ -- 137
+chr.to.int$ -- 25
+cite$ -- 31
+duplicate$ -- 435
+empty$ -- 806
+format.name$ -- 144
+if$ -- 2150
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 25
-newline$ -- 127
-num.names$ -- 72
-pop$ -- 111
+missing$ -- 26
+newline$ -- 132
+num.names$ -- 75
+pop$ -- 114
 preamble$ -- 1
-purify$ -- 158
+purify$ -- 164
 quote$ -- 0
-skip$ -- 351
+skip$ -- 361
 stack$ -- 0
-substring$ -- 763
-swap$ -- 85
-text.length$ -- 22
-text.prefix$ -- 14
+substring$ -- 795
+swap$ -- 86
+text.length$ -- 23
+text.prefix$ -- 15
 top$ -- 0
-type$ -- 184
+type$ -- 192
 warning$ -- 6
-while$ -- 104
-width$ -- 28
-write$ -- 322
+while$ -- 108
+width$ -- 30
+write$ -- 335
 (There were 6 warnings)
