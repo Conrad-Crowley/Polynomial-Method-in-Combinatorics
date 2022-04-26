@@ -1,25 +1,3 @@
-\chapter{Proof of Bézout's Lemma}
-
-\begin{lemma}[Bézout Lemma in $\RR^3$ (Lemma \ref{lem:Bezout})]    
-    Let $Z(P)$ and $Z(Q_1,Q_2)$ be the zero sets of polynomials over $\RR[X,Y,Z]$ and suppose that $P,Q_1,Q_2$ have no pairwise common factors.
-  Then we can bound the cardinality of the intersection of the zero sets by
-     \[ |Z(P) \cap Z(Q_1,Q_2)| \lesssim \deg P \deg Q_1 \deg Q_2.\]
- \end{lemma}
-\begin{proof}
-    Let $F_D [X,Y,Z] = \operatorname{Poly}_D (\RR[X,Y,Z])$ for convenience. 
-        \[\begin{tikzcd}
-            & {\frac{F_{D-\deg Q_2}[X,Y,Z]}{\langle Q_1 \rangle_{D- \deg Q_2}}} & {\frac{F_{D-\deg P}[X,Y,Z]}{\langle Q_1, Q_2 \rangle_{D- \deg P}}} \\
-            {F_D[X,Y,Z]} & {\frac{F_D[X,Y,Z]}{\langle Q_1 \rangle_D}} & {\frac{F_D[X,Y,Z]}{\langle Q_1, Q_2 \rangle_D}} & {\frac{F_D[X,Y,Z]}{\langle Q_1, Q_2, P \rangle_D}}
-            \arrow["\alpha", from=2-1, to=2-2]
-            \arrow["\beta", from=2-2, to=2-3]
-            \arrow["\gamma", from=2-3, to=2-4]
-            \arrow["{\beta'}", from=1-2, to=2-2]
-            \arrow["{\gamma'}", from=1-3, to=2-3]
-        \end{tikzcd}\]
-
-\end{proof}
-
-
 
 \chapter{Proof of the Borsuk-Ulam Theorem}
     \begin{theorem}[Borsuk-Ulam (Theorem \ref{thm:Borsuk-Ulam})]

@@ -88,13 +88,12 @@ This one-to-one correspondence between tangencies in $\RR^2$ and incidences in $
 It may be viewed as the graph of a Gaussian map in a certain coordinate system.
 
 In the course of the proof we will need a Bézout-type result which bounds the number of intersections between a curve and a surface with no common components.
-\begin{lemma}[Bézout Lemma in $\RR^3$]     \label{lem:Bezout}
-   Let $Z(P)$ and $Z(Q_1,Q_2)$ be the zero sets of polynomials over $\RR[X,Y,Z]$ and suppose that $P,Q_1,Q_2$ have no pairwise common factors.
+\begin{lemma}[Bézout's Lemma in $\RR^3$]     \label{lem:Bezout}
+   Let $Z(P)$ be a surface over $\RR[X,Y,Z]$ and $Z(Q_1,Q_2)$ be a curve over $\RR[X,Y,Z]$. Suppose that $P,Q_1,Q_2$ have no pairwise common factors.
  Then we can bound the cardinality of the intersection of the zero sets by
-    \[ |Z(P) \cap Z(Q_1,Q_2)| \lesssim \deg P \deg Q_1 \deg Q_2.\]
+    \[ |Z(P) \cap Z(Q_1,Q_2)| \leq \deg P \deg Q_1 \deg Q_2.\]
 \end{lemma}
-To preserve the flow of this chapter, the proof of this result will be given in Appendix \ref{appendix:Bezout}.
-
+This result follows from Theorem 12.3 in Fulton's book ``\textit{Intersection Theory}'' (See \cite{Fulton1998}, page 223).
 \section[Ellenberg-Solymosi-Zahl's Proof]{Ellenberg-Solymosi-Zahl's Proof of Theorem \ref{thm:circle-tangencies} \label{sect:Zahl-Proof}}
 In this proof, we will need to ensure our tangencies
 are sufficiently uniformly distributed among our circles. We can refine our collection such that this is the case by the following lemma.
@@ -138,7 +137,7 @@ We do this to achieve a contradiction as the degree of our polynomial will be to
     Then we claim that $$(0,0,1) \in \text{span} \left( T_{(x,y,z) }\beta (\gamma_1), T_{(x,y,z) }\beta (\gamma_2)\right).$$
     In other words, at the intersection of $\beta(\gamma_1)$ and $\beta(\gamma_2)$ their tangent vectors span a vertical subspace of $\RR^3$. 
     We can establish this by examining a parameterisation of $\gamma_1$ and $\gamma_2$ in the neighbourhood of $(x,y)$.
-    Define $f_i (t), \ i \in \{1,2\}$ such that $(x+t, f_i(t))$ is a parameterisation of $\gamma_i$ in the neighbourhood of $(x,y)$ for all $t$ in a small neighbourhood of 0. In particular $f_i(0) = y$. Since $(x+t, f_i(t))$ satisfies the equation of a circle $\gamma_i$ we have the relation \todo{enough or more?}
+    Define $f_i (t), \ i \in \{1,2\}$ such that $(x+t, f_i(t))$ is a parameterisation of $\gamma_i$ in the neighbourhood of $(x,y)$ for all $t$ in a small neighbourhood of 0. In particular $f_i(0) = y$. Since $(x+t, f_i(t))$ satisfies the equation of a circle $\gamma_i$ we have the relation 
     \[
         (x+t - x_{\gamma_i})^2 +  (f_i(t) - y_{\gamma_i})^2 = r_{\gamma_i}^2.
     \]
@@ -194,13 +193,22 @@ There are a few key differences between the two methods of proof. In the followi
 it is no longer required to ensure the uniform distribution of tangent points among each circle in our collection, so we will not
 have to use Lemma \ref{lem:uniform-refine}.
 Secondly, in a similar fashion to the proof of the Szemerédi-Trotter Theorem (Theorem \ref{thm:S-T}) in the previous chapter we will partition $\RR^3$ using a polynomial of controlled degree and leverage our trivial bound (Lemma \ref{lem:trivial-circle-bound}) in each cell.
-Slight care will be needed to deal with intersections of curves in the zero set, which we do via a recursive  argument.
+Slight care will be needed to deal with intersections of curves in the zero set, which we do via a recursive argument. 
+
+\begin{definition}
+    An \textbf{algebraic variety} in $\RR^n$ is defined as $Z(Q_1,\dots, Q_k)$ for some non-zero polynomials $Q_1, \dots Q_k$. 
+    The \textbf{dimension of a variety} $Z(Q_1,\dots, Q_k)$ is the dimension of the tangent spaces at its regular points (these are the points for which the matrix formed by the gradient vectors $\nabla Q_1, \dots, \nabla Q_k$ has maximal rank). 
+
+    In particular, we refer to algebraic varieties of dimension 1 as \textbf{curves}.
+\end{definition}
+
+
 
 We begin by introducing the main tool for this proof, 
 an extension of the \hyperref[thm:PolyPartioning]{polynomial partitioning} theorem (Theorem \ref{thm:PolyPartioning}) to algebraic varieties instead of just points (which are 0-dimensional varieties). 
 
-\todo{add def of variety}
-\todo{rephrase closer to \ref{thm:PolyPartioning}}
+
+
 \begin{lemma}[Polynomial Partitioning for Algebraic Varieties]
     If $\Gamma$ is a finite set of $k$-dimensional varieties in $\RR^n$ and $D$ any degree, there exists a non-zero polynomial $P$ of degree at
     most $D$ such that each disjoint open set of $\RR^n \backslash Z(P)$ intersects $\lesssim D^{k-n} |\Gamma|$ varieties of $\Gamma$.\label{lem:poly-part-var}
@@ -358,7 +366,7 @@ We now optimise $D$ by setting $N^2D^{-1} \sim ND$ which gives $D \sim N^{1/2}$ 
     Since polynomial partitioning exploits the topology of $\RR^n$ in an essential manner, it would have been reasonable to expect an improvement over the exponent 3/2 via the argument above. Alas, this was not the case.
 \end{remark}
 
-\section[The Case of Sphere Tangencies in $\RR^{3}$]{Considerations for the Case of Sphere Tangencies in $\RR^{3}$}\todo{capitalisation?}
+\section[The Case of Sphere Tangencies in $\RR^{3}$]{Considerations for the Case of Sphere Tangencies in $\RR^{3}$}
 Considering the analogous problem in $\RR^{3}$, two new difficulties emerge. 
 Firstly, our current non-degeneracy condition is not sufficient as we have new degenerate cases to consider where the trivial bound of $O(N^2)$ is achieved. 
 \begin{example}[Degenerate case in $\RR^{3}$, \cite{ZahlSpheres}]
@@ -366,7 +374,7 @@ Firstly, our current non-degeneracy condition is not sufficient as we have new d
     Hence the union is a collection of $2N$ spheres that produces $N^2$ tangencies. Note that for each sphere in the first collection, all of its tangencies with the second collection occur along a circle on the surface of the sphere.
     \begin{figure}[h]
         \centering 
-        \includegraphics[width=0.8\textwidth]{images/degenr3.png}
+        \includegraphics[width=\textwidth,trim={1cm 1cm 1cm 0.5cm},clip]{images/degenr3.png}
         \caption{Two collections of $N$ spheres in $\RR^3$, whose union satisfies the non-degeneracy condition the earlier section yet achieves $N^2$ tangencies. \label{fig:degen-3d}}
         \end{figure}
 \end{example}
@@ -412,5 +420,5 @@ We now construct our lower bound utilising geometric inversion in $\RR^3$ analog
      Let $\CE$ be a collection of $(d-1)$-spheres in $\RR^d$. Then the number of distinct points of tangencies is $\lesssim |\CE|^{\frac{2d-1}{d}}.$
  \end{conjecture}
 
-This is a somewhat weak conjecture, as the evidence to form it is simply the natural extension of the $\beta$-lifting technique into higher dimensions. \todo{rewrite sentence}
+This is a somewhat weak conjecture, as the evidence to form it is simply the extension of the $\beta$-lifting technique into higher dimensions. The $\beta$-lifting of spheres in $\RR^d$ produces curves in $\RR^{2d-1}$, and it is the ratio of these dimensions that authors claim to be a bound for the exponent.
 As such, there is no evidence to suggest that it should be tight. 
